@@ -1,0 +1,2299 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>7.2 地图数据三维可视化 · NICHE MODEL 中文指南-RCODING</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="nicheerfeng">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="7.3 栅格数据可视化.html" />
+    
+    
+    <link rel="prev" href="7.1 R包地图底图.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"nicheerfeng/Nichefbook","types":["star"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Niche model 中文指南-Rcoding</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1. 构建工作环境/1.1 构建工作环境说明.html">
+            
+                <a href="../1. 构建工作环境/1.1 构建工作环境说明.html">
+            
+                    
+                    1. 构建工作环境
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1. 构建工作环境/1.1 R-配置环境变量.html">
+            
+                <a href="../1. 构建工作环境/1.1 R-配置环境变量.html">
+            
+                    
+                    1.1 加载及配置R工作环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2.下载物种分布数据/2.下载物种分布数据说明.html">
+            
+                <a href="../2.下载物种分布数据/2.下载物种分布数据说明.html">
+            
+                    
+                    2.下载物种分布数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2.下载物种分布数据/2.1 物种分布数据网站.html">
+            
+                <a href="../2.下载物种分布数据/2.1 物种分布数据网站.html">
+            
+                    
+                    2.1 物种分布数据网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2.下载物种分布数据/2.2 使用R下载物种分布.html">
+            
+                <a href="../2.下载物种分布数据/2.2 使用R下载物种分布.html">
+            
+                    
+                    2.2 使用R下载物种分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3. 物种分布数据清理/物种分布数据清理.html">
+            
+                <a href="../3. 物种分布数据清理/物种分布数据清理.html">
+            
+                    
+                    3. 物种分布数据清理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../3. 物种分布数据清理/3.1 R-清理分布数据.html">
+            
+                <a href="../3. 物种分布数据清理/3.1 R-清理分布数据.html">
+            
+                    
+                    3.1 R-清理分布数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../3. 物种分布数据清理/3.2 构建物种丰富度栅格.html">
+            
+                <a href="../3. 物种分布数据清理/3.2 构建物种丰富度栅格.html">
+            
+                    
+                    3.2 构建物种丰富度栅格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../3. 物种分布数据清理/3.3 核平滑构建物种分布图.html">
+            
+                <a href="../3. 物种分布数据清理/3.3 核平滑构建物种分布图.html">
+            
+                    
+                    3.3 核平滑构建物种分布图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../3. 物种分布数据清理/3.4 改变分布数据的投影方法.html">
+            
+                <a href="../3. 物种分布数据清理/3.4 改变分布数据的投影方法.html">
+            
+                    
+                    3.4 改变分布数据的投影方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../3. 物种分布数据清理/3.5 spthin降低采样偏差.html">
+            
+                <a href="../3. 物种分布数据清理/3.5 spthin降低采样偏差.html">
+            
+                    
+                    3.5 spthin降低采样偏差
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4. 下载环境数据/4.下载环境数据说明.html">
+            
+                <a href="../4. 下载环境数据/4.下载环境数据说明.html">
+            
+                    
+                    4. 下载环境数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../4. 下载环境数据/4.1 环境数据网站.html">
+            
+                <a href="../4. 下载环境数据/4.1 环境数据网站.html">
+            
+                    
+                    4.1 环境数据网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../4. 下载环境数据/R下载及处理环境数据.md">
+            
+                <span>
+            
+                    
+                    4.2 R下载及处理环境数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5. 模型数据预处理/5.模型数据预处理说明.html">
+            
+                <a href="../5. 模型数据预处理/5.模型数据预处理说明.html">
+            
+                    
+                    5. 模型数据预处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../5. 模型数据预处理/5.1 环境数据预处理/5.1 环境数据预处理.html">
+            
+                <a href="../5. 模型数据预处理/5.1 环境数据预处理/5.1 环境数据预处理.html">
+            
+                    
+                    5.1 环境数据预处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../5. 模型数据预处理/5.1 环境数据预处理/5.1.1 读取及导出shp_raster.html">
+            
+                <a href="../5. 模型数据预处理/5.1 环境数据预处理/5.1.1 读取及导出shp_raster.html">
+            
+                    
+                    5.1.1 读取及导出shp_raster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../5. 模型数据预处理/5.1 环境数据预处理/5.1.2 栅格数据的基本处理.html">
+            
+                <a href="../5. 模型数据预处理/5.1 环境数据预处理/5.1.2 栅格数据的基本处理.html">
+            
+                    
+                    5.1.2 栅格数据的基本处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../5. 模型数据预处理/5.1 环境数据预处理/5.1.3 补充和报错处理.html">
+            
+                <a href="../5. 模型数据预处理/5.1 环境数据预处理/5.1.3 补充和报错处理.html">
+            
+                    
+                    5.1.3 补充和报错处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2 模型分布数据预处理.html">
+            
+                <a href="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2 模型分布数据预处理.html">
+            
+                    
+                    5.2 模型分布数据预处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.1 构建训练集和测试集.html">
+            
+                <a href="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.1 构建训练集和测试集.html">
+            
+                    
+                    5.2.1 构建训练集和测试集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.2 构建背景数据集.html">
+            
+                <a href="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.2 构建背景数据集.html">
+            
+                    
+                    5.2.2 构建背景数据集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.3" data-path="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.3 筛选环境因子.html">
+            
+                <a href="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.3 筛选环境因子.html">
+            
+                    
+                    5.2.3 筛选环境因子.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../6. SDM运行/6.SDM运行说明.html">
+            
+                <a href="../6. SDM运行/6.SDM运行说明.html">
+            
+                    
+                    6. SDM运行
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../6. SDM运行/6.1 SDM运行.html">
+            
+                <a href="../6. SDM运行/6.1 SDM运行.html">
+            
+                    
+                    6.1 SDM运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../6. SDM运行/6.2 SDM结果展示.html">
+            
+                <a href="../6. SDM运行/6.2 SDM结果展示.html">
+            
+                    
+                    6.2 SDM结果展示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../6. SDM运行/6.3 SDM模型评估.html">
+            
+                <a href="../6. SDM运行/6.3 SDM模型评估.html">
+            
+                    
+                    6.3 SDM模型评估
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../6. SDM运行/6.4 SDM模型外推.html">
+            
+                <a href="../6. SDM运行/6.4 SDM模型外推.html">
+            
+                    
+                    6.4 SDM模型外推
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../6. SDM运行/6.5 SDM整合建模.html">
+            
+                <a href="../6. SDM运行/6.5 SDM整合建模.html">
+            
+                    
+                    6.5 SDM整合建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../6. SDM运行/6. SDM运行说明.md">
+            
+                <span>
+            
+                    
+                    6.6 SDM案例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.6.1" data-path="../6. SDM运行/6.6 SDM案例/6.6.1bioclim.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.1bioclim.html">
+            
+                    
+                    bioclim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.2" data-path="../6. SDM运行/6.6 SDM案例/6.6.2biomod2工作流.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.2biomod2工作流.html">
+            
+                    
+                    biomod2工作流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.3" data-path="../6. SDM运行/6.6 SDM案例/6.6.3ENMEVAAL.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.3ENMEVAAL.html">
+            
+                    
+                    ENMEVAAL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.4" data-path="../6. SDM运行/6.6 SDM案例/6.6.4enmSDM工作流.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.4enmSDM工作流.html">
+            
+                    
+                    enmSDM工作流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.5" data-path="../6. SDM运行/6.6 SDM案例/6.6.5hypervolume.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.5hypervolume.html">
+            
+                    
+                    hypervolume
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.6" data-path="../6. SDM运行/6.6 SDM案例/6.6.6maxent工作流.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.6maxent工作流.html">
+            
+                    
+                    maxent工作流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.7" data-path="../6. SDM运行/6.6 SDM案例/6.6.7SDMtune工作流.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.7SDMtune工作流.html">
+            
+                    
+                    SDMtune工作流
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="7.SDM相关数据可视化说明.html">
+            
+                <a href="7.SDM相关数据可视化说明.html">
+            
+                    
+                    7. SDM相关数据可视化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="7.1 R包地图底图.html">
+            
+                <a href="7.1 R包地图底图.html">
+            
+                    
+                    7.1 R包地图底图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.2" data-path="7.2 地图数据三维可视化.html">
+            
+                <a href="7.2 地图数据三维可视化.html">
+            
+                    
+                    7.2 地图数据三维可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="7.3 栅格数据可视化.html">
+            
+                <a href="7.3 栅格数据可视化.html">
+            
+                    
+                    7.3 栅格数据可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="7.4 多维环境变量可视化.html">
+            
+                <a href="7.4 多维环境变量可视化.html">
+            
+                    
+                    7.4 多维环境变量可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="7.5 SDM结果可视化.html">
+            
+                <a href="7.5 SDM结果可视化.html">
+            
+                    
+                    7.5 SDM结果可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="7.6 可视化物种分布.html">
+            
+                <a href="7.6 可视化物种分布.html">
+            
+                    
+                    7.6 可视化物种分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="7.7 相关性分析.html">
+            
+                <a href="7.7 相关性分析.html">
+            
+                    
+                    7.7 相关性分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../8. SDM-workflow说明/8.SDM-workflow说明.html">
+            
+                <a href="../8. SDM-workflow说明/8.SDM-workflow说明.html">
+            
+                    
+                    8. SDM-workflow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../8. SDM-workflow说明/8.1 workflow的基本流程.html">
+            
+                <a href="../8. SDM-workflow说明/8.1 workflow的基本流程.html">
+            
+                    
+                    8.1 workflow的基本流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../8. SDM-workflow说明/8.2 workflow的基础知识.html">
+            
+                <a href="../8. SDM-workflow说明/8.2 workflow的基础知识.html">
+            
+                    
+                    8.2 workflow的基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../8. SDM-workflow说明/8.3 workflow的全流程R包.html">
+            
+                <a href="../8. SDM-workflow说明/8.3 workflow的全流程R包.html">
+            
+                    
+                    8.3 workflow的全流程R包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../8. SDM-workflow说明/8.4 workflow的专项R包及脚本.html">
+            
+                <a href="../8. SDM-workflow说明/8.4 workflow的专项R包及脚本.html">
+            
+                    
+                    8.4 workflow的专项R包及脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../8. SDM-workflow说明/8.5 workflow.GUI.html">
+            
+                <a href="../8. SDM-workflow说明/8.5 workflow.GUI.html">
+            
+                    
+                    8.5 workflow(GUI)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../8. SDM-workflow说明/8.6 案例.html">
+            
+                <a href="../8. SDM-workflow说明/8.6 案例.html">
+            
+                    
+                    8.6 案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../9. 生态位进化/9.生态位进化说明.html">
+            
+                <a href="../9. 生态位进化/9.生态位进化说明.html">
+            
+                    
+                    9. 生态位进化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1 生态位宽度的进化.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1 生态位宽度的进化.html">
+            
+                    
+                    9.1 生态位宽度的进化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.1" data-path="../9. 生态位进化/9.1 生态位宽度的进化/生态位宽度基础概念.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/生态位宽度基础概念.html">
+            
+                    
+                    9.1 生态位宽度的进化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/9.1.1 单因素分析.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/9.1.1 单因素分析.html">
+            
+                    
+                    9.1.1 单因素分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.2.1" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/参数和及非参.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/参数和及非参.html">
+            
+                    
+                    参数和及非参统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2.2" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/方差分析结果可视化.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/方差分析结果可视化.html">
+            
+                    
+                    方差分析结果可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/9.1.2 多因素分析.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/9.1.2 多因素分析.html">
+            
+                    
+                    9.1.2 多因素分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.3.1" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/CCA.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/CCA.html">
+            
+                    
+                    CCA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3.2" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/PCA_MANOVA.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/PCA_MANOVA.html">
+            
+                    
+                    PCA_MANOVA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3.3" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/聚类分析.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/聚类分析.html">
+            
+                    
+                    聚类分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3.4" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/生态位轴PCA得分.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/生态位轴PCA得分.html">
+            
+                    
+                    生态位轴PCA得分
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.4" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.3 超维度分析R-多维超体积生态位.md">
+            
+                <span>
+            
+                    
+                    9.1.3 超维度分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2 生态位进化式样说明.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2 生态位进化式样说明.html">
+            
+                    
+                    9.2 生态位进化式样
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.2.1" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.1 生态位进化式样.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.1 生态位进化式样.html">
+            
+                    
+                    9.2.1 生态位进化式样
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2 ecospat.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2 ecospat.html">
+            
+                    
+                    9.2.2 ecospat
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.2.2.1" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.1 优化可视化_raw.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.1 优化可视化_raw.html">
+            
+                    
+                    9.2.2.1 优化可视化_raw
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.2" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.2 优化可视化2.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.2 优化可视化2.html">
+            
+                    
+                    9.2.2.2 优化可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.3" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.3 生态位保守性测试.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.3 生态位保守性测试.html">
+            
+                    
+                    9.2.2.3 生态位保守性测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.4" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.4 生态位的重叠与计算.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.4 生态位的重叠与计算.html">
+            
+                    
+                    9.2.2.4 生态位的重叠与计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.5" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.5 生态位重叠可视化.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.5 生态位重叠可视化.html">
+            
+                    
+                    9.2.2.5 生态位重叠可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.6" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.6 非矫正.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.6 非矫正.html">
+            
+                    
+                    9.2.2.6 非矫正生态位重叠
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.3" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.3 ENMtools.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.3 ENMtools.html">
+            
+                    
+                    9.2.3 ENMtools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../9. 生态位进化/9.3 扩散动态研究/9.3 扩散动态研究.html">
+            
+                <a href="../9. 生态位进化/9.3 扩散动态研究/9.3 扩散动态研究.html">
+            
+                    
+                    9.3 扩散动态研究
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../10. 群落与SDM/10. 群落生态学说明.html">
+            
+                <a href="../10. 群落与SDM/10. 群落生态学说明.html">
+            
+                    
+                    10. 群落与SDM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../10. 群落生态学/10.1 背景资料.md">
+            
+                <span>
+            
+                    
+                    10.1 背景资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../10. 群落与SDM/10.2 多物种联合建模.html">
+            
+                <a href="../10. 群落与SDM/10.2 多物种联合建模.html">
+            
+                    
+                    10.2 多物种联合建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../10. 群落与SDM/10.3 经典研究案例.html">
+            
+                <a href="../10. 群落与SDM/10.3 经典研究案例.html">
+            
+                    
+                    10.3 经典研究案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../10. 群落与SDM/10.4 可视化.html">
+            
+                <a href="../10. 群落与SDM/10.4 可视化.html">
+            
+                    
+                    10.4 可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../11. 遥感与SDM/11. 遥感与SDM说明.html">
+            
+                <a href="../11. 遥感与SDM/11. 遥感与SDM说明.html">
+            
+                    
+                    11.遥感与SDM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../11. 遥感与SDM/11.1 研究思路.html">
+            
+                <a href="../11. 遥感与SDM/11.1 研究思路.html">
+            
+                    
+                    11.1 研究思路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../11. 遥感与SDM/11.2 研究R包.html">
+            
+                <a href="../11. 遥感与SDM/11.2 研究R包.html">
+            
+                    
+                    11.2 研究R包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../11. 遥感与SDM/11.3 经典研究案例.html">
+            
+                <a href="../11. 遥感与SDM/11.3 经典研究案例.html">
+            
+                    
+                    11.3 经典研究案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../12. 系统发育与SDM/12. 系统发育与SDM说明.html">
+            
+                <a href="../12. 系统发育与SDM/12. 系统发育与SDM说明.html">
+            
+                    
+                    12.系统发育与SDM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../12. 系统发育与SDM/12.1 研究思路.html">
+            
+                <a href="../12. 系统发育与SDM/12.1 研究思路.html">
+            
+                    
+                    12.1 研究思路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../12. 系统发育与SDM/12.2 研究R包.html">
+            
+                <a href="../12. 系统发育与SDM/12.2 研究R包.html">
+            
+                    
+                    12.2 研究R包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../12. 系统发育与SDM/12.3 经典研究案例.html">
+            
+                <a href="../12. 系统发育与SDM/12.3 经典研究案例.html">
+            
+                    
+                    12.3 经典研究案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../13. 空间生态位/13. 空间生态位.html">
+            
+                <a href="../13. 空间生态位/13. 空间生态位.html">
+            
+                    
+                    13.空间生态位
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../13. 空间生态位/13.1 R-空间统计书籍.html">
+            
+                <a href="../13. 空间生态位/13.1 R-空间统计书籍.html">
+            
+                    
+                    13.1 R-空间统计书籍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../13. 空间生态位/13.2 空间自相关概念释义.html">
+            
+                <a href="../13. 空间生态位/13.2 空间自相关概念释义.html">
+            
+                    
+                    13.2 空间自相关概念释义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../13. 空间生态位/13.3 地统计.html">
+            
+                <a href="../13. 空间生态位/13.3 地统计.html">
+            
+                    
+                    13.3 地统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../13. 空间生态位/13.4 案例.html">
+            
+                <a href="../13. 空间生态位/13.4 案例.html">
+            
+                    
+                    13.4 案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="../13. 空间生态位/13.5 R-解决空间自相关.html">
+            
+                <a href="../13. 空间生态位/13.5 R-解决空间自相关.html">
+            
+                    
+                    13.5 R-解决空间自相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="../13. 空间生态位/13.6 补充.html">
+            
+                <a href="../13. 空间生态位/13.6 补充.html">
+            
+                    
+                    13.6 补充
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../14. 生态位基础资料/14.生态位理论资料说明.html">
+            
+                <a href="../14. 生态位基础资料/14.生态位理论资料说明.html">
+            
+                    
+                    14.生态位理论资料
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../14. 生态位基础资料/14.1 生态相关的名词释义.html">
+            
+                <a href="../14. 生态位基础资料/14.1 生态相关的名词释义.html">
+            
+                    
+                    14.1 生态相关的名词释义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../14. 生态位基础资料/14.2 SDM建模书籍.html">
+            
+                <a href="../14. 生态位基础资料/14.2 SDM建模书籍.html">
+            
+                    
+                    14.2 SDM建模书籍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../14. 生态位基础资料/14.3 相关与因果.html">
+            
+                <a href="../14. 生态位基础资料/14.3 相关与因果.html">
+            
+                    
+                    14.3 相关与因果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../14. 生态位基础资料/14.4 分布数据清理的依据.html">
+            
+                <a href="../14. 生态位基础资料/14.4 分布数据清理的依据.html">
+            
+                    
+                    14.4 分布数据清理的依据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../14. 生态位基础资料/14.5 建模格局的二元性.html">
+            
+                <a href="../14. 生态位基础资料/14.5 建模格局的二元性.html">
+            
+                    
+                    14.5 建模格局的二元性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../14. 生态位基础资料/14.6 niche常见错误.html">
+            
+                <a href="../14. 生态位基础资料/14.6 niche常见错误.html">
+            
+                    
+                    14.6 niche常见错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../14. 生态位基础资料/14.7 气候生态位的思路.html">
+            
+                <a href="../14. 生态位基础资料/14.7 气候生态位的思路.html">
+            
+                    
+                    14.7 气候生态位的思路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="../14. 生态位基础资料/14.8 环境与物种分布的交互选择.html">
+            
+                <a href="../14. 生态位基础资料/14.8 环境与物种分布的交互选择.html">
+            
+                    
+                    14.8 环境与物种分布的交互选择
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../15. niche领航员工作/15.niche领航员工作.html">
+            
+                <a href="../15. niche领航员工作/15.niche领航员工作.html">
+            
+                    
+                    15.niche领航员工作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../15. niche领航员工作/乔慧捷.html">
+            
+                <a href="../15. niche领航员工作/乔慧捷.html">
+            
+                    
+                    乔慧捷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../15. niche领航员工作/朱耿平.html">
+            
+                <a href="../15. niche领航员工作/朱耿平.html">
+            
+                    
+                    朱耿平
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../15. niche领航员工作/邬建国.html">
+            
+                <a href="../15. niche领航员工作/邬建国.html">
+            
+                    
+                    邬建国
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../15. niche领航员工作/Andrew Townsend Peterson.html">
+            
+                <a href="../15. niche领航员工作/Andrew Townsend Peterson.html">
+            
+                    
+                    Andrew Townsend Peterson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../15. niche领航员工作/Annette Ostling.html">
+            
+                <a href="../15. niche领航员工作/Annette Ostling.html">
+            
+                    
+                    Annette Ostling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../15. niche领航员工作/Antoine Guisan.html">
+            
+                <a href="../15. niche领航员工作/Antoine Guisan.html">
+            
+                    
+                    Antoine Guisan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../15. niche领航员工作/Damaris Zurell.html">
+            
+                <a href="../15. niche领航员工作/Damaris Zurell.html">
+            
+                    
+                    Damaris Zurell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="../15. niche领航员工作/Dan L. Warre.html">
+            
+                <a href="../15. niche领航员工作/Dan L. Warre.html">
+            
+                    
+                    Dan L. Warren
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.9" data-path="../15. niche领航员工作/Erin E. Saupe.html">
+            
+                <a href="../15. niche领航员工作/Erin E. Saupe.html">
+            
+                    
+                    Erin E. Saupe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.10" data-path="../15. niche领航员工作/Holt R D.html">
+            
+                <a href="../15. niche领航员工作/Holt R D.html">
+            
+                    
+                    Holt R D
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.11" data-path="../15. niche领航员工作/Hannah Lois Owens.html">
+            
+                <a href="../15. niche领航员工作/Hannah Lois Owens.html">
+            
+                    
+                    Hannah Lois Owens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.12" data-path="../15. niche领航员工作/Jane Elith.html">
+            
+                <a href="../15. niche领航员工作/Jane Elith.html">
+            
+                    
+                    Jane Elith
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.13" data-path="../15. niche领航员工作/Jorge Soberón.html">
+            
+                <a href="../15. niche领航员工作/Jorge Soberón.html">
+            
+                    
+                    Jorge Soberón
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.14" data-path="../15. niche领航员工作/Olivier Broennimann.html">
+            
+                <a href="../15. niche领航员工作/Olivier Broennimann.html">
+            
+                    
+                    Olivier Broennimann
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.15" data-path="../15. niche领航员工作/Jane Elith.html">
+            
+                <a href="../15. niche领航员工作/Jane Elith.html">
+            
+                    
+                    John J. Wiens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.16" data-path="../15. niche领航员工作/Robert P. Anderson.html">
+            
+                <a href="../15. niche领航员工作/Robert P. Anderson.html">
+            
+                    
+                    Robert P. Anderson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.17" data-path="../15. niche领航员工作/Michael R Kearney.html">
+            
+                <a href="../15. niche领航员工作/Michael R Kearney.html">
+            
+                    
+                    Michael R Kearne
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >7.2 地图数据三维可视化</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="721-&#x751F;&#x6210;&#x5761;&#x5411;&#x5761;&#x5EA6;&#x6570;&#x636E;">7.2.1 &#x751F;&#x6210;&#x5761;&#x5411;&#x5761;&#x5EA6;&#x6570;&#x636E;</h3>
+<pre><code class="lang-r"><span class="hljs-comment">## &#x57FA;&#x4E8E;&#x6295;&#x5F71;&#x5750;&#x6807;&#x7CFB;&#x7ED8;&#x5236;&#x5761;&#x5411;&#x548C;&#x5761;&#x5EA6;&#xFF1A;&#x5DF2;&#x7ECF;&#x8FDB;&#x884C;&#x4E8C;&#x7EF4;&#x5730;&#x56FE;&#x4F18;&#x5316;&#x9AD8;&#x7A0B;&#x663E;&#x793A;&#xFF1A;</span>
+higground = dem &gt;<span class="hljs-number">600</span>
+slope = terrain(dem,opt =<span class="hljs-string">&apos;slope&apos;</span>)
+aspect  = terrain(dem,opt=<span class="hljs-string">&apos;aspect&apos;</span>)
+hill = hillShade(slope,aspect)
+plot(hill,col= grey(<span class="hljs-number">0</span>:<span class="hljs-number">100</span>/<span class="hljs-number">100</span>),legend =<span class="hljs-literal">F</span>)
+plot(dem,col =ranibow(<span class="hljs-number">25</span>,alpha=<span class="hljs-number">0.35</span>,add=<span class="hljs-literal">T</span>)
+</code></pre>
+<h3 id="722-rayshader&#x6784;&#x5EFA;&#x4E09;&#x7EF4;&#x7ACB;&#x4F53;&#x5730;&#x56FE;">7.2.2 rayshader&#x6784;&#x5EFA;&#x4E09;&#x7EF4;&#x7ACB;&#x4F53;&#x5730;&#x56FE;</h3>
+<pre><code class="lang-R"><span class="hljs-comment">## &#x6784;&#x5EFA;&#x4E09;&#x7EF4;&#x5730;&#x56FE;&#xFF1A;</span>
+<span class="hljs-comment">## &#x51E1;&#x662F;&#x4E09;&#x7EF4;&#x7684;&#x6570;&#x636E;&#x90FD;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;R&#x5305;&#xFF0C;&#x80FD;&#x505A;&#x4E00;&#x4E9B;&#x76F8;&#x5BF9;&#x6709;&#x8DA3;&#x7684;&#x56FE;&#x548C;&#x53EF;&#x89C6;&#x5316;&#x5DE5;&#x4F5C;&#xFF1B;</span>
+<span class="hljs-comment"># &#x6700;&#x7EC8;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x7684;&#x6548;&#x679C;&#xFF1A;3&#x70B9;&#x53EF;&#x89C6;&#x5316;&#x7269;&#x79CD;&#x5206;&#x5E03;&#x70B9;&#x53CA;&#x7269;&#x79CD;&#x5206;&#x5E03;&#x56FE;&#xFF1B;</span>
+
+<span class="hljs-keyword">library</span>(rayshader)
+setwd(<span class="hljs-string">&quot;E:/&#x73AF;&#x5883;&#x6570;&#x636E;/dem/&quot;</span>)
+<span class="hljs-comment">#Here, I load a map with the raster package.</span>
+loadzip = tempfile()
+download.file(<span class="hljs-string">&quot;https://tylermw.com/data/dem_01.tif.zip&quot;</span>, loadzip)
+localtif = raster::raster( <span class="hljs-string">&quot;./dem_01.tif&quot;</span>)
+
+
+plot(localtif)
+
+<span class="hljs-comment">#And convert it to a matrix:</span>
+elmat = raster_to_matrix(localtif)
+
+<span class="hljs-comment">#We use another one of rayshader&apos;s built-in textures:</span>
+<span class="hljs-comment">##  &#x6784;&#x5EFA;2d&#x53EF;&#x89C6;&#x5316;&#xFF1A;</span>
+elmat %&gt;%
+  sphere_shade(texture = <span class="hljs-string">&quot;desert&quot;</span>) %&gt;%
+  plot_map()
+<span class="hljs-comment"># &#x66F4;&#x6539;&#x592A;&#x9633;&#x503E;&#x89D2;&#xFF1A;</span>
+elmat %&gt;%
+  sphere_shade(sunangle = <span class="hljs-number">45</span>, texture = <span class="hljs-string">&quot;desert&quot;</span>) %&gt;%
+  plot_map()
+
+<span class="hljs-comment"># &#x57FA;&#x4E8E;&#x9AD8;&#x7A0B;&#x6784;&#x5EFA;&#x6C34;&#x6D41;&#x73AF;&#x5883;&#xFF1A;</span>
+elmat %&gt;%
+  sphere_shade(texture = <span class="hljs-string">&quot;desert&quot;</span>) %&gt;%
+  add_water(detect_water(elmat), color = <span class="hljs-string">&quot;desert&quot;</span>) %&gt;%
+  plot_map()
+
+<span class="hljs-comment">## &#x989C;&#x8272;&#x53D8;&#x6697;&#xFF1A;</span>
+elmat %&gt;%
+  sphere_shade(texture = <span class="hljs-string">&quot;desert&quot;</span>) %&gt;%
+  add_water(detect_water(elmat), color = <span class="hljs-string">&quot;desert&quot;</span>) %&gt;%
+  add_shadow(ray_shade(elmat), <span class="hljs-number">0.5</span>) %&gt;%
+  plot_map()
+
+<span class="hljs-comment">## &#x6DFB;&#x52A0;&#x5927;&#x6C14;&#x6563;&#x5C04;&#x5149;&#x73AF;&#x5883;&#x5C42;&#xFF1A;</span>
+elmat %&gt;%
+  sphere_shade(texture = <span class="hljs-string">&quot;desert&quot;</span>) %&gt;%
+  add_water(detect_water(elmat), color = <span class="hljs-string">&quot;desert&quot;</span>) %&gt;%
+  add_shadow(ray_shade(elmat), <span class="hljs-number">0.5</span>) %&gt;%
+  add_shadow(ambient_shade(elmat), <span class="hljs-number">0</span>) %&gt;%
+  plot_map()
+
+<span class="hljs-comment">## plot_3d&#x4E2D;zscale&#x7684;&#x503C;&#x589E;&#x5927;&#x4F1A;&#x5BFC;&#x81F4;&#x5C71;&#x5CF0;&#x53D8;&#x5F97;&#x66F4;&#x52A0;&#x9510;&#x5229;&#xFF1A;&#x9ED8;&#x8BA4;&#x662F;10</span>
+elmat %&gt;%
+  sphere_shade(texture = <span class="hljs-string">&quot;desert&quot;</span>) %&gt;%
+  add_water(detect_water(elmat), color = <span class="hljs-string">&quot;desert&quot;</span>) %&gt;%
+  add_shadow(ray_shade(elmat, zscale = <span class="hljs-number">3</span>), <span class="hljs-number">0.5</span>) %&gt;%
+  add_shadow(ambient_shade(elmat), <span class="hljs-number">0</span>) %&gt;%
+  plot_3d(elmat, zscale = <span class="hljs-number">10</span>, fov = <span class="hljs-number">0</span>, theta = <span class="hljs-number">135</span>, zoom = <span class="hljs-number">0.75</span>, phi = <span class="hljs-number">45</span>, windowsize = c(<span class="hljs-number">1000</span>, <span class="hljs-number">800</span>))
+<span class="hljs-comment"># &#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x4EE3;&#x7801;&#x4FDD;&#x5B58;&#x622A;&#x56FE;&#xFF1A;</span>
+Sys.sleep(<span class="hljs-number">0.2</span>)
+render_snapshot()
+
+
+<span class="hljs-comment">## &#x6DFB;&#x52A0;&#x6BD4;&#x4F8B;&#x5C3A;&#x548C;&#x6307;&#x5357;&#x9488;&#xFF1A;</span>
+elmat %&gt;%
+  sphere_shade(texture = <span class="hljs-string">&quot;desert&quot;</span>) %&gt;%
+  add_water(detect_water(elmat), color = <span class="hljs-string">&quot;desert&quot;</span>) %&gt;%
+  add_shadow(ray_shade(elmat, zscale = <span class="hljs-number">3</span>), <span class="hljs-number">0.5</span>) %&gt;%
+  add_shadow(ambient_shade(elmat), <span class="hljs-number">0</span>) %&gt;%
+  plot_3d(elmat, zscale = <span class="hljs-number">10</span>, fov = <span class="hljs-number">0</span>, theta = <span class="hljs-number">135</span>, zoom = <span class="hljs-number">0.75</span>, phi = <span class="hljs-number">45</span>, windowsize = c(<span class="hljs-number">1000</span>, <span class="hljs-number">800</span>))
+
+render_camera(fov = <span class="hljs-number">0</span>, theta = <span class="hljs-number">60</span>, zoom = <span class="hljs-number">0.75</span>, phi = <span class="hljs-number">45</span>)
+render_scalebar(limits=c(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>, <span class="hljs-number">10</span>),label_unit = <span class="hljs-string">&quot;km&quot;</span>,position = <span class="hljs-string">&quot;W&quot;</span>, y=<span class="hljs-number">50</span>,
+                scale_length = c(<span class="hljs-number">0.33</span>,<span class="hljs-number">1</span>))
+render_compass(position = <span class="hljs-string">&quot;E&quot;</span>)
+render_snapshot(clear=<span class="hljs-literal">TRUE</span>)
+
+<span class="hljs-comment">## &#x6DF1;&#x5EA6;&#x6E32;&#x67D3;&#x53EF;&#x89C6;&#x5316;&#xFF1A;&#x8017;&#x8D39;&#x65F6;&#x95F4;&#x7684;&#x5440;&#xFF01;&#x800C;&#x4E14;&#x4E0D;&#x600E;&#x4E48;&#x597D;&#x770B;&#xFF01;</span>
+elmat %&gt;%
+  sphere_shade(texture = <span class="hljs-string">&quot;desert&quot;</span>) %&gt;%
+  add_water(detect_water(elmat), color = <span class="hljs-string">&quot;desert&quot;</span>) %&gt;%
+  plot_3d(elmat, zscale = <span class="hljs-number">10</span>, fov = <span class="hljs-number">0</span>, theta = <span class="hljs-number">60</span>, zoom = <span class="hljs-number">0.75</span>, phi = <span class="hljs-number">45</span>, windowsize = c(<span class="hljs-number">1000</span>, <span class="hljs-number">800</span>))
+
+render_scalebar(limits=c(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>, <span class="hljs-number">10</span>),label_unit = <span class="hljs-string">&quot;km&quot;</span>,position = <span class="hljs-string">&quot;W&quot;</span>, y=<span class="hljs-number">50</span>,
+                scale_length = c(<span class="hljs-number">0.33</span>,<span class="hljs-number">1</span>))
+
+render_compass(position = <span class="hljs-string">&quot;E&quot;</span>)
+Sys.sleep(<span class="hljs-number">0.2</span>)
+<span class="hljs-keyword">library</span>(rayrender)
+render_highquality(samples=<span class="hljs-number">200</span>, scale_text_size = <span class="hljs-number">24</span>,clear=<span class="hljs-literal">TRUE</span>)
+
+<span class="hljs-comment">## &#x53EF;&#x89C6;&#x5316;&#x6C34;&#x5C42;&#xFF1A;&#x5E76;&#x6DFB;&#x52A0;&#x6C34;&#x7684;&#x989C;&#x8272;&#xFF1A;</span>
+montshadow = ray_shade(montereybay, zscale = <span class="hljs-number">50</span>, lambert = <span class="hljs-literal">FALSE</span>)
+montamb = ambient_shade(montereybay, zscale = <span class="hljs-number">50</span>)
+montereybay %&gt;%
+  sphere_shade(zscale = <span class="hljs-number">10</span>, texture = <span class="hljs-string">&quot;imhof1&quot;</span>) %&gt;%
+  add_shadow(montshadow, <span class="hljs-number">0.5</span>) %&gt;%
+  add_shadow(montamb, <span class="hljs-number">0</span>) %&gt;%
+  plot_3d(montereybay, zscale = <span class="hljs-number">50</span>, fov = <span class="hljs-number">0</span>, theta = -<span class="hljs-number">45</span>, phi = <span class="hljs-number">45</span>,
+          windowsize = c(<span class="hljs-number">500</span>, <span class="hljs-number">300</span>), zoom = <span class="hljs-number">0.75</span>,
+          water = <span class="hljs-literal">TRUE</span>, waterdepth = <span class="hljs-number">0</span>, wateralpha = <span class="hljs-number">0.5</span>, watercolor = <span class="hljs-string">&quot;lightblue&quot;</span>,
+          waterlinecolor = <span class="hljs-string">&quot;white&quot;</span>, waterlinealpha = <span class="hljs-number">0.5</span>)
+Sys.sleep(<span class="hljs-number">0.2</span>)
+render_snapshot(clear=<span class="hljs-literal">TRUE</span>)
+
+
+<span class="hljs-comment">##  baseshape = &quot;circle&quot;&#x4FEE;&#x6539;&#x6210;&#x56FE;&#x7684;&#x5F62;&#x72B6;&#xFF1B;circle&#x4E3A;&#x5706;&#x5F62;&#xFF0C;hex&#x4E3A;&#x4E94;&#x89D2;&#x5F62;&#xFF1B;</span>
+montereybay %&gt;%
+  sphere_shade(zscale = <span class="hljs-number">10</span>, texture = <span class="hljs-string">&quot;imhof1&quot;</span>) %&gt;%
+  add_shadow(montshadow, <span class="hljs-number">0.5</span>) %&gt;%
+  add_shadow(montamb, <span class="hljs-number">0</span>) %&gt;%
+  plot_3d(montereybay, zscale = <span class="hljs-number">50</span>, fov = <span class="hljs-number">0</span>, theta = -<span class="hljs-number">45</span>, phi = <span class="hljs-number">45</span>, windowsize = c(<span class="hljs-number">1000</span>, <span class="hljs-number">800</span>), zoom = <span class="hljs-number">0.6</span>,
+          water = <span class="hljs-literal">TRUE</span>, waterdepth = <span class="hljs-number">0</span>, wateralpha = <span class="hljs-number">0.5</span>, watercolor = <span class="hljs-string">&quot;lightblue&quot;</span>,
+          waterlinecolor = <span class="hljs-string">&quot;white&quot;</span>, waterlinealpha = <span class="hljs-number">0.5</span>, baseshape = <span class="hljs-string">&quot;circle&quot;</span>)
+
+render_snapshot(clear = <span class="hljs-literal">TRUE</span>)
+
+
+<span class="hljs-comment">## &#x4F7F;&#x7528;render_label()&#x529F;&#x80FD;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x6587;&#x672C;&#x6807;&#x7B7E;&#xFF0C;&#x8BE5;&#x529F;&#x80FD;&#x8FD8;&#x5141;&#x8BB8;&#x60A8;&#x81EA;&#x5B9A;&#x4E49;&#x7EBF;&#x6761;&#x7C7B;&#x578B;&#xFF0C;&#x989C;&#x8272;&#x548C;&#x5927;&#x5C0F;&#x4EE5;&#x53CA;&#x5B57;&#x4F53;&#xFF1A;</span>
+montereybay %&gt;%
+  sphere_shade(zscale = <span class="hljs-number">10</span>, texture = <span class="hljs-string">&quot;imhof1&quot;</span>) %&gt;%
+  add_shadow(montshadow, <span class="hljs-number">0.5</span>) %&gt;%
+  add_shadow(montamb,<span class="hljs-number">0</span>) %&gt;%
+  plot_3d(montereybay, zscale = <span class="hljs-number">50</span>, fov = <span class="hljs-number">0</span>, theta = -<span class="hljs-number">100</span>, phi = <span class="hljs-number">30</span>, windowsize = c(<span class="hljs-number">1000</span>, <span class="hljs-number">800</span>), zoom = <span class="hljs-number">0.6</span>,
+          water = <span class="hljs-literal">TRUE</span>, waterdepth = <span class="hljs-number">0</span>, waterlinecolor = <span class="hljs-string">&quot;white&quot;</span>, waterlinealpha = <span class="hljs-number">0.5</span>,
+          wateralpha = <span class="hljs-number">0.5</span>, watercolor = <span class="hljs-string">&quot;lightblue&quot;</span>)
+render_label(montereybay, x = <span class="hljs-number">350</span>, y = <span class="hljs-number">160</span>, z = <span class="hljs-number">1000</span>, zscale = <span class="hljs-number">50</span>,
+             text = <span class="hljs-string">&quot;Moss Landing&quot;</span>, textsize = <span class="hljs-number">2</span>, linewidth = <span class="hljs-number">5</span>)
+render_label(montereybay, x = <span class="hljs-number">220</span>, y = <span class="hljs-number">70</span>, z = <span class="hljs-number">7000</span>, zscale = <span class="hljs-number">50</span>,
+             text = <span class="hljs-string">&quot;Santa Cruz&quot;</span>, textcolor = <span class="hljs-string">&quot;darkred&quot;</span>, linecolor = <span class="hljs-string">&quot;darkred&quot;</span>,
+             textsize = <span class="hljs-number">2</span>, linewidth = <span class="hljs-number">5</span>)
+render_label(montereybay, x = <span class="hljs-number">300</span>, y = <span class="hljs-number">270</span>, z = <span class="hljs-number">4000</span>, zscale = <span class="hljs-number">50</span>,
+             text = <span class="hljs-string">&quot;Monterey&quot;</span>, dashed = <span class="hljs-literal">TRUE</span>, textsize = <span class="hljs-number">2</span>, linewidth = <span class="hljs-number">5</span>)
+render_label(montereybay, x = <span class="hljs-number">50</span>, y = <span class="hljs-number">270</span>, z = <span class="hljs-number">1000</span>, zscale = <span class="hljs-number">50</span>,  textcolor = <span class="hljs-string">&quot;white&quot;</span>, linecolor = <span class="hljs-string">&quot;white&quot;</span>,
+             text = <span class="hljs-string">&quot;Monterey Canyon&quot;</span>, relativez = <span class="hljs-literal">FALSE</span>, textsize = <span class="hljs-number">2</span>, linewidth = <span class="hljs-number">5</span>)
+
+
+<span class="hljs-comment">## &#x6DFB;&#x52A0;&#x8DEF;&#x5F84;&#x3001;&#x70B9;&#x548C;shp&#xFF0C;&#x4F7F;&#x7528;sf&#x5305;&#xFF1B;</span>
+<span class="hljs-comment">## &#x6DFB;&#x52A0;polygons&#xFF1A;</span>
+<span class="hljs-keyword">library</span>(sf)
+montereybay %&gt;%
+  sphere_shade(texture = <span class="hljs-string">&quot;desert&quot;</span>) %&gt;%
+  add_shadow(ray_shade(montereybay,zscale=<span class="hljs-number">50</span>)) %&gt;%
+  plot_3d(montereybay,water=<span class="hljs-literal">TRUE</span>, windowsize=c(<span class="hljs-number">1000</span>,<span class="hljs-number">800</span>), watercolor=<span class="hljs-string">&quot;dodgerblue&quot;</span>)
+render_camera(theta=-<span class="hljs-number">60</span>,  phi=<span class="hljs-number">60</span>, zoom = <span class="hljs-number">0.85</span>, fov=<span class="hljs-number">30</span>)
+
+<span class="hljs-comment">#We will apply a negative buffer to create space between adjacent polygons:</span>
+
+mont_county_buff = sf::st_simplify(sf::st_buffer(monterey_counties_sf,-<span class="hljs-number">0.003</span>), dTolerance=<span class="hljs-number">0.001</span>)
+
+render_polygons(mont_county_buff,
+                extent = attr(montereybay,<span class="hljs-string">&quot;extent&quot;</span>), data_column_top = <span class="hljs-string">&quot;ALAND&quot;</span>,
+                scale_data = <span class="hljs-number">300</span>/(<span class="hljs-number">2.6E9</span>), color=<span class="hljs-string">&quot;chartreuse4&quot;</span>,
+                parallel=<span class="hljs-literal">TRUE</span>)
+render_highquality(clamp_value=<span class="hljs-number">10</span>,sample_method=<span class="hljs-string">&quot;stratified&quot;</span>)
+
+
+<span class="hljs-comment">## &#x6DFB;&#x52A0;&#x70B9;&#xFF1A;</span>
+montereybay %&gt;%
+  sphere_shade(texture = <span class="hljs-string">&quot;desert&quot;</span>) %&gt;%
+  add_shadow(ray_shade(montereybay,zscale=<span class="hljs-number">50</span>)) %&gt;%
+  plot_3d(montereybay,water=<span class="hljs-literal">TRUE</span>, windowsize=c(<span class="hljs-number">1000</span>,<span class="hljs-number">800</span>), watercolor=<span class="hljs-string">&quot;dodgerblue&quot;</span>)
+render_camera(theta=-<span class="hljs-number">60</span>,  phi=<span class="hljs-number">60</span>, zoom = <span class="hljs-number">0.85</span>, fov=<span class="hljs-number">30</span>)
+
+moss_landing_coord = c(<span class="hljs-number">36.806807</span>, -<span class="hljs-number">121.793332</span>)
+x_vel_out = -<span class="hljs-number">0.001</span> + rnorm(<span class="hljs-number">1000</span>)[<span class="hljs-number">1</span>:<span class="hljs-number">500</span>]/<span class="hljs-number">1000</span>
+y_vel_out = rnorm(<span class="hljs-number">1000</span>)[<span class="hljs-number">1</span>:<span class="hljs-number">500</span>]/<span class="hljs-number">200</span>
+z_out = c(seq(<span class="hljs-number">0</span>,<span class="hljs-number">2000</span>,length.out = <span class="hljs-number">180</span>), seq(<span class="hljs-number">2000</span>,<span class="hljs-number">0</span>,length.out=<span class="hljs-number">10</span>),
+          seq(<span class="hljs-number">0</span>,<span class="hljs-number">2000</span>,length.out = <span class="hljs-number">100</span>), seq(<span class="hljs-number">2000</span>,<span class="hljs-number">0</span>,length.out=<span class="hljs-number">10</span>))
+
+bird_track_lat = list()
+bird_track_long = list()
+bird_track_lat[[<span class="hljs-number">1</span>]] = moss_landing_coord[<span class="hljs-number">1</span>]
+bird_track_long[[<span class="hljs-number">1</span>]] = moss_landing_coord[<span class="hljs-number">2</span>]
+
+<span class="hljs-keyword">for</span>(i <span class="hljs-keyword">in</span> <span class="hljs-number">2</span>:<span class="hljs-number">500</span>) {
+  bird_track_lat[[i]] = bird_track_lat[[i-<span class="hljs-number">1</span>]] + y_vel_out[i]
+  bird_track_long[[i]] = bird_track_long[[i-<span class="hljs-number">1</span>]] + x_vel_out[i]
+}
+
+render_points(extent = attr(montereybay,<span class="hljs-string">&quot;extent&quot;</span>),
+              lat = unlist(bird_track_lat), long = unlist(bird_track_long),
+              altitude = z_out, zscale=<span class="hljs-number">50</span>, color=<span class="hljs-string">&quot;red&quot;</span>)
+render_highquality(point_radius = <span class="hljs-number">1</span>,sample_method=<span class="hljs-string">&quot;stratified&quot;</span>)
+
+
+
+<span class="hljs-comment">#Combining base R plotting with rayshader&apos;s spherical color mapping and raytracing:</span>
+<span class="hljs-comment">## Not run: </span>
+<span class="hljs-comment">##  &#x7ED8;&#x5236;&#x5730;&#x5F62;&#x9634;&#x5F71;&#xFF1A;</span>
+montereybay %&gt;%
+  sphere_shade() %&gt;%
+  add_overlay(height_shade(montereybay),alphalayer = <span class="hljs-number">0.6</span>)  %&gt;%
+  add_shadow(ray_shade(montereybay,zscale=<span class="hljs-number">50</span>)) %&gt;%
+  plot_map()
+
+<span class="hljs-comment">## End(Not run)</span>
+
+<span class="hljs-comment">#Add contours with `generate_contour_overlay()`</span>
+<span class="hljs-comment"># &#x6DFB;&#x52A0;&#x7B49;&#x9AD8;&#x7EBF;&#xFF1A;</span>
+montereybay %&gt;%
+  height_shade() %&gt;%
+  add_overlay(generate_contour_overlay(montereybay))  %&gt;%
+  add_shadow(ray_shade(montereybay,zscale=<span class="hljs-number">50</span>)) %&gt;%
+  <span class="hljs-comment"># plot_map()</span>
+  plot_3d(montereybay, zscale = <span class="hljs-number">30</span>, fov = <span class="hljs-number">0</span>, theta = <span class="hljs-number">135</span>, zoom = <span class="hljs-number">0.75</span>, phi = <span class="hljs-number">45</span>, windowsize = c(<span class="hljs-number">1000</span>, <span class="hljs-number">800</span>))
+
+
+
+<span class="hljs-comment">### &#x4F7F;&#x7528;&#x81EA;&#x5DF1;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x6A21;&#x62DF;&#x5B9E;&#x9A8C;&#xFF1A;####</span>
+<span class="hljs-comment">## &#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x6784;&#x5EFA;dem&#x8F6C;&#x6295;&#x5F71;&#x5750;&#x6807;&#x7CFB;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x53CC;&#x63D2;&#x503C;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#xFF1B;</span>
+setwd(<span class="hljs-string">&quot;E:/&#x73AF;&#x5883;&#x6570;&#x636E;/dem/&quot;</span>)
+dem &lt;- raster(<span class="hljs-string">&quot;./wc2.1_30s_elev.tif&quot;</span>)
+<span class="hljs-keyword">source</span>(<span class="hljs-string">&quot;E:/sjdata/code/sdmenm.R&quot;</span>)
+all &lt;- read.csv(<span class="hljs-string">&quot;E:/sjdata/F1_SP/Hgya3.csv&quot;</span>)[,<span class="hljs-number">2</span>:<span class="hljs-number">3</span>]
+range &lt;- mcp(all) %&gt;% rgeos::gBuffer(width =<span class="hljs-number">1</span>)
+dems &lt;- mask(crop(dem,range),range)
+<span class="hljs-comment">## &#x5C06;&#x5730;&#x7406;&#x5750;&#x6807;&#x7CFB;&#x8F6C;&#x4E3A;&#x6295;&#x5F71;&#x5750;&#x6807;&#x7CFB;&#xFF1A;</span>
+
+demms&lt;- projectRaster(dems, crs = CRS(<span class="hljs-string">&quot;+init=epsg:3857&quot;</span>) )
+plot(demms)
+<span class="hljs-comment">## &#x6570;&#x636E;&#x8F6C;&#x4E3A;&#x77E9;&#x9635;&#xFF1A;</span>
+demmss = raster_to_matrix(demms)
+<span class="hljs-comment">## &#x91CD;&#x8981;&#x7684;&#x4E00;&#x6B65;&#xFF1A;&#x5C06;&#x77E9;&#x9635;&#x4E2D;&#x7684;na&#x503C;&#x7B49;&#x4E8E;0</span>
+demmss[is.na(demmss)] &lt;- <span class="hljs-number">0</span>
+
+
+<span class="hljs-comment">## &#x6DFB;&#x52A0;&#x70B9;&#xFF1A;</span>
+demmss %&gt;%
+  sphere_shade(texture = <span class="hljs-string">&quot;desert&quot;</span>) %&gt;%
+  add_water(detect_water(demmss, min_area = <span class="hljs-number">15</span>,zscale=<span class="hljs-number">10</span>), color = <span class="hljs-string">&quot;desert&quot;</span>) %&gt;%
+  <span class="hljs-comment"># add_shadow(ray_shade(demmss, zscale = 3), 0.5) %&gt;%</span>
+  add_shadow(ambient_shade(demmss), <span class="hljs-number">0</span>) %&gt;%
+  <span class="hljs-comment">## z&#x503C;&#x4F4E;&#x4E8E;50&#x4F1A;&#x8FC7;&#x4E8E;&#x5C16;&#x9510;&#xFF1B;</span>
+  plot_3d(demmss, zscale = <span class="hljs-number">80</span>, fov = <span class="hljs-number">0</span>, theta = <span class="hljs-number">135</span>, zoom = <span class="hljs-number">0.75</span>, phi = <span class="hljs-number">45</span>, windowsize = c(<span class="hljs-number">500</span>, <span class="hljs-number">300</span>))
+
+render_points(extent = attr(dems ,<span class="hljs-string">&quot;extent&quot;</span>),
+              lat = unlist(all$latitude),long =  unlist(all$longitude),
+              altitude = z_out, zscale=<span class="hljs-number">20</span>, color=<span class="hljs-string">&quot;red&quot;</span>)
+render_water(demmss,zscale=<span class="hljs-number">10</span>)
+
+render_camera(fov = <span class="hljs-number">0</span>, theta = <span class="hljs-number">60</span>, zoom = <span class="hljs-number">0.75</span>, phi = <span class="hljs-number">45</span>)
+render_scalebar(limits=c(<span class="hljs-number">0</span>, <span class="hljs-number">250</span>, <span class="hljs-number">500</span>),label_unit = <span class="hljs-string">&quot;km&quot;</span>,position = <span class="hljs-string">&quot;W&quot;</span>, y=<span class="hljs-number">50</span>,
+                scale_length = <span class="hljs-number">1</span>)
+render_compass(position = <span class="hljs-string">&quot;N&quot;</span>,scale_distance =<span class="hljs-number">1.1</span>, compass_radius=<span class="hljs-number">80</span>)
+render_snapshot()
+
+extent(demms)
+(demms@extent@ymax - demms@extent@ymin ) /<span class="hljs-number">1000</span>
+
+<span class="hljs-comment">## &#x5C1D;&#x8BD5;&#x5728;&#x6D77;&#x62D4;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x6DFB;&#x52A0;&#x6E29;&#x5EA6;&#x56FE;&#x5C42;&#xFF1A;####</span>
+bio1 &lt;- raster(<span class="hljs-string">&quot;E:/&#x73AF;&#x5883;&#x6570;&#x636E;/wc2.0_30s_bio/wc2.0_bio_30s_01.tif&quot;</span>)
+bio &lt;- mask(crop(bio1,dems),dems)
+
+plot(bio)
+biox&lt;- projectRaster(bio, crs = CRS(<span class="hljs-string">&quot;+init=epsg:3857&quot;</span>) )
+plot(demms)
+<span class="hljs-comment">## &#x6570;&#x636E;&#x8F6C;&#x4E3A;&#x77E9;&#x9635;&#xFF1A;</span>
+bioxc = raster_to_matrix(biox)
+<span class="hljs-comment">## &#x91CD;&#x8981;&#x7684;&#x4E00;&#x6B65;&#xFF1A;&#x5C06;&#x77E9;&#x9635;&#x4E2D;&#x7684;na&#x503C;&#x7B49;&#x4E8E;0</span>
+bioxc[is.na(bioxc)] &lt;- <span class="hljs-number">0</span>
+
+
+<span class="hljs-comment">## &#x4E00;&#x79CD;&#x53EF;&#x884C;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;&#xFF1A;</span>
+landsat_mat_list &lt;- lapply(as.list(landsat), <span class="hljs-keyword">function</span>(x){t(raster_to_matrix(x)/<span class="hljs-number">255</span>)})
+landsat_mat_list[[<span class="hljs-number">4</span>]] &lt;- t(raster_to_matrix(raster(nrows = nrow(landsat), ncols = ncol(landsat), ext = extent(landsat), resolution = raster::res(landsat), vals = <span class="hljs-number">0.9</span>)))
+
+<span class="hljs-keyword">library</span>(abind)
+landsat_mat &lt;- do.call(abind,list(landsat_mat_list,along = <span class="hljs-number">3</span>))
+
+
+
+
+hill &lt;- demms %&gt;%
+  sphere_shade() 
+
+hill &lt;- add_overlay(hill, landsat_mat)
+
+rgl::clear3d()
+
+plot_3d(hillshade = hill, heightmap = dem_mat, 
+        windowsize = c(<span class="hljs-number">1000</span>, <span class="hljs-number">600</span>), zscale = zscale, 
+        theta = <span class="hljs-number">160</span>, zoom = <span class="hljs-number">0.5</span>, phi = <span class="hljs-number">35</span>, baseshape = <span class="hljs-string">&quot;circle&quot;</span>)
+
+
+
+<span class="hljs-comment">## &#x4E0D;&#x80FD;&#x4F7F;&#x7528;library(rayshader)&#x8FD9;&#x4E2A;&#x5305;&#xFF0C;&#x9700;&#x8981;&#x66F4;&#x6362;&#xFF1A;</span>
+<span class="hljs-keyword">library</span>(rasterVis)
+<span class="hljs-comment">## &#x6DFB;&#x52A0;&#x6295;&#x5F71;&#x5750;&#x6807;&#x7CFB;&#x4E0B;&#x7684;&#x6805;&#x683C;&#xFF1B;&#x524D;&#x7F6E;&#x9AD8;&#x7A0B;&#xFF0C;&#x540E;&#x7F6E;&#x53E0;&#x52A0;&#x6805;&#x683C;&#xFF1B;</span>
+plot3D(demms,drape= biox , adjust = <span class="hljs-literal">FALSE</span>)
+</code></pre>
+<h4 id="723-plot3d">7.2.3 plot3d</h4>
+<pre><code class="lang-R">spatialEco::tri()&#x4E5F;&#x540C;
+<span class="hljs-comment">## &#x6837;&#x53EF;&#x4EE5;&#x8BA1;&#x7B97;&#xFF1B;</span>
+<span class="hljs-comment">## &#x5FEB;&#x901F;&#x5730;&#x5F62;&#x7684;3d&#x53EF;&#x89C6;&#x5316;&#xFF1A;</span>
+<span class="hljs-keyword">library</span>(rasterVis)
+plot3D(valley)  <span class="hljs-comment">## &#x5176;&#x4E2D;vally&#x662F;&#x5BF9;&#x5E94;&#x7684;dem</span>
+&#x8FD9;&#x4E2A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;R&#x5305;&#x7684;raster&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#xFF08;terrain()&#xFF09;&#xFF1B;
+slope &lt;- terrain(dem, <span class="hljs-string">&quot;slope&quot;</span>)
+aspect &lt;- terrain(dem, <span class="hljs-string">&quot;aspect&quot;</span>)
+TPI &lt;- terrain(dem, <span class="hljs-string">&quot;TPI&quot;</span>) <span class="hljs-comment"># Topographic Position Index</span>
+TRI &lt;- terrain(dem, <span class="hljs-string">&quot;TRI&quot;</span>) <span class="hljs-comment"># Terrain Ruggedness Index</span>
+roughness &lt;- terrain(dem, <span class="hljs-string">&quot;roughness&quot;</span>)
+flowdir &lt;- terrain(dem, <span class="hljs-string">&quot;flowdir&quot;</span>)
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="7.1 R包地图底图.html" class="navigation navigation-prev " aria-label="Previous page: 7.1 R包地图底图">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="7.3 栅格数据可视化.html" class="navigation navigation-next " aria-label="Next page: 7.3 栅格数据可视化">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"7.2 地图数据三维可视化","level":"1.8.2","depth":2,"next":{"title":"7.3 栅格数据可视化","level":"1.8.3","depth":2,"path":"7. SDM相关数据可视化/7.3 栅格数据可视化.md","ref":"7. SDM相关数据可视化/7.3 栅格数据可视化.md","articles":[]},"previous":{"title":"7.1 R包地图底图","level":"1.8.1","depth":2,"path":"7. SDM相关数据可视化/7.1 R包地图底图.md","ref":"7. SDM相关数据可视化/7.1 R包地图底图.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github-buttons@2.1.0","edit-link","toggle-chapters","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"repo":"nicheerfeng/Nichefbook","types":["star"],"size":"small"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/nicheerfeng/Nichefbook/edit/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"nicheerfeng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NICHE MODEL 中文指南-RCODING","language":"zh-hans","gitbook":"*","description":"Niche"},"file":{"path":"7. SDM相关数据可视化/7.2 地图数据三维可视化.md","mtime":"2021-09-16T07:40:07.045Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-22T14:10:03.582Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

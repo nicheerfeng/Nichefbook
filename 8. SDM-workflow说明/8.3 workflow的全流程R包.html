@@ -1,0 +1,3134 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>8.3 workflow的全流程R包 · NICHE MODEL 中文指南-RCODING</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="nicheerfeng">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="8.4 workflow的专项R包及脚本.html" />
+    
+    
+    <link rel="prev" href="8.2 workflow的基础知识.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"nicheerfeng/Nichefbook","types":["star"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Niche model 中文指南-Rcoding</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1. 构建工作环境/1.1 构建工作环境说明.html">
+            
+                <a href="../1. 构建工作环境/1.1 构建工作环境说明.html">
+            
+                    
+                    1. 构建工作环境
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1. 构建工作环境/1.1 R-配置环境变量.html">
+            
+                <a href="../1. 构建工作环境/1.1 R-配置环境变量.html">
+            
+                    
+                    1.1 加载及配置R工作环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2.下载物种分布数据/2.下载物种分布数据说明.html">
+            
+                <a href="../2.下载物种分布数据/2.下载物种分布数据说明.html">
+            
+                    
+                    2.下载物种分布数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2.下载物种分布数据/2.1 物种分布数据网站.html">
+            
+                <a href="../2.下载物种分布数据/2.1 物种分布数据网站.html">
+            
+                    
+                    2.1 物种分布数据网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2.下载物种分布数据/2.2 使用R下载物种分布.html">
+            
+                <a href="../2.下载物种分布数据/2.2 使用R下载物种分布.html">
+            
+                    
+                    2.2 使用R下载物种分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3. 物种分布数据清理/物种分布数据清理.html">
+            
+                <a href="../3. 物种分布数据清理/物种分布数据清理.html">
+            
+                    
+                    3. 物种分布数据清理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../3. 物种分布数据清理/3.1 R-清理分布数据.html">
+            
+                <a href="../3. 物种分布数据清理/3.1 R-清理分布数据.html">
+            
+                    
+                    3.1 R-清理分布数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../3. 物种分布数据清理/3.2 构建物种丰富度栅格.html">
+            
+                <a href="../3. 物种分布数据清理/3.2 构建物种丰富度栅格.html">
+            
+                    
+                    3.2 构建物种丰富度栅格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../3. 物种分布数据清理/3.3 核平滑构建物种分布图.html">
+            
+                <a href="../3. 物种分布数据清理/3.3 核平滑构建物种分布图.html">
+            
+                    
+                    3.3 核平滑构建物种分布图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../3. 物种分布数据清理/3.4 改变分布数据的投影方法.html">
+            
+                <a href="../3. 物种分布数据清理/3.4 改变分布数据的投影方法.html">
+            
+                    
+                    3.4 改变分布数据的投影方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../3. 物种分布数据清理/3.5 spthin降低采样偏差.html">
+            
+                <a href="../3. 物种分布数据清理/3.5 spthin降低采样偏差.html">
+            
+                    
+                    3.5 spthin降低采样偏差
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4. 下载环境数据/4.下载环境数据说明.html">
+            
+                <a href="../4. 下载环境数据/4.下载环境数据说明.html">
+            
+                    
+                    4. 下载环境数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../4. 下载环境数据/4.1 环境数据网站.html">
+            
+                <a href="../4. 下载环境数据/4.1 环境数据网站.html">
+            
+                    
+                    4.1 环境数据网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../4. 下载环境数据/R下载及处理环境数据.md">
+            
+                <span>
+            
+                    
+                    4.2 R下载及处理环境数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5. 模型数据预处理/5.模型数据预处理说明.html">
+            
+                <a href="../5. 模型数据预处理/5.模型数据预处理说明.html">
+            
+                    
+                    5. 模型数据预处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../5. 模型数据预处理/5.1 环境数据预处理/5.1 环境数据预处理.html">
+            
+                <a href="../5. 模型数据预处理/5.1 环境数据预处理/5.1 环境数据预处理.html">
+            
+                    
+                    5.1 环境数据预处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../5. 模型数据预处理/5.1 环境数据预处理/5.1.1 读取及导出shp_raster.html">
+            
+                <a href="../5. 模型数据预处理/5.1 环境数据预处理/5.1.1 读取及导出shp_raster.html">
+            
+                    
+                    5.1.1 读取及导出shp_raster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../5. 模型数据预处理/5.1 环境数据预处理/5.1.2 栅格数据的基本处理.html">
+            
+                <a href="../5. 模型数据预处理/5.1 环境数据预处理/5.1.2 栅格数据的基本处理.html">
+            
+                    
+                    5.1.2 栅格数据的基本处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../5. 模型数据预处理/5.1 环境数据预处理/5.1.3 补充和报错处理.html">
+            
+                <a href="../5. 模型数据预处理/5.1 环境数据预处理/5.1.3 补充和报错处理.html">
+            
+                    
+                    5.1.3 补充和报错处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2 模型分布数据预处理.html">
+            
+                <a href="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2 模型分布数据预处理.html">
+            
+                    
+                    5.2 模型分布数据预处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.1 构建训练集和测试集.html">
+            
+                <a href="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.1 构建训练集和测试集.html">
+            
+                    
+                    5.2.1 构建训练集和测试集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.2 构建背景数据集.html">
+            
+                <a href="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.2 构建背景数据集.html">
+            
+                    
+                    5.2.2 构建背景数据集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.3" data-path="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.3 筛选环境因子.html">
+            
+                <a href="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.3 筛选环境因子.html">
+            
+                    
+                    5.2.3 筛选环境因子.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../6. SDM运行/6.SDM运行说明.html">
+            
+                <a href="../6. SDM运行/6.SDM运行说明.html">
+            
+                    
+                    6. SDM运行
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../6. SDM运行/6.1 SDM运行.html">
+            
+                <a href="../6. SDM运行/6.1 SDM运行.html">
+            
+                    
+                    6.1 SDM运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../6. SDM运行/6.2 SDM结果展示.html">
+            
+                <a href="../6. SDM运行/6.2 SDM结果展示.html">
+            
+                    
+                    6.2 SDM结果展示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../6. SDM运行/6.3 SDM模型评估.html">
+            
+                <a href="../6. SDM运行/6.3 SDM模型评估.html">
+            
+                    
+                    6.3 SDM模型评估
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../6. SDM运行/6.4 SDM模型外推.html">
+            
+                <a href="../6. SDM运行/6.4 SDM模型外推.html">
+            
+                    
+                    6.4 SDM模型外推
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../6. SDM运行/6.5 SDM整合建模.html">
+            
+                <a href="../6. SDM运行/6.5 SDM整合建模.html">
+            
+                    
+                    6.5 SDM整合建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../6. SDM运行/6. SDM运行说明.md">
+            
+                <span>
+            
+                    
+                    6.6 SDM案例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.6.1" data-path="../6. SDM运行/6.6 SDM案例/6.6.1bioclim.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.1bioclim.html">
+            
+                    
+                    bioclim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.2" data-path="../6. SDM运行/6.6 SDM案例/6.6.2biomod2工作流.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.2biomod2工作流.html">
+            
+                    
+                    biomod2工作流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.3" data-path="../6. SDM运行/6.6 SDM案例/6.6.3ENMEVAAL.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.3ENMEVAAL.html">
+            
+                    
+                    ENMEVAAL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.4" data-path="../6. SDM运行/6.6 SDM案例/6.6.4enmSDM工作流.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.4enmSDM工作流.html">
+            
+                    
+                    enmSDM工作流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.5" data-path="../6. SDM运行/6.6 SDM案例/6.6.5hypervolume.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.5hypervolume.html">
+            
+                    
+                    hypervolume
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.6" data-path="../6. SDM运行/6.6 SDM案例/6.6.6maxent工作流.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.6maxent工作流.html">
+            
+                    
+                    maxent工作流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.7" data-path="../6. SDM运行/6.6 SDM案例/6.6.7SDMtune工作流.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.7SDMtune工作流.html">
+            
+                    
+                    SDMtune工作流
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../7. SDM相关数据可视化/7.SDM相关数据可视化说明.html">
+            
+                <a href="../7. SDM相关数据可视化/7.SDM相关数据可视化说明.html">
+            
+                    
+                    7. SDM相关数据可视化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../7. SDM相关数据可视化/7.1 R包地图底图.html">
+            
+                <a href="../7. SDM相关数据可视化/7.1 R包地图底图.html">
+            
+                    
+                    7.1 R包地图底图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../7. SDM相关数据可视化/7.2 地图数据三维可视化.html">
+            
+                <a href="../7. SDM相关数据可视化/7.2 地图数据三维可视化.html">
+            
+                    
+                    7.2 地图数据三维可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../7. SDM相关数据可视化/7.3 栅格数据可视化.html">
+            
+                <a href="../7. SDM相关数据可视化/7.3 栅格数据可视化.html">
+            
+                    
+                    7.3 栅格数据可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../7. SDM相关数据可视化/7.4 多维环境变量可视化.html">
+            
+                <a href="../7. SDM相关数据可视化/7.4 多维环境变量可视化.html">
+            
+                    
+                    7.4 多维环境变量可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../7. SDM相关数据可视化/7.5 SDM结果可视化.html">
+            
+                <a href="../7. SDM相关数据可视化/7.5 SDM结果可视化.html">
+            
+                    
+                    7.5 SDM结果可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../7. SDM相关数据可视化/7.6 可视化物种分布.html">
+            
+                <a href="../7. SDM相关数据可视化/7.6 可视化物种分布.html">
+            
+                    
+                    7.6 可视化物种分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../7. SDM相关数据可视化/7.7 相关性分析.html">
+            
+                <a href="../7. SDM相关数据可视化/7.7 相关性分析.html">
+            
+                    
+                    7.7 相关性分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="8.SDM-workflow说明.html">
+            
+                <a href="8.SDM-workflow说明.html">
+            
+                    
+                    8. SDM-workflow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="8.1 workflow的基本流程.html">
+            
+                <a href="8.1 workflow的基本流程.html">
+            
+                    
+                    8.1 workflow的基本流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="8.2 workflow的基础知识.html">
+            
+                <a href="8.2 workflow的基础知识.html">
+            
+                    
+                    8.2 workflow的基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.3" data-path="8.3 workflow的全流程R包.html">
+            
+                <a href="8.3 workflow的全流程R包.html">
+            
+                    
+                    8.3 workflow的全流程R包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="8.4 workflow的专项R包及脚本.html">
+            
+                <a href="8.4 workflow的专项R包及脚本.html">
+            
+                    
+                    8.4 workflow的专项R包及脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="8.5 workflow.GUI.html">
+            
+                <a href="8.5 workflow.GUI.html">
+            
+                    
+                    8.5 workflow(GUI)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="8.6 案例.html">
+            
+                <a href="8.6 案例.html">
+            
+                    
+                    8.6 案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../9. 生态位进化/9.生态位进化说明.html">
+            
+                <a href="../9. 生态位进化/9.生态位进化说明.html">
+            
+                    
+                    9. 生态位进化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1 生态位宽度的进化.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1 生态位宽度的进化.html">
+            
+                    
+                    9.1 生态位宽度的进化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.1" data-path="../9. 生态位进化/9.1 生态位宽度的进化/生态位宽度基础概念.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/生态位宽度基础概念.html">
+            
+                    
+                    9.1 生态位宽度的进化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/9.1.1 单因素分析.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/9.1.1 单因素分析.html">
+            
+                    
+                    9.1.1 单因素分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.2.1" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/参数和及非参.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/参数和及非参.html">
+            
+                    
+                    参数和及非参统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2.2" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/方差分析结果可视化.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/方差分析结果可视化.html">
+            
+                    
+                    方差分析结果可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/9.1.2 多因素分析.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/9.1.2 多因素分析.html">
+            
+                    
+                    9.1.2 多因素分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.3.1" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/CCA.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/CCA.html">
+            
+                    
+                    CCA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3.2" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/PCA_MANOVA.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/PCA_MANOVA.html">
+            
+                    
+                    PCA_MANOVA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3.3" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/聚类分析.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/聚类分析.html">
+            
+                    
+                    聚类分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3.4" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/生态位轴PCA得分.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/生态位轴PCA得分.html">
+            
+                    
+                    生态位轴PCA得分
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.4" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.3 超维度分析R-多维超体积生态位.md">
+            
+                <span>
+            
+                    
+                    9.1.3 超维度分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2 生态位进化式样说明.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2 生态位进化式样说明.html">
+            
+                    
+                    9.2 生态位进化式样
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.2.1" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.1 生态位进化式样.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.1 生态位进化式样.html">
+            
+                    
+                    9.2.1 生态位进化式样
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2 ecospat.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2 ecospat.html">
+            
+                    
+                    9.2.2 ecospat
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.2.2.1" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.1 优化可视化_raw.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.1 优化可视化_raw.html">
+            
+                    
+                    9.2.2.1 优化可视化_raw
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.2" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.2 优化可视化2.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.2 优化可视化2.html">
+            
+                    
+                    9.2.2.2 优化可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.3" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.3 生态位保守性测试.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.3 生态位保守性测试.html">
+            
+                    
+                    9.2.2.3 生态位保守性测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.4" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.4 生态位的重叠与计算.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.4 生态位的重叠与计算.html">
+            
+                    
+                    9.2.2.4 生态位的重叠与计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.5" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.5 生态位重叠可视化.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.5 生态位重叠可视化.html">
+            
+                    
+                    9.2.2.5 生态位重叠可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.6" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.6 非矫正.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.6 非矫正.html">
+            
+                    
+                    9.2.2.6 非矫正生态位重叠
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.3" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.3 ENMtools.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.3 ENMtools.html">
+            
+                    
+                    9.2.3 ENMtools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../9. 生态位进化/9.3 扩散动态研究/9.3 扩散动态研究.html">
+            
+                <a href="../9. 生态位进化/9.3 扩散动态研究/9.3 扩散动态研究.html">
+            
+                    
+                    9.3 扩散动态研究
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../10. 群落与SDM/10. 群落生态学说明.html">
+            
+                <a href="../10. 群落与SDM/10. 群落生态学说明.html">
+            
+                    
+                    10. 群落与SDM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../10. 群落生态学/10.1 背景资料.md">
+            
+                <span>
+            
+                    
+                    10.1 背景资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../10. 群落与SDM/10.2 多物种联合建模.html">
+            
+                <a href="../10. 群落与SDM/10.2 多物种联合建模.html">
+            
+                    
+                    10.2 多物种联合建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../10. 群落与SDM/10.3 经典研究案例.html">
+            
+                <a href="../10. 群落与SDM/10.3 经典研究案例.html">
+            
+                    
+                    10.3 经典研究案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../10. 群落与SDM/10.4 可视化.html">
+            
+                <a href="../10. 群落与SDM/10.4 可视化.html">
+            
+                    
+                    10.4 可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../11. 遥感与SDM/11. 遥感与SDM说明.html">
+            
+                <a href="../11. 遥感与SDM/11. 遥感与SDM说明.html">
+            
+                    
+                    11.遥感与SDM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../11. 遥感与SDM/11.1 研究思路.html">
+            
+                <a href="../11. 遥感与SDM/11.1 研究思路.html">
+            
+                    
+                    11.1 研究思路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../11. 遥感与SDM/11.2 研究R包.html">
+            
+                <a href="../11. 遥感与SDM/11.2 研究R包.html">
+            
+                    
+                    11.2 研究R包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../11. 遥感与SDM/11.3 经典研究案例.html">
+            
+                <a href="../11. 遥感与SDM/11.3 经典研究案例.html">
+            
+                    
+                    11.3 经典研究案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../12. 系统发育与SDM/12. 系统发育与SDM说明.html">
+            
+                <a href="../12. 系统发育与SDM/12. 系统发育与SDM说明.html">
+            
+                    
+                    12.系统发育与SDM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../12. 系统发育与SDM/12.1 研究思路.html">
+            
+                <a href="../12. 系统发育与SDM/12.1 研究思路.html">
+            
+                    
+                    12.1 研究思路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../12. 系统发育与SDM/12.2 研究R包.html">
+            
+                <a href="../12. 系统发育与SDM/12.2 研究R包.html">
+            
+                    
+                    12.2 研究R包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../12. 系统发育与SDM/12.3 经典研究案例.html">
+            
+                <a href="../12. 系统发育与SDM/12.3 经典研究案例.html">
+            
+                    
+                    12.3 经典研究案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../13. 空间生态位/13. 空间生态位.html">
+            
+                <a href="../13. 空间生态位/13. 空间生态位.html">
+            
+                    
+                    13.空间生态位
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../13. 空间生态位/13.1 R-空间统计书籍.html">
+            
+                <a href="../13. 空间生态位/13.1 R-空间统计书籍.html">
+            
+                    
+                    13.1 R-空间统计书籍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../13. 空间生态位/13.2 空间自相关概念释义.html">
+            
+                <a href="../13. 空间生态位/13.2 空间自相关概念释义.html">
+            
+                    
+                    13.2 空间自相关概念释义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../13. 空间生态位/13.3 地统计.html">
+            
+                <a href="../13. 空间生态位/13.3 地统计.html">
+            
+                    
+                    13.3 地统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../13. 空间生态位/13.4 案例.html">
+            
+                <a href="../13. 空间生态位/13.4 案例.html">
+            
+                    
+                    13.4 案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="../13. 空间生态位/13.5 R-解决空间自相关.html">
+            
+                <a href="../13. 空间生态位/13.5 R-解决空间自相关.html">
+            
+                    
+                    13.5 R-解决空间自相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="../13. 空间生态位/13.6 补充.html">
+            
+                <a href="../13. 空间生态位/13.6 补充.html">
+            
+                    
+                    13.6 补充
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../14. 生态位基础资料/14.生态位理论资料说明.html">
+            
+                <a href="../14. 生态位基础资料/14.生态位理论资料说明.html">
+            
+                    
+                    14.生态位理论资料
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../14. 生态位基础资料/14.1 生态相关的名词释义.html">
+            
+                <a href="../14. 生态位基础资料/14.1 生态相关的名词释义.html">
+            
+                    
+                    14.1 生态相关的名词释义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../14. 生态位基础资料/14.2 SDM建模书籍.html">
+            
+                <a href="../14. 生态位基础资料/14.2 SDM建模书籍.html">
+            
+                    
+                    14.2 SDM建模书籍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../14. 生态位基础资料/14.3 相关与因果.html">
+            
+                <a href="../14. 生态位基础资料/14.3 相关与因果.html">
+            
+                    
+                    14.3 相关与因果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../14. 生态位基础资料/14.4 分布数据清理的依据.html">
+            
+                <a href="../14. 生态位基础资料/14.4 分布数据清理的依据.html">
+            
+                    
+                    14.4 分布数据清理的依据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../14. 生态位基础资料/14.5 建模格局的二元性.html">
+            
+                <a href="../14. 生态位基础资料/14.5 建模格局的二元性.html">
+            
+                    
+                    14.5 建模格局的二元性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../14. 生态位基础资料/14.6 niche常见错误.html">
+            
+                <a href="../14. 生态位基础资料/14.6 niche常见错误.html">
+            
+                    
+                    14.6 niche常见错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../14. 生态位基础资料/14.7 气候生态位的思路.html">
+            
+                <a href="../14. 生态位基础资料/14.7 气候生态位的思路.html">
+            
+                    
+                    14.7 气候生态位的思路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="../14. 生态位基础资料/14.8 环境与物种分布的交互选择.html">
+            
+                <a href="../14. 生态位基础资料/14.8 环境与物种分布的交互选择.html">
+            
+                    
+                    14.8 环境与物种分布的交互选择
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../15. niche领航员工作/15.niche领航员工作.html">
+            
+                <a href="../15. niche领航员工作/15.niche领航员工作.html">
+            
+                    
+                    15.niche领航员工作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../15. niche领航员工作/乔慧捷.html">
+            
+                <a href="../15. niche领航员工作/乔慧捷.html">
+            
+                    
+                    乔慧捷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../15. niche领航员工作/朱耿平.html">
+            
+                <a href="../15. niche领航员工作/朱耿平.html">
+            
+                    
+                    朱耿平
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../15. niche领航员工作/邬建国.html">
+            
+                <a href="../15. niche领航员工作/邬建国.html">
+            
+                    
+                    邬建国
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../15. niche领航员工作/Andrew Townsend Peterson.html">
+            
+                <a href="../15. niche领航员工作/Andrew Townsend Peterson.html">
+            
+                    
+                    Andrew Townsend Peterson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../15. niche领航员工作/Annette Ostling.html">
+            
+                <a href="../15. niche领航员工作/Annette Ostling.html">
+            
+                    
+                    Annette Ostling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../15. niche领航员工作/Antoine Guisan.html">
+            
+                <a href="../15. niche领航员工作/Antoine Guisan.html">
+            
+                    
+                    Antoine Guisan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../15. niche领航员工作/Damaris Zurell.html">
+            
+                <a href="../15. niche领航员工作/Damaris Zurell.html">
+            
+                    
+                    Damaris Zurell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="../15. niche领航员工作/Dan L. Warre.html">
+            
+                <a href="../15. niche领航员工作/Dan L. Warre.html">
+            
+                    
+                    Dan L. Warren
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.9" data-path="../15. niche领航员工作/Erin E. Saupe.html">
+            
+                <a href="../15. niche领航员工作/Erin E. Saupe.html">
+            
+                    
+                    Erin E. Saupe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.10" data-path="../15. niche领航员工作/Holt R D.html">
+            
+                <a href="../15. niche领航员工作/Holt R D.html">
+            
+                    
+                    Holt R D
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.11" data-path="../15. niche领航员工作/Hannah Lois Owens.html">
+            
+                <a href="../15. niche领航员工作/Hannah Lois Owens.html">
+            
+                    
+                    Hannah Lois Owens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.12" data-path="../15. niche领航员工作/Jane Elith.html">
+            
+                <a href="../15. niche领航员工作/Jane Elith.html">
+            
+                    
+                    Jane Elith
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.13" data-path="../15. niche领航员工作/Jorge Soberón.html">
+            
+                <a href="../15. niche领航员工作/Jorge Soberón.html">
+            
+                    
+                    Jorge Soberón
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.14" data-path="../15. niche领航员工作/Olivier Broennimann.html">
+            
+                <a href="../15. niche领航员工作/Olivier Broennimann.html">
+            
+                    
+                    Olivier Broennimann
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.15" data-path="../15. niche领航员工作/Jane Elith.html">
+            
+                <a href="../15. niche领航员工作/Jane Elith.html">
+            
+                    
+                    John J. Wiens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.16" data-path="../15. niche领航员工作/Robert P. Anderson.html">
+            
+                <a href="../15. niche领航员工作/Robert P. Anderson.html">
+            
+                    
+                    Robert P. Anderson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.17" data-path="../15. niche领航员工作/Michael R Kearney.html">
+            
+                <a href="../15. niche领航员工作/Michael R Kearney.html">
+            
+                    
+                    Michael R Kearne
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >8.3 workflow的全流程R包</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="83-workflow&#x5168;&#x6D41;&#x7A0B;r&#x5305;">8.3 workflow&#x5168;&#x6D41;&#x7A0B;R&#x5305;</h3>
+<h4 id="831-biomod2script">8.3.1 Biomod2(script)</h4>
+<h5 id="8311-&#x5355;&#x7269;&#x79CD;&#x5EFA;&#x6A21;">8.3.1.1 &#x5355;&#x7269;&#x79CD;&#x5EFA;&#x6A21;</h5>
+<h6 id="83111-&#x5EFA;&#x6A21;&#x5F15;&#x7528;">8.3.1.1.1 &#x5EFA;&#x6A21;&#x5F15;&#x7528;</h6>
+<pre><code class="lang-r"><span class="hljs-comment">## Citation:</span>
+<span class="hljs-comment">## @book{</span>
+<span class="hljs-comment">##    title={Habitat Suitability and Distribution Models: With Applications in R},</span>
+<span class="hljs-comment">##    author={Guisan, A. and Thuiller, W. and Zimmermann, N.E.},</span>
+<span class="hljs-comment">##    isbn={9780521758369},</span>
+<span class="hljs-comment">##    series={Ecology, Biodiversity and Conservation},</span>
+<span class="hljs-comment">##    year={2017},</span>
+<span class="hljs-comment">##    publisher={Cambridge University Press}</span>
+<span class="hljs-comment">## }</span>
+</code></pre>
+<h6 id="83112-&#x52A0;&#x8F7D;&#x5DE5;&#x4F5C;&#x73AF;&#x5883;&#x53CA;&#x6570;&#x636E;">8.3.1.1.2 &#x52A0;&#x8F7D;&#x5DE5;&#x4F5C;&#x73AF;&#x5883;&#x53CA;&#x6570;&#x636E;</h6>
+<pre><code class="lang-r"><span class="hljs-comment">## load the required packages</span>
+<span class="hljs-keyword">library</span>(biomod2)
+<span class="hljs-keyword">library</span>(ggplot2)
+<span class="hljs-keyword">library</span>(gridExtra)
+<span class="hljs-keyword">library</span>(raster)
+<span class="hljs-keyword">library</span>(rasterVis)
+<span class="hljs-comment">## read data ----</span>
+ProLau_occ &lt;- read.csv(<span class="hljs-string">&apos;../data/ProLau_occ.csv&apos;</span>)
+summary(ProLau_occ)
+
+bioclim_ZA_sub &lt;- 
+  raster::stack(
+    c(
+      bio_5  = <span class="hljs-string">&apos;../data/worldclim_ZA/worldclim_ZA_bio_5.asc&apos;</span>,
+      bio_7  = <span class="hljs-string">&apos;../data/worldclim_ZA/worldclim_ZA_bio_7.asc&apos;</span>,
+      bio_11 = <span class="hljs-string">&apos;../data/worldclim_ZA/worldclim_ZA_bio_11.asc&apos;</span>,
+      bio_19 = <span class="hljs-string">&apos;../data/worldclim_ZA/worldclim_ZA_bio_19.asc&apos;</span>
+    )
+  )
+bioclim_ZA_sub
+<span class="hljs-comment">## format the data ---- ##&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x6784;&#x5EFA;&#x7F3A;&#x5931;&#x70B9;&#x6570;&#x636E;&#x4F1A;&#x6784;&#x5EFA;&#x4E24;&#x5957;&#xFF1B;#&#x8FD8;&#x6CA1;&#x641E;&#x6E05;&#x695A;&#x4E3A;&#x4EC0;&#x4E48;&#x6784;&#x5EFA;&#x4E86;&#x4E24;&#x5957;&#xFF1B;</span>
+ProLau_data &lt;- 
+  BIOMOD_FormatingData(
+    resp.var = ProLau_occ[<span class="hljs-string">&apos;Protea.laurifolia&apos;</span>],
+    resp.xy = ProLau_occ[, c(<span class="hljs-string">&apos;long&apos;</span>, <span class="hljs-string">&apos;lat&apos;</span>)],
+    expl.var = bioclim_ZA_sub,
+    resp.name = <span class="hljs-string">&quot;Protea.laurifolia&quot;</span>,
+    PA.nb.rep = <span class="hljs-number">2</span>,
+    PA.nb.absences = <span class="hljs-number">500</span>,
+    PA.strategy = <span class="hljs-string">&apos;random&apos;</span>
+  )
+<span class="hljs-comment">## &#x67E5;&#x770B;&#x6784;&#x5EFA;&#x7684;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x4E3A;S4&#x5F62;&#x5F0F;&#xFF1B;</span>
+<span class="hljs-comment">## formatted object summary</span>
+ProLau_data
+<span class="hljs-comment">## plot of selected pseudo-absences</span>
+plot(ProLau_data) <span class="hljs-comment">##&#x5305;&#x542B;&#x4E09;&#x5F20;&#x56FE;&#xFF1A;&#x5B9E;&#x9645;&#x5206;&#x5E03;&#x548C;&#x4E24;&#x5F20;&#x6784;&#x5EFA;&#x7684;&#x7F3A;&#x5931;&#x70B9;&#x5206;&#x5E03;</span>
+</code></pre>
+<h6 id="83113-&#x6784;&#x7B51;&#x591A;&#x6A21;&#x578B;&#x5EFA;&#x6A21;">8.3.1.1.3 &#x6784;&#x7B51;&#x591A;&#x6A21;&#x578B;&#x5EFA;&#x6A21;</h6>
+<pre><code class="lang-r"><span class="hljs-comment">## define individual models options ---- </span>
+ProLau_opt &lt;- 
+  BIOMOD_ModelingOptions(
+    GLM = list(type = <span class="hljs-string">&apos;quadratic&apos;</span>, interaction.level = <span class="hljs-number">1</span>),
+    GBM = list(n.trees = <span class="hljs-number">1000</span>),
+    GAM = list(algo = <span class="hljs-string">&apos;GAM_mgcv&apos;</span>)
+  )
+</code></pre>
+<pre><code class="lang-r"><span class="hljs-comment">## run the individual models ----</span>
+ProLau_models &lt;- 
+  BIOMOD_Modeling(
+    data = ProLau_data,
+    models = c(<span class="hljs-string">&quot;GLM&quot;</span>, <span class="hljs-string">&quot;GBM&quot;</span>, <span class="hljs-string">&quot;RF&quot;</span>, <span class="hljs-string">&quot;GAM&quot;</span>),
+    models.options = ProLau_opt,
+    NbRunEval = <span class="hljs-number">2</span>,
+    DataSplit = <span class="hljs-number">80</span>,
+    VarImport = <span class="hljs-number">3</span>,
+    modeling.id = <span class="hljs-string">&quot;demo1&quot;</span>
+  )
+</code></pre>
+<h6 id="83113--&#x5EFA;&#x6A21;&#x8BC4;&#x4F30;auctss">8.3.1.1.3  &#x5EFA;&#x6A21;&#x8BC4;&#x4F30;:AUC/TSS</h6>
+<pre><code class="lang-r"><span class="hljs-comment">## get models evaluation scores</span>
+ProLau_models_scores &lt;- get_evaluations(ProLau_models)
+<span class="hljs-comment">## ProLau_models_scores is a 5 dimension array containing the scores of the models</span>
+dim(ProLau_models_scores)
+dimnames(ProLau_models_scores)
+<span class="hljs-comment">## plot models evaluation scores</span>
+models_scores_graph(  <span class="hljs-comment">##&#x591A;&#x4E2A;&#x6A21;&#x578B;&#x7684;&#x8BC4;&#x4F30;auc&#x548C;tss</span>
+  ProLau_models, 
+  by = <span class="hljs-string">&quot;models&quot;</span>, 
+  metrics = c(<span class="hljs-string">&quot;ROC&quot;</span>,<span class="hljs-string">&quot;TSS&quot;</span>), 
+  xlim = c(<span class="hljs-number">0.5</span>,<span class="hljs-number">1</span>), 
+  ylim = c(<span class="hljs-number">0.5</span>,<span class="hljs-number">1</span>)
+)
+models_scores_graph(  <span class="hljs-comment">##&#x4E24;&#x6B21;&#x6A21;&#x578B;&#x8FD0;&#x884C;&#x7684;&#x7ED3;&#x679C;&#x8BC4;&#x4F30;</span>
+  ProLau_models, 
+  by = <span class="hljs-string">&quot;cv_run&quot;</span> , 
+  metrics = c(<span class="hljs-string">&quot;ROC&quot;</span>,<span class="hljs-string">&quot;TSS&quot;</span>), 
+  xlim = c(<span class="hljs-number">0.5</span>,<span class="hljs-number">1</span>), 
+  ylim = c(<span class="hljs-number">0.5</span>,<span class="hljs-number">1</span>)
+)
+models_scores_graph(  <span class="hljs-comment">##&#x4E0D;&#x540C;&#x7F3A;&#x5931;&#x70B9;&#x6570;&#x636E;&#x96C6;&#x7684;&#x7ED3;&#x679C;&#x8BC4;&#x4F30;</span>
+  ProLau_models, 
+  by = <span class="hljs-string">&quot;data_set&quot;</span>, 
+  metrics = c(<span class="hljs-string">&quot;ROC&quot;</span>,<span class="hljs-string">&quot;TSS&quot;</span>), 
+  xlim = c(<span class="hljs-number">0.5</span>,<span class="hljs-number">1</span>), 
+  ylim = c(<span class="hljs-number">0.5</span>,<span class="hljs-number">1</span>)
+)
+<span class="hljs-comment">## check variable importance</span>
+(ProLau_models_var_import &lt;- get_variables_importance(ProLau_models))
+<span class="hljs-comment">## make the mean of variable importance by algorithm ##&#x7EDF;&#x8BA1;&#x6C47;&#x603B;&#x4E0D;&#x540C;&#x6A21;&#x578B;&#x7684;TSS&#x3001;AUC&#x7B49;&#xFF1B;</span>
+apply(ProLau_models_var_import, c(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>), mean)
+</code></pre>
+<h6 id="83114--&#x5EFA;&#x6A21;&#x8BC4;&#x4F30;&#x54CD;&#x5E94;&#x66F2;&#x7EBF;">8.3.1.1.4  &#x5EFA;&#x6A21;&#x8BC4;&#x4F30;:&#x54CD;&#x5E94;&#x66F2;&#x7EBF;</h6>
+<pre><code class="lang-r"><span class="hljs-comment">## individual models response plots  ##&#x7ED8;&#x5236;&#x4E0D;&#x540C;&#x6A21;&#x578B;&#x8FD0;&#x884C;&#x540E;&#x7684;&#x54CD;&#x5E94;&#x66F2;&#x7EBF;</span>
+ProLau_glm &lt;- BIOMOD_LoadModels(ProLau_models, models=<span class="hljs-string">&apos;GLM&apos;</span>)
+ProLau_gbm &lt;- BIOMOD_LoadModels(ProLau_models, models=<span class="hljs-string">&apos;GBM&apos;</span>)
+ProLau_rf &lt;- BIOMOD_LoadModels(ProLau_models, models=<span class="hljs-string">&apos;RF&apos;</span>)
+ProLau_gam &lt;- BIOMOD_LoadModels(ProLau_models, models=<span class="hljs-string">&apos;GAM&apos;</span>)
+
+glm_eval_strip &lt;- 
+  biomod2::response.plot2(
+    models  = ProLau_glm,
+    Data = get_formal_data(ProLau_models,<span class="hljs-string">&apos;expl.var&apos;</span>), 
+    show.variables= get_formal_data(ProLau_models,<span class="hljs-string">&apos;expl.var.names&apos;</span>),
+    do.bivariate = <span class="hljs-literal">FALSE</span>,
+    fixed.var.metric = <span class="hljs-string">&apos;median&apos;</span>,
+    legend = <span class="hljs-literal">FALSE</span>,
+    display_title = <span class="hljs-literal">FALSE</span>,
+    data_species = get_formal_data(ProLau_models,<span class="hljs-string">&apos;resp.var&apos;</span>)
+  )
+
+gbm_eval_strip &lt;- 
+  biomod2::response.plot2(
+    models  = ProLau_gbm,
+    Data = get_formal_data(ProLau_models,<span class="hljs-string">&apos;expl.var&apos;</span>), 
+    show.variables= get_formal_data(ProLau_models,<span class="hljs-string">&apos;expl.var.names&apos;</span>),
+    do.bivariate = <span class="hljs-literal">FALSE</span>,
+    fixed.var.metric = <span class="hljs-string">&apos;median&apos;</span>,
+    legend = <span class="hljs-literal">FALSE</span>,
+    display_title = <span class="hljs-literal">FALSE</span>,
+    data_species = get_formal_data(ProLau_models,<span class="hljs-string">&apos;resp.var&apos;</span>)
+  )
+
+rf_eval_strip &lt;- 
+  biomod2::response.plot2(
+    models  = ProLau_rf,
+    Data = get_formal_data(ProLau_models,<span class="hljs-string">&apos;expl.var&apos;</span>), 
+    show.variables= get_formal_data(ProLau_models,<span class="hljs-string">&apos;expl.var.names&apos;</span>),
+    do.bivariate = <span class="hljs-literal">FALSE</span>,
+    fixed.var.metric = <span class="hljs-string">&apos;median&apos;</span>,
+    legend = <span class="hljs-literal">FALSE</span>,
+    display_title = <span class="hljs-literal">FALSE</span>,
+    data_species = get_formal_data(ProLau_models,<span class="hljs-string">&apos;resp.var&apos;</span>)
+  )
+
+gam_eval_strip &lt;- 
+  biomod2::response.plot2(
+  models  = ProLau_gam,
+  Data = get_formal_data(ProLau_models,<span class="hljs-string">&apos;expl.var&apos;</span>), 
+  show.variables= get_formal_data(ProLau_models,<span class="hljs-string">&apos;expl.var.names&apos;</span>),
+  do.bivariate = <span class="hljs-literal">FALSE</span>,
+  fixed.var.metric = <span class="hljs-string">&apos;median&apos;</span>,
+  legend = <span class="hljs-literal">FALSE</span>,
+  display_title = <span class="hljs-literal">FALSE</span>,
+  data_species = get_formal_data(ProLau_models,<span class="hljs-string">&apos;resp.var&apos;</span>)
+)
+</code></pre>
+<h6 id="83115--ensemble-models">8.3.1.1.5  ensemble models</h6>
+<pre><code class="lang-r"><span class="hljs-comment">## run the ensemble models ----</span>
+ProLau_ensemble_models &lt;- 
+  BIOMOD_EnsembleModeling(
+    modeling.output = ProLau_models,
+    em.by = <span class="hljs-string">&apos;all&apos;</span>,
+    eval.metric = <span class="hljs-string">&apos;TSS&apos;</span>,
+    eval.metric.quality.threshold = <span class="hljs-number">0.8</span>,
+    models.eval.meth = c(<span class="hljs-string">&apos;TSS&apos;</span>,<span class="hljs-string">&apos;ROC&apos;</span>),
+    prob.mean = <span class="hljs-literal">FALSE</span>,
+    prob.cv = <span class="hljs-literal">TRUE</span>, 
+    committee.averaging = <span class="hljs-literal">TRUE</span>,
+    prob.mean.weight = <span class="hljs-literal">TRUE</span>,
+    VarImport = <span class="hljs-number">0</span>
+  )
+</code></pre>
+<pre><code class="lang-r"><span class="hljs-comment">## asses ensemble models quality ----</span>
+(ProLau_ensemble_models_scores &lt;- get_evaluations(ProLau_ensemble_models))
+</code></pre>
+<h6 id="83116--&#x6A21;&#x578B;&#x6295;&#x5F71;">8.3.1.1.6  &#x6A21;&#x578B;&#x6295;&#x5F71;</h6>
+<pre><code class="lang-r"><span class="hljs-comment">## current projections</span>
+ProLau_models_proj_current &lt;-  <span class="hljs-comment">##&#x5404;&#x6A21;&#x578B;&#x5206;&#x522B;&#x6295;&#x5F71;</span>
+  BIOMOD_Projection(
+    modeling.output = ProLau_models,
+    new.env = bioclim_ZA_sub,
+    proj.name = <span class="hljs-string">&quot;current&quot;</span>,
+    binary.meth = <span class="hljs-string">&quot;TSS&quot;</span>,
+    output.format = <span class="hljs-string">&quot;.img&quot;</span>,
+    do.stack = <span class="hljs-literal">FALSE</span>
+  )
+
+ProLau_ensemble_models_proj_current &lt;- <span class="hljs-comment">##&#x6574;&#x5408;&#x6A21;&#x578B;&#x6295;&#x5F71;</span>
+  BIOMOD_EnsembleForecasting(
+    EM.output = ProLau_ensemble_models,
+    projection.output = ProLau_models_proj_current,
+    binary.meth = <span class="hljs-string">&quot;TSS&quot;</span>,
+    output.format = <span class="hljs-string">&quot;.img&quot;</span>,
+    do.stack = <span class="hljs-literal">FALSE</span>
+  )
+</code></pre>
+<pre><code class="lang-r"><span class="hljs-comment">## future projections</span>
+<span class="hljs-comment">## load 2050 bioclim variables</span>
+bioclim_ZA_2050_BC45 &lt;-
+  stack(
+    c(
+      bio_5  = <span class="hljs-string">&apos;../data/worldclim_ZA/worldclim_ZA_2050_BC45_bio_5.asc&apos;</span>,
+      bio_7  = <span class="hljs-string">&apos;../data/worldclim_ZA/worldclim_ZA_2050_BC45_bio_7.asc&apos;</span>,
+      bio_11 = <span class="hljs-string">&apos;../data/worldclim_ZA/worldclim_ZA_2050_BC45_bio_11.asc&apos;</span>,
+      bio_19 = <span class="hljs-string">&apos;../data/worldclim_ZA/worldclim_ZA_2050_BC45_bio_19.asc&apos;</span>
+    )
+  )
+ProLau_models_proj_2050_BC45 &lt;- 
+  BIOMOD_Projection(
+    modeling.output = ProLau_models,
+    new.env = bioclim_ZA_2050_BC45,
+    proj.name = <span class="hljs-string">&quot;2050_BC45&quot;</span>,
+    binary.meth = <span class="hljs-string">&quot;TSS&quot;</span>,
+    output.format = <span class="hljs-string">&quot;.img&quot;</span>,
+    do.stack = <span class="hljs-literal">FALSE</span>
+  )
+ProLau_ensemble_models_proj_2050_BC45 &lt;- 
+  BIOMOD_EnsembleForecasting(
+    EM.output = ProLau_ensemble_models,
+    projection.output = ProLau_models_proj_2050_BC45,
+    binary.meth = <span class="hljs-string">&quot;TSS&quot;</span>,
+    output.format = <span class="hljs-string">&quot;.img&quot;</span>,
+    do.stack = <span class="hljs-literal">FALSE</span>
+  )
+<span class="hljs-comment">## load 2070 bioclim variables</span>
+bioclim_ZA_2070_BC45 &lt;-
+  stack(
+    c(
+      bio_5  = <span class="hljs-string">&apos;../data/worldclim_ZA/worldclim_ZA_2070_BC45_bio_5.asc&apos;</span>,
+      bio_7  = <span class="hljs-string">&apos;../data/worldclim_ZA/worldclim_ZA_2070_BC45_bio_7.asc&apos;</span>,
+      bio_11 = <span class="hljs-string">&apos;../data/worldclim_ZA/worldclim_ZA_2070_BC45_bio_11.asc&apos;</span>,
+      bio_19 = <span class="hljs-string">&apos;../data/worldclim_ZA/worldclim_ZA_2070_BC45_bio_19.asc&apos;</span>
+    )
+  )
+ProLau_models_proj_2070_BC45 &lt;- 
+  BIOMOD_Projection(
+    modeling.output = ProLau_models,
+    new.env = bioclim_ZA_2070_BC45,
+    proj.name = <span class="hljs-string">&quot;2070_BC45&quot;</span>,
+    binary.meth = <span class="hljs-string">&quot;TSS&quot;</span>,
+    output.format = <span class="hljs-string">&quot;.img&quot;</span>,
+    do.stack = <span class="hljs-literal">FALSE</span>
+  )
+ProLau_ensemble_models_proj_2070_BC45 &lt;- 
+  BIOMOD_EnsembleForecasting(
+    EM.output = ProLau_ensemble_models,
+    projection.output = ProLau_models_proj_2070_BC45,
+    binary.meth = <span class="hljs-string">&quot;TSS&quot;</span>,
+    output.format = <span class="hljs-string">&quot;.img&quot;</span>,
+    do.stack = <span class="hljs-literal">FALSE</span>
+  )
+</code></pre>
+<pre><code class="lang-r"><span class="hljs-comment">## check how projections looks like ##&#x6295;&#x5F71;&#x53EF;&#x89C6;&#x5316;</span>
+plot(ProLau_ensemble_models_proj_2070_BC45, str.grep = <span class="hljs-string">&quot;EMca|EMwmean&quot;</span>)
+</code></pre>
+<h6 id="83117--&#x8BA1;&#x7B97;&#x6295;&#x5F71;&#x8303;&#x56F4;&#x53D8;&#x5316;&#xFF08;&#x52A0;&#x3001;&#x4E0D;&#x53D8;&#x3001;&#x51CF;&#xFF09;">8.3.1.1.7  &#x8BA1;&#x7B97;&#x6295;&#x5F71;&#x8303;&#x56F4;&#x53D8;&#x5316;&#xFF08;&#x52A0;&#x3001;&#x4E0D;&#x53D8;&#x3001;&#x51CF;&#xFF09;</h6>
+<pre><code class="lang-r"><span class="hljs-comment">## compute Species Range Change (SRC) ----</span>
+<span class="hljs-comment">## load binary projections</span>
+ProLau_bin_proj_current &lt;- 
+  stack( 
+    c(
+      ca = <span class="hljs-string">&quot;Protea.laurifolia/proj_current/individual_projections/Protea.laurifolia_EMcaByTSS_mergedAlgo_mergedRun_mergedData_TSSbin.img&quot;</span>,
+      wm = <span class="hljs-string">&quot;Protea.laurifolia/proj_current/individual_projections/Protea.laurifolia_EMwmeanByTSS_mergedAlgo_mergedRun_mergedData_TSSbin.img&quot;</span>
+    )
+  )
+
+ProLau_bin_proj_2050_BC45 &lt;- 
+  stack( 
+    c(
+      ca = <span class="hljs-string">&quot;Protea.laurifolia/proj_2050_BC45/individual_projections/Protea.laurifolia_EMcaByTSS_mergedAlgo_mergedRun_mergedData_TSSbin.img&quot;</span>,
+      wm = <span class="hljs-string">&quot;Protea.laurifolia/proj_2050_BC45/individual_projections/Protea.laurifolia_EMwmeanByTSS_mergedAlgo_mergedRun_mergedData_TSSbin.img&quot;</span>
+    )
+  )
+
+ProLau_bin_proj_2070_BC45 &lt;- 
+  stack( 
+    c(
+      ca = <span class="hljs-string">&quot;Protea.laurifolia/proj_2070_BC45/individual_projections/Protea.laurifolia_EMcaByTSS_mergedAlgo_mergedRun_mergedData_TSSbin.img&quot;</span>,
+      wm = <span class="hljs-string">&quot;Protea.laurifolia/proj_2070_BC45/individual_projections/Protea.laurifolia_EMwmeanByTSS_mergedAlgo_mergedRun_mergedData_TSSbin.img&quot;</span>
+    )
+  )
+
+<span class="hljs-comment">## SRC current -&gt; 2050</span>
+SRC_current_2050_BC45 &lt;- 
+  BIOMOD_RangeSize(
+    ProLau_bin_proj_current,
+    ProLau_bin_proj_2050_BC45
+  )
+
+SRC_current_2050_BC45$Compt.By.Models
+
+<span class="hljs-comment">## SRC current -&gt; 2070</span>
+SRC_current_2070_BC45 &lt;- 
+  BIOMOD_RangeSize(
+    ProLau_bin_proj_current,
+    ProLau_bin_proj_2070_BC45
+  )
+
+SRC_current_2070_BC45$Compt.By.Models
+
+ProLau_src_map &lt;- 
+  stack(
+    SRC_current_2050_BC45$Diff.By.Pixel, 
+    SRC_current_2070_BC45$Diff.By.Pixel
+  )
+names(ProLau_src_map) &lt;- c(<span class="hljs-string">&quot;ca cur-2050&quot;</span>, <span class="hljs-string">&quot;wm cur-2050&quot;</span>, <span class="hljs-string">&quot;ca cur-2070&quot;</span>, <span class="hljs-string">&quot;wm cur-2070&quot;</span>)
+
+my.at &lt;- seq(-<span class="hljs-number">2.5</span>, <span class="hljs-number">1.5</span>, <span class="hljs-number">1</span>)
+myColorkey &lt;- 
+  list(
+    at = my.at, <span class="hljs-comment">## where the colors change</span>
+    labels = 
+      list(
+        labels = c(<span class="hljs-string">&quot;lost&quot;</span>, <span class="hljs-string">&quot;pres&quot;</span>, <span class="hljs-string">&quot;abs&quot;</span>,<span class="hljs-string">&quot;gain&quot;</span>), <span class="hljs-comment">## labels</span>
+        at = my.at[-<span class="hljs-number">1</span>] - <span class="hljs-number">0.5</span> <span class="hljs-comment">## where to print labels</span>
+      )
+  )
+
+rasterVis::levelplot(   <span class="hljs-comment">##&#x53EF;&#x89C6;&#x5316;&#x8303;&#x56F4;&#x53D8;&#x5316;&#xFF1B;</span>
+  ProLau_src_map, 
+  main = <span class="hljs-string">&quot;Protea laurifolia range change&quot;</span>,
+  colorkey = myColorkey,
+  col.regions=c(<span class="hljs-string">&apos;#f03b20&apos;</span>, <span class="hljs-string">&apos;#99d8c9&apos;</span>, <span class="hljs-string">&apos;#f0f0f0&apos;</span>, <span class="hljs-string">&apos;#2ca25f&apos;</span>),
+  layout = c(<span class="hljs-number">2</span>,<span class="hljs-number">2</span>)
+)
+</code></pre>
+<pre><code class="lang-r"><span class="hljs-comment">## compute the stratified density of probabilities on SRC ----</span>
+<span class="hljs-comment">##&#x8BA1;&#x7B97;&#x4E0D;&#x540C;&#x6761;&#x4EF6;&#x53D8;&#x5316;&#x4E0B;&#x9762;&#x79EF;&#x53D8;&#x5316;&#x7684;&#x6982;&#x7387;&#x5BC6;&#x5EA6;&#x51FD;&#x6570;&#xFF1B;</span>
+<span class="hljs-comment">## the reference projetion</span>
+ref &lt;- subset(ProLau_bin_proj_current, <span class="hljs-string">&quot;ca&quot;</span>)
+<span class="hljs-comment">## define the facets we want to study</span>
+mods &lt;- c(<span class="hljs-string">&quot;GLM&quot;</span>, <span class="hljs-string">&quot;GBM&quot;</span>, <span class="hljs-string">&quot;RF&quot;</span>, <span class="hljs-string">&quot;GAM&quot;</span>)
+data_set &lt;- c(<span class="hljs-string">&quot;PA1&quot;</span>, <span class="hljs-string">&quot;PA2&quot;</span>)
+cv_run &lt;- c(<span class="hljs-string">&quot;RUN1&quot;</span>, <span class="hljs-string">&quot;RUN2&quot;</span>, <span class="hljs-string">&quot;Full&quot;</span>)
+<span class="hljs-comment">## construct combination of all facets</span>
+groups &lt;- 
+  as.matrix(
+    expand.grid(
+      models = mods, 
+      data_set = data_set, 
+      cv_run = cv_run,
+      stringsAsFactors = <span class="hljs-literal">FALSE</span>)
+  )
+<span class="hljs-comment">## load all projections we have produced</span>
+all_bin_proj_files &lt;- 
+  list.files( 
+    path = <span class="hljs-string">&quot;Protea.laurifolia&quot;</span>,  
+    pattern = <span class="hljs-string">&quot;_TSSbin.img$&quot;</span>,
+    full.names = <span class="hljs-literal">TRUE</span>, 
+    recursive = <span class="hljs-literal">TRUE</span>
+  )
+<span class="hljs-comment">## current versus 2070 (removed the projections for current and 2050)</span>
+current_and_2070_proj_files &lt;- grep(all_bin_proj_files, pattern=<span class="hljs-string">&quot;2070&quot;</span>, value=<span class="hljs-literal">T</span>)
+<span class="hljs-comment">## keep only projections that match with our selected facets groups</span>
+selected_bin_proj_files &lt;- 
+  apply(
+  groups, <span class="hljs-number">1</span>, 
+    <span class="hljs-keyword">function</span>(x){
+      proj_file &lt;- <span class="hljs-literal">NA</span>
+      match_tab &lt;- sapply(x, grepl, current_and_2070_proj_files)
+      match_id &lt;- which(apply(match_tab, <span class="hljs-number">1</span>, all))
+      <span class="hljs-keyword">if</span>(length(match_id)) proj_file &lt;- current_and_2070_proj_files[match_id]
+      proj_file
+    }
+  )
+<span class="hljs-comment">## remove no-matching groups</span>
+to_remove &lt;- which(is.na(selected_bin_proj_files))
+<span class="hljs-keyword">if</span>(length(to_remove)){
+  groups &lt;- groups[-to_remove,]
+  selected_bin_proj_files &lt;- selected_bin_proj_files[-to_remove]
+}
+<span class="hljs-comment">## build stack of selected projections</span>
+proj_groups &lt;- stack(selected_bin_proj_files)
+ProbDensFunc(
+  initial = as.vector(ref),
+  projections = raster::as.matrix(proj_groups),
+  groups = t(groups),
+  plothist = <span class="hljs-literal">TRUE</span>,
+  resolution = <span class="hljs-number">10</span>,
+  cvsn = <span class="hljs-literal">FALSE</span>
+)
+</code></pre>
+<h6 id="83118-&#x8BC4;&#x4F30;&#x5EFA;&#x6A21;&#x4E2D;&#x4E0D;&#x540C;&#x53C2;&#x6570;&#x53D8;&#x5316;&#x5BF9;&#x5EFA;&#x6A21;&#x7ED3;&#x679C;&#x7684;&#x5F71;&#x54CD;">8.3.1.1.8 &#x8BC4;&#x4F30;&#x5EFA;&#x6A21;&#x4E2D;&#x4E0D;&#x540C;&#x53C2;&#x6570;&#x53D8;&#x5316;&#x5BF9;&#x5EFA;&#x6A21;&#x7ED3;&#x679C;&#x7684;&#x5F71;&#x54CD;</h6>
+<pre><code class="lang-r"><span class="hljs-keyword">library</span>(biomod2)
+<span class="hljs-keyword">library</span>(raster)
+<span class="hljs-keyword">library</span>(reshape2)
+<span class="hljs-keyword">library</span>(ggplot2)
+setwd(<span class="hljs-string">&quot;workdir&quot;</span>)
+col_vec = c(<span class="hljs-string">&apos;#a6cee3&apos;</span>,<span class="hljs-string">&apos;#1f78b4&apos;</span>,<span class="hljs-string">&apos;#b2df8a&apos;</span>,<span class="hljs-string">&apos;#33a02c&apos;</span>,<span class="hljs-string">&apos;#fb9a99&apos;</span>,<span class="hljs-string">&apos;#e31a1c&apos;</span>
+            ,<span class="hljs-string">&apos;#fdbf6f&apos;</span>,<span class="hljs-string">&apos;#ff7f00&apos;</span>,<span class="hljs-string">&apos;#cab2d6&apos;</span>,<span class="hljs-string">&apos;#6a3d9a&apos;</span>,<span class="hljs-string">&apos;#ffff99&apos;</span>,<span class="hljs-string">&apos;#b15928&apos;</span>)
+col_fun = colorRampPalette(col_vec)
+<span class="hljs-comment">###################################################################################</span>
+<span class="hljs-comment">## PART 1.a</span>
+<span class="hljs-comment">###################################################################################</span>
+<span class="hljs-comment">## get models ##&#x8FD9;&#x91CC;&#x52A0;&#x8F7D;&#x7684;&#x662F;&#x5355;&#x7269;&#x79CD;&#x5EFA;&#x6A21;&#x7684;&#x7ED3;&#x679C;&#xFF1B;</span>
+ProLau_models &lt;- get(load(<span class="hljs-string">&quot;Protea.laurifolia/Protea.laurifolia.demo1.models.out&quot;</span>))
+<span class="hljs-comment">## get models evaluation scores</span>
+ProLau_models_scores &lt;- get_evaluations(ProLau_models)
+<span class="hljs-comment">## rearrange data</span>
+ModEval = melt(ProLau_models_scores)
+ModEval = ModEval[which(ModEval$Var2 == <span class="hljs-string">&quot;Testing.data&quot;</span>), ]
+head(ModEval)
+<span class="hljs-comment">##&#x7ED8;&#x5236;&#x7684;&#x662F;&#x4E0D;&#x540C;abseces&#x6570;&#x636E;&#x96C6;&#x548C;&#x4E0D;&#x540C;&#x6A21;&#x578B;&#x7684;tss&#x3001;auc&#x548C;kappa&#x503C;&#x5DEE;&#x5F02;</span>
+ggplot(ModEval, aes(x = Var1, y = value, color = interaction(Var5,Var3))) +
+  scale_color_manual(<span class="hljs-string">&quot;&quot;</span>, values = rep(col_fun(<span class="hljs-number">4</span>), each = <span class="hljs-number">3</span>)) +
+  geom_boxplot(size = <span class="hljs-number">0.8</span>) +
+  labs(x = <span class="hljs-string">&quot;&quot;</span>, y = <span class="hljs-string">&quot;&quot;</span>) +
+  theme(
+    axis.text.x = element_text(angle = <span class="hljs-number">90</span>),
+    panel.border = element_rect(size = <span class="hljs-number">1</span>, fill = <span class="hljs-literal">NA</span>),
+    panel.grid.major = element_line(linetype = <span class="hljs-number">2</span>, color = <span class="hljs-string">&quot;grey&quot;</span>, size = <span class="hljs-number">0.8</span>)
+  )
+
+<span class="hljs-comment">###################################################################################</span>
+<span class="hljs-comment">## PART 1.b</span>
+<span class="hljs-comment">###################################################################################</span>
+<span class="hljs-comment">## get ensemble model</span>
+ProLau_ensemble_models &lt;- get(load(<span class="hljs-string">&quot;Protea.laurifolia/Protea.laurifolia.demo1ensemble.models.out&quot;</span>))
+<span class="hljs-comment">## get ensemble model evaluation scores</span>
+ProLau_ensemble_models_scores &lt;- get_evaluations(ProLau_ensemble_models)
+<span class="hljs-comment">## rearrange data</span>
+EnsModEval = melt(ProLau_ensemble_models_scores)
+EnsModEval = EnsModEval[which(EnsModEval$Var2 == <span class="hljs-string">&quot;Testing.data&quot;</span>), ]
+head(EnsModEval)
+<span class="hljs-comment">##&#x7ED8;&#x5236;ensemble&#x7684;&#x6574;&#x5408;&#x8FC7;&#x7A0B;&#xFF08;&#x6C42;mean&#xFF09;&#x4E2D;tss&#x548C;auc&#x53D8;&#x5316;&#x67F1;&#x72B6;&#x56FE;</span>
+ggplot(EnsModEval, aes(x = Var1, y = value, color = Var1)) +
+  scale_color_manual(<span class="hljs-string">&quot;&quot;</span>, values = rep(col_fun(<span class="hljs-number">4</span>), each = <span class="hljs-number">3</span>)) +
+  geom_boxplot(size = <span class="hljs-number">0.8</span>) +
+  labs(x = <span class="hljs-string">&quot;&quot;</span>, y = <span class="hljs-string">&quot;&quot;</span>) +
+  theme(
+    axis.text.x = element_text(angle = <span class="hljs-number">90</span>),
+    panel.border = element_rect(size = <span class="hljs-number">1</span>, fill = <span class="hljs-literal">NA</span>),
+    panel.grid.major = element_line(linetype = <span class="hljs-number">2</span>, color = <span class="hljs-string">&quot;grey&quot;</span>, size = <span class="hljs-number">0.8</span>)
+  )
+
+<span class="hljs-comment">###################################################################################</span>
+<span class="hljs-comment">## PART 2.a</span>
+<span class="hljs-comment">###################################################################################</span>
+<span class="hljs-comment">## get models</span>
+ProLau_models &lt;- get(load(<span class="hljs-string">&quot;Protea.laurifolia/Protea.laurifolia.demo1.models.out&quot;</span>))
+<span class="hljs-comment">## get models variable importance</span>
+ProLau_models_var_import &lt;- get_variables_importance(ProLau_models)
+<span class="hljs-comment">## rearrange data</span>
+VarImport = melt(ProLau_models_var_import)
+head(VarImport)
+<span class="hljs-comment">##&#x7ED8;&#x5236;&#x7684;&#x662F;&#x4E0D;&#x540C;abseces&#x6570;&#x636E;&#x96C6;&#x548C;&#x4E0D;&#x540C;&#x6A21;&#x578B;&#x7684;&#x56DB;&#x79CD;&#x73AF;&#x5883;&#x56E0;&#x5B50;&#x503C;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x5F02;</span>
+ggplot(VarImport, aes(x = Var1, y = value, color = interaction(Var4,Var2))) +
+  scale_color_manual(<span class="hljs-string">&quot;&quot;</span>, values = rep(col_fun(<span class="hljs-number">4</span>), each = <span class="hljs-number">3</span>)) +
+  geom_boxplot(size = <span class="hljs-number">0.8</span>) +
+  labs(x = <span class="hljs-string">&quot;&quot;</span>, y = <span class="hljs-string">&quot;&quot;</span>) +
+  theme(
+    axis.text.x = element_text(angle = <span class="hljs-number">90</span>),
+    panel.border = element_rect(size = <span class="hljs-number">1</span>, fill = <span class="hljs-literal">NA</span>),
+    panel.grid.major = element_line(linetype = <span class="hljs-number">2</span>, color = <span class="hljs-string">&quot;grey&quot;</span>, size = <span class="hljs-number">0.8</span>)
+  )
+
+<span class="hljs-comment">###################################################################################</span>
+<span class="hljs-comment">## PART 2.b</span>
+<span class="hljs-comment">###################################################################################</span>
+<span class="hljs-comment">## get ensemble model</span>
+ProLau_ensemble_models &lt;- get(load(<span class="hljs-string">&quot;Protea.laurifolia/Protea.laurifolia.demo1ensemble.models.out&quot;</span>))
+<span class="hljs-comment">## get ensemble model variable importance</span>
+ProLau_ensemble_models_var_import &lt;- get_variables_importance(ProLau_ensemble_models)
+<span class="hljs-comment">## rearrange data</span>
+EnsVarImport = melt(ProLau_ensemble_models_var_import)
+EnsVarImport$Var3 = sub(<span class="hljs-string">&quot;.*EM&quot;</span>, <span class="hljs-string">&quot;&quot;</span>, EnsVarImport$Var3)
+EnsVarImport$Var3 = sub(<span class="hljs-string">&quot;_merged.*&quot;</span>, <span class="hljs-string">&quot;&quot;</span>, EnsVarImport$Var3)
+head(EnsVarImport)
+ggplot(EnsVarImport, aes(x = Var1, y = value, color = Var3)) +
+  scale_color_manual(<span class="hljs-string">&quot;&quot;</span>, values = col_fun(<span class="hljs-number">3</span>)) +
+  geom_boxplot(size = <span class="hljs-number">0.8</span>) +
+  labs(x = <span class="hljs-string">&quot;&quot;</span>, y = <span class="hljs-string">&quot;&quot;</span>) +
+  theme(
+    axis.text.x = element_text(angle = <span class="hljs-number">90</span>),
+    panel.border = element_rect(size = <span class="hljs-number">1</span>, fill = <span class="hljs-literal">NA</span>),
+    panel.grid.major = element_line(linetype = <span class="hljs-number">2</span>, color = <span class="hljs-string">&quot;grey&quot;</span>, size = <span class="hljs-number">0.8</span>)
+  )
+
+<span class="hljs-comment">###################################################################################</span>
+<span class="hljs-comment">## PART 3</span>
+<span class="hljs-comment">###################################################################################</span>
+<span class="hljs-comment">## get some outputs maps</span>
+files.names = list.files(path = <span class="hljs-string">&quot;Protea.laurifolia/proj_current/individual_projections/&quot;</span>
+                         , pattern = <span class="hljs-string">&quot;_PA1_&quot;</span>
+                         , full.names = <span class="hljs-literal">TRUE</span>)
+files.names = files.names[grep(<span class="hljs-string">&quot;.img$&quot;</span>, files.names)]
+files.names = files.names[-grep(<span class="hljs-string">&quot;TSSbin.img$&quot;</span>, files.names)]
+stk.outputs = stack(files.names)
+names(stk.outputs) = sub(<span class="hljs-string">&quot;proj_current_Protea.laurifolia_&quot;</span>, <span class="hljs-string">&quot;&quot;</span>, names(stk.outputs))
+
+stk.pts = rasterToPoints(stk.outputs)
+stk.pts = as.data.frame(stk.pts)
+stk.pts = melt(stk.pts, id.vars = c(<span class="hljs-string">&quot;x&quot;</span>, <span class="hljs-string">&quot;y&quot;</span>))
+<span class="hljs-comment">##&#x7ED8;&#x5236;&#x7684;&#x662F;&#x4E0D;&#x540C;abseces&#x6570;&#x636E;&#x96C6;&#x548C;&#x4E0D;&#x540C;&#x6A21;&#x578B;&#x7684;&#x6982;&#x7387;&#x5206;&#x5E03;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x5F02;</span>
+ggplot(stk.pts, aes(x = x, y = y, fill = value/<span class="hljs-number">1000</span>)) +
+  geom_tile() +
+  scale_fill_viridis_c(<span class="hljs-string">&quot;Probability&quot;</span>) +
+  facet_wrap(~ variable) +
+  labs(x = <span class="hljs-string">&quot;&quot;</span>, y = <span class="hljs-string">&quot;&quot;</span>) +
+  theme(
+    panel.border = element_rect(size = <span class="hljs-number">1</span>, fill = <span class="hljs-literal">NA</span>),
+    panel.grid.major = element_line(linetype = <span class="hljs-number">2</span>, color = <span class="hljs-string">&quot;grey&quot;</span>, size = <span class="hljs-number">0.8</span>)
+  )
+
+<span class="hljs-comment">## get coefficient of variation</span>
+ras.cv = raster(<span class="hljs-string">&quot;Protea.laurifolia/proj_current/individual_projections/Protea.laurifolia_EMcvByTSS_mergedAlgo_mergedRun_mergedData.img&quot;</span>)
+
+ras.cv.pts = rasterToPoints(ras.cv)
+ras.cv.pts = as.data.frame(ras.cv.pts)
+colnames(ras.cv.pts) = c(<span class="hljs-string">&quot;x&quot;</span>, <span class="hljs-string">&quot;y&quot;</span>, <span class="hljs-string">&quot;CV&quot;</span>)
+<span class="hljs-comment">## &#x7ED8;&#x5236;&#x4E0D;&#x540C;&#x6761;&#x4EF6;&#x7EC4;&#x5408;&#x4E0B;&#x7684;&#x53D8;&#x5F02;&#x7CFB;&#x6570;&#x5355;&#x4E2A;&#x51FA;&#x56FE;</span>
+ggplot(ras.cv.pts, aes(x = x, y = y, fill = CV)) +
+  geom_tile() +
+  scale_fill_viridis_c() +
+  labs(x = <span class="hljs-string">&quot;&quot;</span>, y = <span class="hljs-string">&quot;&quot;</span>) +
+  theme(
+    panel.border = element_rect(size = <span class="hljs-number">1</span>, fill = <span class="hljs-literal">NA</span>),
+    panel.grid.major = element_line(linetype = <span class="hljs-number">2</span>, color = <span class="hljs-string">&quot;grey&quot;</span>, size = <span class="hljs-number">0.8</span>)
+  )
+</code></pre>
+<h5 id="8112--&#x591A;&#x7269;&#x79CD;&#x5EFA;&#x6A21;&#x6C42;&#x591A;&#x6837;&#x6027;">8.1.1.2  &#x591A;&#x7269;&#x79CD;&#x5EFA;&#x6A21;&#x6C42;&#x591A;&#x6837;&#x6027;</h5>
+<p><strong>&#x591A;&#x7269;&#x79CD;&#x5EFA;&#x6A21;&#x6700;&#x540E;&#x4F1A;&#x5F97;&#x5230;&#x4E00;&#x4E2A;alpha&#x591A;&#x6837;&#x6027;&#x8BC4;&#x4F30;&#x3002;&#x591A;&#x7269;&#x79CD;&#x5EFA;&#x6A21;&#x4E00;&#x822C;&#x662F;&#x9488;&#x5BF9;&#x540C;&#x4E00;&#x5C5E;&#x4E0B;&#x7269;&#x79CD;&#x5EFA;&#x6A21;&#xFF0C;&#x4F7F;&#x7528;&#x76F8;&#x4F3C;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4EE5;&#x5E2E;&#x52A9;&#x6A21;&#x578B;&#x5FEB;&#x901F;&#x5206;&#x6790;&#xFF1B;&#x56E0;&#x4E3A;&#x5EFA;&#x6A21;&#x6240;&#x9700;&#x8981;&#x6784;&#x5EFA;&#x7684;&#x7269;&#x79CD;&#x8F83;&#x591A;&#xFF0C;biomod2&#x63D0;&#x4F9B;&#x5E76;&#x884C;&#x8FD0;&#x7B97;&#x7684;&#x53C2;&#x6570;&#x65B9;&#x6848;&#x7528;&#x4E8E;&#x52A0;&#x901F;&#x5EFA;&#x6A21;&#xFF1B;</strong></p>
+<p><strong>&#x591A;&#x7269;&#x79CD;&#x5EFA;&#x6A21;&#x7684;&#x539F;&#x7406;&#x4E0E;&#x5355;&#x7269;&#x79CD;&#x5EFA;&#x6A21;&#x662F;&#x7C7B;&#x4F3C;&#x7684;&#xFF0C;&#x9664;&#x4E86;&#x6700;&#x540E;&#x4F1A;&#x5C06;&#x591A;&#x4E2A;&#x7269;&#x79CD;&#x5EFA;&#x6A21;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x6574;&#x5408;&#x6210;&#x4E00;&#x5F20;&#x56FE;&#xFF1B;&#x6B64;&#x5916;&#x591A;&#x7269;&#x79CD;&#x5EFA;&#x6A21;&#x4E5F;&#x9700;&#x8981;&#x6309;&#x7167;&#x6B63;&#x5E38;&#x7684;&#x6D41;&#x7A0B;&#x8FDB;&#x884C;&#x52A0;&#x8F7D;&#x7269;&#x79CD;&#x5206;&#x5E03;&#x6570;&#x636E;&#x3001;&#x73AF;&#x5883;&#x6570;&#x636E;&#x548C;&#x8BBE;&#x7F6E;&#x4E0D;&#x540C;&#x6A21;&#x578B;&#x7684;&#x53C2;&#x6570;&#x4EE5;&#x53CA;&#x8FD0;&#x884C;ensemble&#x6A21;&#x578B;&#x7B49;&#x7B49;&#x7528;&#x4E8E;&#x6570;&#x636E;&#x6574;&#x5408;&#x5206;&#x6790;</strong></p>
+<pre><code class="lang-r"><span class="hljs-comment">## setup environment ----</span>
+setwd(<span class="hljs-string">&apos;D:/HIDATA/testohase1/all_scripts/biomod2/biomod2_video_multi_species_modelling/workdir&apos;</span>)
+<span class="hljs-comment">## load the required packages</span>
+<span class="hljs-keyword">library</span>(biomod2)
+<span class="hljs-keyword">library</span>(raster)
+<span class="hljs-keyword">library</span>(rasterVis)
+<span class="hljs-keyword">library</span>(gridExtra)
+<span class="hljs-keyword">library</span>(reshape2)
+
+<span class="hljs-comment">## read data ----</span>
+<span class="hljs-comment">## species occurences data</span>
+data &lt;- read.csv(<span class="hljs-string">&apos;../data/Larus_occ.csv&apos;</span>, stringsAsFactors = <span class="hljs-literal">FALSE</span>)
+head(data)
+table(data$species)
+spp_to_model &lt;- unique(data$species)
+
+<span class="hljs-comment">## curent climatic variables</span>
+stk_current &lt;- 
+  raster::stack(
+    c(
+      bio_1 =  <span class="hljs-string">&quot;../data/worldclim_EU/worldclim_EU_bio_1.tif&quot;</span>,
+      bio_12 = <span class="hljs-string">&quot;../data/worldclim_EU/worldclim_EU_bio_12.tif&quot;</span>,
+      bio_8 =  <span class="hljs-string">&quot;../data/worldclim_EU/worldclim_EU_bio_8.tif&quot;</span>
+    ),
+    RAT = <span class="hljs-literal">FALSE</span>
+  )
+
+<span class="hljs-comment">## 2050 climatic variables</span>
+stk_2050_BC_45 &lt;- 
+  raster::stack(
+    c(
+      bio_1 =  <span class="hljs-string">&quot;../data/worldclim_EU/worldclim_EU_2050_BC45_bio_1.tif&quot;</span>,
+      bio_12 = <span class="hljs-string">&quot;../data/worldclim_EU/worldclim_EU_2050_BC45_bio_12.tif&quot;</span>,
+      bio_8 =  <span class="hljs-string">&quot;../data/worldclim_EU/worldclim_EU_2050_BC45_bio_8.tif&quot;</span>
+    ),
+    RAT = <span class="hljs-literal">FALSE</span>
+  )
+
+<span class="hljs-comment">## 2070 climatic variables</span>
+stk_2070_BC_45 &lt;- 
+  raster::stack(
+    c(
+      bio_1 =  <span class="hljs-string">&quot;../data/worldclim_EU/worldclim_EU_2070_BC45_bio_1.tif&quot;</span>,
+      bio_12 = <span class="hljs-string">&quot;../data/worldclim_EU/worldclim_EU_2070_BC45_bio_12.tif&quot;</span>,
+      bio_8 =  <span class="hljs-string">&quot;../data/worldclim_EU/worldclim_EU_2070_BC45_bio_8.tif&quot;</span>
+    ),
+    RAT = <span class="hljs-literal">FALSE</span>
+  )
+
+
+<span class="hljs-comment">## build species modelling wrapper ----</span>
+biomod2_wrapper &lt;- <span class="hljs-keyword">function</span>(sp){
+  cat(<span class="hljs-string">&quot;/n&gt; species : &quot;</span>, sp)
+
+  <span class="hljs-comment">## get occurrences points</span>
+  sp_dat &lt;- data[data$species == sp, ]
+
+  <span class="hljs-comment">## formating the data</span>
+  sp_format &lt;- 
+    BIOMOD_FormatingData(
+      resp.var = rep(<span class="hljs-number">1</span>, nrow(sp_dat)), 
+      expl.var = stk_current,
+      resp.xy = sp_dat[, c(<span class="hljs-string">&quot;long&quot;</span>, <span class="hljs-string">&quot;lat&quot;</span>)],
+      resp.name = sp,
+      PA.strategy = <span class="hljs-string">&quot;random&quot;</span>, 
+      PA.nb.rep = <span class="hljs-number">2</span>, 
+      PA.nb.absences = <span class="hljs-number">1000</span>
+    )
+
+  <span class="hljs-comment">## print formatting summary</span>
+  sp_format
+
+  <span class="hljs-comment">## save image of input data summary</span>
+  <span class="hljs-keyword">if</span>(!exists(sp)) dir.create(sp)
+  pdf(paste(sp, <span class="hljs-string">&quot;/&quot;</span>, sp ,<span class="hljs-string">&quot;_data_formated.pdf&quot;</span>, sep=<span class="hljs-string">&quot;&quot;</span> ))
+  <span class="hljs-keyword">try</span>(plot(sp_format))
+  dev.off()
+
+  <span class="hljs-comment">## define models options</span>
+  sp_opt &lt;- BIOMOD_ModelingOptions()
+
+  <span class="hljs-comment">## model species</span>
+  sp_model &lt;- BIOMOD_Modeling( 
+    sp_format, 
+    models = c(<span class="hljs-string">&apos;GLM&apos;</span>, <span class="hljs-string">&apos;FDA&apos;</span>, <span class="hljs-string">&apos;RF&apos;</span>), 
+    models.options = sp_opt, 
+    NbRunEval = <span class="hljs-number">2</span>, 
+    DataSplit = <span class="hljs-number">70</span>, 
+    Yweights = <span class="hljs-literal">NULL</span>, 
+    VarImport = <span class="hljs-number">3</span>, 
+    models.eval.meth = c(<span class="hljs-string">&apos;TSS&apos;</span>, <span class="hljs-string">&apos;ROC&apos;</span>),
+    SaveObj = <span class="hljs-literal">TRUE</span>,
+    rescal.all.models = <span class="hljs-literal">FALSE</span>,
+    do.full.models = <span class="hljs-literal">FALSE</span>,
+    modeling.id = <span class="hljs-string">&quot;demo2&quot;</span>
+  )
+
+  <span class="hljs-comment">## save some graphical outputs</span>
+  <span class="hljs-comment">#### models scores</span>
+  pdf(paste0(sp, <span class="hljs-string">&quot;/&quot;</span>, sp , <span class="hljs-string">&quot;_models_scores.pdf&quot;</span>))
+  <span class="hljs-keyword">try</span>(gg1 &lt;- models_scores_graph(sp_model, metrics = c(<span class="hljs-string">&quot;TSS&quot;</span>, <span class="hljs-string">&quot;ROC&quot;</span>), by = <span class="hljs-string">&apos;models&apos;</span>, plot = <span class="hljs-literal">FALSE</span>))
+  <span class="hljs-keyword">try</span>(gg2 &lt;- models_scores_graph(sp_model, metrics = c(<span class="hljs-string">&quot;TSS&quot;</span>, <span class="hljs-string">&quot;ROC&quot;</span>), by = <span class="hljs-string">&apos;data_set&apos;</span>, plot = <span class="hljs-literal">FALSE</span>))
+  <span class="hljs-keyword">try</span>(gg3 &lt;- models_scores_graph(sp_model, metrics = c(<span class="hljs-string">&quot;TSS&quot;</span>, <span class="hljs-string">&quot;ROC&quot;</span>), by = <span class="hljs-string">&apos;cv_run&apos;</span>, plot = <span class="hljs-literal">FALSE</span>))
+  <span class="hljs-keyword">try</span>(grid.arrange(gg1, gg2, gg3))
+  dev.off()
+
+  <span class="hljs-comment">## build ensemble models</span>
+  sp_ens_model &lt;- 
+    BIOMOD_EnsembleModeling(
+      modeling.output = sp_model,
+      em.by = <span class="hljs-string">&apos;all&apos;</span>,
+      eval.metric = <span class="hljs-string">&apos;TSS&apos;</span>,
+      eval.metric.quality.threshold = <span class="hljs-number">0.4</span>,
+      models.eval.meth = c(<span class="hljs-string">&apos;TSS&apos;</span>,<span class="hljs-string">&apos;ROC&apos;</span>),
+      prob.mean = <span class="hljs-literal">FALSE</span>,
+      prob.mean.weight = <span class="hljs-literal">TRUE</span>,
+      VarImport = <span class="hljs-number">0</span>
+    )
+
+  <span class="hljs-comment">## do projections</span>
+  proj_scen &lt;- c(<span class="hljs-string">&quot;current&quot;</span>, <span class="hljs-string">&quot;2050_BC_45&quot;</span>, <span class="hljs-string">&quot;2070_BC_45&quot;</span>)
+
+  <span class="hljs-keyword">for</span>(scen <span class="hljs-keyword">in</span> proj_scen){
+    cat(<span class="hljs-string">&quot;/n&gt; projections of &quot;</span>, scen)
+
+    <span class="hljs-comment">## single model projections</span>
+    sp_proj &lt;- 
+      BIOMOD_Projection(
+        modeling.output = sp_model,
+        new.env = get(paste0(<span class="hljs-string">&quot;stk_&quot;</span>, scen)),
+        proj.name = scen,
+        selected.models = <span class="hljs-string">&apos;all&apos;</span>,
+        binary.meth = <span class="hljs-string">&quot;TSS&quot;</span>,
+        filtered.meth = <span class="hljs-literal">NULL</span>,
+        compress = <span class="hljs-literal">TRUE</span>,
+        build.clamping.mask = <span class="hljs-literal">FALSE</span>,
+        do.stack = <span class="hljs-literal">FALSE</span>,
+        output.format = <span class="hljs-string">&quot;.img&quot;</span>
+      )
+
+    <span class="hljs-comment">## ensemble model projections</span>
+    sp_ens_proj &lt;- 
+      BIOMOD_EnsembleForecasting(
+        EM.output = sp_ens_model,
+        projection.output = sp_proj,
+        binary.meth = <span class="hljs-string">&quot;TSS&quot;</span>,
+        compress = <span class="hljs-literal">TRUE</span>,
+        do.stack = <span class="hljs-literal">FALSE</span>,
+        output.format = <span class="hljs-string">&quot;.img&quot;</span>
+      )
+  }
+
+  <span class="hljs-keyword">return</span>(paste0(sp,<span class="hljs-string">&quot; modelling completed !&quot;</span>))
+}
+
+
+<span class="hljs-comment">## launch the spiecies modelling wrapper over species list ----</span>
+<span class="hljs-keyword">if</span>(<span class="hljs-keyword">require</span>(snowfall)){ <span class="hljs-comment">## parallel computation</span>
+  <span class="hljs-comment">## start the cluster</span>
+  sfInit(parallel = <span class="hljs-literal">TRUE</span>, cpus = <span class="hljs-number">5</span>) <span class="hljs-comment">## here we only require 4 cpus</span>
+  sfExportAll()
+  sfLibrary(biomod2)
+  <span class="hljs-comment">## launch our wrapper in parallel</span>
+  sf_out &lt;- sfLapply(spp_to_model, biomod2_wrapper)
+  <span class="hljs-comment">## stop the cluster</span>
+  sfStop()
+} <span class="hljs-keyword">else</span> { <span class="hljs-comment">## sequencial computation</span>
+  <span class="hljs-keyword">for</span> (sp <span class="hljs-keyword">in</span> spp_to_model){
+    biomod2_wrapper(sp)
+  }
+  <span class="hljs-comment">## or with a lapply function in sequential model</span>
+  <span class="hljs-comment">## all_species_bm &lt;- lapply(spp_to_model, biomod2_wrapper)</span>
+}
+
+<span class="hljs-comment">## produce alpha-diversity maps ----</span>
+
+<span class="hljs-comment">## current conditons</span>
+<span class="hljs-comment">### load binary projections</span>
+f_em_wmean_bin_current &lt;- 
+  paste0(
+    spp_to_model,
+    <span class="hljs-string">&quot;/proj_current/individual_projections/&quot;</span>, 
+    spp_to_model, <span class="hljs-string">&quot;_EMwmeanByTSS_mergedAlgo_mergedRun_mergedData_TSSbin.img&quot;</span>
+  )
+
+<span class="hljs-comment">### sum all projections</span>
+<span class="hljs-keyword">if</span>(length(f_em_wmean_bin_current) &gt;= <span class="hljs-number">2</span>){
+  <span class="hljs-comment">## initialisation</span>
+  taxo_alpha_div_current &lt;- raster(f_em_wmean_bin_current[<span class="hljs-number">1</span>]) 
+  <span class="hljs-keyword">for</span>(f <span class="hljs-keyword">in</span> f_em_wmean_bin_current[-<span class="hljs-number">1</span>]){
+    taxo_alpha_div_current &lt;- taxo_alpha_div_current + raster(f)
+  }
+}
+
+<span class="hljs-comment">## 2050 conditons</span>
+<span class="hljs-comment">### load binaries projections</span>
+f_em_wmean_bin_2050 &lt;- 
+  paste0(
+    spp_to_model,
+    <span class="hljs-string">&quot;/proj_2050_BC_45/individual_projections/&quot;</span>, 
+    spp_to_model, <span class="hljs-string">&quot;_EMwmeanByTSS_mergedAlgo_mergedRun_mergedData_TSSbin.img&quot;</span>
+  )
+
+<span class="hljs-comment">### sum all projections</span>
+<span class="hljs-keyword">if</span>(length(f_em_wmean_bin_2050) &gt;= <span class="hljs-number">2</span>){
+  <span class="hljs-comment">## initialisation</span>
+  taxo_alpha_div_2050 &lt;- raster(f_em_wmean_bin_2050[<span class="hljs-number">1</span>]) 
+  <span class="hljs-keyword">for</span>(f <span class="hljs-keyword">in</span> f_em_wmean_bin_2050[-<span class="hljs-number">1</span>]){
+    taxo_alpha_div_2050 &lt;- taxo_alpha_div_2050 + raster(f)
+  }
+}
+
+<span class="hljs-comment">## 2070 conditons</span>
+<span class="hljs-comment">### load binaries projections</span>
+f_em_wmean_bin_2070 &lt;- 
+  paste0(
+    spp_to_model,
+    <span class="hljs-string">&quot;/proj_2070_BC_45//individual_projections/&quot;</span>, 
+    spp_to_model, <span class="hljs-string">&quot;_EMwmeanByTSS_mergedAlgo_mergedRun_mergedData_TSSbin.img&quot;</span>
+  )
+
+<span class="hljs-comment">### sum all projections</span>
+<span class="hljs-keyword">if</span>(length(f_em_wmean_bin_2070) &gt;= <span class="hljs-number">2</span>){
+  <span class="hljs-comment">## initialisation</span>
+  taxo_alpha_div_2070 &lt;- raster(f_em_wmean_bin_2070[<span class="hljs-number">1</span>]) 
+  <span class="hljs-keyword">for</span>(f <span class="hljs-keyword">in</span> f_em_wmean_bin_2070){
+    taxo_alpha_div_2070 &lt;- taxo_alpha_div_2070 + raster(f)
+  }
+}
+
+<span class="hljs-comment">## plot the alpha-div maps</span>
+levelplot(
+  stack(
+    c(
+      current = taxo_alpha_div_current, 
+      in_2050 = taxo_alpha_div_2050, 
+      in_2070 = taxo_alpha_div_2070 
+    )
+  ),
+  main = expression(paste(<span class="hljs-string">&quot;Larus &quot;</span>, alpha, <span class="hljs-string">&quot;-diversity&quot;</span>)),
+  par.settings = BuRdTheme
+)
+</code></pre>
+<h5 id="8113-&#x5E76;&#x884C;&#x8FD0;&#x7B97;">8.1.1.3 &#x5E76;&#x884C;&#x8FD0;&#x7B97;</h5>
+<pre><code class="lang-r"><span class="hljs-keyword">library</span>(parallel)
+cl=makeCluster(<span class="hljs-number">20</span>)
+clusterEvalQ(cl,{<span class="hljs-keyword">library</span>(R2OpenBUGS);<span class="hljs-keyword">library</span>(DMwR)})
+clusterExport(cl,c(<span class="hljs-string">&quot;unimodal_modelling&quot;</span>,<span class="hljs-string">&quot;bimodal_modelling&quot;</span>,<span class="hljs-string">&quot;unimodal_file&quot;</span>,<span class="hljs-string">&quot;bimodal_file&quot;</span>))
+parLapply(cl,<span class="hljs-number">1</span>:<span class="hljs-number">100</span>,<span class="hljs-keyword">function</span>(i){
+  setwd(paste0(<span class="hljs-string">&apos;sim&apos;</span>,as.character(i)))
+  d=read.csv(<span class="hljs-string">&quot;simulations.txt&quot;</span>)[,<span class="hljs-number">1</span>]
+  nam=paste0(<span class="hljs-string">&quot;sim&quot;</span>,i)
+  m1=unimodal_modelling(d,nam,wd=getwd(),unimodal_file)
+  m2=bimodal_modelling(d,nam,wd=getwd(),bimodal_file)
+  setwd(<span class="hljs-string">&apos;..&apos;</span>)
+})
+stopCluster(cl)
+</code></pre>
+<h4 id="832-kuenmscript">8.3.2 Kuenm(script)</h4>
+<h6 id="8321--kuenm&#x5305;&#x7684;&#x5B89;&#x88C5;&#x8BF4;&#x660E;">8.3.2.1  Kuenm&#x5305;&#x7684;&#x5B89;&#x88C5;&#x8BF4;&#x660E;</h6>
+<pre><code class="lang-r"><span class="hljs-comment">### R&#x5305;&#x8BF4;&#x660E;&#xFF1A;</span>
+
+
+<span class="hljs-comment"># (ONLY IF NEEDED) installing the package </span>
+<span class="hljs-comment">## devtools</span>
+install.packages(<span class="hljs-string">&quot;devtools&quot;</span>)
+<span class="hljs-comment">## kuenm&#xFF08;&#x5728;4.02&#x7248;&#x672C;&#x4E0B;&#x4E0D;&#x80FD;&#x5B89;&#x88C5;&#xFF0C;&#x5728;3.6&#x7248;&#x672C;&#x4E0B;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;&#xFF09;</span>
+devtools::install_github(<span class="hljs-string">&quot;marlonecobos/kuenm&quot;</span>)
+</code></pre>
+<h5 id="8322-kuenm&#x7279;&#x8272;&#x529F;&#x80FD;">8.3.2.2 kuenm&#x7279;&#x8272;&#x529F;&#x80FD;</h5>
+<pre><code class="lang-R"><span class="hljs-comment">## &#x5916;&#x63A8;&#x98CE;&#x9669;&#x5206;&#x6790; mop</span>
+    &#x5982;&#x679C;&#x5728;&#x521B;&#x5EFA;&#x6700;&#x7EC8;&#x6A21;&#x578B;&#x65F6;&#x6267;&#x884C;&#x4E86;&#x8F6C;&#x79FB;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;kuenm_mmop&#x51FD;&#x6570;&#x8BC4;&#x4F30;&#x5916;&#x63A8;&#x7684;&#x98CE;&#x9669;&#x3002;&#x8BE5;&#x529F;&#x80FD;&#x901A;&#x8FC7;&#x6BD4;&#x8F83;&#x6821;&#x51C6;&#x533A;&#x57DF;&#x4E0E;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x751F;&#x6001;&#x4F4D;&#x6A21;&#x578B;&#x5DF2;&#x8F6C;&#x79FB;&#x5230;&#x7684;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x533A;&#x57DF;&#x6216;&#x65B9;&#x6848;&#x4E4B;&#x95F4;&#x7684;&#x73AF;&#x5883;&#x503C;&#xFF0C;&#x8BA1;&#x7B97;&#x9762;&#x5411;&#x6D41;&#x52A8;&#x6027;&#x7684;&#x5947;&#x5076;&#x6027;&#xFF08;MOP&#xFF09;&#x5C42;&#xFF08;Owens&#x7B49;&#x4EBA;&#xFF0C;<span class="hljs-number">2013</span>&#xFF09;&#x3002;&#x4F7F;&#x7528;&#x6B64;&#x529F;&#x80FD;&#x751F;&#x6210;&#x7684;&#x56FE;&#x5C42;&#x6709;&#x52A9;&#x4E8E;&#x53EF;&#x89C6;&#x5316;&#xFF0C;&#x524D;&#x63D0;&#x662F;&#x5B58;&#x5728;&#x4E25;&#x683C;&#x7684;&#x5916;&#x63A8;&#x98CE;&#x9669;&#xFF0C;&#x5E76;&#x4E14;&#x6295;&#x5F71;&#x533A;&#x57DF;&#x6216;&#x573A;&#x666F;&#x4E0E;&#x6821;&#x51C6;&#x533A;&#x57DF;&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x4F3C;&#x5EA6;&#x4E0D;&#x540C;&#x3002;&#x5206;&#x6790;&#x7684;&#x7ED3;&#x679C;&#x5C06;&#x5199;&#x5165;&#x7279;&#x5B9A;&#x6570;&#x636E;&#x4E2D;&#x7684;&#x6BCF;&#x7EC4;&#x53D8;&#x91CF;&#xFF08;&#x56FE;<span class="hljs-number">1</span>&#xFF0C;&#x6DF1;&#x7EFF;&#x8272;&#x533A;&#x57DF;&#xFF09;&#x3002;
+
+<span class="hljs-comment">## &#x5EFA;&#x6A21;&#x540E;&#x5206;&#x6790;</span>
+<span class="hljs-comment">### &#x8DE8;&#x591A;&#x4E2A;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x7684;&#x6A21;&#x578B;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#xFF1A;</span>
+&#x8BA1;&#x7B97;&#x8DE8;&#x6A21;&#x578B;&#x7684;&#x6A21;&#x578B;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#xFF08;&#x5141;&#x8BB8;&#x6765;&#x81EA;&#x4E0D;&#x540C;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x7684;&#x7ED3;&#x679C;
+<span class="hljs-comment">### &#x9002;&#x5E94;&#x6027;&#x548C;&#x9002;&#x5408;&#x533A;&#x57DF;&#x4E4B;&#x95F4;&#x7684;&#x53D8;&#x5316;&#xFF1A;</span>
+&#x786E;&#x5B9A;&#x5408;&#x9002;&#x533A;&#x57DF;&#x7684;&#x53D8;&#x5316;&#x548C;&#x9884;&#x6D4B;&#x7684;&#x9002;&#x7528;&#x6027;&#xFF08;&#x8003;&#x8651;&#x591A;&#x79CD;&#x6C14;&#x5019;&#x6A21;&#x578B;&#xFF0C;&#x6392;&#x653E;&#x60C5;&#x666F;&#x548C;&#x65F6;&#x95F4;&#xFF09;
+<span class="hljs-comment">### &#x6765;&#x81EA;&#x4E0D;&#x540C;&#x6765;&#x6E90;&#x7684;&#x6805;&#x683C;&#x65B9;&#x5DEE;&#x5C42;&#xFF1A;</span>
+&#x521B;&#x5EFA;&#x5730;&#x56FE;&#xFF0C;&#x663E;&#x793A;&#x6BCF;&#x4E2A;&#x53D8;&#x5F02;&#x6E90;&#x8D21;&#x732E;&#x7684;&#x53D8;&#x5F02;&#xFF1B;
+<span class="hljs-comment">### &#x6765;&#x81EA;&#x4E0D;&#x540C;&#x6765;&#x6E90;&#x7684;&#x65B9;&#x5DEE;&#x7684;&#x5206;&#x5C42;&#x5212;&#x5206;&#xFF1A;</span>
+&#x5BF9;&#x6A21;&#x578B;&#x7684;&#x65B9;&#x5DEE;&#x8FDB;&#x884C;&#x5206;&#x5C42;&#x5212;&#x5206;&#xFF0C;&#x8FD9;&#x4E9B;&#x65B9;&#x5DEE;&#x6765;&#x81EA;&#x4E0D;&#x540C;&#x7684;&#x53D8;&#x5316;&#x6765;&#x6E90;&#x3002;&#x8003;&#x8651;&#x7684;&#x56DB;&#x4E2A;&#x6F5C;&#x5728;&#x53D8;&#x5316;&#x6E90;&#x662F;&#xFF1A;&#x6A21;&#x578B;&#x590D;&#x5236;&#xFF0C;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#xFF0C;GCM&#x548C;RCP&#x3002;
+</code></pre>
+<h4 id="8-33-wallaceshiny">8. 3.3 wallace(shiny)</h4>
+<pre><code class="lang-r">install.packages(<span class="hljs-string">&quot;wallace&quot;</span>)
+<span class="hljs-keyword">library</span>(wallace)
+run_wallace()   <span class="hljs-comment">##&#x8FD0;&#x884C;run&#x540E;&#x53EF;&#x76F4;&#x63A5;&#x8FDB;&#x5165;&#x5230;&#x6D4F;&#x89C8;&#x5668;&#x754C;&#x9762;</span>
+</code></pre>
+<pre><code>## &#x5173;&#x4E8E;&#x6B64;&#x5305;&#x7684;&#x529F;&#x80FD;&#x8BF4;&#x660E;&#x4E0E;&#x89E3;&#x91CA;&#xFF1A;
+## &#x6B64;&#x5305;&#x7684;&#x53EF;&#x89C6;&#x5316;&#x529F;&#x80FD;&#x8F83;&#x4E3A;&#x597D;&#x7528;&#xFF0C;&#x6570;&#x636E;&#x5206;&#x6790;&#x5DE5;&#x4F5C;&#x80FD;&#x591F;&#x5F88;&#x597D;&#x7684;&#x5229;&#x7528;&#x6570;&#x636E;&#x5E73;&#x53F0;&#x5C55;&#x5F00;&#xFF1B;&#x5176;&#x4E2D;&#x6709;&#x7528;&#x7684;&#x90E8;&#x5206;&#x662F;&#x5C06;ENMeval&#x5305;&#x548C;&#x53EF;&#x89C6;&#x5316;&#x7269;&#x79CD;&#x5206;&#x5E03;&#x70B9;&#x4EE5;&#x53CA;&#x76F8;&#x5173;&#x5F15;&#x7528;&#x95EE;&#x4E0B;&#x7EB3;&#x5165;&#x5230;shiny&#x5C55;&#x793A;&#x4E2D;&#xFF0C;&#x9274;&#x4E8E;&#x7528;&#x6237;&#x53EF;&#x89C6;&#x5316;&#x4EBA;&#x673A;&#x4EA4;&#x4E92;
+</code></pre><h4 id="834--nichetoolboxshiny">8.3.4  NicheToolBox(shiny)</h4>
+<pre><code class="lang-r"><span class="hljs-comment">## &#x5B89;&#x88C5;&#x4E0E;&#x8FD0;&#x884C;&#xFF1A;</span>
+devtools::install_github(<span class="hljs-string">&apos;luismurao/nichetoolbox&apos;</span>)
+<span class="hljs-keyword">library</span>(nichetoolbox)
+run_nichetoolbox()
+</code></pre>
+<pre><code class="lang-R"><span class="hljs-comment">## nichetoolbox&#x7684;&#x5B89;&#x88C5;&#x8BF4;&#x660E;&#xFF1A;</span>
+https://luismurao.github.io/GSoC/gsoc_final_eval.html
+</code></pre>
+<h5 id="8341-2029-49&#x529F;&#x80FD;">8.3.4.1 2029-49&#x529F;&#x80FD;</h5>
+<pre><code class="lang-r"><span class="hljs-comment">## GUI&#x4F7F;&#x7528;&#xFF1A;</span>
+<span class="hljs-comment">### AppSettings&#x90E8;&#x5206;</span>
+&#x52A0;&#x8F7D;&#x5229;&#x57FA;&#x5C42;
+&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;
+<span class="hljs-comment">## &#x6570;&#x636E;&#x90E8;&#x5206;</span>
+&#x641C;&#x5BFB;GBIF&#x8BB0;&#x5F55;
+GBIF&#x6570;&#x636E;&#x6E05;&#x7406;
+&#x7528;&#x6237;&#x6570;&#x636E;
+<span class="hljs-comment">## &#x4F7F;&#x7528;&#x52A8;&#x6001;&#x5730;&#x56FE;&#x8FDB;&#x884C;&#x5730;&#x7406;&#x63A2;&#x7D22;</span>
+&#x663E;&#x793A;&#x7ECF;&#x5EA6;&#x548C;&#x7EAC;&#x5EA6;&#x6570;&#x636E;
+<span class="hljs-comment">## &#x4F7F;&#x7528;&#x52A8;&#x6001;&#x5730;&#x56FE;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x7B56;&#x5212;</span>
+&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x201C; M&#x201D;&#x56FE;
+<span class="hljs-comment">### &#x4FDD;&#x5B58;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;</span>
+&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x62A5;&#x544A;
+<span class="hljs-comment">## &#x751F;&#x6001;&#x4F4D;&#x7A7A;&#x95F4;&#xFF08;&#x8FDB;&#x884C;&#x805A;&#x7C7B;&#x5206;&#x6790;&#x7684;&#x6B65;&#x9AA4;&#xFF09;</span>
+<span class="hljs-number">1.</span>&#x4ECE;&#x6805;&#x683C;&#x56FE;&#x5C42;&#x4E2D;&#x63D0;&#x53D6;&#x5229;&#x57FA;&#x503C;
+<span class="hljs-number">2.</span>&#x751F;&#x6001;&#x4F4D;&#x63A2;&#x7D22;
+<span class="hljs-number">2.1</span>&#x751F;&#x6001;&#x4F4D;&#x8D8B;&#x52BF;
+<span class="hljs-number">3.</span>&#x751F;&#x6001;&#x4F4D;&#x805A;&#x7C7B;
+(<span class="hljs-comment">## &#x63D0;&#x4F9B;&#x4E09;&#x7EF4;bios&#x7A7A;&#x95F4;&#x4E0B;&#x7684;&#x7269;&#x79CD;&#x751F;&#x6001;&#x7A7A;&#x95F4;&#x6295;&#x5F71;&#x53EF;&#x89C6;&#x5316;)</span>
+<span class="hljs-number">4.</span>&#x751F;&#x6001;&#x4F4D;&#x76F8;&#x5173;&#x6027;
+<span class="hljs-number">6.</span>&#x751F;&#x6001;&#x4F4D;&#x5EFA;&#x6A21;
+    <span class="hljs-number">6.1</span>&#x6700;&#x5C0F;&#x4F53;&#x79EF;&#x692D;&#x7403;&#x6A21;&#x578B;
+&#xFF08;<span class="hljs-comment">##&#x7C7B;&#x4F3C;&#x4E8E;mve&#xFF0C;&#x53EF;&#x6784;&#x5EFA;&#x80CC;&#x666F;&#x7A7A;&#x95F4;&#xFF0C;so beautiful&#xFF09;</span>
+    <span class="hljs-number">6.2</span> Bioclim&#x6A21;&#x578B;
+    <span class="hljs-number">6.3</span> MaxEnt&#x6A21;&#x578B;
+    &#x5730;&#x7406;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;ENM&#x6295;&#x5F71;
+<span class="hljs-number">7.</span>&#x7269;&#x79CD;&#x5206;&#x5E03;&#x6A21;&#x578B;&#x7684;&#x7EE9;&#x6548;
+    <span class="hljs-number">7.1</span>&#x90E8;&#x5206;ROC
+    <span class="hljs-number">7.2</span>&#x4E8C;&#x8FDB;&#x5236;&#x56FE;
+<span class="hljs-comment">## &#x53C2;&#x8003;&#x8D44;&#x6599;</span>
+</code></pre>
+<h4 id="835--odmapshiny">8.3.5  ODMAP(shiny)</h4>
+<pre><code class="lang-R"><span class="hljs-comment">## ODMAP&#x5305;&#x7684;&#x4F7F;&#x7528;&#x8BF4;&#x660E;&#xFF1A;</span>
+ODMAP&#x534F;&#x8BAE;&#x6709;&#x4E24;&#x4E2A;&#x4E3B;&#x8981;&#x76EE;&#x7684;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x5B83;&#x4E3A;&#x4F5C;&#x8005;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x6E05;&#x5355;&#xFF0C;&#x8BE6;&#x7EC6;&#x5217;&#x51FA;&#x4E86;&#x6A21;&#x578B;&#x6784;&#x5EFA;&#x548C;&#x5206;&#x6790;&#x7684;&#x5173;&#x952E;&#x6B65;&#x9AA4;&#x3002;&#x5176;&#x6B21;&#xFF0C;&#x5B83;&#x5F15;&#x5165;&#x4E86;&#x4E00;&#x79CD;&#x6807;&#x51C6;&#x7684;&#x6587;&#x6863;&#x7F16;&#x5236;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x786E;&#x4FDD;&#x900F;&#x660E;&#x5EA6;&#x548C;&#x53EF;&#x91CD;&#x590D;&#x6027;&#xFF0C;&#x4FBF;&#x4E8E;&#x540C;&#x884C;&#x8BC4;&#x5BA1;&#x548C;&#x4E13;&#x5BB6;&#x8BC4;&#x4F30;&#x6A21;&#x578B;&#x8D28;&#x91CF;&#x4EE5;&#x53CA;&#x8FDB;&#x884C;&#x835F;&#x8403;&#x5206;&#x6790;&#x3002;
+
+<span class="hljs-comment">## &#x5F15;&#x7528;&#x8BBA;&#x6587;&#xFF1A;</span>
+https://onlinelibrary.wiley.com/doi/full/<span class="hljs-number">10.1111</span>/ecog.04960
+
+<span class="hljs-comment">## github&#x4E3B;&#x9875;&#xFF1A;</span>
+https://github.com/ChrKoenig/ODMAP
+
+<span class="hljs-comment">## shiny&#x53EF;&#x89C6;&#x5316;&#x5E73;&#x53F0;&#xFF1A;</span>
+https://odmap.wsl.ch/
+</code></pre>
+<h2 id="&#x6784;&#x5EFA;&#x7EC4;&#x4EF6;&#x4EE5;&#x53CA;&#x6807;&#x51C6;">&#x6784;&#x5EFA;&#x7EC4;&#x4EF6;&#x4EE5;&#x53CA;&#x6807;&#x51C6;</h2>
+<p><img src="E:\project-git\markdownpngimg\1596180846427.png" alt="1596180846427"></p>
+<h2 id="&#x5199;&#x4F5C;&#x6784;&#x5EFA;&#x65B9;&#x5F0F;&#x6807;&#x51C6;">&#x5199;&#x4F5C;&#x6784;&#x5EFA;&#x65B9;&#x5F0F;(&#x6807;&#x51C6;)</h2>
+<p><img src="E:\project-git\markdownpngimg\1596182597219.png" alt="1596182597219"></p>
+<h4 id="836-enmsdmscript">8.3.6 enmSDM(script)</h4>
+<pre><code>## enmSDM&#x7B80;&#x4ECB;&#xFF1A;
+&#x8FD9;&#x4E2A;&#x8F6F;&#x4EF6;&#x5305;&#x662F;&#x5BF9;Robert Hijmans&#x7684;R&#x6D41;&#x884C;&#x7684;`dismo`&#x8F6F;&#x4EF6;&#x5305;&#x7684;&#x8865;&#x5145;&#x3002;&#x5B83;&#x5305;&#x542B;&#x4E00;&#x5957;&#x6548;&#x7387;&#x51FD;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x51C6;&#x5907;&#x6570;&#x636E;&#xFF0C;&#x8BAD;&#x7EC3;&#x548C;&#x8BC4;&#x4F30;&#x7269;&#x79CD;&#x5206;&#x5E03;&#x6A21;&#x578B;&#x548C;&#x751F;&#x6001;&#x4F4D;&#x6A21;&#x578B;&#x4EE5;&#x53CA;&#x6BD4;&#x8F83;&#x751F;&#x6001;&#x4F4D;&#x3002;
+
+## R&#x5305;&#x8BF4;&#x660E;&#x6587;&#x6863;&#xFF1A;
+https://github.com/adamlilith/enmSdm
+</code></pre><pre><code class="lang-R"><span class="hljs-comment">##&#x8F6F;&#x4EF6;&#x529F;&#x80FD;&#x7C7B;&#x578B;&#x5982;&#x4E0B;&#xFF1A;</span>
+<span class="hljs-comment">## 1&#x3001;&#x5206;&#x5E03;&#x70B9;&#x81EA;&#x76F8;&#x5173;&#x6E05;&#x7406;</span>
+elimCellDups&#xFF1A;&#x6D88;&#x9664;&#x6805;&#x683C;&#x6BCF;&#x4E2A;&#x50CF;&#x5143;&#x4E2D;&#x7684;&#x91CD;&#x590D;&#x70B9;
+geoFold&#xFF1A;&#x751F;&#x6210;&#x5730;&#x7406;&#x4E0A;&#x4E0D;&#x540C;&#x7684;k&#x500D;
+geoThin&#x548C;geoThinApprox&#xFF1A;&#x5730;&#x7406;&#x4E0A;&#x7684;&#x8584;&#x70B9;
+
+<span class="hljs-comment">## 2&#x3001;&#x6A21;&#x578B;&#x8BAD;&#x7EC3;</span>
+trainByCrossValid&#xFF1A;&#x7528;&#x4E8E;trainXYZ&#x5728;&#x4EA4;&#x53C9;&#x9A8C;&#x8BC1;&#x6298;&#x53E0;&#x4E2D;&#x5B9E;&#x73B0;&#x67D0;&#x4E9B;&#x529F;&#x80FD;&#x7684;&#x5305;&#x88C5;&#x5668;&#xFF08;&#x53E6;&#x8BF7;&#x53C2;&#x89C1;summaryByCrossValid&#xFF09;&#x3002;
+trainBrt&#xFF1A;&#x589E;&#x5F3A;&#x7684;&#x56DE;&#x5F52;&#x6811;&#xFF08;BRT&#xFF09;
+trainCrf&#xFF1A;&#x6761;&#x4EF6;&#x56DE;&#x5F52;&#x6811;&#xFF08;CRF&#xFF09;
+trainGam&#xFF1A;&#x901A;&#x7528;&#x52A0;&#x6027;&#x6A21;&#x578B;&#xFF08;GAM&#xFF09;
+trainGlm&#xFF1A;&#x5E7F;&#x4E49;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#xFF08;GLM&#xFF09;
+trainGlmDredge&#xFF1A;&#x5E7F;&#x4E49;&#x7EBF;&#x6027;&#x6A21;&#x578B;&#xFF08;GLM&#xFF09;
+trainLars&#xFF1A;&#x6700;&#x5C0F;&#x89D2;&#x5EA6;&#x56DE;&#x5F52;&#x6A21;&#x578B;&#xFF08;LARS&#xFF09;
+trainMaxEnt&#x548C;trainMaxNet&#xFF1A;Maxent&#x6A21;&#x578B;
+trainNs&#xFF1A;&#x81EA;&#x7136;&#x82B1;&#x952E;&#xFF08;NSs&#xFF09;
+trainRf&#xFF1A;&#x968F;&#x673A;&#x68EE;&#x6797;&#xFF08;RF&#xFF09;
+
+<span class="hljs-comment">## 3&#x3001;&#x6A21;&#x578B;&#x8BC4;&#x4F30;&#xFF1A;</span>
+aucWeighted&#xFF1A;AUC&#xFF08;&#x6709;/&#x65E0;&#x7AD9;&#x70B9;&#x6743;&#x91CD;&#xFF09;
+aucMultiWeighted&#xFF1A;AUC&#x7684;&#x591A;&#x5143;&#x7248;&#x672C;&#xFF08;&#x6709;/&#x65E0;&#x7F51;&#x7AD9;&#x6743;&#x91CD;&#xFF09;
+contBoyce&#xFF1A;&#x8FDE;&#x7EED;&#x535A;&#x4F0A;&#x65AF;&#x6307;&#x6570;&#xFF08;&#x6709;/&#x65E0;&#x7F51;&#x7AD9;&#x6743;&#x91CD;&#xFF09;
+contBoyce2x&#xFF1A;&#x8FDE;&#x7EED;&#x535A;&#x4F0A;&#x65AF;&#x6307;&#x6570;&#x7684;&#x201C; 2X&#x8986;&#x76D6;&#x7387;&#x201D;&#x7248;&#x672C;&#xFF08;&#x6709;/&#x65E0;&#x7F51;&#x7AD9;&#x6743;&#x91CD;&#xFF09;
+fpb&#xFF1A;Fpb&#xFF08;&#x6709;/&#x65E0;&#x7AD9;&#x70B9;&#x6743;&#x91CD;&#xFF09;
+thresholdWeighted&#xFF1A;&#x5C06;&#x8FDE;&#x7EED;&#x9884;&#x6D4B;&#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#x9884;&#x6D4B;&#x7684;&#x9608;&#x503C;&#xFF08;&#x6709;/&#x65E0;&#x7AD9;&#x70B9;&#x6743;&#x91CD;&#xFF09;
+thresholdStats&#xFF1A;&#x57FA;&#x4E8E;&#x9608;&#x503C;&#x9884;&#x6D4B;&#xFF08;&#x5177;&#x6709;/&#x4E0D;&#x5177;&#x6709;&#x7AD9;&#x70B9;&#x6743;&#x91CD;&#xFF09;&#x5BF9;&#x6027;&#x80FD;&#x7EDF;&#x8BA1;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5EFA;&#x6A21;
+tssWeighted&#xFF1A;&#x771F;&#x5B9E;&#x6280;&#x80FD;&#x7EDF;&#x8BA1;&#xFF08;TSS&#xFF09;&#xFF08;&#x6709;/&#x65E0;&#x7AD9;&#x70B9;&#x6743;&#x91CD;&#xFF09;
+modelSize&#xFF1A;&#x6A21;&#x578B;&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x54CD;&#x5E94;&#x503C;&#x6570;&#x91CF;
+
+<span class="hljs-comment">## 4&#x3001;&#x751F;&#x6001;&#x4F4D;&#x91CD;&#x53E0;</span>
+compareNiches&#xFF1A;&#x5229;&#x57FA;&#x91CD;&#x53E0;&#x6307;&#x6807;
+compareResponse&#xFF1A;&#x6BD4;&#x8F83;&#x5229;&#x57FA;&#x6A21;&#x578B;&#x54CD;&#x5E94;&#x548C;&#x5355;&#x4E2A;&#x53D8;&#x91CF;
+mop&#xFF1A;&#x6839;&#x636E;Saupe&#x7B49;&#x4EBA;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x8BA1;&#x7B97;&#x9762;&#x5411;&#x6D41;&#x52A8;&#x6027;&#x7684;&#x5947;&#x5076;&#x6027;&#xFF0C;&#x5373;&#x5BF9;&#x591A;&#x5143;&#x8DDD;&#x79BB;&#x7684;&#x5EA6;&#x91CF;&#x3002;<span class="hljs-number">2012</span>&#x3002;
+nicheOverlap&#xFF1A;&#x6309;&#x7167;Broennimann&#x7B49;&#x4EBA;&#x7684;&#x65B9;&#x6CD5;&#x8BA1;&#x7B97;&#x751F;&#x6001;&#x4F4D;&#x91CD;&#x53E0;&#x3002;&#x5168;&#x7403;&#x751F;&#x6001;&#x4E0E;&#x751F;&#x7269;&#x5730;&#x7406;<span class="hljs-number">21</span>&#xFF1A;<span class="hljs-number">481</span>-<span class="hljs-number">497</span>
+randPointsRespectingSelf&#xFF1A;&#x968F;&#x673A;&#x5206;&#x914D;&#x5730;&#x7406;&#x70B9;&#xFF0C;&#x540C;&#x65F6;&#x5927;&#x7EA6;&#x5C0A;&#x91CD;&#x89C2;&#x5BDF;&#x5230;&#x7684;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x7A7A;&#x95F4;&#x81EA;&#x76F8;&#x5173;&#x7ED3;&#x6784;
+randPointsRespectingSelfOther2&#xFF1A;&#x968F;&#x673A;&#x5206;&#x914D;&#x4E24;&#x7EC4;&#x5730;&#x7406;&#x70B9;&#xFF0C;&#x540C;&#x65F6;&#x5927;&#x7EA6;&#x5C0A;&#x91CD;&#x7EC4;&#x4E4B;&#x95F4;&#x548C;&#x7EC4;&#x5185;&#x89C2;&#x5BDF;&#x5230;&#x7684;&#x7A7A;&#x95F4;&#x81EA;&#x76F8;&#x5173;&#x7ED3;&#x6784;
+randPointsBatch&#xFF1A;&#x901A;&#x8BDD;randPointsRespectingSelf&#x6216;randPointsRespectingSelfOther2&#x591A;&#x6B21;
+randPointsBatchExtract&#xFF1A;&#x4ECE;&#x4E00;&#x7EC4;&#x6805;&#x683C;&#x4E2D;&#x63D0;&#x53D6;&#x73AF;&#x5883;&#x4EE5;&#x83B7;&#x53D6;&#x4F7F;&#x7528;&#x751F;&#x6210;&#x7684;&#x968F;&#x673A;&#x70B9;&#x96C6; randPointsBatch
+randPointsBatchSampled&#xFF1A;&#x6574;&#x7406;&#x4F7F;&#x7528;&#x751F;&#x6210;&#x7684;&#x6240;&#x6709;&#x968F;&#x673A;&#x70B9;&#x96C6; randPointsBatch
+randPointsBatchNicheOverlap&#xFF1A;&#x8BA1;&#x7B97;&#x4F7F;&#x7528;&#x751F;&#x6210;&#x7684;&#x968F;&#x673A;&#x70B9;&#x96C6;&#x4E4B;&#x95F4;&#x7684;&#x5229;&#x57FA;&#x91CD;&#x53E0; randPointsBatch
+
+<span class="hljs-comment">## 5&#x3001;&#x7A7A;&#x95F4;&#x81EA;&#x76F8;&#x5173;</span>
+localSpatialCorrForValues&#xFF1A;&#x8BA1;&#x7B97;&#x4E0E;&#x70B9;&#x6216;&#x6805;&#x683C;&#x5173;&#x8054;&#x7684;&#x503C;&#x7684;&#x5C40;&#x90E8;&#x7A7A;&#x95F4;&#x81EA;&#x76F8;&#x5173;&#x7684;&#x7279;&#x5B9A;&#x4E8E;&#x7AD9;&#x70B9;&#x7684;&#x7279;&#x5F81;&#x8DDD;&#x79BB;
+spatialCorrForPoints&#xFF1A;&#x8BA1;&#x7B97;&#x57FA;&#x4E8E;&#x6210;&#x5BF9;&#x8DDD;&#x79BB;&#x7684;&#x5730;&#x7406;&#x70B9;&#x4E4B;&#x95F4;&#x5168;&#x5C40;&#x7A7A;&#x95F4;&#x81EA;&#x76F8;&#x5173;&#x7684;&#x5EA6;&#x91CF;
+spatialCorrForPointsSummary&#xFF1A;&#x7A7A;&#x95F4;&#x70B9;&#x7684;&#x7279;&#x5F81;&#x7C07;&#x5927;&#x5C0F;&#xFF08;&#x5168;&#x5C40;&#x81EA;&#x76F8;&#x5173;&#x8DDD;&#x79BB;&#xFF09;
+spatialCorrForPointsPlot&#xFF1A;&#x7ED8;&#x5236;&#x57FA;&#x4E8E;&#x6210;&#x5BF9;&#x8DDD;&#x79BB;&#x7684;&#x5168;&#x5C40;&#x7A7A;&#x95F4;&#x81EA;&#x76F8;&#x5173;&#x5EA6;&#x91CF;&#x7684;&#x89C2;&#x6D4B;&#x503C;&#x548C;&#x96F6;&#x5206;&#x5E03;
+spatialCorrForPointsWeight&#xFF1A;&#x57FA;&#x4E8E;&#x5168;&#x5C40;&#x7A7A;&#x95F4;&#x81EA;&#x76F8;&#x5173;&#x7684;&#x57FA;&#x4E8E;&#x6210;&#x5BF9;&#x8DDD;&#x79BB;&#x7684;&#x5EA6;&#x91CF;&#x4E3A;&#x70B9;&#x5206;&#x914D;&#x6743;&#x91CD;
+
+<span class="hljs-comment">## 6&#x3001;&#x57FA;&#x4E8E;&#x6700;&#x5C0F;&#x51F8;&#x591A;&#x8FB9;&#x5F62;&#x7684;&#x8303;&#x56F4;&#x533A;&#x57DF;</span>
+mcpFromPolygons&#xFF1A;&#x4E00;&#x7EC4;&#x591A;&#x8FB9;&#x5F62;&#x548C;&#x70B9;&#x4E2D;&#x7684;&#x6700;&#x5C0F;&#x51F8;&#x591A;&#x8FB9;&#x5F62;
+areaFromPointsOrPoly&#xFF1A;&#x7A7A;&#x95F4;&#x591A;&#x8FB9;&#x5F62;&#x6216;&#x4E00;&#x7EC4;&#x70B9;&#x7684;&#x9762;&#x79EF;
+
+<span class="hljs-comment">## 7&#x3001;&#x5341;&#x8FDB;&#x5236;&#x548C;&#x5EA6;&#x5206;&#x79D2;&#x5F62;&#x5F0F;&#x8F6C;&#x6362;&#xFF1A;</span>
+decimalToDms&#xFF1A;&#x5C06;&#x5341;&#x8FDB;&#x5236;&#x5750;&#x6807;&#x8F6C;&#x6362;&#x4E3A;&#x5EA6;-&#x5206;-&#x79D2;
+dmsToDecimal&#xFF1A;&#x5C06;&#x5EA6;-&#x5206;-&#x79D2;&#x5750;&#x6807;&#x8F6C;&#x6362;&#x4E3A;&#x5C0F;&#x6570;
+</code></pre>
+<h4 id="837-zoonscript">8.3.7 zoon(script)</h4>
+<pre><code class="lang-r"><span class="hljs-comment">##zoon&#x5305;&#x4E3A;&#x6A21;&#x5757;&#x5316;&#x5DE5;&#x4F5C;&#xFF0C;&#x5C06;&#x5DE5;&#x4F5C;&#x6D41;&#x5B9A;&#x4E49;&#x4E3A;&#x6A21;&#x5757;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6A21;&#x5757;&#x5B89;&#x88C5;&#x5230;&#x6D41;&#x7A0B;&#x96C6;&#x4E2D;&#xFF0C;&#x5728;&#x6D41;&#x7A0B;&#x96C6;&#x4E2D;&#x6279;&#x91CF;&#x8FD0;&#x884C;&#xFF1A;</span>
+&#x56FE;&#x4E66;&#x9986;&#xFF08;zoon&#xFF09;
+
+
+<span class="hljs-keyword">library</span>(zoon)
+<span class="hljs-comment"># &#x8FD0;&#x884C;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#xFF0C;&#x5E76;&#x6307;&#x5B9A;&#x6BCF;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x3002;</span>
+work1 &lt;- workflow(occurrence = UKAnophelesPlumbeus,
+                  covariate  = UKAir,
+                  process    = OneHundredBackground,
+                  model      = LogisticRegression,
+                  output     = PrintMap)
+<span class="hljs-comment"># Get a list of modules</span>
+GetModuleList()
+<span class="hljs-comment"># Get help on a module</span>
+ModuleHelp(LogisticRegression)
+
+<span class="hljs-comment">## R&#x5305;&#x4F7F;&#x7528;&#x6559;&#x7A0B;&#xFF1A;</span>
+https://zoonproject.wordpress.com/tutorials/
+<span class="hljs-comment">## R&#x5305;&#x4F7F;&#x7528;&#x5B9E;&#x4F8B;&#xFF1A;</span>
+https://github.com/lifewatch/sdmpredictors
+</code></pre>
+<pre><code class="lang-r"><span class="hljs-comment">##  &#x53C2;&#x8003;&#x6587;&#x732E;&#xFF1A;</span>
+* Species Distribution Modelling has many related names with subtle differences and many similarities such as Ecological or Environmental Niche Modelling, Bio-climate Modelling, Habitat Suitability Modelling, Resource Selection Modelling, Climate Envelope Modelling, Climate Affinity Modelling&#x2026;
+
+** MaxEnt, R, BioMod, OpenModeller, ModEco, GARP, BioMapper, Canoco,Winbugs, OpenBugs, Domain, ANN, AquaMaps, BioClim, BRT, CSM, CTA, ENFA, Envelope Score, Env Distance, GA, GAM, GBM, Dismo, Glm, GLS, Mahalanobis Distance, MARS, Random Forests, Species, HyperNiche, SRE,SVM , Graf, INLA, BayesComm&#x2026;
+</code></pre>
+<h4 id="838--enmtmlscript">8.3.8  ENMTML(script)</h4>
+<pre><code class="lang-r"><span class="hljs-comment">## &#x5173;&#x4E8E;ENMTML &#x7684;&#x89E3;&#x8BFB;&#x4E0E;&#x8BF4;&#x660E;&#xFF1B;</span>
+<span class="hljs-comment">## &#x53C2;&#x8003;&#x7F51;&#x5740;&#xFF1A;https://rdrr.io/github/andrefaa/ENMTML/f/README.md</span>
+<span class="hljs-comment">## &#x8BBA;&#x6587;&#x53C2;&#x8003;&#x94FE;&#x63A5;&#xFF1A;</span>
+ENMTML: An R package <span class="hljs-keyword">for</span> a straightforward construction of complex ecological niche models
+<span class="hljs-comment">## &#x8BE5;&#x5305;&#x662F;&#x6784;&#x5EFA;&#x5C06;&#x82E5;&#x5E72;&#x7BC7;&#x6587;&#x732E;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x6784;&#x5EFA;&#x7ED3;&#x5408;&#x8D77;&#x6765;&#xFF0C;&#x7136;&#x540E;&#x6C47;&#x603B;&#x5230;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x5F0F;&#x4E2D;&#xFF1B;</span>
+<span class="hljs-comment">## &#x6240;&#x6709;&#x7684;&#x6D41;&#x7A0B;&#x5747;&#x53EF;&#x8C03;&#x53C2;&#xFF1B;</span>
+<span class="hljs-comment">## &#x53EF;&#x540C;&#x65F6;&#x5BF9;&#x591A;&#x4E2A;&#x7269;&#x79CD;&#x8FDB;&#x884C;&#x6279;&#x91CF;&#x5EFA;&#x6A21;&#xFF1B;&#x53EF;&#x5E76;&#x884C;&#x8FD0;&#x884C;&#xFF1B;</span>
+<span class="hljs-comment">### R&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF1A;</span>
+ENMTML(pred_dir, 
+       proj_dir = <span class="hljs-literal">NULL</span>, 
+       result_dir = <span class="hljs-literal">NULL</span>,
+       occ_file, 
+       sp, 
+       x, 
+       y, 
+       min_occ = <span class="hljs-number">10</span>,
+       thin_occ = <span class="hljs-literal">NULL</span>, 
+       eval_occ = <span class="hljs-literal">NULL</span>, 
+       colin_var = <span class="hljs-literal">NULL</span>,
+       imp_var = <span class="hljs-literal">FALSE</span>, 
+       sp_accessible_area = <span class="hljs-literal">NULL</span>, 
+       pseudoabs_method,
+       pres_abs_ratio = <span class="hljs-number">1</span>, 
+       part, save_part = <span class="hljs-literal">FALSE</span>, 
+       save_final = <span class="hljs-literal">TRUE</span>,
+       algorithm, 
+       thr, 
+       msdm = <span class="hljs-literal">NULL</span>, 
+       ensemble = <span class="hljs-literal">NULL</span>,
+       extrapolation = <span class="hljs-literal">FALSE</span>, 
+       cores = <span class="hljs-number">1</span>)
+  <span class="hljs-comment">## &#x8BE6;&#x7EC6;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</span>
+  pred_dir&#xFF1A;&#x5B57;&#x7B26;&#x3002;&#x5177;&#x6709;&#x9884;&#x6D4B;&#x53D8;&#x91CF;&#x7684;&#x76EE;&#x5F55;&#x8DEF;&#x5F84;&#xFF08;&#x652F;&#x6301;&#x7684;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x4E3A;ASC&#xFF0C;BILL&#xFF0C;TIFF&#x6216;TXT&#xFF09;
+proj_dir&#xFF1A;&#x5B57;&#x7B26;&#x3002;&#x76EE;&#x5F55;&#x8DEF;&#x5F84;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x7528;&#x4E8E;&#x9879;&#x76EE;&#x6A21;&#x578B;&#x7684;&#x5177;&#x6709;&#x4E0D;&#x540C;&#x533A;&#x57DF;&#x6216;&#x65F6;&#x95F4;&#x6BB5;&#x7684;&#x9884;&#x6D4B;&#x53D8;&#x91CF;&#x7684;&#x6587;&#x4EF6;&#x5939;&#xFF08;&#x652F;&#x6301;&#x7684;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x4E3A;ASC&#xFF0C;BILL&#xFF0C;TIFF&#x6216;TXT&#xFF09;&#x3002;
+result_dir&#xFF1A;&#x5B57;&#x7B26;&#x3002;&#x5305;&#x542B;&#x8981;&#x5728;&#x5176;&#x4E2D;&#x8BB0;&#x5F55;&#x6A21;&#x578B;&#x7ED3;&#x679C;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x7684;&#x76EE;&#x5F55;&#x8DEF;&#x5F84;&#xFF1A;
+<span class="hljs-literal">NULL</span>&#xFF1A;&#x7ED3;&#x679C;&#x5C06;&#x8BB0;&#x5F55;&#x5728;&#x9ED8;&#x8BA4;&#x7684;Result&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#xFF0C;&#x4E0E;pred_dir&#x6587;&#x4EF6;&#x5939;&#x5904;&#x4E8E;&#x540C;&#x4E00;&#x7EA7;&#x522B;&#xFF08;&#x7528;&#x6CD5; result_dir=<span class="hljs-literal">NULL</span>&#xFF09;&#x3002;
+&#x7B80;&#x5355;&#x540D;&#x79F0;&#xFF1A;&#x5C06;&#x5728;&#x4E0E;pred_dir&#x6587;&#x4EF6;&#x5939;&#x76F8;&#x540C;&#x7684;&#x7EA7;&#x522B;&#x4E0A;&#x521B;&#x5EFA;&#x5177;&#x6709;&#x6307;&#x5B9A;&#x540D;&#x79F0;&#x7684;&#x6587;&#x4EF6;&#x5939;&#xFF08;&#x4F8B;&#x5982;&#x7528;&#x6CD5; result_dir=<span class="hljs-string">&quot;MyFolderName&quot;</span>&#xFF09;
+&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#xFF1A;&#x5C06;&#x5728;&#x6307;&#x5B9A;&#x8DEF;&#x5F84;&#xFF08;&#x4F8B;&#x5982;result_dir=<span class="hljs-string">&quot;C:/Users/mypc/Documents/MyFolderName&quot;</span>&#xFF09;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939; &#x3002;
+occ_file&#xFF1A;&#x5B57;&#x7B26;&#x3002;&#x5236;&#x8868;&#x7B26;&#x5206;&#x9694;&#x7684;TXT&#x6587;&#x4EF6;&#x7684;&#x76EE;&#x5F55;&#x8DEF;&#x5F84;&#xFF0C;&#x8BE5;&#x6587;&#x4EF6;&#x81F3;&#x5C11;&#x5305;&#x542B;&#x4E09;&#x5217;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x6709;&#x5173;&#x7269;&#x79CD;&#x540D;&#x79F0;&#x4EE5;&#x53CA;&#x7269;&#x79CD;&#x53D1;&#x751F;&#x7684;&#x7EAC;&#x5EA6;&#x548C;&#x7ECF;&#x5EA6;&#x7684;&#x4FE1;&#x606F;&#x3002;
+sp&#xFF1A;&#x5B57;&#x7B26;&#x3002;&#x5217;&#x540D;&#x79F0;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x6709;&#x5173;&#x7269;&#x79CD;&#x540D;&#x79F0;&#x7684;&#x4FE1;&#x606F;&#x3002;
+x&#xFF1A;&#x5B57;&#x7B26;&#x3002;&#x5217;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x6709;&#x5173;&#x7ECF;&#x5EA6;&#x7684;&#x4FE1;&#x606F;&#x3002;
+y&#xFF1A;&#x5B57;&#x7B26;&#x3002;&#x5305;&#x542B;&#x6709;&#x5173;&#x7EAC;&#x5EA6;&#x4FE1;&#x606F;&#x7684;&#x5217;&#x7684;&#x540D;&#x79F0;&#x3002;
+min_occ&#xFF1A;&#x6574;&#x6570;&#x3002;&#x6700;&#x5C0F;&#x4E0D;&#x91CD;&#x590D;&#x51FA;&#x73B0;&#x6B21;&#x6570;&#xFF08;&#x5C11;&#x4E8E;&#x8BE5;&#x6B21;&#x6570;&#x7684;&#x7269;&#x79CD;&#x5C06;&#x88AB;&#x6392;&#x9664;&#xFF09;&#x3002;
+thin_occ&#xFF1A;&#x5B57;&#x7B26;&#x3002;&#x5BF9;&#x5B58;&#x5728;&#x7684;&#x5185;&#x5BB9;&#x6267;&#x884C;&#x7A7A;&#x95F4;&#x8FC7;&#x6EE4;&#xFF08;Thinning&#xFF0C;&#x57FA;&#x4E8E;spThin&#x5305;&#xFF09;&#x3002;&#x5BF9;&#x4E8E;&#x6B64;&#x6269;&#x5145;&#xFF0C;&#x6709;&#x5FC5;&#x8981;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5411;&#x91CF;&#xFF0C;&#x5176;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x9700;&#x8981;&#x5177;&#x6709;&#x540D;&#x79F0;&#x201C;&#x65B9;&#x6CD5;&#x201D;&#x6216;&#x201C;&#x65B9;&#x6CD5;&#x201D;&#x548C;&#x201C;&#x8DDD;&#x79BB;&#x201D;&#xFF08;&#x4EE5;&#x4E0B;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF09;&#x3002;&#x4E09;&#x79CD;&#x7A00;&#x758F;&#x65B9;&#x6CD5;&#x53EF;&#x7528;&#xFF08;&#x9ED8;&#x8BA4;<span class="hljs-literal">NULL</span>&#xFF09;&#xFF1A;
+MORAN&#x8DDD;&#x79BB;&#xFF0C;&#x7531;Moran&#x53D8;&#x5F02;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x3002;&#x7528;&#x6CD5; thin_occ=c(method=<span class="hljs-string">&apos;MORAN&apos;</span>)&#x3002;
+&#x50CF;&#x5143;&#x5927;&#x5C0F;&#x7531;<span class="hljs-number">2</span>&#x500D;&#x50CF;&#x5143;&#x5927;&#x5C0F;&#x5B9A;&#x4E49;&#x7684;&#x8DDD;&#x79BB;&#xFF08;Haversine&#x53D8;&#x6362;&#xFF09;&#x3002;&#x7528;&#x6CD5; thin_occ=c(method=<span class="hljs-string">&apos;CELLSIZE&apos;</span>)&#x3002;
+&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7684;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7684;&#x8DDD;&#x79BB;&#x3002;&#x5BF9;&#x4E8E;&#x6B64;&#x9009;&#x9879;&#xFF0C;&#x5FC5;&#x987B;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5E26;&#x6709;&#x4E24;&#x4E2A;&#x503C;&#x7684;&#x5411;&#x91CF;&#x3002;&#x7528;&#x6CD5; thin_occ=c(method=<span class="hljs-string">&apos;USER-DEFINED&apos;</span>, ditance=<span class="hljs-string">&apos;300&apos;</span>)&#x3002;&#x7B2C;&#x4E8C;&#x4E2A;&#x6570;&#x503C;&#x662F;&#x6307;&#x5C06;&#x7528;&#x4E8E;&#x7EC6;&#x5316;&#x7684;&#x8DDD;&#x79BB;&#xFF08;&#x4EE5;km&#x4E3A;&#x5355;&#x4F4D;&#xFF09;&#x3002;&#x56E0;&#x6B64;&#xFF0C;distance = <span class="hljs-number">300</span>&#x8868;&#x793A;&#x5C06;&#x5220;&#x9664;&#x534A;&#x5F84;<span class="hljs-number">300</span> km&#x4E4B;&#x5185;&#x7684;&#x6240;&#x6709;&#x8BB0;&#x5F55;&#x3002;
+eval_occ&#xFF1A;&#x5B57;&#x7B26;&#x3002;&#x5236;&#x8868;&#x7B26;&#x5206;&#x9694;&#x7684;TXT&#x6587;&#x4EF6;&#x7684;&#x76EE;&#x5F55;&#x8DEF;&#x5F84;&#xFF0C;&#x5E26;&#x6709;&#x79CD;&#x7C7B;&#x540D;&#x79F0;&#xFF0C;&#x7EAC;&#x5EA6;&#x548C;&#x7ECF;&#x5EA6;&#xFF0C;&#x8FD9;&#x4E09;&#x5217;&#x7684;&#x5217;&#x540D;&#x79F0;&#x5FC5;&#x987B;&#x4E0E;occ_file&#x53C2;&#x6570;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x6570;&#x636E;&#x5E93;&#x76F8;&#x540C;&#x3002;&#x8BE5;&#x5916;&#x90E8;&#x4E8B;&#x4EF6;&#x6570;&#x636E;&#x5E93;&#x5C06;&#x7528;&#x4E8E;&#x5916;&#x90E8;&#x6A21;&#x578B;&#x9A8C;&#x8BC1;&#xFF08;&#x5373;&#xFF0C;&#x5B83;&#x5C06;&#x4E0D;&#x7528;&#x4E8E;&#x6A21;&#x578B;&#x62DF;&#x5408;&#xFF09;&#x3002;&#xFF08;&#x9ED8;&#x8BA4;<span class="hljs-literal">NULL</span>&#xFF09;&#x3002;
+colin_var&#xFF1A;&#x5B57;&#x7B26;&#x3002;&#x51CF;&#x5C11;&#x53EF;&#x53D8;&#x5171;&#x7EBF;&#x6027;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;
+PCA&#xFF1A;&#x5BF9;&#x9884;&#x6D4B;&#x53D8;&#x91CF;&#x6267;&#x884C;&#x4E3B;&#x6210;&#x5206;&#x5206;&#x6790;&#xFF0C;&#x5E76;&#x5C06;&#x4E3B;&#x6210;&#x5206;&#x7528;&#x4F5C;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x3002;&#x7528;&#x6CD5; colin_var=c(method=<span class="hljs-string">&apos;PCA&apos;</span>)&#x3002;
+VIF&#xFF1A;&#x65B9;&#x5DEE;&#x81A8;&#x80C0;&#x56E0;&#x5B50;&#x3002;&#x7528;&#x6CD5;colin_var=c(method=<span class="hljs-string">&apos;VIF&apos;</span>)&#x3002;
+PEARSON&#xFF1A;&#x901A;&#x8FC7;Pearson&#x76F8;&#x5173;&#x9009;&#x62E9;&#x53D8;&#x91CF;&#xFF0C;&#x6700;&#x5927;&#x76F8;&#x5173;&#x9608;&#x503C;&#x5FC5;&#x987B;&#x7531;&#x7528;&#x6237;&#x6307;&#x5B9A;&#x3002;&#x7528;&#x6CD5;colin_var=c(method=<span class="hljs-string">&apos;PEARSON&apos;</span>, threshold=<span class="hljs-string">&apos;0.7&apos;</span>)&#x3002;
+imp_var&#xFF1A;&#x903B;&#x8F91;&#x3002;&#x5BF9;&#x6240;&#x9009;&#x7B97;&#x6CD5;&#x6267;&#x884C;&#x53D8;&#x91CF;&#x91CD;&#x8981;&#x6027;&#x548C;&#x6570;&#x636E;&#x4EE5;&#x8FDB;&#x884C;&#x66F2;&#x7EBF;&#x54CD;&#x5E94;&#xFF1F;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;<span class="hljs-literal">FALSE</span>&#xFF09;
+sp_accessible_area&#xFF1A;&#x5B57;&#x7B26;&#x3002;&#x9650;&#x5236;&#x6BCF;&#x4E2A;&#x7269;&#x79CD;&#x7684;&#x53EF;&#x8BBF;&#x95EE;&#x533A;&#x57DF;&#xFF0C;&#x5373;&#x7528;&#x4E8E;&#x6A21;&#x578B;&#x62DF;&#x5408;&#x7684;&#x533A;&#x57DF;&#x3002;&#x5FC5;&#x987B;&#x4E3A;&#x6B64;&#x53C2;&#x6570;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5411;&#x91CF;&#x3002;&#x5B9E;&#x65BD;&#x4E86;&#x4E09;&#x79CD;&#x65B9;&#x6CD5;
+&#x7528;&#x4E8E;&#x5BF9;&#x62DF;&#x5408;&#x8FDB;&#x884C;&#x5EFA;&#x6A21;&#x7684;BUFFER&#x533A;&#x57DF;&#xFF0C;&#x8BE5;&#x533A;&#x57DF;&#x7531;&#x7F13;&#x51B2;&#x533A;&#x754C;&#x5B9A;&#xFF0C;&#x7F13;&#x51B2;&#x533A;&#x7684;&#x5BBD;&#x5EA6;&#x7B49;&#x4E8E;&#x6BCF;&#x79CD;&#x7269;&#x79CD;&#x5728;&#x4E8B;&#x4EF6;&#x5BF9;&#x4E4B;&#x95F4;&#x7684;&#x6700;&#x5927;&#x8DDD;&#x79BB;&#x3002;&#x7528;&#x6CD5;sp_accessible_area=c(method=<span class="hljs-string">&apos;BUFFER&apos;</span>, type=<span class="hljs-string">&apos;1&apos;</span>)&#x3002;
+&#x7528;&#x4E8E;&#x7F13;&#x51B2;&#x62DF;&#x5408;&#x7684;BUFFER&#x533A;&#x57DF;&#xFF0C;&#x8BE5;&#x533A;&#x57DF;&#x7531;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7684;&#x5BBD;&#x5EA6;&#x5927;&#x5C0F;&#xFF08;&#x4EE5;km&#x4E3A;&#x5355;&#x4F4D;&#xFF09;&#x7F13;&#x51B2;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x6B64;&#x7F13;&#x51B2;&#x533A;&#x7684;&#x5BBD;&#x5EA6;&#x5927;&#x5C0F;&#x5C06;&#x7528;&#x4E8E;&#x6240;&#x6709;&#x79CD;&#x7C7B;&#x3002;&#x7528;&#x6CD5;sp_accessible_area=c(method=<span class="hljs-string">&apos;BUFFER&apos;</span>, type=<span class="hljs-string">&apos;2&apos;</span>, width=<span class="hljs-string">&apos;300&apos;</span>)&#x3002;
+&#x5C4F;&#x853D;&#x6B64;&#x65B9;&#x6CD5;&#x5728;&#x4E8E;&#x6839;&#x636E;&#x7269;&#x79CD;&#x53D1;&#x751F;&#x7684;&#x591A;&#x8FB9;&#x5F62;&#x6765;&#x5212;&#x5B9A;&#x7528;&#x4E8E;&#x8FDB;&#x884C;&#x6A21;&#x578B;&#x62DF;&#x5408;&#x7684;&#x533A;&#x57DF;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x57FA;&#x4E8E;ecoregion shapefile&#x5212;&#x5B9A;&#x6821;&#x51C6;&#x533A;&#x57DF;&#x3002;&#x5BF9;&#x4E8E;&#x6B64;&#x9009;&#x9879;&#xFF0C;&#x6709;&#x5FC5;&#x8981;&#x544A;&#x77E5;&#x5C06;&#x7528;&#x4F5C;&#x63A9;&#x7801;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x3002;&#x53EF;&#x4EE5;&#x52A0;&#x8F7D;&#x4E0B;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x201C; .bil&#x201D;&#xFF0C;&#x201C;&#x3002;asc&#x201D;&#xFF0C;&#x201C;&#x3002;tif&#x201D;&#xFF0C;&#x201C;&#x3002;shp&#x201D;&#x548C;&#x201C; .txt&#x201D;&#x3002;&#x7528;&#x6CD5;sp_accessible_area=c(method=<span class="hljs-string">&apos;MASK&apos;</span>, filepath=<span class="hljs-string">&apos;C:/Users/mycomputer/ecoregion/olson.shp&apos;</span>)..
+pseudoabs_method&#xFF1A;&#x5B57;&#x7B26;&#x3002;&#x4F2A;&#x7F3A;&#x5E2D;&#x5206;&#x914D;&#x65B9;&#x6CD5;&#x3002;&#x5FC5;&#x987B;&#x4E3A;&#x6B64;&#x53C2;&#x6570;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5411;&#x91CF;&#x3002;&#x53EA;&#x80FD;&#x9009;&#x62E9;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x3002;&#x5B9E;&#x73B0;&#x4EE5;&#x4E0B;&#x65B9;&#x6CD5;&#xFF1A;
+RND&#xFF1A;&#x5728;&#x6574;&#x4E2A;&#x7528;&#x4E8E;&#x6A21;&#x578B;&#x62DF;&#x5408;&#x7684;&#x533A;&#x57DF;&#x4E2D;&#x968F;&#x673A;&#x5206;&#x914D;&#x7684;&#x4F2A;&#x7F3A;&#x5E2D;&#x3002;&#x7528;&#x6CD5;pseudoabs_method=c(method=<span class="hljs-string">&apos;RND&apos;</span>)&#x3002;
+ENV_CONST&#xFF1A;&#x4F2A;&#x7F3A;&#x5931;&#x5728;&#x73AF;&#x5883;&#x4E0A;&#x88AB;&#x9650;&#x5236;&#x5728;Bioclim&#x6A21;&#x578B;&#x9884;&#x6D4B;&#x7684;&#x9002;&#x7528;&#x6027;&#x503C;&#x8F83;&#x4F4E;&#x7684;&#x533A;&#x57DF;&#x3002;&#x7528;&#x6CD5;pseudoabs_method = c&#xFF08;method =<span class="hljs-string">&apos;ENV_CONST&apos;</span>&#xFF09;&#x3002;&#x7528;&#x6CD5;pseudoabs_method=c(method=<span class="hljs-string">&apos;ENV_CONST&apos;</span>)&#x3002;
+GEO_CONST&#xFF1A;&#x4F2A;&#x7F3A;&#x5E2D;&#x7684;&#x5206;&#x914D;&#x662F;&#x6839;&#x636E;&#x5730;&#x7406;&#x7F13;&#x51B2;&#x533A;&#x8FDC;&#x79BB;&#x53D1;&#x751F;&#x7684;&#x4E8B;&#x4EF6;&#x3002;&#x5BF9;&#x4E8E;&#x6B64;&#x65B9;&#x6CD5;&#xFF0C;&#x6709;&#x5FC5;&#x8981;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x4EE5;km&#x4E3A;&#x5355;&#x4F4D;&#x8868;&#x793A;&#x7F13;&#x51B2;&#x533A;&#x5BBD;&#x5EA6;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x503C;&#x3002;&#x7528;&#x6CD5;pseudoabs_method=c(method=<span class="hljs-string">&apos;GEO_CONST&apos;</span>, width=<span class="hljs-string">&apos;50&apos;</span>)&#x3002;
+GEO_ENV_CONST&#xFF1A;&#x4F2A;&#x7F3A;&#x5931;&#x5728;&#x73AF;&#x5883;&#x4E0A;&#x53D7;&#x5230;&#x9650;&#x5236;&#xFF08;&#x57FA;&#x4E8E;Bioclim&#x6A21;&#x578B;&#xFF09;&#xFF0C;&#x4F46;&#x5730;&#x7406;&#x5206;&#x5E03;&#x4E0E;&#x57FA;&#x4E8E;&#x5730;&#x7406;&#x7F13;&#x51B2;&#x533A;&#x7684;&#x53D1;&#x751F;&#x4F4D;&#x7F6E;&#x76F8;&#x8DDD;&#x8F83;&#x8FDC;&#x3002;&#x5BF9;&#x4E8E;&#x6B64;&#x65B9;&#x6CD5;&#xFF0C;&#x5FC5;&#x987B;&#x63D0;&#x4F9B;&#x7B2C;&#x4E8C;&#x4E2A;&#x503C;&#xFF0C;&#x4EE5;km&#x4E3A;&#x5355;&#x4F4D;&#x8868;&#x793A;&#x7F13;&#x51B2;&#x533A;&#x5BBD;&#x5EA6;&#x3002;&#x7528;&#x6CD5; pseudoabs_method=c(method=<span class="hljs-string">&apos;GEO_ENV_CONST&apos;</span>, width=<span class="hljs-string">&apos;50&apos;</span>)
+GEO_ENV_KM_CONST&#xFF1A;&#x4F2A;&#x7F3A;&#x5E2D;&#x9650;&#x5236;&#x5728;&#x4E09;&#x7EA7;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF1B;&#x5B83;&#x4E0E;GEO_ENV_CONST&#x76F8;&#x4F3C;&#xFF0C;&#x4F46;&#x6709;&#x4E00;&#x4E2A;&#x989D;&#x5916;&#x7684;&#x6B65;&#x9AA4;&#xFF0C;&#x5373;&#x4F7F;&#x7528;k&#x5747;&#x503C;&#x805A;&#x7C7B;&#x5206;&#x6790;&#x5728;&#x73AF;&#x5883;&#x7A7A;&#x95F4;&#x4E2D;&#x5206;&#x914D;&#x4F2A;&#x7F3A;&#x5931;&#x3002;&#x5BF9;&#x4E8E;&#x6B64;&#x65B9;&#x6CD5;&#xFF0C;&#x5FC5;&#x987B;&#x63D0;&#x4F9B;&#x7B2C;&#x4E8C;&#x4E2A;&#x503C;&#xFF0C;&#x4EE5;km&#x4E3A;&#x5355;&#x4F4D;&#x8868;&#x793A;&#x7F13;&#x51B2;&#x533A;&#x5BBD;&#x5EA6;&#x3002;&#x7528;&#x6CD5;pseudoabs_method=c(method=<span class="hljs-string">&apos;GEO_ENV_KM_CONST&apos;</span>, width=<span class="hljs-string">&apos;50&apos;</span>)&#x3002;
+pres_abs_ratio&#xFF1A;&#x6570;&#x5B57;&#x3002;&#x5728;&#x573A;&#x4E0E;&#x7F3A;&#x5E2D;&#x6BD4;&#x7387;&#xFF08;&#x503C;&#x4ECB;&#x4E8E;<span class="hljs-number">0</span>&#x548C;<span class="hljs-number">1</span>&#x4E4B;&#x95F4;&#xFF09;&#x3002;
+&#x90E8;&#x5206;&#xFF1A;&#x6027;&#x683C;&#x3002;&#x7528;&#x4E8E;&#x6A21;&#x578B;&#x9A8C;&#x8BC1;&#x7684;&#x5206;&#x533A;&#x65B9;&#x6CD5;&#x3002;&#x53EA;&#x80FD;&#x9009;&#x62E9;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x3002;&#x5FC5;&#x987B;&#x4E3A;&#x6B64;&#x53C2;&#x6570;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5411;&#x91CF;&#x3002;&#x5B9E;&#x73B0;&#x4EE5;&#x4E0B;&#x65B9;&#x6CD5;&#xFF1A;
+&#x5F15;&#x5BFC;&#xFF1A;&#x968F;&#x673A;&#x5F15;&#x5BFC;&#x5206;&#x533A;&#x3002;&#x7528;&#x6CD5;part=c(method=<span class="hljs-string">&apos;BOOT&apos;</span>, replicates=<span class="hljs-string">&apos;2&apos;</span>, proportion=<span class="hljs-string">&apos;0.7&apos;</span>)&#x3002;replicate&#x6307;&#x91CD;&#x590D;&#x6570;&#xFF0C;&#x5B83;&#x5047;&#x5B9A;&#x503C;&gt; = <span class="hljs-number">1</span>&#x3002;proportion&#x662F;&#x6307;&#x7528;&#x4E8E;&#x6A21;&#x578B;&#x62DF;&#x5408;&#x7684;&#x51FA;&#x73B0;&#x6BD4;&#x4F8B;&#xFF0C;&#x5B83;&#x5047;&#x5B9A;&#x503C;&gt; <span class="hljs-number">0</span>&#x548C;&lt;= <span class="hljs-number">1</span>&#x3002;&#x5728;&#x6B64;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;proportion=<span class="hljs-string">&apos;0.7&apos;</span>&#x610F;&#x5473;&#x7740;<span class="hljs-number">70</span>&#xFF05;&#x7684;&#x6570;&#x636E;&#x5C06;&#x7528;&#x4E8E;&#x6A21;&#x578B;&#x8BAD;&#x7EC3;&#xFF0C;&#x800C;<span class="hljs-number">30</span>&#xFF05;&#x7684;&#x6570;&#x636E;&#x5C06;&#x7528;&#x4E8E;&#x6A21;&#x578B;&#x6D4B;&#x8BD5;&#x3002;
+KFOLD&#xFF1A; k&#x6298;&#x4EA4;&#x53C9;&#x9A8C;&#x8BC1;&#x4E2D;&#x7684;&#x968F;&#x673A;&#x5206;&#x533A;&#x3002;&#x7528;&#x6CD5;part=c(method= <span class="hljs-string">&apos;KFOLD&apos;</span>, folds=<span class="hljs-string">&apos;5&apos;</span>)&#x3002;folds&#x6307;&#x6570;&#x636E;&#x5206;&#x533A;&#x7684;&#x6298;&#x53E0;&#x6570;&#xFF0C;&#x5B83;&#x5047;&#x5B9A;&#x503C;&gt; = <span class="hljs-number">1</span>&#x3002;
+&#x6761;&#x5E26;&#xFF1A;&#x5730;&#x7406;&#x5206;&#x533A;&#xFF0C;&#x5176;&#x7ED3;&#x6784;&#x662F;&#x6309;&#x7EAC;&#x5EA6;&#x65B9;&#x5F0F;&#xFF08;&#x7C7B;&#x578B;<span class="hljs-number">1</span>&#xFF09;&#x6216;&#x7EB5;&#x5411;&#x65B9;&#x5F0F;&#xFF08;&#x7C7B;&#x578B;<span class="hljs-number">2</span>&#xFF09;&#x6392;&#x5217;&#x7684;&#x6761;&#x5E26;&#x3002;&#x7528;&#x6CD5;part=c(method= <span class="hljs-string">&apos;BANDS&apos;</span>, type=<span class="hljs-string">&apos;1&apos;</span>)&#x3002;type&#x6307;&#x4E50;&#x961F;&#x7684;&#x6027;&#x683C;&#x3002;
+&#x5757;&#xFF1A;&#x6784;&#x9020;&#x4E3A;&#x68CB;&#x76D8;&#x683C;&#x7684;&#x5730;&#x7406;&#x5206;&#x533A;&#xFF08;&#x53C8;&#x540D;&#x5757;&#x4EA4;&#x53C9;&#x9A8C;&#x8BC1;&#xFF09;&#x3002;&#x7528;&#x6CD5;part=c(method= <span class="hljs-string">&apos;BLOCK&apos;</span>)&#x3002;
+save_part&#xFF1A;&#x903B;&#x8F91;&#x3002;&#x5982;&#x679C;&#x4E3A;<span class="hljs-literal">TRUE</span>&#xFF0C;&#x51FD;&#x6570;&#x5C06;&#x4FDD;&#x5B58;&#x90E8;&#x5206;&#x6A21;&#x578B;&#x7684;.tif&#x6587;&#x4EF6;&#xFF0C;&#x5373;&#x6BCF;&#x4E2A;&#x51FA;&#x73B0;&#x7684;&#x5206;&#x533A;&#x521B;&#x5EFA;&#x7684;&#x6A21;&#x578B;&#x3002;&#xFF08;&#x9ED8;&#x8BA4;<span class="hljs-literal">FALSE</span>&#xFF09;&#x3002;
+save_final&#xFF1A;&#x903B;&#x8F91;&#x3002;&#x5982;&#x679C;&#x4E3A;<span class="hljs-literal">TRUE</span>&#xFF0C;&#x5219;&#x51FD;&#x6570;&#x5C06;&#x4FDD;&#x5B58;&#x6700;&#x7EC8;&#x6A21;&#x578B;&#x7684;.tif&#x6587;&#x4EF6;&#xFF0C;&#x5373;&#x5305;&#x542B;&#x6240;&#x6709;&#x51FA;&#x73B0;&#x6570;&#x636E;&#x7684;&#x6587;&#x4EF6;&#x3002;&#xFF08;&#x9ED8;&#x8BA4;<span class="hljs-literal">TRUE</span>&#xFF09;
+&#x7B97;&#x6CD5;&#xFF1A;&#x5B57;&#x7B26;&#x3002;&#x6784;&#x5EFA;&#x751F;&#x6001;&#x4F4D;&#x6A21;&#x578B;&#x7684;&#x7B97;&#x6CD5;&#xFF08;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x591A;&#x79CD;&#x65B9;&#x6CD5;&#xFF09;&#xFF1A;
+&#x751F;&#x7269;&#xFF1A; Bioclim
+MAH&#xFF1A; Mahalanobis
+DOM&#xFF1A;&#x57DF;
+ENF&#xFF1A;&#x751F;&#x6001;&#x4F4D;&#x56E0;&#x5B50;&#x5206;&#x6790;
+MXS&#xFF1A; Maxent&#x7B80;&#x5355;&#xFF08;&#x4EC5;&#x7EBF;&#x6027;&#x548C;&#x4E8C;&#x6B21;&#x7279;&#x5F81;&#xFF0C;&#x57FA;&#x4E8E;MaxNet&#x8F6F;&#x4EF6;&#x5305;&#xFF09;
+MXD&#xFF1A; Maxent&#x7684;&#x9ED8;&#x8BA4;&#x529F;&#x80FD;&#xFF08;&#x6240;&#x6709;&#x529F;&#x80FD;&#x5747;&#x57FA;&#x4E8E;MaxNet&#x8F6F;&#x4EF6;&#x5305;&#xFF09;
+SVM&#xFF1A;&#x652F;&#x6301;&#x5411;&#x91CF;&#x673A;
+GLM&#xFF1A;&#x5E7F;&#x4E49;&#x7EBF;&#x6027;&#x6A21;&#x578B;
+GAM&#xFF1A;&#x5E7F;&#x4E49;&#x52A0;&#x6CD5;&#x6A21;&#x578B;
+BRT&#xFF1A;&#x589E;&#x5F3A;&#x56DE;&#x5F52;&#x6811;
+RDF&#xFF1A;&#x968F;&#x673A;&#x68EE;&#x6797;
+MLK&#xFF1A;&#x6700;&#x5927;&#x53EF;&#x80FD;&#x6027;
+GAU&#xFF1A;&#x9AD8;&#x65AF;&#x6D41;&#x7A0B;&#x4F7F;&#x7528;&#x7B97;&#x6CD5;= c&#xFF08;<span class="hljs-string">&apos;BIO&apos;</span>&#xFF0C;<span class="hljs-string">&apos;SVM&apos;</span>&#xFF0C;<span class="hljs-string">&apos;GLM&apos;</span>&#xFF0C;<span class="hljs-string">&apos;GAM&apos;</span>&#xFF0C;<span class="hljs-string">&apos;GAU&apos;</span>&#xFF09;&#x3002;
+thr&#xFF1A;&#x5B57;&#x7B26;&#x3002;&#x7528;&#x4E8E;&#x5B58;&#x5728;&#x7F3A;&#x5E2D;&#x9884;&#x6D4B;&#x7684;&#x9608;&#x503C;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x9608;&#x503C;&#x7C7B;&#x578B;&#x3002;&#x5FC5;&#x987B;&#x4E3A;&#x6B64;&#x53C2;&#x6570;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5411;&#x91CF;&#xFF1A;
+LPT&#xFF1A;&#x65E0;&#x9057;&#x6F0F;&#x7684;&#x6700;&#x9AD8;&#x9608;&#x503C;&#x3002;&#x7528;&#x6CD5;thr=c(type=<span class="hljs-string">&apos;LPT&apos;</span>)&#x3002;
+MAX_TSS&#xFF1A;&#x7075;&#x654F;&#x5EA6;&#x548C;&#x7279;&#x5F02;&#x6027;&#x4E4B;&#x548C;&#x6700;&#x9AD8;&#x7684;&#x9608;&#x503C;&#x3002;&#x7528;&#x6CD5;&#x3002; thr=c(type=<span class="hljs-string">&apos;MAX_TSS&apos;</span>)
+MAX_KAPPA&#xFF1A; kappa&#x6700;&#x9AD8;&#x7684;&#x9608;&#x503C;&#xFF08;&#x201C; max kappa&#x201D;&#xFF09;&#x3002;&#x7528;&#x6CD5;thr=c(type=<span class="hljs-string">&apos;MAX_KAPPA&apos;</span>)&#x3002;
+&#x7075;&#x654F;&#x5EA6;&#xFF1A;&#x7528;&#x6237;&#x6307;&#x5B9A;&#x7684;&#x9608;&#x503C;&#x3002;&#x7528;&#x6CD5;thr=c(type=<span class="hljs-string">&apos;SENSITIVITY&apos;</span>, sens=<span class="hljs-string">&apos;0.6&apos;</span>)&#x3002;&#x201C;&#x611F;&#x89C9;&#x201D;&#x662F;&#x6307;&#x5C06;&#x4F7F;&#x7528;&#x6B64;&#x9002;&#x7528;&#x6027;&#x503C;&#x5BF9;&#x6A21;&#x578B;&#x8FDB;&#x884C;&#x4E8C;&#x503C;&#x5316;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x6B64;&#x65B9;&#x6CD5;&#x5BF9;&#x6240;&#x6709;&#x7B97;&#x6CD5;&#x548C;&#x79CD;&#x7C7B;&#x5747;&#x5047;&#x8BBE;&#x4E3A;&#x201C;&#x654F;&#x611F;&#x201D;&#x503C;&#x3002;
+JACCARD&#xFF1A; Jaccard&#x6700;&#x9AD8;&#x7684;&#x9608;&#x503C;&#x3002;&#x7528;&#x6CD5;thr=c(type=<span class="hljs-string">&apos;JACCARD&apos;</span>)&#x3002;
+SORENSEN&#xFF1A; Sorensen&#x6700;&#x9AD8;&#x7684;&#x9608;&#x503C;&#x3002;&#x7528;&#x6CD5;thr=c(type=<span class="hljs-string">&apos;SORENSEN&apos;</span>)&#x3002;
+&#x5728;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x9608;&#x503C;&#x7C7B;&#x578B;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6709;&#x5FC5;&#x8981;&#x5C06;&#x9608;&#x503C;&#x7C7B;&#x578B;&#x7684;&#x540D;&#x79F0;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#xFF0C;&#x4F8B;&#x5982;thr=c(type=c(<span class="hljs-string">&apos;LPT&apos;</span>, <span class="hljs-string">&apos;MAX_TSS&apos;</span>, <span class="hljs-string">&apos;JACCARD&apos;</span>))&#x3002;&#x5F53;SENSITIVITY&#x9608;&#x503C;&#x4E0E;&#x5176;&#x4ED6;&#x9608;&#x503C;&#x7ED3;&#x5408;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x6709;&#x5FC5;&#x8981;&#x6307;&#x5B9A;&#x6240;&#x9700;&#x7684;&#x7075;&#x654F;&#x5EA6;&#x503C;&#xFF0C;&#x4F8B;&#x5982;thr=c(type=c(<span class="hljs-string">&apos;LPT&apos;</span>, <span class="hljs-string">&apos;MAX_TSS&apos;</span>, <span class="hljs-string">&apos;SENSITIVITY&apos;</span>), sens=<span class="hljs-string">&apos;0.8&apos;</span>)&#x3002;
+
+msdm&#xFF1A;&#x5B57;&#x7B26;&#x3002;&#x5305;&#x62EC;&#x6A21;&#x578B;&#x6295;&#x5F71;&#x7684;&#x7A7A;&#x95F4;&#x9650;&#x5236;&#x3002;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x9650;&#x5236;&#x4E86;&#x751F;&#x6001;&#x4F4D;&#x6A21;&#x578B;&#xFF0C;&#x4EE5;&#x51CF;&#x5C11;&#x6F5C;&#x5728;&#x7684;&#x9884;&#x6D4B;&#x5E76;&#x4F7F;&#x6A21;&#x578B;&#x66F4;&#x63A5;&#x8FD1;&#x7269;&#x79CD;&#x5206;&#x5E03;&#x6A21;&#x578B;&#x3002;&#x5B83;&#x4EEC;&#x5206;&#x4E3A;&#x201C;&#x5148;&#x9A8C;&#x201D;&#x548C;&#x201C;&#x540E;&#x9A8C;&#x201D;&#x65B9;&#x6CD5;&#x3002;&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x5305;&#x62EC;&#x5C06;&#x5730;&#x7406;&#x5C42;&#x4F5C;&#x4E3A;&#x6A21;&#x578B;&#x62DF;&#x5408;&#x7684;&#x9884;&#x6D4B;&#x56E0;&#x5B50;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x800C;&#x540E;&#x9A8C;&#x7EA6;&#x675F;&#x5219;&#x57FA;&#x4E8E;&#x51FA;&#x73B0;&#x548C;&#x9002;&#x5408;&#x6027;&#x6A21;&#x5F0F;&#x6765;&#x7EA6;&#x675F;&#x6A21;&#x578B;&#x3002;&#x6B64;&#x53C2;&#x6570;&#x4EC5;&#x7528;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x586B;&#x5145;&#xFF0C;&#x5728;&#x4F7F;&#x7528;MCP-B&#x65B9;&#x6CD5;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;msdm&#x4EE5;&#x4E0B;&#x9762;&#x7684;&#x53E6;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x586B;&#x5145;&#xFF08;&#x9ED8;&#x8BA4;<span class="hljs-literal">NULL</span>&#xFF09;&#xFF1A;
+a Priori&#x65B9;&#x6CD5;&#xFF08;&#x5728;&#x6A21;&#x578B;&#x62DF;&#x5408;&#x65F6;&#x5C06;&#x56FE;&#x5C42;&#x521B;&#x5EFA;&#x7684;&#x533A;&#x57DF;&#x6DFB;&#x52A0;&#x4E3A;&#x9884;&#x6D4B;&#x53D8;&#x91CF;&#xFF09;&#xFF1A;+ XY&#xFF1A;&#x521B;&#x5EFA;&#x4E24;&#x4E2A;&#x56FE;&#x5C42;&#x7684;&#x7EAC;&#x5EA6;&#x548C;&#x7ECF;&#x5EA6;&#x56FE;&#x5C42;&#x3002;&#x7528;&#x6CD5;msdm=c(method=<span class="hljs-string">&apos;XY&apos;</span>)&#x3002;+ MIN&#xFF1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x56FE;&#x5C42;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x4ECE;&#x6BCF;&#x4E2A;&#x50CF;&#x5143;&#x5230;&#x6700;&#x8FD1;&#x51FA;&#x73B0;&#x7684;&#x70B9;&#x7684;&#x8DDD;&#x79BB;&#x4FE1;&#x606F;&#x3002;&#x7528;&#x6CD5;msdm=c(method=<span class="hljs-string">&apos;MIN&apos;</span>)&#x3002;+ CML&#xFF1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x56FE;&#x5C42;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x4ECE;&#x6BCF;&#x4E2A;&#x50CF;&#x5143;&#x5230;&#x6240;&#x6709;&#x4E8B;&#x4EF6;&#x7684;&#x603B;&#x8DDD;&#x79BB;&#x4FE1;&#x606F;&#x3002;&#x7528;&#x6CD5;msdm=c(method=<span class="hljs-string">&apos;CML&apos;</span>)&#x3002;+ KER&#xFF1A;&#x5728;&#x4E8B;&#x4EF6;&#x6570;&#x636E;&#x4E0A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x9AD8;&#x65AF;&#x6838;&#x7684;&#x56FE;&#x5C42;&#x3002;&#x7528;&#x6CD5;msdm=c(method=<span class="hljs-string">&apos;KER&apos;</span>)&#x3002;
+
+&#x540E;&#x9A8C;&#x65B9;&#x6CD5;&#xFF1A;+ OBR&#xFF1A;&#x57FA;&#x4E8E;&#x51FA;&#x73B0;&#x7684;&#x9650;&#x5236;&#xFF0C;&#x4F7F;&#x7528;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#x6765;&#x6392;&#x9664;&#x66F4;&#x5408;&#x9002;&#x7684;&#x8865;&#x4E01;&#xFF08;Mendes&#x7B49;&#x4EBA;&#xFF0C;&#x51C6;&#x5907;&#x4E2D;&#xFF09;&#x3002;&#x7528;&#x6CD5;msdm=c(method=<span class="hljs-string">&apos;OBR&apos;</span>)&#x3002;+ LR&#xFF1A;&#x4E0B;&#x4F4D;&#x6570;&#xFF0C;&#x9009;&#x62E9;&#x6700;&#x8FD1;&#x7684;<span class="hljs-number">25</span>&#xFF05;&#x8272;&#x6807;&#xFF08;Mendes&#x7B49;&#xFF0C;&#x51C6;&#x5907;&#x4E2D;&#xFF09;&#x3002;&#x7528;&#x6CD5;msdm=c(method=<span class="hljs-string">&apos;LR&apos;</span>)&#x3002;+ PRES&#xFF1A;&#x4EC5;&#x9009;&#x62E9;&#x5DF2;&#x786E;&#x8BA4;&#x53D1;&#x751F;&#x6570;&#x636E;&#x7684;&#x8865;&#x4E01;&#xFF08;Mendes&#x7B49;&#xFF0C;&#x51C6;&#x5907;&#x4E2D;&#xFF09;&#x3002;&#x7528;&#x6CD5;msdm=c(method=<span class="hljs-string">&apos;PRES&apos;</span>)&#x3002;+ MCP&#xFF1A;&#x6392;&#x9664;&#x6839;&#x636E;&#x4E8B;&#x4EF6;&#x6570;&#x636E;&#x6784;&#x5EFA;&#x7684;&#x6700;&#x5C0F;&#x51F8;&#x591A;&#x8FB9;&#x5F62;&#xFF08;MCP&#xFF09;&#x4E4B;&#x5916;&#x7684;&#x5408;&#x9002;&#x50CF;&#x5143;&#x3002;&#x7528;&#x6CD5;msdm=c(method=<span class="hljs-string">&apos;MCP&apos;</span>)&#x3002;+ MCP-B&#xFF1A;&#x5728;MCP&#x5468;&#x56F4;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7F13;&#x51B2;&#x533A;&#xFF08;&#x5BBD;&#x5EA6;&#x7531;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#xFF0C;&#x4EE5;&#x516C;&#x91CC;&#x4E3A;&#x5355;&#x4F4D;&#xFF09;&#x3002;&#x7528;&#x6CD5;msdm=c(method=<span class="hljs-string">&apos;MCP-B&apos;</span>, width=<span class="hljs-number">100</span>)&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;width=<span class="hljs-number">100</span> &#x8868;&#x793A;&#x5C06;&#x5728;MCP&#x5468;&#x56F4;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5BBD;&#x5EA6;&#x4E3A;<span class="hljs-number">100</span> km&#x7684;&#x7F13;&#x51B2;&#x533A;&#x3002;
+
+&#x5408;&#x594F;&#xFF1A;&#x6027;&#x683C;&#x3002;&#x7528;&#x4E8E;&#x96C6;&#x6210;&#x4E0D;&#x540C;&#x7B97;&#x6CD5;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x591A;&#x79CD;&#x65B9;&#x6CD5;&#x3002;&#x5FC5;&#x987B;&#x4E3A;&#x6B64;&#x53C2;&#x6570;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5411;&#x91CF;&#x3002;&#x5BF9;&#x4E8E;SUP&#xFF0C;W_MEAN&#x6216;PCA_SUP&#x65B9;&#x6CD5;&#xFF0C;&#x6709;&#x5FC5;&#x8981;&#x4E3A;&#x6574;&#x4F53;&#x53C2;&#x6570;&#xFF08;&#x4F8B;&#x5982;AUC&#xFF0C;Kappa&#xFF0C;TSS&#xFF0C;Jaccard&#xFF0C;Sorensen&#x6216;Fpb&#xFF09;&#x63D0;&#x4F9B;&#x8BC4;&#x4F30;&#x6307;&#x6807;&#x3002;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;<span class="hljs-literal">NULL</span>&#xFF09;&#xFF1A;
+&#x5747;&#x503C;&#xFF1A;&#x4E0D;&#x540C;&#x6A21;&#x578B;&#x7684;&#x7B80;&#x5355;&#x5E73;&#x5747;&#x503C;&#x3002;&#x7528;&#x6CD5;ensemble=c(method=<span class="hljs-string">&apos;MEAN&apos;</span>)&#x3002;
+W_MEAN&#xFF1A;&#x57FA;&#x4E8E;&#x6A21;&#x578B;&#x6027;&#x80FD;&#x7684;&#x52A0;&#x6743;&#x5E73;&#x5747;&#x503C;&#x3002;&#x5FC5;&#x987B;&#x63D0;&#x4F9B;&#x8BC4;&#x4F30;&#x6307;&#x6807;&#x3002;&#x7528;&#x6CD5;ensemble=c(method=<span class="hljs-string">&apos;W_MEAN&apos;</span>, metric=<span class="hljs-string">&apos;TSS&apos;</span>)&#x3002;
+SUP&#xFF1A;&#x6700;&#x4F73;&#x6A21;&#x578B;&#x7684;&#x5E73;&#x5747;&#x503C;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;TSS&#x8D85;&#x8FC7;&#x5E73;&#x5747;&#x503C;&#xFF09;&#x3002;&#x5FC5;&#x987B;&#x63D0;&#x4F9B;&#x8BC4;&#x4F30;&#x6307;&#x6807;&#x3002;&#x7528;&#x6CD5;ensemble=c(method=<span class="hljs-string">&apos;SUP&apos;</span>, metric=<span class="hljs-string">&apos;TSS&apos;</span>)&#x3002;
+PCA&#xFF1A;&#x6267;&#x884C;&#x4E3B;&#x6210;&#x5206;&#x5206;&#x6790;&#xFF08;PCA&#xFF09;&#x5E76;&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x8F74;&#x3002;&#x7528;&#x6CD5;ensemble=c(method=<span class="hljs-string">&apos;PCA&apos;</span>)&#x3002;
+PCA_SUP&#xFF1A;&#x6700;&#x4F73;&#x6A21;&#x578B;&#x7684;PCA&#xFF08;&#x4F8B;&#x5982;&#xFF0C;TSS&#x8D85;&#x8FC7;&#x5E73;&#x5747;&#x503C;&#xFF09;&#x3002;&#x5FC5;&#x987B;&#x63D0;&#x4F9B;&#x8BC4;&#x4F30;&#x6307;&#x6807;&#x3002;&#x7528;&#x6CD5;ensemble=c(method=<span class="hljs-string">&apos;PCA_SUP&apos;</span>, metric=<span class="hljs-string">&apos;Fpb&apos;</span>)&#x3002;
+PCA_THR&#xFF1A; PCA&#x4EC5;&#x5BF9;&#x9002;&#x5E94;&#x6027;&#x503C;&#x9AD8;&#x4E8E;&#x6240;&#x9009;&#x9608;&#x503C;&#x7684;&#x90A3;&#x4E9B;&#x5355;&#x5143;&#x6267;&#x884C;&#x3002;&#x7528;&#x6CD5;ensemble=c(method=<span class="hljs-string">&apos;PCA_THR&apos;</span>)&#x3002;
+&#x5982;&#x679C;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x96C6;&#x6210;&#x65B9;&#x6CD5;&#xFF0C;&#x5219;&#x5FC5;&#x987B;&#x5728;&#x53C2;&#x6570;&#x4E2D;&#x8FDE;&#x63A5;&#x96C6;&#x6210;&#x65B9;&#x6CD5;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x4F8B;&#x5982;ensemble=c(type=c(<span class="hljs-string">&apos;MEAN&apos;</span>, <span class="hljs-string">&apos;PCA&apos;</span>))&#xFF0C;ensemble=c(method=c(<span class="hljs-string">&apos;MEAN, &apos;</span>W_MEAN<span class="hljs-string">&apos;, &apos;</span>PCA_SUP<span class="hljs-string">&apos;), metric=&apos;</span>Fpb<span class="hljs-string">&apos;)&#x3002;
+
+&#x5916;&#x63A8;&#x903B;&#x8F91;&#x3002;&#x5982;&#x679C;&#x4E3A;TRUE&#xFF0C;&#x5219;&#x8BE5;&#x51FD;&#x6570;&#x5C06;&#x57FA;&#x4E8E;&#x9488;&#x5BF9;&#x5F53;&#x524D;&#x6761;&#x4EF6;&#x7684;&#x9762;&#x5411;&#x79FB;&#x52A8;&#x7684;&#x5947;&#x5076;&#x6027;&#x5206;&#x6790;&#xFF08;MOP&#xFF09;&#x8BA1;&#x7B97;&#x5916;&#x63A8;&#x3002;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x53C2;&#x6570;proj_dir&#xFF0C;&#x5219;&#x8FD8;&#x5C06;&#x8BA1;&#x7B97;&#x5176;&#x4ED6;&#x533A;&#x57DF;&#x6216;&#x65F6;&#x95F4;&#x6BB5;&#x7684;&#x5916;&#x63A8;&#x5C42;&#xFF08;&#x9ED8;&#x8BA4;&#x503C;FALSE&#xFF09;&#x3002;
+
+&#x6838;&#x5FC3;&#x6570;&#x5B57;&#x3002;&#x5B9A;&#x4E49;&#x8981;&#x5E76;&#x884C;&#x8FD0;&#x884C;&#x5EFA;&#x6A21;&#x8FC7;&#x7A0B;&#x7684;CPU&#x5185;&#x6838;&#x6570;&#xFF08;&#x9ED8;&#x8BA4;1&#xFF09;&#x3002;
+
+## &#x7ED3;&#x679C;&#x6587;&#x4EF6;&#xFF1A;
+&#x5728;&#x60A8;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6587;&#x4EF6;&#x5939;&#x4E4B;&#x4E0A;&#x7684;&#x4E00;&#x7EA7;&#x5C06;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Result&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5728;&#x5185;&#x90E8;&#x60A8;&#x5C06;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x7B97;&#x6CD5;&#x7ED3;&#x679C;&#xFF0C;&#x6574;&#x4F53;&#x7ED3;&#x679C;&#xFF08;&#x5982;&#x679C;&#x5DF2;&#x9009;&#x62E9;&#xFF09;&#xFF0C;&#x5916;&#x63A8;&#x533A;&#x57DF;&#x7684;&#x6295;&#x5F71;&#x548C;&#x5730;&#x56FE;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x3002;&#x8FD8;&#x6709;&#x4E00;&#x4E9B;.txt&#x6587;&#x4EF6;&#xFF08;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x5C06;&#x5728;ceratin&#x5EFA;&#x6A21;&#x8BBE;&#x7F6E;&#x4E0B;&#x521B;&#x5EFA;&#x4E00;&#x4E9B;txt&#xFF0C;&#x4F8B;&#x5982;Thresholds_Ensemble.txt&#xFF09;&#xFF1A; Evaluation_Table.txt&#x5305;&#x542B;&#x6A21;&#x578B;&#x8BC4;&#x4F30;&#x7684;&#x7ED3;&#x679C; InfoModeling.txt&#x5EFA;&#x6A21;&#x53C2;&#x6570;&#x7684;&#x4FE1;&#x606F; Number_Unique_Occurrences.txt&#x552F;&#x4E00;&#x7F16;&#x53F7;&#x6BCF;&#x4E2A;&#x7269;&#x79CD;&#x7684; &#x51FA;&#x73B0;Occurrences_Cleaned.txt&#x901A;&#x8FC7;&#x5728;&#x6BCF;&#x4E2A;&#x7F51;&#x683C;&#x5355;&#x5143;&#x4E2D;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x51FA;&#x73B0;&#x6765;&#x8FC7;&#x6EE4;&#x51FA;&#x73B0;&#x4E4B;&#x540E;&#x4EA7;&#x751F;&#x7684;&#x6570;&#x636E;&#x96C6; Occurrences_Filtered.txt&#x901A;&#x8FC7;&#x9009;&#x62E9;&#x6821;&#x6B63;&#x540E;&#x7684;&#x91C7;&#x6837;&#x7A7A;&#x95F4;&#x504F;&#x5DEE;&#xFF08;&#x7A00;&#x758F;&#x4E8B;&#x4EF6;&#xFF09;&#x6765;&#x8FC7;&#x6EE4;&#x4E8B;&#x4EF6;&#x53D1;&#x751F;&#x540E;&#x4EA7;&#x751F;&#x7684;&#x6570;&#x636E;&#x96C6; Validation_Partition.txt&#x90E8;&#x5206;&#x6A21;&#x578B;&#x8BC4;&#x4F30;&#x7684;&#x4FE1;&#x606F;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x5C06;&#x6A21;&#x578B;&#x6295;&#x5F71;&#x5230;&#x5269;&#x4F59;&#x7684;30&#xFF05;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x65F6;&#xFF09; Thresholds_Algorithm.txt&#x5173;&#x4E8E;&#x9608;&#x503C;&#x7684;&#x4FE1;&#x606F;&#x7528;&#x4E8E;&#x4E3A;&#x6BCF;&#x79CD;&#x7B97;&#x6CD5;&#x521B;&#x5EFA;&#x5728;&#x573A;&#x56FE;&#xFF08;&#x4ECE;&#x5B8C;&#x6574;&#x6A21;&#x578B;&#x7684;&#x9608;&#x503C;&#x521B;&#x5EFA;&#x5728;&#x573A;&#x56FE;&#xFF09; Thresholds_Ensemble.txt&#x6709;&#x5173;&#x7528;&#x4E8E;&#x4E3A;&#x96C6;&#x5408;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x5728;&#x573A;&#x56FE;&#x7684;&#x9608;&#x503C;&#x7684;&#x4FE1;&#x606F;
+</span></code></pre>
+<h4 id="839-sdmbenchshiny">8.3.9 SDMbench(shiny)</h4>
+<pre><code class="lang-r"><span class="hljs-comment">## &#x5173;&#x4E8E;SDMbench&#x7684;&#x89E3;&#x8BFB;&#xFF1A;</span>
+<span class="hljs-comment">## git&#x7F51;&#x5740;&#xFF1A;https://github.com/boyanangelov/sdmbench</span>
+<span class="hljs-comment"># &#x6B64;&#x5305;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x5229;&#x7528;shiny&#x6784;&#x5EFA;&#x73AF;&#x5883;&#x5904;&#x7406;&#x4F53;&#x7CFB;&#xFF0C;&#x6BD4;warraace&#x5DEE;&#x5F88;&#x591A;&#xFF0C;&#x4F46;&#x662F;&#x6A21;&#x578B;&#x7684;&#x63D0;&#x4F9B;&#x7684;&#x5F88;&#x4E30;&#x5BCC;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x662F;&#x5426;&#x652F;&#x6301;&#x591A;&#x7269;&#x79CD;&#x5EFA;&#x6A21;&#xFF1B;</span>
+<span class="hljs-comment">## &#x6A21;&#x578B;&#x662F;&#x4E00;&#x4E2A;&#x6574;&#x5408;&#x5305;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x9009;&#x62E9;&#x6700;&#x4F18;&#x6A21;&#x578B;&#x5E76;&#x5229;&#x7528;&#x6700;&#x4F18;&#x6A21;&#x578B;&#x8FDB;&#x884C;&#x6295;&#x5F71;&#xFF0C;&#x91CD;&#x8981;&#x662F;&#x662F;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x6240;&#x6709;&#x65B9;&#x6CD5;&#x7684;&#x53C2;&#x8003;&#x6587;&#x732E;&#xFF0C;&#x8FD9;&#x5C31;&#x53EF;&#x4EE5;&#x964D;&#x4F4E;&#x5199;&#x4F5C;&#x53C2;&#x8003;&#x6587;&#x732E;&#x7684;&#x96BE;&#x5EA6;&#xFF1B;</span>
+
+<span class="hljs-comment">## R&#x5B9E;&#x73B0;&#xFF1A;</span>
+devtools::install_github(<span class="hljs-string">&quot;boyanangelov/sdmbench&quot;</span>)
+<span class="hljs-keyword">library</span>(sdmbench)
+run_sdmbench()
+
+<span class="hljs-comment">## &#x9664;&#x4E86;gui&#x754C;&#x9762;&#x4EE5;&#x5916;&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x94FE;&#x63A5;&#x4E2D;&#x8FD8;&#x63D0;&#x4F9B;&#x76F8;&#x5E94;&#x7684;R&#x4EE3;&#x7801;&#x811A;&#x672C;&#x547D;&#x4EE4;&#xFF1A;</span>
+&#x8BE6;&#x7EC6;&#x53C2;&#x89C1;&#xFF0C;&#x6570;&#x636E;&#x7684;&#x6784;&#x5EFA;&#x65B9;&#x6CD5;&#x4E0E;&#x4F20;&#x7EDF;&#x5EFA;&#x6A21;&#x65B9;&#x6CD5;&#x4E00;&#x81F4;&#xFF0C;&#x4F46;&#x8FD0;&#x7B97;workflow&#x6BD4;ESDMselsect&#x66F4;&#x7B80;&#x5355;&#xFF1B;
+</code></pre>
+<h4 id="8310-sdms-scriptjncc-sdms">8.3.10 SDMS (script)/Jncc-SDMS</h4>
+<pre><code class="lang-R"><span class="hljs-comment">## SDMS&#x7684;&#x89E3;&#x91CA;&#x4E0E;&#x8BF4;&#x660E;:</span>
+&#x8BE5;&#x5305;&#x662F;&#x901A;&#x8FC7;&#x7269;&#x79CD;&#x7EE7;&#x627F;&#x5EFA;&#x6A21;&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#xFF0C;&#x5206;&#x4E3A;&#x4E24;&#x79CD;&#x6D41;&#x5F0F;&#xFF1A;&#x4E0E;biomod2&#x529F;&#x80FD;&#x7C7B;&#x4F3C;&#xFF1A;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5355;&#x7269;&#x79CD;&#x5EFA;&#x6A21;&#x548C;&#x591A;&#x7269;&#x79CD;&#x8054;&#x5408;&#x5EFA;&#x6A21;&#xFF1B;
+&#x5177;&#x4F53;&#x811A;&#x672C;&#x53C2;&#x89C1;&#xFF1A;&#x6536;&#x5230;sdms/vignettes&#xFF1B;
+
+<span class="hljs-comment">## SDMS&#x5305;&#x7684;&#x6765;&#x6E90;&#x8BF4;&#x660E;&#xFF1A;</span>
+https://github.com/jncc/sdms/tree/master/vignettes
+</code></pre>
+<p>8.3.11  eSDM(shiny)</p>
+<pre><code>## eSDM&#x4E3A;shiny&#x5F00;&#x53D1;&#x7684;&#x6709;gui&#x754C;&#x9762;&#x7684;&#x64CD;&#x4F5C;&#x5305;&#xFF0C;&#x53EF;&#x65E8;&#x5728;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x6839;&#x636E;&#x7269;&#x79CD;&#x5206;&#x5E03;&#x6A21;&#x578B;&#xFF08;SDM&#xFF09;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x7A7A;&#x95F4;&#x6BD4;&#x4F8B;&#x6216;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x9884;&#x6D4B;&#x5355;&#x4F4D;&#x521B;&#x5EFA;&#x9884;&#x6D4B;&#x7684;&#x96C6;&#x5408;&#xFF1B;
+## &#x8F6F;&#x4EF6;&#x5168;&#x79F0;&#xFF1A;&#xFF08;#&#x539F;&#x6765;&#x8FD8;&#x662F;enseable&#xFF0C;&#x65E0;&#x8DA3;&#xFF01;&#xFF09;
+Ensemble tool for predictions from Species Distribution Modelsgraphical user interface
+
+## &#x5B89;&#x88C5;R&#x5305;
+devtools::install_github(&apos;smwoodman/eSDM&apos;,build_vignettes  =  TRUE)
+&#x52A0;&#x8F7D;R&#x5305;&#xFF1A;
+eSDM::eSDM_GUI()
+</code></pre><h4 id="8311-seegsdmscript">8.3.11 seegSDM(script)</h4>
+<pre><code class="lang-R"><span class="hljs-comment">## seegSDM &#x7684;&#x89E3;&#x8BFB;&#xFF1A;</span>
+&#x672C;&#x5305;&#x7684;&#x91CD;&#x8981;&#x4F18;&#x52BF;&#x662F;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x5355;&#x4E00;model&#x5F88;&#x597D;&#x7684;&#x8BC4;&#x4F30;&#x8BE5;&#x6A21;&#x578B;&#x5EFA;&#x6A21;&#x7684;&#x4F18;&#x52A3;&#x4EE5;&#x53CA;&#x7EE7;&#x7EED;&#x53EF;&#x89C6;&#x5316;&#x5173;&#x7CFB;&#xFF1B;&#x6B64;&#x5916;&#xFF0C;&#x6A21;&#x578B;&#x8FD8;&#x53EF;&#x4EE5;&#x6784;&#x5EFA;&#x591A;&#x6B21;&#x8FED;&#x4EE3;&#x5173;&#x7CFB;&#xFF0C;&#x8FDB;&#x800C;&#x786E;&#x5B9A;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x6A21;&#x578B;&#x7684;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#x5206;&#x5E03;&#x548C;&#x5730;&#x7406;&#x5206;&#x5E03;&#x5173;&#x7CFB;&#x5728;&#x73AF;&#x5883;&#x5DEE;&#x5F02;&#x4E0A;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x67D0;&#x79CD;&#x201C;&#x5B9A;&#x6027;&#x201D;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x8FD9;&#x79CD;&#x5173;&#x7CFB;&#x7684;&#x53D1;&#x73B0;&#x5BF9;&#x4E8E;&#x7406;&#x89E3;&#x7269;&#x79CD;&#x5206;&#x5E03;&#x6A21;&#x578B;&#x7684;&#x6295;&#x5F71;&#x4EE5;&#x53CA;&#x7A7A;&#x95F4;&#x81EA;&#x76F8;&#x5173;&#x548C;&#x81EA;&#x4E0B;&#x800C;&#x4E0A;&#x7684;&#x6784;&#x9020;&#x7406;&#x89E3;&#x53EF;&#x80FD;&#x90FD;&#x4F1A;&#x8D77;&#x5230;&#x826F;&#x597D;&#x7684;&#x4FC3;&#x8FDB;&#x4F5C;&#x7528;&#xFF1B;
+</code></pre>
+<pre><code class="lang-r"><span class="hljs-comment">## &#x672C;&#x5305;&#x7684;&#x7279;&#x8272;&#x529F;&#x80FD;&#xFF1A;</span>
+<span class="hljs-comment">## &#x53EF;&#x89C6;&#x5316;&#x6A21;&#x578B;&#x8BC4;&#x4EF7;&#x7ED3;&#x679C;&#xFF0C;&#x4ECE;&#x591A;&#x4E2A;&#x53C2;&#x6570;&#x503C;&#x4E2D;&#xFF0C;&#x5982;&#xFF1A;kappa&#x3001;auc&#x3001;sens&#x3001;spec&#x548C;pcc&#x7B49;&#x3002;&#x5F53;&#x7136;&#x73B0;&#x5728;&#x66F4;&#x4EFB;&#x8BFE;&#x7684;boyce&#x90A3;&#x4E00;&#x5957;&#x8BC4;&#x4EF7;&#x65B9;&#x5F0F;&#xFF1B;</span>
+<span class="hljs-comment">## &#x8BA1;&#x7B97;&#x6A21;&#x578B;&#x8FED;&#x4EE3;&#x7ED3;&#x679C;&#x7684;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#xFF1B;</span>
+<span class="hljs-comment">## &#x6559;&#x7A0B;&#x6848;&#x4F8B;&#x53C2;&#x89C1;&#xFF1A;</span>
+https://rawgit.com/SEEG-Oxford/seegSDM/master/seegSDM_tutorial.html
+</code></pre>
+<h4 id="8312-model-rshiny">8.3.12 MODEL-R(SHINY)</h4>
+<pre><code class="lang-R"><span class="hljs-comment">## modleR &#x7B80;&#x4ECB;&#x8BF4;&#x660E;&#xFF1A;</span>
+modleR&#x662F;&#x4E00;&#x79CD;&#x5DE5;&#x4F5C;&#x6D41;&#xFF0C;&#x65E8;&#x5728;&#x5728;&#x6267;&#x884C;&#x751F;&#x6001;&#x4F4D;&#x6A21;&#x578B;&#xFF08;ENM&#xFF09;&#x65F6;&#x81EA;&#x52A8;&#x6267;&#x884C;&#x5E76;&#x8BB0;&#x5F55;&#x4E00;&#x4E9B;&#x5E38;&#x89C1;&#x6B65;&#x9AA4;&#x3002;&#x7ED9;&#x5B9A;&#x4E8B;&#x4EF6;&#x8BB0;&#x5F55;&#x548C;&#x4E00;&#x7EC4;&#x73AF;&#x5883;&#x9884;&#x6D4B;&#x5668;&#xFF0C;setup_sdmdata()&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6E05;&#x7406;&#x91CD;&#x590D;&#x9879;&#xFF0C;&#x5220;&#x9664;&#x6CA1;&#x6709;&#x73AF;&#x5883;&#x4FE1;&#x606F;&#x7684;&#x4E8B;&#x4EF6;&#x5E76;&#x5E94;&#x7528;&#x67D0;&#x4E9B;&#x5730;&#x7406;&#x548C;&#x73AF;&#x5883;&#x8FC7;&#x6EE4;&#x5668;&#x6765;&#x51C6;&#x5907;&#x6570;&#x636E;&#x3002;&#x5B83;&#x8FD8;&#x4F7F;&#x7528;&#x4EA4;&#x53C9;&#x9A8C;&#x8BC1;&#x6216;&#x5F15;&#x5BFC;&#x8FC7;&#x7A0B;&#x5C06;&#x6570;&#x636E;&#x5212;&#x5206;&#x4E3A;&#x6D4B;&#x8BD5;&#x96C6;&#x548C;&#x8BAD;&#x7EC3;&#x96C6;&#x3002;do_any()&#x6216;do_many()&#x4F7F;&#x7528;&#x591A;&#x79CD;&#x7B97;&#x6CD5;&#x62DF;&#x5408;&#x751F;&#x6001;&#x4F4D;&#x6A21;&#x578B;&#xFF0C;&#x5176;&#x4E2D;&#x4E00;&#x4E9B;&#x7B97;&#x6CD5;&#x5DF2;&#x5728;dismo&#x8F6F;&#x4EF6;&#x5305;&#x4E2D;&#x5B9E;&#x73B0;&#xFF08;Hijmans&#x7B49;&#xFF0C;<span class="hljs-number">2017</span>&#xFF09;&#xFF0C;&#x800C;&#x5176;&#x4ED6;&#x7B97;&#x6CD5;&#x5219;&#x6765;&#x81EA;R&#x73AF;&#x5883;&#x4E2D;&#x7684;&#x5176;&#x4ED6;&#x8F6F;&#x4EF6;&#x5305;&#xFF0C;&#x4F8B;&#x5982;glm&#xFF0C;Support Vector Machines&#xFF08;kernlab&#x548C;e1071&#xFF09;&#xFF09;&#x548C;&#x968F;&#x673A;&#x68EE;&#x6797;&#xFF08;randomForest&#xFF09;&#x3002;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x4EE5;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;&#x8FDE;&#x63A5;&#x5404;&#x4E2A;&#x5206;&#x533A;&#x7684;&#x529F;&#x80FD;final_model()&#x3002;&#x6700;&#x540E;&#xFF0C;ensemble_model()&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7B97;&#x6CD5;&#x7EC4;&#x88C5;&#x6A21;&#x578B;&#x5E76;&#x63D0;&#x4F9B;&#x6458;&#x8981;&#x6805;&#x683C;&#x3002;
+
+<span class="hljs-comment">## github&#x4E3B;&#x9875;&#xFF1A;</span>
+https://github.com/Model-R/modleR
+
+<span class="hljs-comment">## model-R&#x7684;&#x5173;&#x952E;&#x7279;&#x8272;&#xFF1A;</span>
+<span class="hljs-number">1</span>&#x3001;&#x8BE5;R&#x5305;&#x6784;&#x5EFA;&#x4E86;&#x4E00;&#x6574;&#x5957;&#x7CFB;&#x7EDF;&#x6D41;&#x7A0B;&#xFF0C;&#x4E3B;&#x8981;&#x5DE5;&#x4F5C;&#x5728;&#x4E8E;&#x6570;&#x636E;&#x6E05;&#x7406;&#xFF0C;&#x53C2;&#x6570;&#x8BC4;&#x4F30;&#xFF08;&#x5206;&#x5272;&#x53C2;&#x6570;&#x548C;&#x91CD;&#x65B0;&#xFF09;&#xFF0C;&#x6784;&#x5EFA;&#x6A21;&#x578B;&#x8BC4;&#x4F30;&#x6D41;&#x7A0B;&#xFF0C;&#x57FA;&#x4E8E;&#x8BC4;&#x4F30;&#x540E;&#x6A21;&#x578B;&#x6784;&#x5EFA;ensemble model&#xFF08;<span class="hljs-comment">##&#x8FD9;&#x91CC;&#x6784;&#x5EFA;ensemb&#x7684;&#x65B9;&#x6CD5;&#x91C7;&#x7528;&#x5E73;&#x5747;&#x503C;&#x548C;&#x5206;&#x5272;&#x6CD5;&#x6784;&#x5EFA;&#x4E24;&#x79CD;&#xFF09;</span>
+
+<span class="hljs-number">2</span>&#x3001;&#x6B64;R&#x5305;&#x6784;&#x5EFA;&#x8FC7;&#x7A0B;&#x4E2D;&#x91C7;&#x7528;&#x7684;&#x65B9;&#x5F0F;&#x548C;KNENM&#x662F;&#x7C7B;&#x4F3C;&#x7684;&#xFF0C;&#x91C7;&#x7528;&#x6587;&#x4EF6;&#x5939;&#x6811;&#x7684;&#x5F62;&#x5F0F;&#x6765;&#x6784;&#x5EFA;&#xFF1B;
+</code></pre>
+<pre><code class="lang-r"><span class="hljs-comment">## &#x5173;&#x4E8E;&#x8BE5;&#x5305;&#x7684;&#x5173;&#x8054;&#xFF1A;</span>
+<span class="hljs-comment">## &#x548C;rangeModelMetadata&#x6709;&#x5173;&#x8054;&#xFF1A;    </span>
+https://github.com/cmerow/rangeModelMetadata
+</code></pre>
+<h4 id="8313--ntboxshiny">8.3.13  ntbox(shiny)</h4>
+<pre><code class="lang-R"><span class="hljs-comment">## ntbox&#x662F;nichetoolbox(&#x89C1;8.3.4)&#x7684;&#x7A33;&#x5B9A;&#x7248;&#xFF0C;&#x5305;&#x542B;nichetoolsbox&#x7684;&#x6240;&#x6709;&#x529F;&#x80FD;&#xFF0C;&#x6B64;&#x5916;&#x8FD8;&#x5305;&#x542B;&#x6709;&#x51E0;&#x9879;&#x66F4;&#x65B0;&#x540E;&#x7684;&#x529F;&#x80FD;&#xFF1A;</span>
+
+<span class="hljs-comment">### &#x6A21;&#x578B;&#x5916;&#x63A8;&#x5206;&#x6790;&#x548C;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#x5206;&#x6790;&#xFF1A;</span>
+<span class="hljs-number">1</span>&#x3001;&#x9762;&#x5411;&#x79FB;&#x52A8;&#x7684;&#x5947;&#x5076;&#x6821;&#x9A8C;&#xFF08;MOP&#xFF09;&#xFF08;Owens&#x7B49;&#x4EBA;&#xFF0C;<span class="hljs-number">2013</span>&#xFF09;
+<span class="hljs-number">2</span>&#x3001;&#x591A;&#x5143;&#x73AF;&#x5883;&#x76F8;&#x4F3C;&#x8868;&#x9762;&#xFF08;MESS&#xFF09;&#xFF08;Elith&#xFF0C;Kearney&#x548C;Phillips <span class="hljs-number">2010</span>&#xFF09;
+<span class="hljs-number">3</span>&#x3001;&#x5916;&#x63A8;&#x68C0;&#x6D4B;&#x5DE5;&#x5177;&#xFF08;ExDet&#xFF09;&#xFF08;Mesgaran&#xFF0C;Cousens&#x548C;Webber <span class="hljs-number">2014</span>&#xFF09;
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="8.2 workflow的基础知识.html" class="navigation navigation-prev " aria-label="Previous page: 8.2 workflow的基础知识">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="8.4 workflow的专项R包及脚本.html" class="navigation navigation-next " aria-label="Next page: 8.4 workflow的专项R包及脚本">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"8.3 workflow的全流程R包","level":"1.9.3","depth":2,"next":{"title":"8.4 workflow的专项R包及脚本","level":"1.9.4","depth":2,"path":"8. SDM-workflow说明/8.4 workflow的专项R包及脚本.md","ref":"8. SDM-workflow说明/8.4 workflow的专项R包及脚本.md","articles":[]},"previous":{"title":"8.2 workflow的基础知识","level":"1.9.2","depth":2,"path":"8. SDM-workflow说明/8.2 workflow的基础知识.md","ref":"8. SDM-workflow说明/8.2 workflow的基础知识.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github-buttons@2.1.0","edit-link","toggle-chapters","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"repo":"nicheerfeng/Nichefbook","types":["star"],"size":"small"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/nicheerfeng/Nichefbook/edit/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"nicheerfeng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NICHE MODEL 中文指南-RCODING","language":"zh-hans","gitbook":"*","description":"Niche"},"file":{"path":"8. SDM-workflow说明/8.3 workflow的全流程R包.md","mtime":"2021-09-22T08:58:04.619Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-22T14:10:03.582Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

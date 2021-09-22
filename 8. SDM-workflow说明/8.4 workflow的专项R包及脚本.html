@@ -1,0 +1,2123 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>8.4 workflow的专项R包及脚本 · NICHE MODEL 中文指南-RCODING</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="nicheerfeng">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="8.5 workflow.GUI.html" />
+    
+    
+    <link rel="prev" href="8.3 workflow的全流程R包.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"nicheerfeng/Nichefbook","types":["star"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Niche model 中文指南-Rcoding</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1. 构建工作环境/1.1 构建工作环境说明.html">
+            
+                <a href="../1. 构建工作环境/1.1 构建工作环境说明.html">
+            
+                    
+                    1. 构建工作环境
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1. 构建工作环境/1.1 R-配置环境变量.html">
+            
+                <a href="../1. 构建工作环境/1.1 R-配置环境变量.html">
+            
+                    
+                    1.1 加载及配置R工作环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2.下载物种分布数据/2.下载物种分布数据说明.html">
+            
+                <a href="../2.下载物种分布数据/2.下载物种分布数据说明.html">
+            
+                    
+                    2.下载物种分布数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2.下载物种分布数据/2.1 物种分布数据网站.html">
+            
+                <a href="../2.下载物种分布数据/2.1 物种分布数据网站.html">
+            
+                    
+                    2.1 物种分布数据网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2.下载物种分布数据/2.2 使用R下载物种分布.html">
+            
+                <a href="../2.下载物种分布数据/2.2 使用R下载物种分布.html">
+            
+                    
+                    2.2 使用R下载物种分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3. 物种分布数据清理/物种分布数据清理.html">
+            
+                <a href="../3. 物种分布数据清理/物种分布数据清理.html">
+            
+                    
+                    3. 物种分布数据清理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../3. 物种分布数据清理/3.1 R-清理分布数据.html">
+            
+                <a href="../3. 物种分布数据清理/3.1 R-清理分布数据.html">
+            
+                    
+                    3.1 R-清理分布数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../3. 物种分布数据清理/3.2 构建物种丰富度栅格.html">
+            
+                <a href="../3. 物种分布数据清理/3.2 构建物种丰富度栅格.html">
+            
+                    
+                    3.2 构建物种丰富度栅格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../3. 物种分布数据清理/3.3 核平滑构建物种分布图.html">
+            
+                <a href="../3. 物种分布数据清理/3.3 核平滑构建物种分布图.html">
+            
+                    
+                    3.3 核平滑构建物种分布图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../3. 物种分布数据清理/3.4 改变分布数据的投影方法.html">
+            
+                <a href="../3. 物种分布数据清理/3.4 改变分布数据的投影方法.html">
+            
+                    
+                    3.4 改变分布数据的投影方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../3. 物种分布数据清理/3.5 spthin降低采样偏差.html">
+            
+                <a href="../3. 物种分布数据清理/3.5 spthin降低采样偏差.html">
+            
+                    
+                    3.5 spthin降低采样偏差
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4. 下载环境数据/4.下载环境数据说明.html">
+            
+                <a href="../4. 下载环境数据/4.下载环境数据说明.html">
+            
+                    
+                    4. 下载环境数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../4. 下载环境数据/4.1 环境数据网站.html">
+            
+                <a href="../4. 下载环境数据/4.1 环境数据网站.html">
+            
+                    
+                    4.1 环境数据网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../4. 下载环境数据/R下载及处理环境数据.md">
+            
+                <span>
+            
+                    
+                    4.2 R下载及处理环境数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5. 模型数据预处理/5.模型数据预处理说明.html">
+            
+                <a href="../5. 模型数据预处理/5.模型数据预处理说明.html">
+            
+                    
+                    5. 模型数据预处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../5. 模型数据预处理/5.1 环境数据预处理/5.1 环境数据预处理.html">
+            
+                <a href="../5. 模型数据预处理/5.1 环境数据预处理/5.1 环境数据预处理.html">
+            
+                    
+                    5.1 环境数据预处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../5. 模型数据预处理/5.1 环境数据预处理/5.1.1 读取及导出shp_raster.html">
+            
+                <a href="../5. 模型数据预处理/5.1 环境数据预处理/5.1.1 读取及导出shp_raster.html">
+            
+                    
+                    5.1.1 读取及导出shp_raster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../5. 模型数据预处理/5.1 环境数据预处理/5.1.2 栅格数据的基本处理.html">
+            
+                <a href="../5. 模型数据预处理/5.1 环境数据预处理/5.1.2 栅格数据的基本处理.html">
+            
+                    
+                    5.1.2 栅格数据的基本处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../5. 模型数据预处理/5.1 环境数据预处理/5.1.3 补充和报错处理.html">
+            
+                <a href="../5. 模型数据预处理/5.1 环境数据预处理/5.1.3 补充和报错处理.html">
+            
+                    
+                    5.1.3 补充和报错处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2 模型分布数据预处理.html">
+            
+                <a href="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2 模型分布数据预处理.html">
+            
+                    
+                    5.2 模型分布数据预处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.1 构建训练集和测试集.html">
+            
+                <a href="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.1 构建训练集和测试集.html">
+            
+                    
+                    5.2.1 构建训练集和测试集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.2 构建背景数据集.html">
+            
+                <a href="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.2 构建背景数据集.html">
+            
+                    
+                    5.2.2 构建背景数据集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.3" data-path="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.3 筛选环境因子.html">
+            
+                <a href="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.3 筛选环境因子.html">
+            
+                    
+                    5.2.3 筛选环境因子.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../6. SDM运行/6.SDM运行说明.html">
+            
+                <a href="../6. SDM运行/6.SDM运行说明.html">
+            
+                    
+                    6. SDM运行
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../6. SDM运行/6.1 SDM运行.html">
+            
+                <a href="../6. SDM运行/6.1 SDM运行.html">
+            
+                    
+                    6.1 SDM运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../6. SDM运行/6.2 SDM结果展示.html">
+            
+                <a href="../6. SDM运行/6.2 SDM结果展示.html">
+            
+                    
+                    6.2 SDM结果展示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../6. SDM运行/6.3 SDM模型评估.html">
+            
+                <a href="../6. SDM运行/6.3 SDM模型评估.html">
+            
+                    
+                    6.3 SDM模型评估
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../6. SDM运行/6.4 SDM模型外推.html">
+            
+                <a href="../6. SDM运行/6.4 SDM模型外推.html">
+            
+                    
+                    6.4 SDM模型外推
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../6. SDM运行/6.5 SDM整合建模.html">
+            
+                <a href="../6. SDM运行/6.5 SDM整合建模.html">
+            
+                    
+                    6.5 SDM整合建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../6. SDM运行/6. SDM运行说明.md">
+            
+                <span>
+            
+                    
+                    6.6 SDM案例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.6.1" data-path="../6. SDM运行/6.6 SDM案例/6.6.1bioclim.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.1bioclim.html">
+            
+                    
+                    bioclim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.2" data-path="../6. SDM运行/6.6 SDM案例/6.6.2biomod2工作流.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.2biomod2工作流.html">
+            
+                    
+                    biomod2工作流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.3" data-path="../6. SDM运行/6.6 SDM案例/6.6.3ENMEVAAL.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.3ENMEVAAL.html">
+            
+                    
+                    ENMEVAAL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.4" data-path="../6. SDM运行/6.6 SDM案例/6.6.4enmSDM工作流.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.4enmSDM工作流.html">
+            
+                    
+                    enmSDM工作流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.5" data-path="../6. SDM运行/6.6 SDM案例/6.6.5hypervolume.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.5hypervolume.html">
+            
+                    
+                    hypervolume
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.6" data-path="../6. SDM运行/6.6 SDM案例/6.6.6maxent工作流.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.6maxent工作流.html">
+            
+                    
+                    maxent工作流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.7" data-path="../6. SDM运行/6.6 SDM案例/6.6.7SDMtune工作流.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.7SDMtune工作流.html">
+            
+                    
+                    SDMtune工作流
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../7. SDM相关数据可视化/7.SDM相关数据可视化说明.html">
+            
+                <a href="../7. SDM相关数据可视化/7.SDM相关数据可视化说明.html">
+            
+                    
+                    7. SDM相关数据可视化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../7. SDM相关数据可视化/7.1 R包地图底图.html">
+            
+                <a href="../7. SDM相关数据可视化/7.1 R包地图底图.html">
+            
+                    
+                    7.1 R包地图底图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../7. SDM相关数据可视化/7.2 地图数据三维可视化.html">
+            
+                <a href="../7. SDM相关数据可视化/7.2 地图数据三维可视化.html">
+            
+                    
+                    7.2 地图数据三维可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../7. SDM相关数据可视化/7.3 栅格数据可视化.html">
+            
+                <a href="../7. SDM相关数据可视化/7.3 栅格数据可视化.html">
+            
+                    
+                    7.3 栅格数据可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../7. SDM相关数据可视化/7.4 多维环境变量可视化.html">
+            
+                <a href="../7. SDM相关数据可视化/7.4 多维环境变量可视化.html">
+            
+                    
+                    7.4 多维环境变量可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../7. SDM相关数据可视化/7.5 SDM结果可视化.html">
+            
+                <a href="../7. SDM相关数据可视化/7.5 SDM结果可视化.html">
+            
+                    
+                    7.5 SDM结果可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../7. SDM相关数据可视化/7.6 可视化物种分布.html">
+            
+                <a href="../7. SDM相关数据可视化/7.6 可视化物种分布.html">
+            
+                    
+                    7.6 可视化物种分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../7. SDM相关数据可视化/7.7 相关性分析.html">
+            
+                <a href="../7. SDM相关数据可视化/7.7 相关性分析.html">
+            
+                    
+                    7.7 相关性分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="8.SDM-workflow说明.html">
+            
+                <a href="8.SDM-workflow说明.html">
+            
+                    
+                    8. SDM-workflow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="8.1 workflow的基本流程.html">
+            
+                <a href="8.1 workflow的基本流程.html">
+            
+                    
+                    8.1 workflow的基本流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="8.2 workflow的基础知识.html">
+            
+                <a href="8.2 workflow的基础知识.html">
+            
+                    
+                    8.2 workflow的基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="8.3 workflow的全流程R包.html">
+            
+                <a href="8.3 workflow的全流程R包.html">
+            
+                    
+                    8.3 workflow的全流程R包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.4" data-path="8.4 workflow的专项R包及脚本.html">
+            
+                <a href="8.4 workflow的专项R包及脚本.html">
+            
+                    
+                    8.4 workflow的专项R包及脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="8.5 workflow.GUI.html">
+            
+                <a href="8.5 workflow.GUI.html">
+            
+                    
+                    8.5 workflow(GUI)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="8.6 案例.html">
+            
+                <a href="8.6 案例.html">
+            
+                    
+                    8.6 案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../9. 生态位进化/9.生态位进化说明.html">
+            
+                <a href="../9. 生态位进化/9.生态位进化说明.html">
+            
+                    
+                    9. 生态位进化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1 生态位宽度的进化.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1 生态位宽度的进化.html">
+            
+                    
+                    9.1 生态位宽度的进化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.1" data-path="../9. 生态位进化/9.1 生态位宽度的进化/生态位宽度基础概念.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/生态位宽度基础概念.html">
+            
+                    
+                    9.1 生态位宽度的进化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/9.1.1 单因素分析.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/9.1.1 单因素分析.html">
+            
+                    
+                    9.1.1 单因素分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.2.1" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/参数和及非参.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/参数和及非参.html">
+            
+                    
+                    参数和及非参统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2.2" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/方差分析结果可视化.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/方差分析结果可视化.html">
+            
+                    
+                    方差分析结果可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/9.1.2 多因素分析.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/9.1.2 多因素分析.html">
+            
+                    
+                    9.1.2 多因素分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.3.1" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/CCA.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/CCA.html">
+            
+                    
+                    CCA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3.2" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/PCA_MANOVA.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/PCA_MANOVA.html">
+            
+                    
+                    PCA_MANOVA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3.3" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/聚类分析.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/聚类分析.html">
+            
+                    
+                    聚类分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3.4" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/生态位轴PCA得分.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/生态位轴PCA得分.html">
+            
+                    
+                    生态位轴PCA得分
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.4" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.3 超维度分析R-多维超体积生态位.md">
+            
+                <span>
+            
+                    
+                    9.1.3 超维度分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2 生态位进化式样说明.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2 生态位进化式样说明.html">
+            
+                    
+                    9.2 生态位进化式样
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.2.1" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.1 生态位进化式样.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.1 生态位进化式样.html">
+            
+                    
+                    9.2.1 生态位进化式样
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2 ecospat.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2 ecospat.html">
+            
+                    
+                    9.2.2 ecospat
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.2.2.1" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.1 优化可视化_raw.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.1 优化可视化_raw.html">
+            
+                    
+                    9.2.2.1 优化可视化_raw
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.2" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.2 优化可视化2.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.2 优化可视化2.html">
+            
+                    
+                    9.2.2.2 优化可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.3" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.3 生态位保守性测试.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.3 生态位保守性测试.html">
+            
+                    
+                    9.2.2.3 生态位保守性测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.4" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.4 生态位的重叠与计算.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.4 生态位的重叠与计算.html">
+            
+                    
+                    9.2.2.4 生态位的重叠与计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.5" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.5 生态位重叠可视化.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.5 生态位重叠可视化.html">
+            
+                    
+                    9.2.2.5 生态位重叠可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.6" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.6 非矫正.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.6 非矫正.html">
+            
+                    
+                    9.2.2.6 非矫正生态位重叠
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.3" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.3 ENMtools.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.3 ENMtools.html">
+            
+                    
+                    9.2.3 ENMtools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../9. 生态位进化/9.3 扩散动态研究/9.3 扩散动态研究.html">
+            
+                <a href="../9. 生态位进化/9.3 扩散动态研究/9.3 扩散动态研究.html">
+            
+                    
+                    9.3 扩散动态研究
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../10. 群落与SDM/10. 群落生态学说明.html">
+            
+                <a href="../10. 群落与SDM/10. 群落生态学说明.html">
+            
+                    
+                    10. 群落与SDM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../10. 群落生态学/10.1 背景资料.md">
+            
+                <span>
+            
+                    
+                    10.1 背景资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../10. 群落与SDM/10.2 多物种联合建模.html">
+            
+                <a href="../10. 群落与SDM/10.2 多物种联合建模.html">
+            
+                    
+                    10.2 多物种联合建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../10. 群落与SDM/10.3 经典研究案例.html">
+            
+                <a href="../10. 群落与SDM/10.3 经典研究案例.html">
+            
+                    
+                    10.3 经典研究案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../10. 群落与SDM/10.4 可视化.html">
+            
+                <a href="../10. 群落与SDM/10.4 可视化.html">
+            
+                    
+                    10.4 可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../11. 遥感与SDM/11. 遥感与SDM说明.html">
+            
+                <a href="../11. 遥感与SDM/11. 遥感与SDM说明.html">
+            
+                    
+                    11.遥感与SDM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../11. 遥感与SDM/11.1 研究思路.html">
+            
+                <a href="../11. 遥感与SDM/11.1 研究思路.html">
+            
+                    
+                    11.1 研究思路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../11. 遥感与SDM/11.2 研究R包.html">
+            
+                <a href="../11. 遥感与SDM/11.2 研究R包.html">
+            
+                    
+                    11.2 研究R包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../11. 遥感与SDM/11.3 经典研究案例.html">
+            
+                <a href="../11. 遥感与SDM/11.3 经典研究案例.html">
+            
+                    
+                    11.3 经典研究案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../12. 系统发育与SDM/12. 系统发育与SDM说明.html">
+            
+                <a href="../12. 系统发育与SDM/12. 系统发育与SDM说明.html">
+            
+                    
+                    12.系统发育与SDM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../12. 系统发育与SDM/12.1 研究思路.html">
+            
+                <a href="../12. 系统发育与SDM/12.1 研究思路.html">
+            
+                    
+                    12.1 研究思路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../12. 系统发育与SDM/12.2 研究R包.html">
+            
+                <a href="../12. 系统发育与SDM/12.2 研究R包.html">
+            
+                    
+                    12.2 研究R包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../12. 系统发育与SDM/12.3 经典研究案例.html">
+            
+                <a href="../12. 系统发育与SDM/12.3 经典研究案例.html">
+            
+                    
+                    12.3 经典研究案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../13. 空间生态位/13. 空间生态位.html">
+            
+                <a href="../13. 空间生态位/13. 空间生态位.html">
+            
+                    
+                    13.空间生态位
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../13. 空间生态位/13.1 R-空间统计书籍.html">
+            
+                <a href="../13. 空间生态位/13.1 R-空间统计书籍.html">
+            
+                    
+                    13.1 R-空间统计书籍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../13. 空间生态位/13.2 空间自相关概念释义.html">
+            
+                <a href="../13. 空间生态位/13.2 空间自相关概念释义.html">
+            
+                    
+                    13.2 空间自相关概念释义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../13. 空间生态位/13.3 地统计.html">
+            
+                <a href="../13. 空间生态位/13.3 地统计.html">
+            
+                    
+                    13.3 地统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../13. 空间生态位/13.4 案例.html">
+            
+                <a href="../13. 空间生态位/13.4 案例.html">
+            
+                    
+                    13.4 案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="../13. 空间生态位/13.5 R-解决空间自相关.html">
+            
+                <a href="../13. 空间生态位/13.5 R-解决空间自相关.html">
+            
+                    
+                    13.5 R-解决空间自相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="../13. 空间生态位/13.6 补充.html">
+            
+                <a href="../13. 空间生态位/13.6 补充.html">
+            
+                    
+                    13.6 补充
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../14. 生态位基础资料/14.生态位理论资料说明.html">
+            
+                <a href="../14. 生态位基础资料/14.生态位理论资料说明.html">
+            
+                    
+                    14.生态位理论资料
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../14. 生态位基础资料/14.1 生态相关的名词释义.html">
+            
+                <a href="../14. 生态位基础资料/14.1 生态相关的名词释义.html">
+            
+                    
+                    14.1 生态相关的名词释义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../14. 生态位基础资料/14.2 SDM建模书籍.html">
+            
+                <a href="../14. 生态位基础资料/14.2 SDM建模书籍.html">
+            
+                    
+                    14.2 SDM建模书籍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../14. 生态位基础资料/14.3 相关与因果.html">
+            
+                <a href="../14. 生态位基础资料/14.3 相关与因果.html">
+            
+                    
+                    14.3 相关与因果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../14. 生态位基础资料/14.4 分布数据清理的依据.html">
+            
+                <a href="../14. 生态位基础资料/14.4 分布数据清理的依据.html">
+            
+                    
+                    14.4 分布数据清理的依据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../14. 生态位基础资料/14.5 建模格局的二元性.html">
+            
+                <a href="../14. 生态位基础资料/14.5 建模格局的二元性.html">
+            
+                    
+                    14.5 建模格局的二元性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../14. 生态位基础资料/14.6 niche常见错误.html">
+            
+                <a href="../14. 生态位基础资料/14.6 niche常见错误.html">
+            
+                    
+                    14.6 niche常见错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../14. 生态位基础资料/14.7 气候生态位的思路.html">
+            
+                <a href="../14. 生态位基础资料/14.7 气候生态位的思路.html">
+            
+                    
+                    14.7 气候生态位的思路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="../14. 生态位基础资料/14.8 环境与物种分布的交互选择.html">
+            
+                <a href="../14. 生态位基础资料/14.8 环境与物种分布的交互选择.html">
+            
+                    
+                    14.8 环境与物种分布的交互选择
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../15. niche领航员工作/15.niche领航员工作.html">
+            
+                <a href="../15. niche领航员工作/15.niche领航员工作.html">
+            
+                    
+                    15.niche领航员工作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../15. niche领航员工作/乔慧捷.html">
+            
+                <a href="../15. niche领航员工作/乔慧捷.html">
+            
+                    
+                    乔慧捷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../15. niche领航员工作/朱耿平.html">
+            
+                <a href="../15. niche领航员工作/朱耿平.html">
+            
+                    
+                    朱耿平
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../15. niche领航员工作/邬建国.html">
+            
+                <a href="../15. niche领航员工作/邬建国.html">
+            
+                    
+                    邬建国
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../15. niche领航员工作/Andrew Townsend Peterson.html">
+            
+                <a href="../15. niche领航员工作/Andrew Townsend Peterson.html">
+            
+                    
+                    Andrew Townsend Peterson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../15. niche领航员工作/Annette Ostling.html">
+            
+                <a href="../15. niche领航员工作/Annette Ostling.html">
+            
+                    
+                    Annette Ostling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../15. niche领航员工作/Antoine Guisan.html">
+            
+                <a href="../15. niche领航员工作/Antoine Guisan.html">
+            
+                    
+                    Antoine Guisan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../15. niche领航员工作/Damaris Zurell.html">
+            
+                <a href="../15. niche领航员工作/Damaris Zurell.html">
+            
+                    
+                    Damaris Zurell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="../15. niche领航员工作/Dan L. Warre.html">
+            
+                <a href="../15. niche领航员工作/Dan L. Warre.html">
+            
+                    
+                    Dan L. Warren
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.9" data-path="../15. niche领航员工作/Erin E. Saupe.html">
+            
+                <a href="../15. niche领航员工作/Erin E. Saupe.html">
+            
+                    
+                    Erin E. Saupe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.10" data-path="../15. niche领航员工作/Holt R D.html">
+            
+                <a href="../15. niche领航员工作/Holt R D.html">
+            
+                    
+                    Holt R D
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.11" data-path="../15. niche领航员工作/Hannah Lois Owens.html">
+            
+                <a href="../15. niche领航员工作/Hannah Lois Owens.html">
+            
+                    
+                    Hannah Lois Owens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.12" data-path="../15. niche领航员工作/Jane Elith.html">
+            
+                <a href="../15. niche领航员工作/Jane Elith.html">
+            
+                    
+                    Jane Elith
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.13" data-path="../15. niche领航员工作/Jorge Soberón.html">
+            
+                <a href="../15. niche领航员工作/Jorge Soberón.html">
+            
+                    
+                    Jorge Soberón
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.14" data-path="../15. niche领航员工作/Olivier Broennimann.html">
+            
+                <a href="../15. niche领航员工作/Olivier Broennimann.html">
+            
+                    
+                    Olivier Broennimann
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.15" data-path="../15. niche领航员工作/Jane Elith.html">
+            
+                <a href="../15. niche领航员工作/Jane Elith.html">
+            
+                    
+                    John J. Wiens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.16" data-path="../15. niche领航员工作/Robert P. Anderson.html">
+            
+                <a href="../15. niche领航员工作/Robert P. Anderson.html">
+            
+                    
+                    Robert P. Anderson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.17" data-path="../15. niche领航员工作/Michael R Kearney.html">
+            
+                <a href="../15. niche领航员工作/Michael R Kearney.html">
+            
+                    
+                    Michael R Kearne
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >8.4 workflow的专项R包及脚本</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="84-workflow-&#x4E13;&#x9879;r&#x5305;&#x53CA;&#x8BBA;&#x6587;&#x811A;&#x672C;">8.4 workflow &#x4E13;&#x9879;R&#x5305;&#x53CA;&#x8BBA;&#x6587;&#x811A;&#x672C;</h3>
+<h4 id="841--sdmselsect&#x6700;&#x4F73;&#x6A21;&#x578B;&#x548C;&#x56E0;&#x5B50;&#x9009;&#x62E9;">8.4.1  SDMselsect(&#x6700;&#x4F73;&#x6A21;&#x578B;&#x548C;&#x56E0;&#x5B50;&#x9009;&#x62E9;)</h4>
+<pre><code class="lang-r"><span class="hljs-comment">## SDMselect&#x5DE5;&#x5177;&#x5305;&#xFF1A;&#x63D0;&#x4F9B;&#x4E86;&#x5B8C;&#x6574;&#x6D41;&#x7A0B;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x5BF9;&#x63A5;gplot&#x7ED8;&#x5236;&#xFF1B;</span>
+<span class="hljs-comment">## &#x4E3B;&#x8981;&#x529F;&#x80FD;&#x662F;&#x63D0;&#x4F9B;&#x6700;&#x4F73;&#x4F18;&#x5316;&#x7B5B;&#x9009;&#x73AF;&#x5883;&#x56E0;&#x5B50;(##&#x57FA;&#x4E8E;&#x6A21;&#x578B;&#x7684;auc&#x5224;&#x8BFB;)&#xFF0C;&#x4EE5;&#x53CA;&#x6700;&#x4F18;&#x73AF;&#x5883;&#x56E0;&#x5B50;&#x9009;&#x62E9;&#x540E;&#x7684;&#x6700;&#x4F18;&#x6A21;&#x578B;&#x53C2;&#x6570;&#x9009;&#x62E9;&#xFF0C; &#xFF0C;&#x7528;&#x4E8E;&#x9AD8;&#x7CBE;&#x5EA6;&#x5EFA;&#x6A21;&#xFF1B;&#x53E6;&#x5916;&#xFF0C;&#x8FD9;&#x4E2A;&#x5305;&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x5BF9;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#x53C2;&#x6570;&#x7684;&#x5206;&#x6790;&#xFF0C;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;&#x6BCF;&#x6B21;&#x53C2;&#x6570;&#xFF0C;&#x53C2;&#x6570;&#x5DEE;&#x5F02;&#x53EF;&#x4EE5;&#x53CD;&#x5E94;&#x5728;&#x5EFA;&#x6A21;&#x7ED3;&#x679C;&#x4E2D;&#xFF0C;&#x6784;&#x5EFA;&#x73AF;&#x5883;&#x56FE;&#x5C42;&#x6765;&#x53CD;&#x6620;&#x7269;&#x79CD;&#x751F;&#x6001;&#x4F4D;&#x5EFA;&#x6A21;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#x663E;&#x8457;&#x7684;&#x533A;&#x57DF;&#xFF1B;</span>
+
+<span class="hljs-comment">## &#x53C2;&#x8003;&#x7F51;&#x9875;&#x6559;&#x7A0B;&#x94FE;&#x63A5;&#xFF1A;</span>
+https://statnmap.github.io/SDMSelect/articles/SDM_Selection.html
+https://github.com/statnmap/SDMSelect
+
+<span class="hljs-comment">###&#x4F46;&#x7406;&#x8BBA;&#x4E0A;&#x8FD9;&#x4E2A;&#x5305;&#x5B58;&#x5728;&#x95EE;&#x9898;&#xFF0C;&#x6700;&#x4F18;&#x73AF;&#x5883;&#x56E0;&#x5B50;&#x7684;&#x9009;&#x62E9;&#x57FA;&#x4E8E;auc&#x6216;&#x8005;&#x5176;&#x4ED6;&#x5355;&#x4E00;&#x6307;&#x6570;&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x5B58;&#x5728;&#x95EE;&#x9898;&#x7684;&#xFF0C;&#x8FD9;&#x79CD;presence/absence&#x7684;&#x95EE;&#x9898;&#x518D;&#x8FDB;&#x9879;&#x53CC;&#x5411;&#x5224;&#x8BFB;&#x65F6;&#x4F7F;&#x7528;&#x53EF;&#x80FD;&#x4E0D;&#x9002;&#x5408;&#xFF1B;&#x53E6;&#x5916;&#xFF0C;&#x6700;&#x4F18;&#x73AF;&#x5883;&#x56E0;&#x5B50;&#x9700;&#x8981;&#x6839;&#x636E;&#x5EFA;&#x6A21;&#x7684;&#x7528;&#x9014;&#x6765;&#x9009;&#x62E9;&#xFF0C;&#x6700;&#x4F18;&#x6A21;&#x578B;&#x5E76;&#x4E0D;&#x4EE3;&#x8868;&#x5728;&#x8F6C;&#x79FB;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x7528;&#x9014;&#x65F6;&#x6548;&#x679C;&#x662F;&#x6700;&#x597D;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x8003;&#x8651;&#x5230;&#x66F4;&#x590D;&#x6742;&#x7684;&#x80CC;&#x666F;&#x8FC7;&#x7A0B;&#xFF1A;&#x5F53;&#x6211;&#x4EEC;&#x63D0;&#x9AD8;&#x7CBE;&#x5EA6;&#x548C;&#x6700;&#x4F73;&#x6A21;&#x578B;&#x5339;&#x914D;&#x65F6;&#xFF0C;&#x7B97;&#x6CD5;&#xFF0C;&#x662F;&#x5426;&#x610F;&#x5473;&#x7740;&#x8FC7;&#x62DF;&#x5408;&#xFF0C;&#x800C;&#x964D;&#x4F4E;&#x6A21;&#x578B;&#x7684;&#x6CDB;&#x5316;&#x80FD;&#x529B;&#x3002;&#x6A21;&#x578B;&#x7684;&#x6CDB;&#x5316;&#x80FD;&#x529B;&#x5728;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x4E0A;&#x662F;&#x53CD;&#x6620;&#x7269;&#x79CD;&#x5206;&#x5E03;&#x95F4;&#x5BB9;&#x5DEE;&#x5173;&#x7CFB;&#xFF0C;&#x5939;&#x7D27;&#x7A0B;&#x5EA6;&#x8FC7;&#x9AD8;&#x65F6;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x7F29;&#x5C0F;&#x4E86;&#x7269;&#x79CD;&#x7684;&#x6F5C;&#x5728;&#x5206;&#x5E03;&#x9002;&#x751F;&#x533A;&#x3002;&#x9700;&#x8981;&#x660E;&#x767D;&#x7684;&#x5173;&#x952E;&#x95EE;&#x9898;&#x662F;&#xFF1A;&#x6A21;&#x578B;&#x7684;&#x5EFA;&#x7ACB;&#x57FA;&#x7840;&#x662F;&#x57FA;&#x7840;&#x751F;&#x6001;&#x4F4D;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x73B0;&#x5B9E;&#x751F;&#x6001;&#x4F4D;&#x3002;</span>
+</code></pre>
+<h4 id="842-sdmvspecies&#x6784;&#x5EFA;&#x865A;&#x62DF;&#x7269;&#x79CD;">8.4.2 SDMvspecies(&#x6784;&#x5EFA;&#x865A;&#x62DF;&#x7269;&#x79CD;)</h4>
+<pre><code>## SDMvspecies&#x7528;&#x4E8E;&#x6784;&#x5EFA;sdm&#x5206;&#x6790;&#x4E2D;&#x7684;&#x7269;&#x79CD;&#x5EFA;&#x6A21;&#x5206;&#x5E03;&#x6570;&#xFF1B;2015&#x5E74;&#x5C31;&#x5DF2;&#x7ECF;&#x5EFA;&#x7ACB;&#xFF1B;
+## &#x8BE6;&#x53C2;&#xFF1A;
+https://github.com/howl-anderson/sdmvspecies
+##
+</code></pre><h4 id="843--sdmshiny-&#x56E0;&#x5B50;&#x53D8;&#x5F02;&#x53EF;&#x89C6;&#x5316;">8.4.3  sdmShiny (&#x56E0;&#x5B50;&#x53D8;&#x5F02;&#x53EF;&#x89C6;&#x5316;)</h4>
+<pre><code>## &#x8FD9;&#x4E2A;&#x5305;&#x63D0;&#x4F9B;&#x4E86;&#x6B27;&#x6D32;&#x6570;&#x5341;&#x79CD;&#x5E94;&#x666F;&#x89C2;&#x5EFA;&#x6A21;&#x5206;&#x6790;&#x7684;&#x7269;&#x79CD;&#xFF0C;&#x5E76;&#x6839;&#x636E;&#x672A;&#x6765;&#x73AF;&#x5883;&#x53D8;&#x5316;(&#x4E3B;&#x8981;&#x662F;&#x6307;&#x964D;&#x96E8;&#x548C;&#x5347;&#x6E29;)&#x4EE5;&#x53CA;&#x751F;&#x7269;&#x76F8;&#x4E92;&#x4F5C;&#x7528;(#&#x98DF;&#x8349;&#x52A8;&#x7269;)&#x6765;&#x63ED;&#x793A;&#x5728;&#x5168;&#x7403;&#x73AF;&#x5883;&#x53D8;&#x5316;&#x4E0B;&#xFF0C;&#x7269;&#x79CD;&#x9002;&#x751F;&#x533A;&#x53D1;&#x751F;&#x8F6C;&#x79FB;&#x7684;&#x8FC7;&#x7A0B;&#x3002;
+## &#x8FD9;&#x4E2A;&#x5305;&#x53EF;&#x80FD;&#x7528;&#x4E8E;&#x5EFA;&#x6A21;&#x5206;&#x6790;&#x6559;&#x5B66;&#x7684;&#xFF1B;&#x4F46;&#x5F88;&#x503C;&#x5F97;&#x5B66;&#x4E60;&#xFF1B;&#x4E0D;&#x80FD;&#x624B;&#x52A8;&#x52A0;&#x5165;&#x53C2;&#x6570;&#xFF0C;&#x800C;&#x4E14;&#x5347;&#x6E29;&#x3001;&#x964D;&#x96E8;&#x548C;&#x751F;&#x7269;&#x76F8;&#x4E92;&#x4F5C;&#x7528;&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x975E;&#x7EBF;&#x6027;&#x7684;&#xFF0C;&#x4EE5;&#x7EBF;&#x6027;&#x6765;&#x6784;&#x5EFA;&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x5B58;&#x95EE;&#x9898;&#x7684;&#xFF1B;
+## &#x975E;R&#x5305;&#xFF0C;&#x4E3B;&#x8981;&#x662F;shiny&#x6784;&#x5EFA;&#x7684;&#x7F51;&#x7AD9;&#xFF1A;
+https://github.com/anders-kolstad/sdmShiny
+https://anderskolstad.shinyapps.io/sdmShiny/
+</code></pre><h4 id="844-rmaxentsdm-&#x63D0;&#x9AD8;&#x6A21;&#x578B;&#x8FD0;&#x884C;&#x6548;&#x7387;">8.4.4 rmaxent/sdm (&#x63D0;&#x9AD8;&#x6A21;&#x578B;&#x8FD0;&#x884C;&#x6548;&#x7387;)</h4>
+<pre><code class="lang-R"><span class="hljs-comment">## &#x4F5C;&#x8005;&#xFF1A;&#x5F00;&#x53D1;&#x4E86;sdm&#x548C;rmaxent&#x4E24;&#x4E2A;R&#x5305;&#xFF1B;</span>
+<span class="hljs-comment">## R&#x5305;&#x53C2;&#x8003;&#x94FE;&#x63A5;&#x53CA;&#x6587;&#x6863;&#x6848;&#x4F8B;&#xFF1A;</span>
+https://github.com/johnbaums/rmaxent
+<span class="hljs-comment">## &#x5B89;&#x88C5;R&#x5305;&#xFF1A;</span>
+remotes::install_github(<span class="hljs-string">&apos;johnbaums/rmaxent&apos;</span>)
+
+<span class="hljs-comment">## rmaxent&#x4F5C;&#x8005;&#x6240;&#x8BF4;&#xFF0C;&#x672C;&#x5305;&#x662F;&#x57FA;&#x4E8E;c++&#x91CD;&#x6784;&#x7684;&#xFF0C;&#x5728;&#x4F7F;&#x7528;peoject&#x8FDB;&#x884C;&#x6295;&#x5F71;&#x65F6;&#x81F3;&#x5C11;&#x662F;maxent&#x539F;&#x751F;&#x5305;&#x7684;&#x4E24;&#x500D;&#x4EE5;&#x4E0A;&#xFF0C;&#x5728;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x6279;&#x5904;&#x7406;&#x7684;&#x65F6;&#x5019;&#x7279;&#x522B;&#x6709;&#x7528;&#xFF1B;</span>
+<span class="hljs-comment">## &#x8BE5;&#x5305;&#x7684;&#x5176;&#x4ED6;&#x91CD;&#x8981;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x89C6;&#x5316;&#x89E3;&#x6790;maxent&#x751F;&#x6210; lambda&#x6587;&#x4EF6;&#xFF1B;&#x91CD;&#x6784;mass&#x5206;&#x6790;&#x7ED3;&#x679C;(#mess&#x5206;&#x6790;&#x662F;&#x57FA;&#x4E8E;&#x5730;&#x7406;&#x8DDD;&#x79BB;&#x8BA1;&#x7B97;&#x7684;&#x76F8;&#x4F3C;&#x6027;&#xFF0C;&#x73B0;&#x5728;&#x4E3B;&#x6D41;&#x7684;&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;&#x662F;&#x73AF;&#x5883;&#x8DDD;&#x79BB;&#x7684;&#x8BA1;&#x7B97;mop&#x5206;&#x6790;)</span>
+</code></pre>
+<pre><code class="lang-R"><span class="hljs-comment">## sdm</span>
+<span class="hljs-comment">## &#x53C2;&#x8003;&#x6848;&#x4F8B;&#x6559;&#x5B66;&#xFF1A;</span>
+https://github.com/johnbaums/sdm
+
+<span class="hljs-comment">## &#x5B89;&#x88C5;R&#x5305;&#xFF1A;</span>
+remotes::install_github(<span class="hljs-string">&apos;johnbaums/sdm&apos;</span>)
+<span class="hljs-comment">## &#x8BF4;&#x660E;&#xFF1A;&#xFF1A;</span>
+&#x5B89;&#x88C5;&#x5931;&#x8D25;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x672C;&#x673A;&#x7684;R&#x4E0E;rjava&#x6709;&#x4E9B;&#x95EE;&#x9898;&#xFF1B;&#x9700;&#x8981;&#x91CD;&#x88C5;&#x4E4B;&#x540E;&#x518D;&#x5B89;&#x88C5;&#xFF1B;
+<span class="hljs-comment">## &#x5173;&#x4E8E;sdm&#x6784;&#x5EFA;&#x811A;&#x672C;&#x6D41;&#x7A0B;&#xFF0C;&#x5B9E;&#x73B0;&#x6279;&#x91CF;&#x5B9E;&#x73B0;&#x7269;&#x79CD;&#x5EFA;&#x6A21;&#xFF0C;&#x80FD;&#x548C;rmaxent&#x5305;&#x7684;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x5F88;&#x597D;&#x7684;&#x7ED3;&#x5408;&#xFF1B;&#x5982;&#x679C;&#x540E;&#x7EED;&#x6709;&#x9700;&#x8981;&#x5728;&#x5B89;&#x88C5;&#xFF01;</span>
+</code></pre>
+<h4 id="844-minbar&#x786E;&#x5B9A;&#x6700;&#x5C0F;buffer">8.4.4 MinBAR:&#x786E;&#x5B9A;&#x6700;&#x5C0F;buffer</h4>
+<pre><code>## minbar&#x5305;&#x8BF4;&#x660E;&#xFF1A;
+&#x8BE5;&#x62A5;&#x4E3B;&#x8981;&#x57FA;&#x4E8E;&#x5206;&#x5E03;&#x533A;&#x8D28;&#x5FC3;&#x7531;&#x91CC;&#x5411;&#x5916;&#x8F6C;&#x79FB;&#x786E;&#x5B9A;buffer&#x7F13;&#x51B2;&#x533A;&#xFF0C;&#x7136;&#x540E;&#x5229;&#x7528;&#x6784;&#x5EFA;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x91C7;&#x6837;&#x73AF;&#x5883;&#x80CC;&#x666F;&#xFF0C;&#x518D;&#x57FA;&#x4E8E;&#x73AF;&#x5883;&#x80CC;&#x666F;&#x8FDB;&#x884C;Boyce Index&#x4F5C;&#x4E3A;&#x6A21;&#x578B;&#x6027;&#x80FD;&#x7684;&#x5EA6;&#x91CF;&#xFF0C;&#x76F4;&#x81F3;&#x786E;&#x5B9A;&#x6EE1;&#x610F;&#x7684;&#x6A21;&#x578B;&#x4E3A;&#x6B62;&#xFF1B;(##&#x5173;&#x4E8E;Boyce Index&#x76EE;&#x524D;&#x8BA4;&#x4E3A;&#x662F;&#x8BC4;&#x4F30;&#x6A21;&#x578B;&#x6700;&#x4E3A;&#x5408;&#x7406;&#x7684;&#x65B9;&#x5F0F;)
+
+## minabar&#x5305;&#x7684;&#x5177;&#x4F53;&#x53C2;&#x6570;&#x5B9E;&#x4F8B;&#xFF1A;
+&#x53C2;&#x89C1;&#xFF1A;https://github.com/xavi-rp/MinBAR
+&#x53C2;&#x89C1;&#xFF1A;https://github.com/xavi-rp/MinBAR/tree/master/vignettes
+
+
+## R&#x5305;&#x5B89;&#x88C5;&#xFF1A; 
+library(devtools)
+install_github(&quot;xavi-rp/MinBAR&quot;)
+</code></pre><h4 id="845-sdmprior&#x7EB3;&#x5165;&#x751F;&#x7406;&#x56E0;&#x7D20;">8.4.5 SDMprior(&#x7EB3;&#x5165;&#x751F;&#x7406;&#x56E0;&#x7D20;)</h4>
+<pre><code>## &#x9C7C;&#x7C7B;SDM&#x7684;&#x65F6;&#x7A7A;&#x5EFA;&#x6A21;
+## sdmprior&#x5305;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x8BD5;&#x63A2;&#x6027;&#x7684;&#x5C06;&#x690D;&#x7269;&#x751F;&#x7406;&#x6781;&#x9650;&#x7EB3;&#x5165;&#x5230;&#x5EFA;&#x6A21;&#x53D8;&#x5316;&#x4E2D;&#x533A;&#xFF0C;&#x8FDB;&#x800C;&#x8D77;&#x5230;&#x76F4;&#x63A5;&#x7684;&#x7EA6;&#x675F;&#x4F5C;&#x7528;&#xFF1B;
+## &#x672C;&#x5305;&#x89C4;&#x5B9A;&#x4E86;&#x7279;&#x6B8A;&#x7684;&#x6570;&#x636E;&#x8303;&#x5F0F;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x6570;&#x636E;&#x7ED3;&#x679C;
+
+## &#x8FD9;&#x91CC;&#x6D89;&#x53CA;&#x7684;&#x65F6;&#x7A7A;&#x6A21;&#x578B;&#x8F83;&#x4E3A;&#x590D;&#x6742;&#xFF0C;&#x53EF;&#x80FD;&#x548C;&#x4F20;&#x7EDF;&#x7684;&#x5EFA;&#x6A21;&#x65B9;&#x5F0F;&#x5B58;&#x5728;&#x5DEE;&#x5F02;&#xFF1B;&#x4F46;&#x5305;&#x542B;&#x8BE6;&#x7EC6;&#x7684;&#x7A7A;&#x95F4;&#x5EFA;&#x6A21;&#x77E5;&#x8BC6;&#x548C;&#x4F53;&#x7CFB;&#xFF0C;&#x7528;&#x4E8E;&#x7814;&#x7A76;&#x5305;&#x542B;&#x4E30;&#x5BCC;&#x7684;&#x5386;&#x53F2;&#x6570;&#x636E;&#x7684;&#x6E14;&#x573A;&#x6570;&#x636E;&#xFF1B;
+https://github.com/James-Thorson-NOAA/VAST#references
+</code></pre><h4 id="846-phylio-sdm&#x6784;&#x5EFA;&#x7CFB;&#x7EDF;&#x4E0E;&#x7269;&#x79CD;&#x5EFA;&#x6A21;">8.4.6 Phylio-SDM(&#x6784;&#x5EFA;&#x7CFB;&#x7EDF;&#x4E0E;&#x7269;&#x79CD;&#x5EFA;&#x6A21;)</h4>
+<pre><code class="lang-r"><span class="hljs-comment">## 2017&#x5E74;&#x521A;&#x53D1;&#x8868;&#x7684;&#x6587;&#x7AE0;&#xFF0C;&#x7528;&#x4E8E;&#x5C06;&#x7CFB;&#x7EDF;&#x53D1;&#x751F;&#x4FE1;&#x606F;&#x548C;&#x7269;&#x79CD;&#x5DE9;&#x56FA;&#x624D;&#x80FD;&#x4FE1;&#x606F;&#x7ED3;&#x5408;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x8BA1;&#x7B97;&#x5728;&#x5E38;&#x89C4;&#x7269;&#x79CD;&#x5EFA;&#x6A21;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x7CFB;&#x7EDF;&#x53D1;&#x751F;&#x9884;&#x6D4B;&#x56E0;&#x5B50;&#xFF1B;</span>
+
+<span class="hljs-comment">##&#x5177;&#x4F53;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</span>
+https://github.com/MoralesCastilla/Phylo-SDMs
+
+<span class="hljs-comment">## &#x6587;&#x7AE0;&#x94FE;&#x63A5;&#x5982;&#x4E0B;&#xFF1A;</span>
+
+
+<span class="hljs-comment">## &#x8BE5;&#x4F5C;&#x8005;&#x8FD8;&#x5728;github&#x4E0A;&#x63D0;&#x4F9B;&#x4E86;&#x5176;&#x4ED6;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</span>
+<span class="hljs-number">1</span>&#x3001;&#x7528;&#x4E8E;&#x7814;&#x7A76;&#x4F5C;&#x7269;&#x54C1;&#x79CD;&#x591A;&#x6837;&#x6027;&#x7684;&#x7269;&#x5019;&#x548C;&#x6C14;&#x5019;&#x9002;&#x5E94;&#x6027;&#x9884;&#x6D4B;&#xFF1A;
+<span class="hljs-comment">## &#x5EFA;&#x6A21;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;</span>
+&#x7269;&#x5019;&#x6A21;&#x578B;&#x7684;&#x53C2;&#x6570;&#x5316;&#xFF08;&#x901A;&#x8FC7;PMP V5.0&#x5916;&#x90E8;&#x5B8C;&#x6210;&#xFF1B; Chuine&#x7B49;&#x4EBA;&#xFF0C;<span class="hljs-number">2013</span>&#x5E74;&#x300A;&#x690D;&#x7269;&#x53D1;&#x5C55;&#x6A21;&#x578B;&#x300B;&#xFF0C;&#x300A;&#x7269;&#x5019;&#x5B66;&#xFF1A;&#x7EFC;&#x5408;&#x73AF;&#x5883;&#x79D1;&#x5B66;&#x300B;&#xFF0C;Springer&#xFF0C;&#x7B2C;<span class="hljs-number">275</span>-<span class="hljs-number">293</span>&#x9875;&#xFF09;&#x3002;
+&#x6C14;&#x5019;&#x6570;&#x636E;&#x63D0;&#x53D6;&#xFF0C;&#x504F;&#x5DEE;&#x6821;&#x6B63;&#x548C;&#x5B58;&#x50A8;&#x3002;
+&#x7269;&#x5019;&#x9884;&#x6D4B;&#xFF08;&#x5BF9;&#x7ED9;&#x5B9A;&#x5E74;&#x4EFD;&#x548C;&#x54C1;&#x79CD;&#x7684;&#x51FA;&#x82BD;&#xFF0C;&#x5F00;&#x82B1;&#x548C;&#x786E;&#x8BC1;&#x65E5;&#x671F;&#x8FDB;&#x884C;&#x9884;&#x6D4B;&#xFF09;&#x3002;
+&#x786E;&#x5B9A;&#x7EDD;&#x5BF9;&#x65F6;&#x671F;&#xFF08;<span class="hljs-number">1950</span>-<span class="hljs-number">1980</span>&#x5E74;&#xFF09;&#x6210;&#x719F;&#x7684;&#x6C14;&#x5019;&#x8303;&#x56F4;&#x3002;
+&#x9884;&#x6D4B;&#x7ED9;&#x5B9A;&#x54C1;&#x79CD;&#x548C;&#x5E74;&#x4EFD;&#x7684;&#x6210;&#x719F;&#x8FC7;&#x7A0B;&#x7684;&#x6C14;&#x5019;&#x8303;&#x56F4;&#x3002;
+<span class="hljs-comment">## &#x4EE3;&#x7801;&#x7F51;&#x5740;&#x5982;&#x4E0B;&#xFF1A;https://github.com/MoralesCastilla/PhenoDiversity</span>
+</code></pre>
+<h4 id="847--maxnet-r&#x8FD0;&#x884C;maxent">8.4.7  maxnet R&#x8FD0;&#x884C;maxent</h4>
+<pre><code>## maxnet&#x5728;&#x591A;&#x4E2A;R&#x4E2D;&#x5145;&#x5F53;&#x7740;&#x91CD;&#x8981;&#x53C2;&#x6570;&#x4EE3;&#x7801;&#xFF1B;
+## &#x672C;&#x5305;&#x53EF;&#x4EE5;&#x8C03;&#x53C2;&#x8FD0;&#x884C;&#xFF0C;&#x4F46;&#x662F;&#x4E0A;&#x9762;&#x6709;&#x63D0;&#x4EA4;&#x7684;rmaxent(C++)&#x53EF;&#x4EE5;&#x663E;&#x8457;&#x7684;&#x63D0;&#x9AD8;&#x8FD0;&#x884C;&#x6548;&#x7387;&#x3002;
+## &#x4E0E;&#x6B64;&#x5305;&#x76F8;&#x5339;&#x914D;&#x7684;&#x7279;&#x6B8A;R&#x5305;&#x662F;ENMeval&#x7528;&#x4E8E;&#xFF0C;maxent&#x7684;&#x8C03;&#x53C2;&#x8FD0;&#x884C;&#xFF0C;&#x7B5B;&#x9009;&#x6700;&#x4F18;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x4E00;&#x90E8;&#x5206;&#x53C2;&#x89C1;6.1.3&#xFF1B;
+</code></pre><p>8.4.8 SDMtune(&#x6A21;&#x578B;&#x4F18;&#x5316;)</p>
+<pre><code class="lang-r"><span class="hljs-comment">## SDMtune&#x8BF4;&#x660E;&#xFF1A;</span>
+&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x4E3A;&#x7269;&#x79CD;&#x5206;&#x5E03;&#x6A21;&#x578B;&#x6267;&#x884C;&#x53D8;&#x91CF;&#x9009;&#x62E9;&#x548C;&#x6A21;&#x578B;&#x8C03;&#x6574;&#xFF0C;&#x5B83;&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x5B9E;&#x7528;&#x7A0B;&#x5E8F;&#x6765;&#x663E;&#x793A;&#x7ED3;&#x679C;&#xFF1B;
+<span class="hljs-comment"># &#x53C2;&#x8003;&#x94FE;&#x63A5;&#xFF1A;</span>
+https://github.com/ConsBiol-unibern
+
+<span class="hljs-comment">## &#x8BE6;&#x7EC6;&#x4EE3;&#x7801;&#x53C2;&#x89C1;&#xFF1A;</span>
+https://github.com/ConsBiol-unibern/SDMtune/tree/master/vignettes/articles
+<span class="hljs-comment">## &#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x7684;&#x529F;&#x80FD;&#x5982;&#x4E0B;&#xFF1A;</span>
+&#x8BC4;&#x4F30;&#x6A21;&#x578B;
+&#x8BC4;&#x4F30;&#x7B56;&#x7565;
+&#x89E3;&#x51B3;&#x9519;&#x8BEF;
+&#x505A;&#x51FA;&#x9884;&#x6D4B;
+&#x51C6;&#x5907;&#x6570;&#x636E;
+&#x8BAD;&#x7EC3;&#x6A21;&#x578B;
+&#x8BAD;&#x7EC3;&#x97F3;&#x8C03;&#x5B58;&#x5728;&#x7F3A;&#x52E4;&#x52E4;&#x6A21;&#x578B;
+&#x8C03;&#x8D85;&#x53C2;&#x6570;
+&#x6700;&#x9AD8;&#x53D8;&#x91CF;
+&#x53D8;&#x91CF;&#x9009;&#x62E9;
+</code></pre>
+<h4 id="848-isdm&#x7269;&#x79CD;&#x5165;&#x4FB5;">8.4.8 iSDM(&#x7269;&#x79CD;&#x5165;&#x4FB5;)</h4>
+<pre><code class="lang-r"><span class="hljs-comment">## &#x6B64;&#x5305;&#x4E3B;&#x8981;&#x662F;&#x4E3A;&#x4E86;&#x5F00;&#x5C55;&#x7269;&#x79CD;&#x5165;&#x4FB5;&#x7814;&#x7A76;&#x8FC7;&#x7A0B;&#xFF0C;&#x63D0;&#x4F9B;&#x51E0;&#x5F20;&#x7279;&#x8272;&#x4EE3;&#x7801;&#x670D;&#x52A1;&#xFF1A;</span>
+<span class="hljs-comment">##&#x5982;&#xFF1A;</span>
+<span class="hljs-number">1</span>&#x3001;&#x5229;&#x7528;<span class="hljs-keyword">library</span>(virtualspecies)&#x6784;&#x5EFA;&#x865A;&#x62DF;&#x7269;&#x79CD;&#xFF1B;
+<span class="hljs-number">2</span>&#x3001;&#x8FDB;&#x884C;&#x5206;&#x5C42;&#x62BD;&#x6837;&#x6784;&#x5EFA;&#x7269;&#x79CD;&#x73AF;&#x5883;&#x80CC;&#x666F;&#x6570;&#x636E;&#xFF1B;
+<span class="hljs-number">3</span>&#x3001;&#x4E09;&#x7EF4;&#x53EF;&#x89C6;&#x5316;&#x73AF;&#x5883;&#x80CC;&#x666F;&#x7A7A;&#x95F4;&#x5728;&#x7A7A;&#x95F4;&#x4E3B;&#x8F74;&#x4E0A;&#xFF1B;
+<span class="hljs-number">4</span>&#x3001;&#x6784;&#x5EFA;&#x7269;&#x79CD;&#x6269;&#x6563;&#x7684;&#x6838;&#x5E73;&#x5212;&#x51FD;&#x6570;&#xFF08;<span class="hljs-comment">#&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x5B58;&#x5728;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x603B;&#x4F53;&#x6765;&#x8BF4;&#x4E5F;&#x7B97;&#x4F5C;&#x8FDB;&#x6B65;&#x5427;&#xFF09;</span>
+<span class="hljs-number">5</span>&#x3001;&#x53EF;&#x89C6;&#x5316;&#x6F5C;&#x5728;&#x5206;&#x5E03;&#x4E0E;&#x5B9E;&#x9645;&#x5206;&#x5E03;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#xFF1B;
+</code></pre>
+<pre><code class="lang-r"><span class="hljs-comment">## &#x5B89;&#x88C5;R&#x5305;&#xFF1A;</span>
+install.packages(<span class="hljs-string">&quot;iSDM&quot;</span>)
+<span class="hljs-keyword">library</span>(iSDM)
+<span class="hljs-comment">## R&#x5305;&#x6848;&#x4F8B;&#x53C2;&#x8003;&#xFF1A;</span>
+https://github.com/TarekHattab/iSDM
+</code></pre>
+<h4 id="849-transformer&#x73AF;&#x5883;&#x56FE;&#x5C42;&#x805A;&#x7C7B;&#x5206;&#x6790;">8.4.9 transformeR(&#x73AF;&#x5883;&#x56FE;&#x5C42;&#x805A;&#x7C7B;&#x5206;&#x6790;)</h4>
+<pre><code>## &#x4F7F;&#x7528;SantanderMetGroup/transformeR&#x5305;
+## &#x8BE5;&#x5305;&#x5BC4;&#x5B58;&#x5728;github&#x4E0A;&#xFF0C;&#x53C2;&#x8003;&#x94FE;&#x63A5;&#x5982;&#x4E0B;&#xFF1A;
+https://github.com/SantanderMetGroup/transformeR/wiki/Clustering-Algorithms
+
+## &#x63D0;&#x4F9B;&#x805A;&#x7C7B;&#x7B97;&#x6CD5;&#x5217;&#x8868;&#xFF1A;
+K-means/Hierarchical(&#x5C42;&#x6B21;&#x7ED3;&#x6784;)/SOM/
+&#x8FD8;&#x6709;&#x53E6;&#x5916;&#x53E6;&#x4E2A;&#x6C14;&#x5019;&#x5206;&#x6790;&#x4E2D;&#x5E38;&#x7528;&#x7684;&#x5206;&#x6790;&#x65B9;&#x6CD5;&#xFF1B;
+</code></pre><h4 id="8410-hsdm&#x8D1D;&#x53F6;&#x65AF;&#x5EFA;&#x6A21;">8.4.10 hSDM(&#x8D1D;&#x53F6;&#x65AF;&#x5EFA;&#x6A21;)</h4>
+<pre><code>## R&#x5305;&#x7B80;&#x4ECB;&#xFF1A;
+1&#x3001;hSDM&#x662F;&#x4E00;&#x4E2A;R&#x5305;&#xFF0C;&#x7528;&#x4E8E;&#x4F30;&#x8BA1;&#x5206;&#x5C42;&#x8D1D;&#x53F6;&#x65AF;&#x7269;&#x79CD;&#x5206;&#x5E03;&#x6A21;&#x578B;&#x7684;&#x53C2;&#x6570;&#x3002;&#x8FD9;&#x79CD;&#x6A21;&#x578B;&#x5141;&#x8BB8;&#x89E3;&#x91CA;&#x89C2;&#x5BDF;&#x7ED3;&#x679C;&#xFF08;&#x7269;&#x79CD;&#x7684;&#x53D1;&#x751F;&#x548C;&#x4E30;&#x5EA6;&#xFF09;&#xFF0C;&#x8FD9;&#x662F;&#x7531;&#x4E8E;&#x5305;&#x62EC;&#x751F;&#x6001;&#x8FC7;&#x7A0B;&#xFF08;&#x6816;&#x606F;&#x5730;&#x9002;&#x5E94;&#x6027;&#xFF0C;&#x7A7A;&#x95F4;&#x4F9D;&#x8D56;&#x6027;&#x548C;&#x4EBA;&#x4E3A;&#x5E72;&#x6270;&#xFF09;&#x548C;&#x89C2;&#x5BDF;&#x8FC7;&#x7A0B;&#xFF08;&#x7269;&#x79CD;&#x53EF;&#x68C0;&#x6D4B;&#x6027;&#xFF09;&#x5728;&#x5185;&#x7684;&#x51E0;&#x4E2A;&#x5C42;&#x6B21;&#x8FC7;&#x7A0B;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x5206;&#x7EA7;&#x7269;&#x79CD;&#x5206;&#x5E03;&#x6A21;&#x578B;&#x5BF9;&#x4E8E;&#x51C6;&#x786E;&#x8868;&#x5F81;&#x7269;&#x79CD;&#x7684;&#x73AF;&#x5883;&#x54CD;&#x5E94;&#xFF0C;&#x9884;&#x6D4B;&#x5176;&#x53D1;&#x751F;&#x6982;&#x7387;&#x4EE5;&#x53CA;&#x8BC4;&#x4F30;&#x6A21;&#x578B;&#x7ED3;&#x679C;&#x7684;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#x81F3;&#x5173;&#x91CD;&#x8981;&#x3002;
+2&#x3001;&#x9700;&#x8981;&#x8BF4;&#x660E;&#x7684;&#x662F;&#x8FD9;&#x4E2A;&#x5305;&#x7684;&#x5B9E;&#x9645;&#x7528;&#x9014;&#x662F;&#x68C0;&#x6D4B;&#x7A7A;&#x95F4;&#x81EA;&#x76F8;&#x5173;&#x9020;&#x6210;&#x7684; &#x7269;&#x79CD;&#x5206;&#x5E03;&#x6A21;&#x578B;&#x7684;&#x4E0D;&#x786E;&#x5B9A;&#x6027;&#xFF1B;
+## &#x5B89;&#x88C5;R&#x5305;&#xFF1A;
+install.packages&#xFF08;&quot;hSDM&quot;&#xFF09;
+
+## &#x8BE5;&#x5305;&#x7684;&#x6570;&#x636E;&#x7F51;&#x5740;&#xFF1A;(&#x5305;&#x542B;&#x5B9E;&#x4F8B;)
+https://github.com/ghislainv/hSDM
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="8.3 workflow的全流程R包.html" class="navigation navigation-prev " aria-label="Previous page: 8.3 workflow的全流程R包">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="8.5 workflow.GUI.html" class="navigation navigation-next " aria-label="Next page: 8.5 workflow(GUI)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"8.4 workflow的专项R包及脚本","level":"1.9.4","depth":2,"next":{"title":"8.5 workflow(GUI)","level":"1.9.5","depth":2,"path":"8. SDM-workflow说明/8.5 workflow.GUI.md","ref":"8. SDM-workflow说明/8.5 workflow.GUI.md","articles":[]},"previous":{"title":"8.3 workflow的全流程R包","level":"1.9.3","depth":2,"path":"8. SDM-workflow说明/8.3 workflow的全流程R包.md","ref":"8. SDM-workflow说明/8.3 workflow的全流程R包.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github-buttons@2.1.0","edit-link","toggle-chapters","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"repo":"nicheerfeng/Nichefbook","types":["star"],"size":"small"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/nicheerfeng/Nichefbook/edit/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"nicheerfeng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NICHE MODEL 中文指南-RCODING","language":"zh-hans","gitbook":"*","description":"Niche"},"file":{"path":"8. SDM-workflow说明/8.4 workflow的专项R包及脚本.md","mtime":"2021-09-22T08:58:10.180Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-22T14:10:03.582Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

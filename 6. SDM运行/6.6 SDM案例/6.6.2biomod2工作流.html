@@ -1,0 +1,2272 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>biomod2工作流 · NICHE MODEL 中文指南-RCODING</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="nicheerfeng">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="6.6.3ENMEVAAL.html" />
+    
+    
+    <link rel="prev" href="6.6.1bioclim.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"nicheerfeng/Nichefbook","types":["star"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Niche model 中文指南-Rcoding</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../1. 构建工作环境/1.1 构建工作环境说明.html">
+            
+                <a href="../../1. 构建工作环境/1.1 构建工作环境说明.html">
+            
+                    
+                    1. 构建工作环境
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../1. 构建工作环境/1.1 R-配置环境变量.html">
+            
+                <a href="../../1. 构建工作环境/1.1 R-配置环境变量.html">
+            
+                    
+                    1.1 加载及配置R工作环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../2.下载物种分布数据/2.下载物种分布数据说明.html">
+            
+                <a href="../../2.下载物种分布数据/2.下载物种分布数据说明.html">
+            
+                    
+                    2.下载物种分布数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../2.下载物种分布数据/2.1 物种分布数据网站.html">
+            
+                <a href="../../2.下载物种分布数据/2.1 物种分布数据网站.html">
+            
+                    
+                    2.1 物种分布数据网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../2.下载物种分布数据/2.2 使用R下载物种分布.html">
+            
+                <a href="../../2.下载物种分布数据/2.2 使用R下载物种分布.html">
+            
+                    
+                    2.2 使用R下载物种分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../3. 物种分布数据清理/物种分布数据清理.html">
+            
+                <a href="../../3. 物种分布数据清理/物种分布数据清理.html">
+            
+                    
+                    3. 物种分布数据清理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../3. 物种分布数据清理/3.1 R-清理分布数据.html">
+            
+                <a href="../../3. 物种分布数据清理/3.1 R-清理分布数据.html">
+            
+                    
+                    3.1 R-清理分布数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../3. 物种分布数据清理/3.2 构建物种丰富度栅格.html">
+            
+                <a href="../../3. 物种分布数据清理/3.2 构建物种丰富度栅格.html">
+            
+                    
+                    3.2 构建物种丰富度栅格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../3. 物种分布数据清理/3.3 核平滑构建物种分布图.html">
+            
+                <a href="../../3. 物种分布数据清理/3.3 核平滑构建物种分布图.html">
+            
+                    
+                    3.3 核平滑构建物种分布图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../3. 物种分布数据清理/3.4 改变分布数据的投影方法.html">
+            
+                <a href="../../3. 物种分布数据清理/3.4 改变分布数据的投影方法.html">
+            
+                    
+                    3.4 改变分布数据的投影方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../3. 物种分布数据清理/3.5 spthin降低采样偏差.html">
+            
+                <a href="../../3. 物种分布数据清理/3.5 spthin降低采样偏差.html">
+            
+                    
+                    3.5 spthin降低采样偏差
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../4. 下载环境数据/4.下载环境数据说明.html">
+            
+                <a href="../../4. 下载环境数据/4.下载环境数据说明.html">
+            
+                    
+                    4. 下载环境数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../4. 下载环境数据/4.1 环境数据网站.html">
+            
+                <a href="../../4. 下载环境数据/4.1 环境数据网站.html">
+            
+                    
+                    4.1 环境数据网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../4. 下载环境数据/R下载及处理环境数据.md">
+            
+                <span>
+            
+                    
+                    4.2 R下载及处理环境数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../5. 模型数据预处理/5.模型数据预处理说明.html">
+            
+                <a href="../../5. 模型数据预处理/5.模型数据预处理说明.html">
+            
+                    
+                    5. 模型数据预处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../5. 模型数据预处理/5.1 环境数据预处理/5.1 环境数据预处理.html">
+            
+                <a href="../../5. 模型数据预处理/5.1 环境数据预处理/5.1 环境数据预处理.html">
+            
+                    
+                    5.1 环境数据预处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../../5. 模型数据预处理/5.1 环境数据预处理/5.1.1 读取及导出shp_raster.html">
+            
+                <a href="../../5. 模型数据预处理/5.1 环境数据预处理/5.1.1 读取及导出shp_raster.html">
+            
+                    
+                    5.1.1 读取及导出shp_raster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../../5. 模型数据预处理/5.1 环境数据预处理/5.1.2 栅格数据的基本处理.html">
+            
+                <a href="../../5. 模型数据预处理/5.1 环境数据预处理/5.1.2 栅格数据的基本处理.html">
+            
+                    
+                    5.1.2 栅格数据的基本处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../../5. 模型数据预处理/5.1 环境数据预处理/5.1.3 补充和报错处理.html">
+            
+                <a href="../../5. 模型数据预处理/5.1 环境数据预处理/5.1.3 补充和报错处理.html">
+            
+                    
+                    5.1.3 补充和报错处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../5. 模型数据预处理/5.2 模型分布数据预处理/5.2 模型分布数据预处理.html">
+            
+                <a href="../../5. 模型数据预处理/5.2 模型分布数据预处理/5.2 模型分布数据预处理.html">
+            
+                    
+                    5.2 模型分布数据预处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.1 构建训练集和测试集.html">
+            
+                <a href="../../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.1 构建训练集和测试集.html">
+            
+                    
+                    5.2.1 构建训练集和测试集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.2 构建背景数据集.html">
+            
+                <a href="../../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.2 构建背景数据集.html">
+            
+                    
+                    5.2.2 构建背景数据集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.3" data-path="../../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.3 筛选环境因子.html">
+            
+                <a href="../../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.3 筛选环境因子.html">
+            
+                    
+                    5.2.3 筛选环境因子.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../6.SDM运行说明.html">
+            
+                <a href="../6.SDM运行说明.html">
+            
+                    
+                    6. SDM运行
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../6.1 SDM运行.html">
+            
+                <a href="../6.1 SDM运行.html">
+            
+                    
+                    6.1 SDM运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../6.2 SDM结果展示.html">
+            
+                <a href="../6.2 SDM结果展示.html">
+            
+                    
+                    6.2 SDM结果展示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../6.3 SDM模型评估.html">
+            
+                <a href="../6.3 SDM模型评估.html">
+            
+                    
+                    6.3 SDM模型评估
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../6.4 SDM模型外推.html">
+            
+                <a href="../6.4 SDM模型外推.html">
+            
+                    
+                    6.4 SDM模型外推
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../6.5 SDM整合建模.html">
+            
+                <a href="../6.5 SDM整合建模.html">
+            
+                    
+                    6.5 SDM整合建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../6. SDM运行说明.md">
+            
+                <span>
+            
+                    
+                    6.6 SDM案例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.6.1" data-path="6.6.1bioclim.html">
+            
+                <a href="6.6.1bioclim.html">
+            
+                    
+                    bioclim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.6.2" data-path="6.6.2biomod2工作流.html">
+            
+                <a href="6.6.2biomod2工作流.html">
+            
+                    
+                    biomod2工作流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.3" data-path="6.6.3ENMEVAAL.html">
+            
+                <a href="6.6.3ENMEVAAL.html">
+            
+                    
+                    ENMEVAAL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.4" data-path="6.6.4enmSDM工作流.html">
+            
+                <a href="6.6.4enmSDM工作流.html">
+            
+                    
+                    enmSDM工作流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.5" data-path="6.6.5hypervolume.html">
+            
+                <a href="6.6.5hypervolume.html">
+            
+                    
+                    hypervolume
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.6" data-path="6.6.6maxent工作流.html">
+            
+                <a href="6.6.6maxent工作流.html">
+            
+                    
+                    maxent工作流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.7" data-path="6.6.7SDMtune工作流.html">
+            
+                <a href="6.6.7SDMtune工作流.html">
+            
+                    
+                    SDMtune工作流
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../7. SDM相关数据可视化/7.SDM相关数据可视化说明.html">
+            
+                <a href="../../7. SDM相关数据可视化/7.SDM相关数据可视化说明.html">
+            
+                    
+                    7. SDM相关数据可视化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../7. SDM相关数据可视化/7.1 R包地图底图.html">
+            
+                <a href="../../7. SDM相关数据可视化/7.1 R包地图底图.html">
+            
+                    
+                    7.1 R包地图底图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../7. SDM相关数据可视化/7.2 地图数据三维可视化.html">
+            
+                <a href="../../7. SDM相关数据可视化/7.2 地图数据三维可视化.html">
+            
+                    
+                    7.2 地图数据三维可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../7. SDM相关数据可视化/7.3 栅格数据可视化.html">
+            
+                <a href="../../7. SDM相关数据可视化/7.3 栅格数据可视化.html">
+            
+                    
+                    7.3 栅格数据可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../7. SDM相关数据可视化/7.4 多维环境变量可视化.html">
+            
+                <a href="../../7. SDM相关数据可视化/7.4 多维环境变量可视化.html">
+            
+                    
+                    7.4 多维环境变量可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../../7. SDM相关数据可视化/7.5 SDM结果可视化.html">
+            
+                <a href="../../7. SDM相关数据可视化/7.5 SDM结果可视化.html">
+            
+                    
+                    7.5 SDM结果可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../../7. SDM相关数据可视化/7.6 可视化物种分布.html">
+            
+                <a href="../../7. SDM相关数据可视化/7.6 可视化物种分布.html">
+            
+                    
+                    7.6 可视化物种分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../../7. SDM相关数据可视化/7.7 相关性分析.html">
+            
+                <a href="../../7. SDM相关数据可视化/7.7 相关性分析.html">
+            
+                    
+                    7.7 相关性分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../8. SDM-workflow说明/8.SDM-workflow说明.html">
+            
+                <a href="../../8. SDM-workflow说明/8.SDM-workflow说明.html">
+            
+                    
+                    8. SDM-workflow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../8. SDM-workflow说明/8.1 workflow的基本流程.html">
+            
+                <a href="../../8. SDM-workflow说明/8.1 workflow的基本流程.html">
+            
+                    
+                    8.1 workflow的基本流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../8. SDM-workflow说明/8.2 workflow的基础知识.html">
+            
+                <a href="../../8. SDM-workflow说明/8.2 workflow的基础知识.html">
+            
+                    
+                    8.2 workflow的基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../8. SDM-workflow说明/8.3 workflow的全流程R包.html">
+            
+                <a href="../../8. SDM-workflow说明/8.3 workflow的全流程R包.html">
+            
+                    
+                    8.3 workflow的全流程R包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../../8. SDM-workflow说明/8.4 workflow的专项R包及脚本.html">
+            
+                <a href="../../8. SDM-workflow说明/8.4 workflow的专项R包及脚本.html">
+            
+                    
+                    8.4 workflow的专项R包及脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../../8. SDM-workflow说明/8.5 workflow.GUI.html">
+            
+                <a href="../../8. SDM-workflow说明/8.5 workflow.GUI.html">
+            
+                    
+                    8.5 workflow(GUI)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../../8. SDM-workflow说明/8.6 案例.html">
+            
+                <a href="../../8. SDM-workflow说明/8.6 案例.html">
+            
+                    
+                    8.6 案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../9. 生态位进化/9.生态位进化说明.html">
+            
+                <a href="../../9. 生态位进化/9.生态位进化说明.html">
+            
+                    
+                    9. 生态位进化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../9. 生态位进化/9.1 生态位宽度的进化/9.1 生态位宽度的进化.html">
+            
+                <a href="../../9. 生态位进化/9.1 生态位宽度的进化/9.1 生态位宽度的进化.html">
+            
+                    
+                    9.1 生态位宽度的进化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.1" data-path="../../9. 生态位进化/9.1 生态位宽度的进化/生态位宽度基础概念.html">
+            
+                <a href="../../9. 生态位进化/9.1 生态位宽度的进化/生态位宽度基础概念.html">
+            
+                    
+                    9.1 生态位宽度的进化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2" data-path="../../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/9.1.1 单因素分析.html">
+            
+                <a href="../../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/9.1.1 单因素分析.html">
+            
+                    
+                    9.1.1 单因素分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.2.1" data-path="../../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/参数和及非参.html">
+            
+                <a href="../../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/参数和及非参.html">
+            
+                    
+                    参数和及非参统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2.2" data-path="../../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/方差分析结果可视化.html">
+            
+                <a href="../../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/方差分析结果可视化.html">
+            
+                    
+                    方差分析结果可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3" data-path="../../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/9.1.2 多因素分析.html">
+            
+                <a href="../../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/9.1.2 多因素分析.html">
+            
+                    
+                    9.1.2 多因素分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.3.1" data-path="../../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/CCA.html">
+            
+                <a href="../../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/CCA.html">
+            
+                    
+                    CCA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3.2" data-path="../../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/PCA_MANOVA.html">
+            
+                <a href="../../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/PCA_MANOVA.html">
+            
+                    
+                    PCA_MANOVA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3.3" data-path="../../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/聚类分析.html">
+            
+                <a href="../../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/聚类分析.html">
+            
+                    
+                    聚类分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3.4" data-path="../../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/生态位轴PCA得分.html">
+            
+                <a href="../../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/生态位轴PCA得分.html">
+            
+                    
+                    生态位轴PCA得分
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.4" data-path="../../9. 生态位进化/9.1 生态位宽度的进化/9.1.3 超维度分析R-多维超体积生态位.md">
+            
+                <span>
+            
+                    
+                    9.1.3 超维度分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../../9. 生态位进化/9.2 生态位进化式样/9.2 生态位进化式样说明.html">
+            
+                <a href="../../9. 生态位进化/9.2 生态位进化式样/9.2 生态位进化式样说明.html">
+            
+                    
+                    9.2 生态位进化式样
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.2.1" data-path="../../9. 生态位进化/9.2 生态位进化式样/9.2.1 生态位进化式样.html">
+            
+                <a href="../../9. 生态位进化/9.2 生态位进化式样/9.2.1 生态位进化式样.html">
+            
+                    
+                    9.2.1 生态位进化式样
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2" data-path="../../9. 生态位进化/9.2 生态位进化式样/9.2.2 ecospat.html">
+            
+                <a href="../../9. 生态位进化/9.2 生态位进化式样/9.2.2 ecospat.html">
+            
+                    
+                    9.2.2 ecospat
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.2.2.1" data-path="../../9. 生态位进化/9.2 生态位进化式样/9.2.2.1 优化可视化_raw.html">
+            
+                <a href="../../9. 生态位进化/9.2 生态位进化式样/9.2.2.1 优化可视化_raw.html">
+            
+                    
+                    9.2.2.1 优化可视化_raw
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.2" data-path="../../9. 生态位进化/9.2 生态位进化式样/9.2.2.2 优化可视化2.html">
+            
+                <a href="../../9. 生态位进化/9.2 生态位进化式样/9.2.2.2 优化可视化2.html">
+            
+                    
+                    9.2.2.2 优化可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.3" data-path="../../9. 生态位进化/9.2 生态位进化式样/9.2.2.3 生态位保守性测试.html">
+            
+                <a href="../../9. 生态位进化/9.2 生态位进化式样/9.2.2.3 生态位保守性测试.html">
+            
+                    
+                    9.2.2.3 生态位保守性测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.4" data-path="../../9. 生态位进化/9.2 生态位进化式样/9.2.2.4 生态位的重叠与计算.html">
+            
+                <a href="../../9. 生态位进化/9.2 生态位进化式样/9.2.2.4 生态位的重叠与计算.html">
+            
+                    
+                    9.2.2.4 生态位的重叠与计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.5" data-path="../../9. 生态位进化/9.2 生态位进化式样/9.2.2.5 生态位重叠可视化.html">
+            
+                <a href="../../9. 生态位进化/9.2 生态位进化式样/9.2.2.5 生态位重叠可视化.html">
+            
+                    
+                    9.2.2.5 生态位重叠可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.6" data-path="../../9. 生态位进化/9.2 生态位进化式样/9.2.2.6 非矫正.html">
+            
+                <a href="../../9. 生态位进化/9.2 生态位进化式样/9.2.2.6 非矫正.html">
+            
+                    
+                    9.2.2.6 非矫正生态位重叠
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.3" data-path="../../9. 生态位进化/9.2 生态位进化式样/9.2.3 ENMtools.html">
+            
+                <a href="../../9. 生态位进化/9.2 生态位进化式样/9.2.3 ENMtools.html">
+            
+                    
+                    9.2.3 ENMtools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../../9. 生态位进化/9.3 扩散动态研究/9.3 扩散动态研究.html">
+            
+                <a href="../../9. 生态位进化/9.3 扩散动态研究/9.3 扩散动态研究.html">
+            
+                    
+                    9.3 扩散动态研究
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../10. 群落与SDM/10. 群落生态学说明.html">
+            
+                <a href="../../10. 群落与SDM/10. 群落生态学说明.html">
+            
+                    
+                    10. 群落与SDM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../../10. 群落生态学/10.1 背景资料.md">
+            
+                <span>
+            
+                    
+                    10.1 背景资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../../10. 群落与SDM/10.2 多物种联合建模.html">
+            
+                <a href="../../10. 群落与SDM/10.2 多物种联合建模.html">
+            
+                    
+                    10.2 多物种联合建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../../10. 群落与SDM/10.3 经典研究案例.html">
+            
+                <a href="../../10. 群落与SDM/10.3 经典研究案例.html">
+            
+                    
+                    10.3 经典研究案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../../10. 群落与SDM/10.4 可视化.html">
+            
+                <a href="../../10. 群落与SDM/10.4 可视化.html">
+            
+                    
+                    10.4 可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../11. 遥感与SDM/11. 遥感与SDM说明.html">
+            
+                <a href="../../11. 遥感与SDM/11. 遥感与SDM说明.html">
+            
+                    
+                    11.遥感与SDM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../11. 遥感与SDM/11.1 研究思路.html">
+            
+                <a href="../../11. 遥感与SDM/11.1 研究思路.html">
+            
+                    
+                    11.1 研究思路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../../11. 遥感与SDM/11.2 研究R包.html">
+            
+                <a href="../../11. 遥感与SDM/11.2 研究R包.html">
+            
+                    
+                    11.2 研究R包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../../11. 遥感与SDM/11.3 经典研究案例.html">
+            
+                <a href="../../11. 遥感与SDM/11.3 经典研究案例.html">
+            
+                    
+                    11.3 经典研究案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../12. 系统发育与SDM/12. 系统发育与SDM说明.html">
+            
+                <a href="../../12. 系统发育与SDM/12. 系统发育与SDM说明.html">
+            
+                    
+                    12.系统发育与SDM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../../12. 系统发育与SDM/12.1 研究思路.html">
+            
+                <a href="../../12. 系统发育与SDM/12.1 研究思路.html">
+            
+                    
+                    12.1 研究思路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../../12. 系统发育与SDM/12.2 研究R包.html">
+            
+                <a href="../../12. 系统发育与SDM/12.2 研究R包.html">
+            
+                    
+                    12.2 研究R包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../../12. 系统发育与SDM/12.3 经典研究案例.html">
+            
+                <a href="../../12. 系统发育与SDM/12.3 经典研究案例.html">
+            
+                    
+                    12.3 经典研究案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../13. 空间生态位/13. 空间生态位.html">
+            
+                <a href="../../13. 空间生态位/13. 空间生态位.html">
+            
+                    
+                    13.空间生态位
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../../13. 空间生态位/13.1 R-空间统计书籍.html">
+            
+                <a href="../../13. 空间生态位/13.1 R-空间统计书籍.html">
+            
+                    
+                    13.1 R-空间统计书籍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../../13. 空间生态位/13.2 空间自相关概念释义.html">
+            
+                <a href="../../13. 空间生态位/13.2 空间自相关概念释义.html">
+            
+                    
+                    13.2 空间自相关概念释义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../../13. 空间生态位/13.3 地统计.html">
+            
+                <a href="../../13. 空间生态位/13.3 地统计.html">
+            
+                    
+                    13.3 地统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../../13. 空间生态位/13.4 案例.html">
+            
+                <a href="../../13. 空间生态位/13.4 案例.html">
+            
+                    
+                    13.4 案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="../../13. 空间生态位/13.5 R-解决空间自相关.html">
+            
+                <a href="../../13. 空间生态位/13.5 R-解决空间自相关.html">
+            
+                    
+                    13.5 R-解决空间自相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="../../13. 空间生态位/13.6 补充.html">
+            
+                <a href="../../13. 空间生态位/13.6 补充.html">
+            
+                    
+                    13.6 补充
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../../14. 生态位基础资料/14.生态位理论资料说明.html">
+            
+                <a href="../../14. 生态位基础资料/14.生态位理论资料说明.html">
+            
+                    
+                    14.生态位理论资料
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../../14. 生态位基础资料/14.1 生态相关的名词释义.html">
+            
+                <a href="../../14. 生态位基础资料/14.1 生态相关的名词释义.html">
+            
+                    
+                    14.1 生态相关的名词释义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../../14. 生态位基础资料/14.2 SDM建模书籍.html">
+            
+                <a href="../../14. 生态位基础资料/14.2 SDM建模书籍.html">
+            
+                    
+                    14.2 SDM建模书籍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../../14. 生态位基础资料/14.3 相关与因果.html">
+            
+                <a href="../../14. 生态位基础资料/14.3 相关与因果.html">
+            
+                    
+                    14.3 相关与因果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../../14. 生态位基础资料/14.4 分布数据清理的依据.html">
+            
+                <a href="../../14. 生态位基础资料/14.4 分布数据清理的依据.html">
+            
+                    
+                    14.4 分布数据清理的依据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../../14. 生态位基础资料/14.5 建模格局的二元性.html">
+            
+                <a href="../../14. 生态位基础资料/14.5 建模格局的二元性.html">
+            
+                    
+                    14.5 建模格局的二元性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../../14. 生态位基础资料/14.6 niche常见错误.html">
+            
+                <a href="../../14. 生态位基础资料/14.6 niche常见错误.html">
+            
+                    
+                    14.6 niche常见错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../../14. 生态位基础资料/14.7 气候生态位的思路.html">
+            
+                <a href="../../14. 生态位基础资料/14.7 气候生态位的思路.html">
+            
+                    
+                    14.7 气候生态位的思路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="../../14. 生态位基础资料/14.8 环境与物种分布的交互选择.html">
+            
+                <a href="../../14. 生态位基础资料/14.8 环境与物种分布的交互选择.html">
+            
+                    
+                    14.8 环境与物种分布的交互选择
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../../15. niche领航员工作/15.niche领航员工作.html">
+            
+                <a href="../../15. niche领航员工作/15.niche领航员工作.html">
+            
+                    
+                    15.niche领航员工作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../../15. niche领航员工作/乔慧捷.html">
+            
+                <a href="../../15. niche领航员工作/乔慧捷.html">
+            
+                    
+                    乔慧捷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../../15. niche领航员工作/朱耿平.html">
+            
+                <a href="../../15. niche领航员工作/朱耿平.html">
+            
+                    
+                    朱耿平
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../../15. niche领航员工作/邬建国.html">
+            
+                <a href="../../15. niche领航员工作/邬建国.html">
+            
+                    
+                    邬建国
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../../15. niche领航员工作/Andrew Townsend Peterson.html">
+            
+                <a href="../../15. niche领航员工作/Andrew Townsend Peterson.html">
+            
+                    
+                    Andrew Townsend Peterson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../../15. niche领航员工作/Annette Ostling.html">
+            
+                <a href="../../15. niche领航员工作/Annette Ostling.html">
+            
+                    
+                    Annette Ostling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../../15. niche领航员工作/Antoine Guisan.html">
+            
+                <a href="../../15. niche领航员工作/Antoine Guisan.html">
+            
+                    
+                    Antoine Guisan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../../15. niche领航员工作/Damaris Zurell.html">
+            
+                <a href="../../15. niche领航员工作/Damaris Zurell.html">
+            
+                    
+                    Damaris Zurell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="../../15. niche领航员工作/Dan L. Warre.html">
+            
+                <a href="../../15. niche领航员工作/Dan L. Warre.html">
+            
+                    
+                    Dan L. Warren
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.9" data-path="../../15. niche领航员工作/Erin E. Saupe.html">
+            
+                <a href="../../15. niche领航员工作/Erin E. Saupe.html">
+            
+                    
+                    Erin E. Saupe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.10" data-path="../../15. niche领航员工作/Holt R D.html">
+            
+                <a href="../../15. niche领航员工作/Holt R D.html">
+            
+                    
+                    Holt R D
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.11" data-path="../../15. niche领航员工作/Hannah Lois Owens.html">
+            
+                <a href="../../15. niche领航员工作/Hannah Lois Owens.html">
+            
+                    
+                    Hannah Lois Owens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.12" data-path="../../15. niche领航员工作/Jane Elith.html">
+            
+                <a href="../../15. niche领航员工作/Jane Elith.html">
+            
+                    
+                    Jane Elith
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.13" data-path="../../15. niche领航员工作/Jorge Soberón.html">
+            
+                <a href="../../15. niche领航员工作/Jorge Soberón.html">
+            
+                    
+                    Jorge Soberón
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.14" data-path="../../15. niche领航员工作/Olivier Broennimann.html">
+            
+                <a href="../../15. niche领航员工作/Olivier Broennimann.html">
+            
+                    
+                    Olivier Broennimann
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.15" data-path="../../15. niche领航员工作/Jane Elith.html">
+            
+                <a href="../../15. niche领航员工作/Jane Elith.html">
+            
+                    
+                    John J. Wiens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.16" data-path="../../15. niche领航员工作/Robert P. Anderson.html">
+            
+                <a href="../../15. niche领航员工作/Robert P. Anderson.html">
+            
+                    
+                    Robert P. Anderson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.17" data-path="../../15. niche领航员工作/Michael R Kearney.html">
+            
+                <a href="../../15. niche领航员工作/Michael R Kearney.html">
+            
+                    
+                    Michael R Kearne
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >biomod2工作流</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="biomod2&#x5EFA;&#x6A21;">biomod2&#x5EFA;&#x6A21;</h3>
+<pre><code class="lang-r"><span class="hljs-keyword">library</span>(biomod2);
+<span class="hljs-keyword">library</span>(raster);
+<span class="hljs-keyword">library</span>(RColorBrewer);
+<span class="hljs-keyword">library</span>(dismo);
+
+setwd(<span class="hljs-string">&quot;~/AnalysisFolder/Localities/&quot;</span>)
+<span class="hljs-comment">#Get data points</span>
+points &lt;- read.csv(file = <span class="hljs-string">&quot;GadMa.csv&quot;</span>, header = <span class="hljs-literal">T</span>);
+points &lt;- cbind(points, rep.int(<span class="hljs-number">1</span>, length(nrow(points)))); <span class="hljs-comment">#Adds another column indicating these are presence points</span>
+colnames(points) &lt;- c(<span class="hljs-string">&quot;Species&quot;</span>, <span class="hljs-string">&quot;X&quot;</span>, <span class="hljs-string">&quot;Y&quot;</span>, <span class="hljs-string">&quot;Response&quot;</span>);
+
+<span class="hljs-comment">#Get environmental variables</span>
+setwd(<span class="hljs-string">&quot;~/AnalysisFolder/Ms/GadMa/&quot;</span>);
+envtList &lt;- list.files(pattern = <span class="hljs-string">&quot;.asc&quot;</span>);
+envt.st &lt;- stack(envtList);
+
+<span class="hljs-comment">#Get projection variables</span>
+setwd(<span class="hljs-string">&quot;~/AnalysisFolder/EnvironmentalData/Future/rcp8_5/2100/&quot;</span>)
+projectionList &lt;- list.files(pattern = <span class="hljs-string">&quot;.asc&quot;</span>);
+proj.st &lt;- stack(projectionList);
+
+<span class="hljs-comment">#Setting up data file for Biomod2</span>
+bmData &lt;- BIOMOD_FormatingData(resp.var = points[,<span class="hljs-number">4</span>],
+                               resp.xy = points[,<span class="hljs-number">2</span>:<span class="hljs-number">3</span>], 
+                               resp.name = as.character(points[<span class="hljs-number">1</span>,<span class="hljs-number">1</span>]),
+                               expl.var = envt.st,
+                               PA.nb.rep=<span class="hljs-number">1</span>
+);
+
+<span class="hljs-comment">#Setting up Maxent run</span>
+myBiomodOption &lt;- Print_Default_ModelingOptions();
+myBiomodOption@MAXENT.Phillips$path_to_maxent.jar = paste(system.file(package=<span class="hljs-string">&quot;dismo&quot;</span>), <span class="hljs-string">&quot;/java&quot;</span>, sep=<span class="hljs-string">&apos;&apos;</span>);
+myBiomodOption@MAXENT.Phillips$memory_allocated = <span class="hljs-number">2048</span>; <span class="hljs-comment">#Allocates 2048 MB/2 GB of memory to modeling</span>
+myBiomodOption@MAXENT.Phillips$maximumiterations = <span class="hljs-number">10000</span>;
+myBiomodOption@MAXENT.Phillips$threshold = <span class="hljs-literal">F</span>;
+myBiomodOption@MAXENT.Phillips$hinge = <span class="hljs-literal">F</span>;
+myBiomodOption@MAXENT.Phillips$visible = <span class="hljs-literal">F</span>;
+myBiomodOption@MAXENT.Phillips$beta_lqp = <span class="hljs-number">.95</span>;
+
+<span class="hljs-comment">#Running Maxent</span>
+setwd(<span class="hljs-string">&quot;~/AnalysisFolder/TestModelRun/R/&quot;</span>)
+myMaxentModel &lt;- BIOMOD_Modeling(data=bmData,
+                                    models=c(<span class="hljs-string">&apos;MAXENT.Phillips&apos;</span>),
+                                    models.options=myBiomodOption,
+                                    NbRunEval=<span class="hljs-number">10</span>,
+                                    do.full.models = <span class="hljs-literal">F</span>,
+                                    DataSplit=<span class="hljs-number">50</span>,
+                                    models.eval.meth = c(<span class="hljs-string">&apos;KAPPA&apos;</span>,<span class="hljs-string">&apos;TSS&apos;</span>,<span class="hljs-string">&apos;ROC&apos;</span>),
+                                    SaveObj = <span class="hljs-literal">T</span>
+);
+
+<span class="hljs-comment">#Ensemble of all models--combines model runs using a user-selected evaluation metric</span>
+myMaxentEnsemble &lt;- BIOMOD_EnsembleModeling( modeling.output = myMaxentModel,
+                                   chosen.models = <span class="hljs-string">&apos;all&apos;</span>,
+                                   em.by = <span class="hljs-string">&apos;all&apos;</span>,
+                                   eval.metric = c(<span class="hljs-string">&apos;TSS&apos;</span>),
+                                   eval.metric.quality.threshold = <span class="hljs-literal">NULL</span>,
+                                   models.eval.meth = c(<span class="hljs-string">&apos;TSS&apos;</span>,<span class="hljs-string">&apos;ROC&apos;</span>,<span class="hljs-string">&apos;KAPPA&apos;</span>),
+                                   prob.median = <span class="hljs-literal">TRUE</span> )
+
+<span class="hljs-comment">#Projecting your model to the present</span>
+myBiomodProjPres &lt;- BIOMOD_Projection(modeling.output = myMaxentModel,
+                                    new.env = envt.st,
+                                    proj.name = <span class="hljs-string">&apos;Present&apos;</span>,
+                                    selected.models = <span class="hljs-string">&apos;all&apos;</span>,
+                                    compress = <span class="hljs-string">&apos;gzip&apos;</span>,
+                                    clamping.mask = <span class="hljs-literal">T</span>,
+                                    output.format = <span class="hljs-string">&apos;.grd&apos;</span>,=
+                                    do.stack=<span class="hljs-literal">T</span>
+);
+
+mod_projPres &lt;- get_predictions(myBiomodProjPres);
+presentResult &lt;- calc(mod_projPres,fun = median); <span class="hljs-comment">#Choose whatever descriptive statistic you&apos;d like</span>
+plot(presentResult);
+writeRaster(presentResult, filename = <span class="hljs-string">&quot;GadusMacrocephalusPresent&quot;</span>, format = <span class="hljs-string">&quot;ascii&quot;</span>, overwrite = <span class="hljs-literal">T</span>);
+
+<span class="hljs-comment">#Projecting the ensemble model in the present</span>
+myBiomodProjPresEnsemble &lt;- BIOMOD_EnsembleForecasting(myMaxentEnsemble,
+                            projection.output = myBiomodProjPres,
+                            selected.models = <span class="hljs-string">&apos;all&apos;</span>,
+                            compress = <span class="hljs-string">&apos;gzip&apos;</span>
+);=
+mod_projPresEnsemble &lt;- get_predictions(myBiomodProjPresEnsemble);
+presentEnsembleResult &lt;- mod_projPresEnsemble[[<span class="hljs-number">2</span>]] <span class="hljs-comment">#This is the median model ensemble</span>
+plot(presentEnsembleResult);
+writeRaster(presentEnsembleResult, filename = <span class="hljs-string">&quot;GadusMacrocephalusPresentEnsemble&quot;</span>, format = <span class="hljs-string">&quot;ascii&quot;</span>, overwrite = <span class="hljs-literal">T</span>);
+
+<span class="hljs-comment">#Projecting your model to the future</span>
+myBiomodProj2100 &lt;- BIOMOD_Projection(modeling.output = myMaxentModel,
+                                    new.env = proj.st,
+                                    proj.name = <span class="hljs-string">&apos;In2100&apos;</span>,
+                                    selected.models = <span class="hljs-string">&apos;all&apos;</span>,
+                                    compress = <span class="hljs-string">&apos;gzip&apos;</span>,
+                                    clamping.mask = <span class="hljs-literal">T</span>,
+                                    output.format = <span class="hljs-string">&apos;.grd&apos;</span>,
+                                    do.stack=<span class="hljs-literal">T</span>
+);
+
+mod_proj2100 &lt;- get_predictions(myBiomodProj2100);
+result2100 &lt;- calc(mod_proj2100,fun = median); <span class="hljs-comment">#Choose whatever descriptive statistic you&apos;d like</span>
+plot(result2100);
+writeRaster(result2100, filename = <span class="hljs-string">&quot;GadusMacrocephalus2100&quot;</span>, format = <span class="hljs-string">&quot;ascii&quot;</span>, overwrite = <span class="hljs-literal">T</span>);
+
+<span class="hljs-comment">#Projecting the ensemble model in 2100</span>
+myBiomodProj2100Ensemble &lt;- BIOMOD_EnsembleForecasting(myMaxentEnsemble,
+                                                       projection.output = myBiomodProj2100,
+                                                       selected.models = <span class="hljs-string">&apos;all&apos;</span>,
+                                                       compress = <span class="hljs-string">&apos;gzip&apos;</span>
+);
+mod_proj2100Ensemble &lt;- get_predictions(myBiomodProj2100Ensemble);
+ensembleResult2100 &lt;- mod_proj2100Ensemble[[<span class="hljs-number">2</span>]] <span class="hljs-comment">#This is the median model ensemble</span>
+plot(ensembleResult2100);
+writeRaster(ensembleResult2100, filename = <span class="hljs-string">&quot;GadusMacrocephalus2100Ensemble&quot;</span>, format = <span class="hljs-string">&quot;ascii&quot;</span>, overwrite = <span class="hljs-literal">T</span>);
+
+
+<span class="hljs-comment">#Evaluating models</span>
+<span class="hljs-comment">## Variable response curves</span>
+response.plot2(models = BIOMOD_LoadModels(myMaxentModel, models=<span class="hljs-string">&apos;MAXENT.Phillips&apos;</span>),
+               Data = get_formal_data(myMaxentModel,<span class="hljs-string">&apos;expl.var&apos;</span>),
+               show.variables= get_formal_data(myMaxentModel,<span class="hljs-string">&apos;expl.var.names&apos;</span>),
+               do.bivariate = <span class="hljs-literal">FALSE</span>,
+               fixed.var.metric = <span class="hljs-string">&apos;median&apos;</span>,
+               col = brewer.pal(<span class="hljs-number">10</span>, <span class="hljs-string">&quot;Spectral&quot;</span>),
+               legend = <span class="hljs-literal">TRUE</span>,
+               data_species = get_formal_data(myMaxentModel,<span class="hljs-string">&apos;resp.var&apos;</span>)
+);
+
+<span class="hljs-comment">##Varible contributions; only for Maxent, not possible for other models</span>
+forSetup &lt;- read.csv(file = paste(<span class="hljs-string">&quot;~/AnalysisFolder/TestModelRun/R/GadusMacrocephalus/models/1457123817/GadusMacrocephalus_PA1_RUN1_MAXENT.Phillips_outputs/maxentResults.csv&quot;</span>, sep = <span class="hljs-string">&quot;&quot;</span>), header = <span class="hljs-literal">T</span>)<span class="hljs-comment">#Choose the appropriate model folder with the seed of the analysis you want</span>
+variableContributions &lt;- matrix(data = <span class="hljs-literal">NA</span>, nrow = length(forSetup[, grep(<span class="hljs-string">&apos;.contribution&apos;</span>, names(forSetup))]), ncol = <span class="hljs-number">10</span>);
+rownames(variableContributions) &lt;- names(forSetup[, grep(<span class="hljs-string">&apos;.contribution&apos;</span>, names(forSetup))])
+colnames(variableContributions) &lt;- c(<span class="hljs-string">&quot;Run1&quot;</span>, <span class="hljs-string">&quot;Run2&quot;</span>, <span class="hljs-string">&quot;Run3&quot;</span>, <span class="hljs-string">&quot;Run4&quot;</span>, <span class="hljs-string">&quot;Run5&quot;</span>, <span class="hljs-string">&quot;Run6&quot;</span>, <span class="hljs-string">&quot;Run7&quot;</span>, <span class="hljs-string">&quot;Run8&quot;</span>, <span class="hljs-string">&quot;Run9&quot;</span>, <span class="hljs-string">&quot;Run10&quot;</span>)
+variablePermutationImportance &lt;- matrix(data = <span class="hljs-literal">NA</span>, nrow = length(forSetup[, grep(<span class="hljs-string">&apos;.permutation.importance&apos;</span>, names(forSetup))]), ncol = <span class="hljs-number">10</span>);
+colnames(variablePermutationImportance) &lt;- c(<span class="hljs-string">&quot;Run1&quot;</span>, <span class="hljs-string">&quot;Run2&quot;</span>, <span class="hljs-string">&quot;Run3&quot;</span>, <span class="hljs-string">&quot;Run4&quot;</span>, <span class="hljs-string">&quot;Run5&quot;</span>, <span class="hljs-string">&quot;Run6&quot;</span>, <span class="hljs-string">&quot;Run7&quot;</span>, <span class="hljs-string">&quot;Run8&quot;</span>, <span class="hljs-string">&quot;Run9&quot;</span>, <span class="hljs-string">&quot;Run10&quot;</span>)
+count &lt;- <span class="hljs-number">1</span>;
+<span class="hljs-keyword">while</span> (count &lt;= <span class="hljs-number">10</span>){
+  temporary &lt;- read.csv(file = paste(<span class="hljs-string">&quot;~/AnalysisFolder/TestModelRun/R/GadusMacrocephalus/models/1457123817/GadusMacrocephalus_PA1_RUN&quot;</span>, count, <span class="hljs-string">&quot;_MAXENT.Phillips_outputs/maxentResults.csv&quot;</span>, sep = <span class="hljs-string">&quot;&quot;</span>), header = <span class="hljs-literal">T</span>);
+  variableContributions[,count] &lt;- unlist(unname(temporary[, grep(<span class="hljs-string">&apos;.contribution&apos;</span>, names(temporary))]))
+  variablePermutationImportance[,count] &lt;- unlist(unname(temporary[, grep(<span class="hljs-string">&apos;.permutation.importance&apos;</span>, names(temporary))]))
+  count &lt;- count + <span class="hljs-number">1</span>;
+}
+write.csv(variableContributions, <span class="hljs-string">&quot;VariableContributions.csv&quot;</span>, quote = <span class="hljs-literal">F</span>);
+write.csv(variablePermutationImportance, <span class="hljs-string">&quot;VariablePermutationImportance.csv&quot;</span>, quote = <span class="hljs-literal">F</span>);
+
+<span class="hljs-comment">##Calculate MESS for 2100</span>
+mess2100 &lt;- mess(proj.st, rasterToPoints(envt.st)[,-<span class="hljs-number">1</span>:-<span class="hljs-number">2</span>],-<span class="hljs-number">9999</span>);
+writeRaster(mess2100, filename = <span class="hljs-string">&quot;GadusMacrocephalus2100MESS&quot;</span>, format = <span class="hljs-string">&quot;ascii&quot;</span>, overwrite = <span class="hljs-literal">T</span>);
+
+<span class="hljs-comment">##Create dataset for evaluation</span>
+<span class="hljs-comment">###&quot;Cutoff&quot; gives threshold to optimize evaluation metric, &quot;Sensitivity&quot; and &quot;Specificity&quot; are based on this threshold</span>
+myMaxentModelEval &lt;- get_evaluations(myMaxentModel, as.data.frame = <span class="hljs-literal">F</span>); 
+write.csv(myMaxentModelEval[<span class="hljs-string">&quot;TSS&quot;</span>,,,,],<span class="hljs-string">&quot;TSSEvaluation.csv&quot;</span>, quote = <span class="hljs-literal">F</span>);<span class="hljs-comment">#Results for True Skill Score</span>
+write.csv(myMaxentModelEval[<span class="hljs-string">&quot;ROC&quot;</span>,,,,],<span class="hljs-string">&quot;TSSEvaluation.csv&quot;</span>, quote = <span class="hljs-literal">F</span>);<span class="hljs-comment">#Results for Area Under the Curve</span>
+write.csv(myMaxentModelEval[<span class="hljs-string">&quot;Kappa&quot;</span>,,,,],<span class="hljs-string">&quot;TSSEvaluation.csv&quot;</span>, quote = <span class="hljs-literal">F</span>);<span class="hljs-comment">#Results for Cohen&apos;s Kappa</span>
+</code></pre>
+<h2 id="biomod2&#x6210;&#x719F;&#x6A21;&#x578B;">biomod2&#x6210;&#x719F;&#x6A21;&#x578B;</h2>
+<pre><code class="lang-r"><span class="hljs-comment">## &#x6210;&#x719F;&#x7684;&#x505A;&#x6CD5;&#xFF1A;</span>
+<span class="hljs-comment">## &#x8BC4;&#x4F30;&#x7269;&#x79CD;&#x5EFA;&#x6A21;&#x8FC7;&#x7A0B;&#x4E2D;&#x5EFA;&#x6A21;&#x7684;&#x62DF;&#x5408;&#x4F18;&#x5EA6;&#xFF1A;</span>
+<span class="hljs-keyword">library</span>(pacman)
+p_load(sp,raster,rgeos,rgdal,rasterVis,raster,fs,sf,tidyverse,
+       spatstat,maps,maptools,SDMtune,blockCV,sdm,biomod2)
+
+setwd(<span class="hljs-string">&quot;./xh/&quot;</span>)
+sa &lt;- read.csv(<span class="hljs-string">&quot;./four_4kmpoints_xh/xh_sa.csv&quot;</span>)[,<span class="hljs-number">2</span>:<span class="hljs-number">3</span>]
+oc &lt;- read.csv(<span class="hljs-string">&quot;./four_4kmpoints_xh/xh_oc.csv&quot;</span>)[,<span class="hljs-number">3</span>:<span class="hljs-number">4</span>]
+na &lt;- read.csv(<span class="hljs-string">&quot;./four_4kmpoints_xh/xh_na.csv&quot;</span>)[,<span class="hljs-number">3</span>:<span class="hljs-number">4</span>]
+as &lt;- read.csv(<span class="hljs-string">&quot;./four_4kmpoints_xh/xh_as.csv&quot;</span>)[,<span class="hljs-number">3</span>:<span class="hljs-number">4</span>]
+<span class="hljs-comment">### &#x4F7F;&#x7528;filter-all&#x5EFA;&#x6A21;####</span>
+loss &lt;- paste0(<span class="hljs-string">&quot;C:/Users/Administrator/Desktop/xh/f2_envs/&quot;</span>,c(<span class="hljs-string">&quot;BIO4&quot;</span>,<span class="hljs-string">&quot;BIO7&quot;</span>,<span class="hljs-string">&quot;BIO12&quot;</span>,<span class="hljs-string">&quot;BIO11&quot;</span>,<span class="hljs-string">&quot;BIO15&quot;</span>,<span class="hljs-string">&quot;BIO17&quot;</span>,<span class="hljs-string">&quot;GHI&quot;</span>),<span class="hljs-string">&quot;.tif&quot;</span>)
+env &lt;- stack(loss)
+
+occall &lt;- rbind(sa,oc,na,as) %&gt;% data.frame()
+occall1 &lt;- raster::extract(env,occall) %&gt;% cbind(occall) %&gt;% na.omit()
+occ &lt;- occall1[,<span class="hljs-number">8</span>:<span class="hljs-number">9</span>]
+occ
+
+occ_pr &lt;- SpatialPointsDataFrame(coords=occ, data=occ, proj4string = CRS(<span class="hljs-string">&quot;+proj=longlat +ellps=WGS84 +datum=WGS84&quot;</span>))
+occ_data &lt;- BIOMOD_FormatingData(
+  resp.var = rep(<span class="hljs-number">1</span>, nrow(occ_pr)),
+  resp.xy = occ,
+  expl.var = env,
+  resp.name = <span class="hljs-string">&quot;occall&quot;</span>,
+  PA.nb.rep = <span class="hljs-number">1</span>,
+  PA.nb.absences = <span class="hljs-number">10000</span>,
+  PA.strategy = <span class="hljs-string">&apos;random&apos;</span>,
+  na.rm = <span class="hljs-literal">TRUE</span>
+)
+
+xh_opt &lt;- 
+  BIOMOD_ModelingOptions(
+    GLM = list(type = <span class="hljs-string">&apos;quadratic&apos;</span>, interaction.level = <span class="hljs-number">1</span>),
+    GBM = list(n.trees = <span class="hljs-number">1000</span>),
+    ANN = list(),
+    RF = list(ntree =<span class="hljs-number">1000</span>),
+    MAXENT.Phillips = list(hinge=<span class="hljs-literal">FALSE</span>,threshold=<span class="hljs-literal">FALSE</span>,
+                           memory_allocated = <span class="hljs-number">4096</span>,
+                           betamultiplier = <span class="hljs-number">4</span>)
+  )
+
+xh_models_global_filter &lt;- 
+  BIOMOD_Modeling(
+    data = occ_data,
+    models = c(<span class="hljs-string">&quot;GLM&quot;</span>, <span class="hljs-string">&quot;GBM&quot;</span>, <span class="hljs-string">&quot;RF&quot;</span>,<span class="hljs-string">&quot;ANN&quot;</span>,<span class="hljs-string">&quot;MAXENT.Phillips&quot;</span>),
+    models.options = xh_opt ,
+    NbRunEval =<span class="hljs-number">5</span>, <span class="hljs-comment">#NbRunEval    integer, number of Evaluation run.</span>
+    DataSplit = <span class="hljs-number">70</span>, <span class="hljs-comment">##&#x6570;&#x636E;&#x5206;&#x5272;&#xFF0C;80%</span>
+    VarImport = <span class="hljs-number">0</span>,
+    models.eval.meth = c(<span class="hljs-string">&apos;KAPPA&apos;</span>, <span class="hljs-string">&apos;TSS&apos;</span>, <span class="hljs-string">&apos;ROC&apos;</span>),
+    modeling.id = <span class="hljs-string">&quot;FILTER_GLOBE_global&quot;</span>,
+    do.full.models = <span class="hljs-literal">FALSE</span>
+  )
+
+sink(<span class="hljs-string">&quot;./SDM/FILTER_GLOBE/single_run_global_filter.txt&quot;</span>)
+get_evaluations(xh_models_global_filter)
+sink()
+
+xh_global_filter_ensemble_models &lt;- 
+  BIOMOD_EnsembleModeling(
+    modeling.output = xh_models_global_filter,
+    em.by = <span class="hljs-string">&apos;all&apos;</span>,
+    eval.metric = <span class="hljs-string">&apos;TSS&apos;</span>,
+    eval.metric.quality.threshold = <span class="hljs-number">0.6</span>,
+    models.eval.meth = c(<span class="hljs-string">&apos;TSS&apos;</span>,<span class="hljs-string">&apos;ROC&apos;</span>,<span class="hljs-string">&apos;KAPPA&apos;</span>),
+    prob.mean = <span class="hljs-literal">TRUE</span>,
+    prob.cv = <span class="hljs-literal">TRUE</span>, 
+    committee.averaging = <span class="hljs-literal">FALSE</span>,
+    prob.mean.weight = <span class="hljs-literal">TRUE</span>,
+    VarImport = <span class="hljs-number">0</span>
+  )
+
+
+
+<span class="hljs-comment">##&#x67E5;&#x770B;&#x5EFA;&#x6A21;&#x7684;&#x8BC4;&#x4F30;&#x7ED3;&#x679C;&#xFF1A;</span>
+<span class="hljs-comment">## &#x5355;&#x7269;&#x79CD; &#x5EFA;&#x6A21;&#x7ED3;&#x679C;&#xFF1A;</span>
+pdf(<span class="hljs-string">&quot;./SDM/FILTER_GLOBE/global_filter_eva.pdf&quot;</span>)
+FILTER1 &lt;- models_scores_graph(  <span class="hljs-comment">##&#x8F93;&#x51FA;&#x591A;&#x6A21;&#x578B;&#x6BD4;&#x5BF9;&#x7ED3;&#x679C;&#x53EF;&#x89C6;&#x5316;&#xFF1A;</span>
+  xh_models_global_filter, 
+  by = <span class="hljs-string">&quot;models&quot;</span>, 
+  metrics = c(<span class="hljs-string">&quot;ROC&quot;</span>,<span class="hljs-string">&quot;TSS&quot;</span>), 
+  xlim = c(<span class="hljs-number">0.5</span>,<span class="hljs-number">1</span>), 
+  ylim = c(<span class="hljs-number">0.5</span>,<span class="hljs-number">1</span>)
+)
+
+FILTER2 &lt;- models_scores_graph( <span class="hljs-comment">##&#x8F93;&#x51FA;run1&#x548C;run2&#x4EE5;&#x53CA;mean&#x7684;&#x7ED3;&#x679C;&#xFF1B;</span>
+  xh_models_global_filter, 
+  by = <span class="hljs-string">&quot;cv_run&quot;</span> , 
+  metrics = c(<span class="hljs-string">&quot;ROC&quot;</span>,<span class="hljs-string">&quot;TSS&quot;</span>), 
+  xlim = c(<span class="hljs-number">0.5</span>,<span class="hljs-number">1</span>), 
+  ylim = c(<span class="hljs-number">0.5</span>,<span class="hljs-number">1</span>)
+)
+
+<span class="hljs-comment">## &#x67E5;&#x770B;&#x6574;&#x5408;&#x5EFA;&#x6A21;&#x7684;&#x7ED3;&#x679C;&#xFF1A;</span>
+FILTER3 &lt;- models_scores_graph( <span class="hljs-comment">##&#x8F93;&#x51FA;run1&#x548C;run2&#x4EE5;&#x53CA;mean&#x7684;&#x7ED3;&#x679C;&#xFF1B;</span>
+  xh_global_filter_ensemble_models, 
+  by = <span class="hljs-string">&quot;models&quot;</span> , 
+  metrics = c(<span class="hljs-string">&quot;ROC&quot;</span>,<span class="hljs-string">&quot;TSS&quot;</span>), 
+  xlim = c(<span class="hljs-number">0.5</span>,<span class="hljs-number">1</span>), 
+  ylim = c(<span class="hljs-number">0.5</span>,<span class="hljs-number">1</span>)
+)
+dev.off()
+sink(<span class="hljs-string">&quot;./SDM/FILTER_GLOBE/xh_global_filter_ensemble_models.txt&quot;</span>)
+get_evaluations(xh_global_filter_ensemble_models)
+sink()
+
+<span class="hljs-comment"># FILTER_GLOBE_models_proj_currente &lt;- BIOMOD_Projection( modeling.output = xh_models_global_filter,</span>
+<span class="hljs-comment">#                                                      new.env = env,</span>
+<span class="hljs-comment">#                                                      proj.name = &quot;current&quot;, #projection to analogous climates in occupied range</span>
+<span class="hljs-comment">#                                                      binary.meth = &quot;TSS&quot;,</span>
+<span class="hljs-comment">#                                                      output.format = &quot;.img&quot;,</span>
+<span class="hljs-comment">#                                                      selected.models=&apos;all&apos;,</span>
+<span class="hljs-comment">#                                                      build.clamping.mask=FALSE ,</span>
+<span class="hljs-comment">#                                                      do.stack = TRUE )</span>
+FILTER_GLOBE_ensemble_models_proj_currentw &lt;- 
+  BIOMOD_EnsembleForecasting( EM.output = xh_global_filter_ensemble_models,
+                              new.env = env,
+                              proj.name= <span class="hljs-string">&quot;global_filter_all&quot;</span>,
+                              do.stack =<span class="hljs-literal">TRUE</span> )
+pdf(<span class="hljs-string">&quot;./SDM/FILTER_GLOBE/global_filter_ense.pdf&quot;</span>)
+plot(FILTER_GLOBE_ensemble_models_proj_currentw)
+dev.off()
+writeRaster(FILTER_GLOBE_ensemble_models_proj_currentw@proj@val[[<span class="hljs-number">1</span>]],<span class="hljs-string">&quot;./SDM/FILTER_GLOBE/global_ense_mean.tif&quot;</span>)
+writeRaster(FILTER_GLOBE_ensemble_models_proj_currentw@proj@val[[<span class="hljs-number">2</span>]],<span class="hljs-string">&quot;./SDM/FILTER_GLOBE/global_ense_cv.tif&quot;</span>)
+writeRaster(FILTER_GLOBE_ensemble_models_proj_currentw@proj@val[[<span class="hljs-number">3</span>]],<span class="hljs-string">&quot;./SDM/FILTER_GLOBE/global_ense_wmean.tif&quot;</span>)
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="6.6.1bioclim.html" class="navigation navigation-prev " aria-label="Previous page: bioclim">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="6.6.3ENMEVAAL.html" class="navigation navigation-next " aria-label="Next page: ENMEVAAL">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"biomod2工作流","level":"1.7.6.2","depth":3,"next":{"title":"ENMEVAAL","level":"1.7.6.3","depth":3,"path":"6. SDM运行/6.6 SDM案例/6.6.3ENMEVAAL.md","ref":"6. SDM运行/6.6 SDM案例/6.6.3ENMEVAAL.md","articles":[]},"previous":{"title":"bioclim","level":"1.7.6.1","depth":3,"path":"6. SDM运行/6.6 SDM案例/6.6.1bioclim.md","ref":"6. SDM运行/6.6 SDM案例/6.6.1bioclim.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github-buttons@2.1.0","edit-link","toggle-chapters","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"repo":"nicheerfeng/Nichefbook","types":["star"],"size":"small"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/nicheerfeng/Nichefbook/edit/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"nicheerfeng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NICHE MODEL 中文指南-RCODING","language":"zh-hans","gitbook":"*","description":"Niche"},"file":{"path":"6. SDM运行/6.6 SDM案例/6.6.2biomod2工作流.md","mtime":"2021-07-07T12:40:24.482Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-22T14:10:03.582Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

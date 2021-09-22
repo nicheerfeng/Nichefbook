@@ -1,0 +1,2701 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>13.3 地统计 · NICHE MODEL 中文指南-RCODING</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="nicheerfeng">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="13.4 案例.html" />
+    
+    
+    <link rel="prev" href="13.2 空间自相关概念释义.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"nicheerfeng/Nichefbook","types":["star"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Niche model 中文指南-Rcoding</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1. 构建工作环境/1.1 构建工作环境说明.html">
+            
+                <a href="../1. 构建工作环境/1.1 构建工作环境说明.html">
+            
+                    
+                    1. 构建工作环境
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1. 构建工作环境/1.1 R-配置环境变量.html">
+            
+                <a href="../1. 构建工作环境/1.1 R-配置环境变量.html">
+            
+                    
+                    1.1 加载及配置R工作环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2.下载物种分布数据/2.下载物种分布数据说明.html">
+            
+                <a href="../2.下载物种分布数据/2.下载物种分布数据说明.html">
+            
+                    
+                    2.下载物种分布数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2.下载物种分布数据/2.1 物种分布数据网站.html">
+            
+                <a href="../2.下载物种分布数据/2.1 物种分布数据网站.html">
+            
+                    
+                    2.1 物种分布数据网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2.下载物种分布数据/2.2 使用R下载物种分布.html">
+            
+                <a href="../2.下载物种分布数据/2.2 使用R下载物种分布.html">
+            
+                    
+                    2.2 使用R下载物种分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3. 物种分布数据清理/物种分布数据清理.html">
+            
+                <a href="../3. 物种分布数据清理/物种分布数据清理.html">
+            
+                    
+                    3. 物种分布数据清理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../3. 物种分布数据清理/3.1 R-清理分布数据.html">
+            
+                <a href="../3. 物种分布数据清理/3.1 R-清理分布数据.html">
+            
+                    
+                    3.1 R-清理分布数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../3. 物种分布数据清理/3.2 构建物种丰富度栅格.html">
+            
+                <a href="../3. 物种分布数据清理/3.2 构建物种丰富度栅格.html">
+            
+                    
+                    3.2 构建物种丰富度栅格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../3. 物种分布数据清理/3.3 核平滑构建物种分布图.html">
+            
+                <a href="../3. 物种分布数据清理/3.3 核平滑构建物种分布图.html">
+            
+                    
+                    3.3 核平滑构建物种分布图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../3. 物种分布数据清理/3.4 改变分布数据的投影方法.html">
+            
+                <a href="../3. 物种分布数据清理/3.4 改变分布数据的投影方法.html">
+            
+                    
+                    3.4 改变分布数据的投影方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../3. 物种分布数据清理/3.5 spthin降低采样偏差.html">
+            
+                <a href="../3. 物种分布数据清理/3.5 spthin降低采样偏差.html">
+            
+                    
+                    3.5 spthin降低采样偏差
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4. 下载环境数据/4.下载环境数据说明.html">
+            
+                <a href="../4. 下载环境数据/4.下载环境数据说明.html">
+            
+                    
+                    4. 下载环境数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../4. 下载环境数据/4.1 环境数据网站.html">
+            
+                <a href="../4. 下载环境数据/4.1 环境数据网站.html">
+            
+                    
+                    4.1 环境数据网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../4. 下载环境数据/R下载及处理环境数据.md">
+            
+                <span>
+            
+                    
+                    4.2 R下载及处理环境数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5. 模型数据预处理/5.模型数据预处理说明.html">
+            
+                <a href="../5. 模型数据预处理/5.模型数据预处理说明.html">
+            
+                    
+                    5. 模型数据预处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../5. 模型数据预处理/5.1 环境数据预处理/5.1 环境数据预处理.html">
+            
+                <a href="../5. 模型数据预处理/5.1 环境数据预处理/5.1 环境数据预处理.html">
+            
+                    
+                    5.1 环境数据预处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../5. 模型数据预处理/5.1 环境数据预处理/5.1.1 读取及导出shp_raster.html">
+            
+                <a href="../5. 模型数据预处理/5.1 环境数据预处理/5.1.1 读取及导出shp_raster.html">
+            
+                    
+                    5.1.1 读取及导出shp_raster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../5. 模型数据预处理/5.1 环境数据预处理/5.1.2 栅格数据的基本处理.html">
+            
+                <a href="../5. 模型数据预处理/5.1 环境数据预处理/5.1.2 栅格数据的基本处理.html">
+            
+                    
+                    5.1.2 栅格数据的基本处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../5. 模型数据预处理/5.1 环境数据预处理/5.1.3 补充和报错处理.html">
+            
+                <a href="../5. 模型数据预处理/5.1 环境数据预处理/5.1.3 补充和报错处理.html">
+            
+                    
+                    5.1.3 补充和报错处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2 模型分布数据预处理.html">
+            
+                <a href="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2 模型分布数据预处理.html">
+            
+                    
+                    5.2 模型分布数据预处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.1 构建训练集和测试集.html">
+            
+                <a href="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.1 构建训练集和测试集.html">
+            
+                    
+                    5.2.1 构建训练集和测试集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.2 构建背景数据集.html">
+            
+                <a href="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.2 构建背景数据集.html">
+            
+                    
+                    5.2.2 构建背景数据集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.3" data-path="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.3 筛选环境因子.html">
+            
+                <a href="../5. 模型数据预处理/5.2 模型分布数据预处理/5.2.3 筛选环境因子.html">
+            
+                    
+                    5.2.3 筛选环境因子.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../6. SDM运行/6.SDM运行说明.html">
+            
+                <a href="../6. SDM运行/6.SDM运行说明.html">
+            
+                    
+                    6. SDM运行
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../6. SDM运行/6.1 SDM运行.html">
+            
+                <a href="../6. SDM运行/6.1 SDM运行.html">
+            
+                    
+                    6.1 SDM运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../6. SDM运行/6.2 SDM结果展示.html">
+            
+                <a href="../6. SDM运行/6.2 SDM结果展示.html">
+            
+                    
+                    6.2 SDM结果展示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../6. SDM运行/6.3 SDM模型评估.html">
+            
+                <a href="../6. SDM运行/6.3 SDM模型评估.html">
+            
+                    
+                    6.3 SDM模型评估
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../6. SDM运行/6.4 SDM模型外推.html">
+            
+                <a href="../6. SDM运行/6.4 SDM模型外推.html">
+            
+                    
+                    6.4 SDM模型外推
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../6. SDM运行/6.5 SDM整合建模.html">
+            
+                <a href="../6. SDM运行/6.5 SDM整合建模.html">
+            
+                    
+                    6.5 SDM整合建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../6. SDM运行/6. SDM运行说明.md">
+            
+                <span>
+            
+                    
+                    6.6 SDM案例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.6.1" data-path="../6. SDM运行/6.6 SDM案例/6.6.1bioclim.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.1bioclim.html">
+            
+                    
+                    bioclim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.2" data-path="../6. SDM运行/6.6 SDM案例/6.6.2biomod2工作流.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.2biomod2工作流.html">
+            
+                    
+                    biomod2工作流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.3" data-path="../6. SDM运行/6.6 SDM案例/6.6.3ENMEVAAL.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.3ENMEVAAL.html">
+            
+                    
+                    ENMEVAAL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.4" data-path="../6. SDM运行/6.6 SDM案例/6.6.4enmSDM工作流.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.4enmSDM工作流.html">
+            
+                    
+                    enmSDM工作流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.5" data-path="../6. SDM运行/6.6 SDM案例/6.6.5hypervolume.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.5hypervolume.html">
+            
+                    
+                    hypervolume
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.6" data-path="../6. SDM运行/6.6 SDM案例/6.6.6maxent工作流.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.6maxent工作流.html">
+            
+                    
+                    maxent工作流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6.7" data-path="../6. SDM运行/6.6 SDM案例/6.6.7SDMtune工作流.html">
+            
+                <a href="../6. SDM运行/6.6 SDM案例/6.6.7SDMtune工作流.html">
+            
+                    
+                    SDMtune工作流
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../7. SDM相关数据可视化/7.SDM相关数据可视化说明.html">
+            
+                <a href="../7. SDM相关数据可视化/7.SDM相关数据可视化说明.html">
+            
+                    
+                    7. SDM相关数据可视化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../7. SDM相关数据可视化/7.1 R包地图底图.html">
+            
+                <a href="../7. SDM相关数据可视化/7.1 R包地图底图.html">
+            
+                    
+                    7.1 R包地图底图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../7. SDM相关数据可视化/7.2 地图数据三维可视化.html">
+            
+                <a href="../7. SDM相关数据可视化/7.2 地图数据三维可视化.html">
+            
+                    
+                    7.2 地图数据三维可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../7. SDM相关数据可视化/7.3 栅格数据可视化.html">
+            
+                <a href="../7. SDM相关数据可视化/7.3 栅格数据可视化.html">
+            
+                    
+                    7.3 栅格数据可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../7. SDM相关数据可视化/7.4 多维环境变量可视化.html">
+            
+                <a href="../7. SDM相关数据可视化/7.4 多维环境变量可视化.html">
+            
+                    
+                    7.4 多维环境变量可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../7. SDM相关数据可视化/7.5 SDM结果可视化.html">
+            
+                <a href="../7. SDM相关数据可视化/7.5 SDM结果可视化.html">
+            
+                    
+                    7.5 SDM结果可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../7. SDM相关数据可视化/7.6 可视化物种分布.html">
+            
+                <a href="../7. SDM相关数据可视化/7.6 可视化物种分布.html">
+            
+                    
+                    7.6 可视化物种分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../7. SDM相关数据可视化/7.7 相关性分析.html">
+            
+                <a href="../7. SDM相关数据可视化/7.7 相关性分析.html">
+            
+                    
+                    7.7 相关性分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../8. SDM-workflow说明/8.SDM-workflow说明.html">
+            
+                <a href="../8. SDM-workflow说明/8.SDM-workflow说明.html">
+            
+                    
+                    8. SDM-workflow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../8. SDM-workflow说明/8.1 workflow的基本流程.html">
+            
+                <a href="../8. SDM-workflow说明/8.1 workflow的基本流程.html">
+            
+                    
+                    8.1 workflow的基本流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../8. SDM-workflow说明/8.2 workflow的基础知识.html">
+            
+                <a href="../8. SDM-workflow说明/8.2 workflow的基础知识.html">
+            
+                    
+                    8.2 workflow的基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../8. SDM-workflow说明/8.3 workflow的全流程R包.html">
+            
+                <a href="../8. SDM-workflow说明/8.3 workflow的全流程R包.html">
+            
+                    
+                    8.3 workflow的全流程R包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../8. SDM-workflow说明/8.4 workflow的专项R包及脚本.html">
+            
+                <a href="../8. SDM-workflow说明/8.4 workflow的专项R包及脚本.html">
+            
+                    
+                    8.4 workflow的专项R包及脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../8. SDM-workflow说明/8.5 workflow.GUI.html">
+            
+                <a href="../8. SDM-workflow说明/8.5 workflow.GUI.html">
+            
+                    
+                    8.5 workflow(GUI)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../8. SDM-workflow说明/8.6 案例.html">
+            
+                <a href="../8. SDM-workflow说明/8.6 案例.html">
+            
+                    
+                    8.6 案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../9. 生态位进化/9.生态位进化说明.html">
+            
+                <a href="../9. 生态位进化/9.生态位进化说明.html">
+            
+                    
+                    9. 生态位进化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1 生态位宽度的进化.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1 生态位宽度的进化.html">
+            
+                    
+                    9.1 生态位宽度的进化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.1" data-path="../9. 生态位进化/9.1 生态位宽度的进化/生态位宽度基础概念.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/生态位宽度基础概念.html">
+            
+                    
+                    9.1 生态位宽度的进化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/9.1.1 单因素分析.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/9.1.1 单因素分析.html">
+            
+                    
+                    9.1.1 单因素分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.2.1" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/参数和及非参.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/参数和及非参.html">
+            
+                    
+                    参数和及非参统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2.2" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/方差分析结果可视化.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.1 单因素分析/方差分析结果可视化.html">
+            
+                    
+                    方差分析结果可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/9.1.2 多因素分析.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/9.1.2 多因素分析.html">
+            
+                    
+                    9.1.2 多因素分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.3.1" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/CCA.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/CCA.html">
+            
+                    
+                    CCA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3.2" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/PCA_MANOVA.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/PCA_MANOVA.html">
+            
+                    
+                    PCA_MANOVA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3.3" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/聚类分析.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/聚类分析.html">
+            
+                    
+                    聚类分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3.4" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/生态位轴PCA得分.html">
+            
+                <a href="../9. 生态位进化/9.1 生态位宽度的进化/9.1.2 多因素分析/生态位轴PCA得分.html">
+            
+                    
+                    生态位轴PCA得分
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.4" data-path="../9. 生态位进化/9.1 生态位宽度的进化/9.1.3 超维度分析R-多维超体积生态位.md">
+            
+                <span>
+            
+                    
+                    9.1.3 超维度分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2 生态位进化式样说明.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2 生态位进化式样说明.html">
+            
+                    
+                    9.2 生态位进化式样
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.2.1" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.1 生态位进化式样.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.1 生态位进化式样.html">
+            
+                    
+                    9.2.1 生态位进化式样
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2 ecospat.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2 ecospat.html">
+            
+                    
+                    9.2.2 ecospat
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.2.2.1" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.1 优化可视化_raw.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.1 优化可视化_raw.html">
+            
+                    
+                    9.2.2.1 优化可视化_raw
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.2" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.2 优化可视化2.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.2 优化可视化2.html">
+            
+                    
+                    9.2.2.2 优化可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.3" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.3 生态位保守性测试.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.3 生态位保守性测试.html">
+            
+                    
+                    9.2.2.3 生态位保守性测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.4" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.4 生态位的重叠与计算.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.4 生态位的重叠与计算.html">
+            
+                    
+                    9.2.2.4 生态位的重叠与计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.5" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.5 生态位重叠可视化.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.5 生态位重叠可视化.html">
+            
+                    
+                    9.2.2.5 生态位重叠可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.2.6" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.2.6 非矫正.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.2.6 非矫正.html">
+            
+                    
+                    9.2.2.6 非矫正生态位重叠
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2.3" data-path="../9. 生态位进化/9.2 生态位进化式样/9.2.3 ENMtools.html">
+            
+                <a href="../9. 生态位进化/9.2 生态位进化式样/9.2.3 ENMtools.html">
+            
+                    
+                    9.2.3 ENMtools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../9. 生态位进化/9.3 扩散动态研究/9.3 扩散动态研究.html">
+            
+                <a href="../9. 生态位进化/9.3 扩散动态研究/9.3 扩散动态研究.html">
+            
+                    
+                    9.3 扩散动态研究
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../10. 群落与SDM/10. 群落生态学说明.html">
+            
+                <a href="../10. 群落与SDM/10. 群落生态学说明.html">
+            
+                    
+                    10. 群落与SDM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../10. 群落生态学/10.1 背景资料.md">
+            
+                <span>
+            
+                    
+                    10.1 背景资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../10. 群落与SDM/10.2 多物种联合建模.html">
+            
+                <a href="../10. 群落与SDM/10.2 多物种联合建模.html">
+            
+                    
+                    10.2 多物种联合建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../10. 群落与SDM/10.3 经典研究案例.html">
+            
+                <a href="../10. 群落与SDM/10.3 经典研究案例.html">
+            
+                    
+                    10.3 经典研究案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../10. 群落与SDM/10.4 可视化.html">
+            
+                <a href="../10. 群落与SDM/10.4 可视化.html">
+            
+                    
+                    10.4 可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../11. 遥感与SDM/11. 遥感与SDM说明.html">
+            
+                <a href="../11. 遥感与SDM/11. 遥感与SDM说明.html">
+            
+                    
+                    11.遥感与SDM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../11. 遥感与SDM/11.1 研究思路.html">
+            
+                <a href="../11. 遥感与SDM/11.1 研究思路.html">
+            
+                    
+                    11.1 研究思路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../11. 遥感与SDM/11.2 研究R包.html">
+            
+                <a href="../11. 遥感与SDM/11.2 研究R包.html">
+            
+                    
+                    11.2 研究R包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../11. 遥感与SDM/11.3 经典研究案例.html">
+            
+                <a href="../11. 遥感与SDM/11.3 经典研究案例.html">
+            
+                    
+                    11.3 经典研究案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../12. 系统发育与SDM/12. 系统发育与SDM说明.html">
+            
+                <a href="../12. 系统发育与SDM/12. 系统发育与SDM说明.html">
+            
+                    
+                    12.系统发育与SDM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../12. 系统发育与SDM/12.1 研究思路.html">
+            
+                <a href="../12. 系统发育与SDM/12.1 研究思路.html">
+            
+                    
+                    12.1 研究思路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../12. 系统发育与SDM/12.2 研究R包.html">
+            
+                <a href="../12. 系统发育与SDM/12.2 研究R包.html">
+            
+                    
+                    12.2 研究R包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../12. 系统发育与SDM/12.3 经典研究案例.html">
+            
+                <a href="../12. 系统发育与SDM/12.3 经典研究案例.html">
+            
+                    
+                    12.3 经典研究案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="13. 空间生态位.html">
+            
+                <a href="13. 空间生态位.html">
+            
+                    
+                    13.空间生态位
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="13.1 R-空间统计书籍.html">
+            
+                <a href="13.1 R-空间统计书籍.html">
+            
+                    
+                    13.1 R-空间统计书籍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="13.2 空间自相关概念释义.html">
+            
+                <a href="13.2 空间自相关概念释义.html">
+            
+                    
+                    13.2 空间自相关概念释义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.14.3" data-path="13.3 地统计.html">
+            
+                <a href="13.3 地统计.html">
+            
+                    
+                    13.3 地统计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="13.4 案例.html">
+            
+                <a href="13.4 案例.html">
+            
+                    
+                    13.4 案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="13.5 R-解决空间自相关.html">
+            
+                <a href="13.5 R-解决空间自相关.html">
+            
+                    
+                    13.5 R-解决空间自相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="13.6 补充.html">
+            
+                <a href="13.6 补充.html">
+            
+                    
+                    13.6 补充
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../14. 生态位基础资料/14.生态位理论资料说明.html">
+            
+                <a href="../14. 生态位基础资料/14.生态位理论资料说明.html">
+            
+                    
+                    14.生态位理论资料
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../14. 生态位基础资料/14.1 生态相关的名词释义.html">
+            
+                <a href="../14. 生态位基础资料/14.1 生态相关的名词释义.html">
+            
+                    
+                    14.1 生态相关的名词释义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../14. 生态位基础资料/14.2 SDM建模书籍.html">
+            
+                <a href="../14. 生态位基础资料/14.2 SDM建模书籍.html">
+            
+                    
+                    14.2 SDM建模书籍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../14. 生态位基础资料/14.3 相关与因果.html">
+            
+                <a href="../14. 生态位基础资料/14.3 相关与因果.html">
+            
+                    
+                    14.3 相关与因果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../14. 生态位基础资料/14.4 分布数据清理的依据.html">
+            
+                <a href="../14. 生态位基础资料/14.4 分布数据清理的依据.html">
+            
+                    
+                    14.4 分布数据清理的依据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../14. 生态位基础资料/14.5 建模格局的二元性.html">
+            
+                <a href="../14. 生态位基础资料/14.5 建模格局的二元性.html">
+            
+                    
+                    14.5 建模格局的二元性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../14. 生态位基础资料/14.6 niche常见错误.html">
+            
+                <a href="../14. 生态位基础资料/14.6 niche常见错误.html">
+            
+                    
+                    14.6 niche常见错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../14. 生态位基础资料/14.7 气候生态位的思路.html">
+            
+                <a href="../14. 生态位基础资料/14.7 气候生态位的思路.html">
+            
+                    
+                    14.7 气候生态位的思路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="../14. 生态位基础资料/14.8 环境与物种分布的交互选择.html">
+            
+                <a href="../14. 生态位基础资料/14.8 环境与物种分布的交互选择.html">
+            
+                    
+                    14.8 环境与物种分布的交互选择
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../15. niche领航员工作/15.niche领航员工作.html">
+            
+                <a href="../15. niche领航员工作/15.niche领航员工作.html">
+            
+                    
+                    15.niche领航员工作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../15. niche领航员工作/乔慧捷.html">
+            
+                <a href="../15. niche领航员工作/乔慧捷.html">
+            
+                    
+                    乔慧捷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../15. niche领航员工作/朱耿平.html">
+            
+                <a href="../15. niche领航员工作/朱耿平.html">
+            
+                    
+                    朱耿平
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../15. niche领航员工作/邬建国.html">
+            
+                <a href="../15. niche领航员工作/邬建国.html">
+            
+                    
+                    邬建国
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../15. niche领航员工作/Andrew Townsend Peterson.html">
+            
+                <a href="../15. niche领航员工作/Andrew Townsend Peterson.html">
+            
+                    
+                    Andrew Townsend Peterson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../15. niche领航员工作/Annette Ostling.html">
+            
+                <a href="../15. niche领航员工作/Annette Ostling.html">
+            
+                    
+                    Annette Ostling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../15. niche领航员工作/Antoine Guisan.html">
+            
+                <a href="../15. niche领航员工作/Antoine Guisan.html">
+            
+                    
+                    Antoine Guisan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../15. niche领航员工作/Damaris Zurell.html">
+            
+                <a href="../15. niche领航员工作/Damaris Zurell.html">
+            
+                    
+                    Damaris Zurell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="../15. niche领航员工作/Dan L. Warre.html">
+            
+                <a href="../15. niche领航员工作/Dan L. Warre.html">
+            
+                    
+                    Dan L. Warren
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.9" data-path="../15. niche领航员工作/Erin E. Saupe.html">
+            
+                <a href="../15. niche领航员工作/Erin E. Saupe.html">
+            
+                    
+                    Erin E. Saupe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.10" data-path="../15. niche领航员工作/Holt R D.html">
+            
+                <a href="../15. niche领航员工作/Holt R D.html">
+            
+                    
+                    Holt R D
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.11" data-path="../15. niche领航员工作/Hannah Lois Owens.html">
+            
+                <a href="../15. niche领航员工作/Hannah Lois Owens.html">
+            
+                    
+                    Hannah Lois Owens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.12" data-path="../15. niche领航员工作/Jane Elith.html">
+            
+                <a href="../15. niche领航员工作/Jane Elith.html">
+            
+                    
+                    Jane Elith
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.13" data-path="../15. niche领航员工作/Jorge Soberón.html">
+            
+                <a href="../15. niche领航员工作/Jorge Soberón.html">
+            
+                    
+                    Jorge Soberón
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.14" data-path="../15. niche领航员工作/Olivier Broennimann.html">
+            
+                <a href="../15. niche领航员工作/Olivier Broennimann.html">
+            
+                    
+                    Olivier Broennimann
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.15" data-path="../15. niche领航员工作/Jane Elith.html">
+            
+                <a href="../15. niche领航员工作/Jane Elith.html">
+            
+                    
+                    John J. Wiens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.16" data-path="../15. niche领航员工作/Robert P. Anderson.html">
+            
+                <a href="../15. niche领航员工作/Robert P. Anderson.html">
+            
+                    
+                    Robert P. Anderson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.17" data-path="../15. niche领航员工作/Michael R Kearney.html">
+            
+                <a href="../15. niche领航员工作/Michael R Kearney.html">
+            
+                    
+                    Michael R Kearne
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >13.3 地统计</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x5730;&#x7EDF;&#x8BA1;r&#x5B9E;&#x73B0;">&#x5730;&#x7EDF;&#x8BA1;R&#x5B9E;&#x73B0;</h3>
+<pre><code class="lang-r"><span class="hljs-comment"># &#x52A0;&#x8F7D;R&#x5305;&#xFF1A;</span>
+<span class="hljs-keyword">library</span>(pacman)
+p_load(sp,raster,rgeos,rgdal,rasterVis,raster,fs,sf,tidyverse,
+       spatstat,maps,maptools)
+
+<span class="hljs-keyword">source</span>(<span class="hljs-string">&quot;E:/sjdata/code/sdmenm.R&quot;</span>)
+setwd(<span class="hljs-string">&quot;D:/xh2/&quot;</span>)
+sa &lt;- read.csv(<span class="hljs-string">&quot;./f1_points/xh/xh_sa.csv&quot;</span>)[,<span class="hljs-number">2</span>:<span class="hljs-number">3</span>]
+oc &lt;- read.csv(<span class="hljs-string">&quot;./f1_points/xh/xh_oc.csv&quot;</span>)[,<span class="hljs-number">2</span>:<span class="hljs-number">3</span>]
+na &lt;- read.csv(<span class="hljs-string">&quot;./f1_points/xh/xh_na.csv&quot;</span>)[,<span class="hljs-number">2</span>:<span class="hljs-number">3</span>]
+as &lt;- read.csv(<span class="hljs-string">&quot;./f1_points/xh/xh_as.csv&quot;</span>)[,<span class="hljs-number">2</span>:<span class="hljs-number">3</span>]
+az &lt;- c(<span class="hljs-string">&quot;BIO10&quot;</span>,<span class="hljs-string">&quot;BIO11&quot;</span>,<span class="hljs-string">&quot;BIO12&quot;</span>)
+azs &lt;- paste0(<span class="hljs-string">&quot;./f2_envs/&quot;</span> ,az,<span class="hljs-string">&quot;.tif&quot;</span>)
+envg&lt;- stack(azs) 
+plot(oc)
+<span class="hljs-comment">## &#x8BC4;&#x4F30;&#x4E9A;&#x6D32;&#x70B9;&#x7684;&#x5206;&#x5E03;&#x6A21;&#x5F0F;&#xFF1A;####</span>
+<span class="hljs-comment"># &#x4EE5;&#x4E9A;&#x6D32;&#x4E3A;&#x4F8B;&#xFF1A;</span>
+<span class="hljs-comment"># &#x8F6C;&#x6362;&#x6570;&#x636E;&#x683C;&#x5F0F;&#xFF1A;</span>
+<span class="hljs-keyword">source</span>(<span class="hljs-string">&quot;D:/HIDATA/&#x9879;&#x76EE;&#x4EE3;&#x7801;xmind&#x7BA1;&#x7406;/share_code/sdmenm.R&quot;</span>)
+asp &lt;- ppp_spatstat(as)
+asp.km &lt;- rescale(asp, <span class="hljs-number">1000</span>, <span class="hljs-string">&quot;km&quot;</span>)
+
+<span class="hljs-comment"># &#x8BC4;&#x4F30;&#x6570;&#x636E;&#x7684;L&#x6A21;&#x578B;&#x548C;G&#x6A21;&#x578B;&#xFF1A;</span>
+L &lt;- Lest(asp.km)
+plot(L, las=<span class="hljs-number">1</span>, legendargs=list(cex=<span class="hljs-number">0.8</span>, xpd=<span class="hljs-literal">TRUE</span>, inset=c(<span class="hljs-number">1.01</span>, <span class="hljs-number">0</span>) ))
+<span class="hljs-comment">## &#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x66F4;&#x6E05;&#x6670;&#x7684;&#x89E3;&#x8BFB;&#x6570;&#x636E;&#x7684;&#x5206;&#x5E03;&#x89C4;&#x5F8B;&#xFF1A;</span>
+plot(L, . -r ~ r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>, legendargs=list(cex=<span class="hljs-number">0.6</span>, xpd=<span class="hljs-literal">TRUE</span>, inset=c(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>) ))
+plot(L, . -r ~ r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+
+<span class="hljs-comment">## &#x4F7F;&#x7528;&#x77EB;&#x6B63;&#x7684;L-hat&#x6765;&#x5E73;&#x8861;&#x975E;&#x7A33;&#x6001;&#xFF1A;</span>
+<span class="hljs-keyword">library</span>(spatstat)
+plot(envelope(asp.km, Linhom, correction = <span class="hljs-string">&quot;Ripley&quot;</span>, verbose = <span class="hljs-literal">T</span>), 
+     . - r ~ r, main = <span class="hljs-string">&quot;Sigma 0.75&quot;</span>)
+lhat &lt;- Linhom(asp.km, correction=<span class="hljs-string">&quot;Ripley&quot;</span>)
+plot(lhat, . -r ~ r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>,xlim = c(<span class="hljs-number">0</span>, <span class="hljs-number">300</span>))
+
+<span class="hljs-comment">## G&#x8BC4;&#x4F30;&#x540C;&#x6837;&#x4E0D;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x4E0E;&#x8DDD;&#x79BB;&#xFF1A;&#x7528;&#x8FD9;&#x4E2A;&#x53EF;&#x80FD;&#x66F4;&#x79D1;&#x5B66;&#x4E00;&#x4E9B;&#xFF1B;</span>
+g  &lt;- pcf(asp.km)
+plot(g, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>, legendargs=list(cex=<span class="hljs-number">0.8</span>, xpd=<span class="hljs-literal">TRUE</span>, inset=c(<span class="hljs-number">0.3</span>, <span class="hljs-number">0.1</span>) ))
+plot(g, . -r ~ r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>,xlim = c(<span class="hljs-number">0</span>, <span class="hljs-number">50</span>), 
+     legendargs=list(cex=<span class="hljs-number">0.8</span>, xpd=<span class="hljs-literal">TRUE</span>, inset=c(<span class="hljs-number">0.3</span>, <span class="hljs-number">0.1</span>) ))
+
+<span class="hljs-comment">## &#x8861;&#x91CF;&#x53D8;&#x91CF;&#x5728;&#x4E09;&#x7EF4;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x805A;&#x96C6;&#x7A0B;&#x5EA6;&#xFF1A;</span>
+<span class="hljs-comment">## &#x8FD9;&#x6837;&#x505A;&#x6709;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#x5417;&#xFF1F;</span>
+<span class="hljs-comment"># &#x5C06;&#x6570;&#x636E;0-1&#x5316;&#x4E4B;&#x540E;&#x7528;&#x4E8E;&#x8BC4;&#x4F30;&#xFF1B;</span>
+<span class="hljs-comment"># &#x8FD9;&#x4E2A;&#x7ED3;&#x679C;&#x6709;&#x70B9;&#x96BE;&#x4EE5;&#x89E3;&#x91CA;&#xFF1B;&#x5728;&#x8F83;&#x5C0F;&#x7684;&#x5C3A;&#x5EA6;&#x4E0A;&#x8868;&#x73B0;&#x51FA;&#x968F;&#x673A;&#x5206;&#x5E03;&#x7684;&#x8D8B;&#x52BF;&#xFF0C;</span>
+<span class="hljs-comment"># &#x800C;&#x5728;&#x8F83;&#x5927;&#x5C3A;&#x5EA6;&#x4E0A;&#x5C55;&#x793A;&#x51FA;&#x805A;&#x96C6;&#x7684;&#x8D8B;&#x52BF;&#xFF1B;</span>
+
+ass &lt;- raster::extract(envg,as) %&gt;% na.omit()
+ass &lt;- zero_1(ass)[,<span class="hljs-number">4</span>:<span class="hljs-number">6</span>]
+names(ass) &lt;- c(<span class="hljs-string">&quot;BIO10&quot;</span>,<span class="hljs-string">&quot;BIO11&quot;</span>,<span class="hljs-string">&quot;BIO12&quot;</span>)
+threeDPpp &lt;- pp3(ass$BIO10, ass$BIO11, ass$BIO12, box3(c(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>)))
+plot3d(ass)
+threeDPppKest &lt;- K3est(threeDPpp)
+plot(threeDPppKest, . -r ~ r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+
+<span class="hljs-comment">## &#x4F7F;&#x7528;&#x5BC6;&#x5EA6;&#x4F30;&#x8BA1;&#x6765;&#x8BC4;&#x4F30;&#x5EFA;&#x6A21;&#x53D8;&#x91CF;&#x7684;&#x5F3A;&#x5EA6;&#xFF1A;</span>
+<span class="hljs-comment"># &#x65B9;&#x6CD5;1&#xFF1A;</span>
+Q &lt;- quadratcount(asp.km, nx= <span class="hljs-number">10</span>, ny=<span class="hljs-number">10</span>)
+plot(asp.km, pch=<span class="hljs-number">20</span>, cols=<span class="hljs-string">&quot;grey70&quot;</span>, main=<span class="hljs-literal">NULL</span>)  <span class="hljs-comment"># Plot points</span>
+plot(Q, add=<span class="hljs-literal">TRUE</span>)  <span class="hljs-comment"># Add quadrat grid</span>
+<span class="hljs-comment"># &#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x5206;&#x5E03;&#x5757;&#x7684;&#x5BC6;&#x5EA6;&#xFF1A;</span>
+Q.d &lt;- intensity(Q)
+<span class="hljs-comment"># Plot the density</span>
+plot(intensity(Q, image=<span class="hljs-literal">TRUE</span>), main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)  <span class="hljs-comment"># Plot density raster</span>
+plot(asp.km, pch=<span class="hljs-number">20</span>, cex=<span class="hljs-number">0.6</span>, col=rgb(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">.5</span>), add=<span class="hljs-literal">TRUE</span>)  <span class="hljs-comment"># Add points</span>
+
+<span class="hljs-comment">## &#x65B9;&#x6CD5;2&#xFF1A;</span>
+
+X&lt;-asp.km
+plot(X)
+plot(density(X, <span class="hljs-number">10</span>)) <span class="hljs-comment">## &#x6784;&#x5EFA;&#x7684;&#x6570;&#x5B57;&#x5F71;&#x54CD;&#x5F3A;&#x5EA6;&#xFF1A;</span>
+contour(density(X,<span class="hljs-number">10</span>), axes=<span class="hljs-literal">FALSE</span>)
+<span class="hljs-comment">## &#x7ED3;&#x5408;&#x5730;&#x7406;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#x6765;&#x8003;&#x8651;&#x534F;&#x53D8;&#x91CF;&#x5BF9;&#x5206;&#x5E03;&#x7684;&#x5F71;&#x54CD;&#x548C;&#x9650;&#x5236;</span>
+<span class="hljs-comment"># &#x8FD9;&#x79CD;&#x5206;&#x6790;&#x4E5F;&#x662F;&#x5EFA;&#x7ACB;&#x5728;&#x70B9;&#x7684;&#x5BC6;&#x5EA6;&#x6982;&#x7387;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#xFF1B;</span>
+
+<span class="hljs-comment">## &#x5BF9;&#x5761;&#x5EA6;&#x8FDB;&#x884C;&#x5206;&#x7EC4;&#xFF0C;&#x5206;&#x7EC4;&#x540E;&#x7528;&#x4E8E;quadratcount&#x7684;&#x6620;&#x5C04;&#xFF1B;</span>
+
+
+pzbio10 &lt;- raster_utm(as,envg$BIO10)
+pzbio10 &lt;- as.im(pzbio10)
+hist(pzbio10 , main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+pzbio10.km &lt;- rescale(pzbio10, <span class="hljs-number">1000</span>, <span class="hljs-string">&quot;km&quot;</span>)
+
+pzbio11 &lt;- raster_utm(as,envg$BIO11)
+pzbio11 &lt;- as.im(pzbio11) 
+hist(pzbio11 , main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+pzbio11.km &lt;- rescale(pzbio11, <span class="hljs-number">1000</span>, <span class="hljs-string">&quot;km&quot;</span>) 
+
+pzbio12 &lt;- raster_utm(as,envg$BIO12)
+pzbio12 &lt;- as.im(pzbio12) %&gt;% log()
+hist(pzbio12 , main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+pzbio12.km &lt;- rescale(pzbio12, <span class="hljs-number">1000</span>, <span class="hljs-string">&quot;km&quot;</span>) 
+
+b &lt;- quantile(pzbio10.km, probs = (<span class="hljs-number">0</span>:<span class="hljs-number">4</span>)/<span class="hljs-number">4</span>) %&gt;% round(<span class="hljs-number">3</span>)
+Zcut &lt;- cut(pzbio10.km, breaks = b)
+V &lt;- tess(image = Zcut) 
+plot(V)
+plot(asp.km, add = <span class="hljs-literal">TRUE</span>, pch = <span class="hljs-string">&quot;+&quot;</span>)
+<span class="hljs-comment">## &#x57FA;&#x4E8E;&#x5206;&#x7EC4;</span>
+qb &lt;- quadratcount(asp.km, tess = V)
+plot(qb)
+<span class="hljs-comment">## &#x53EF;&#x89C6;&#x5316;&#x70B9;&#x5BC6;&#x5EA6;&#x548C;&#x534F;&#x53D8;&#x91CF;&#x4E4B;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF1A;</span>
+plot(rhohat(asp.km, pzbio10.km,method=<span class="hljs-string">&quot;ratio&quot;</span>))
+bio10th0 &lt;- rhohat(asp.km, pzbio10.km)
+<span class="hljs-comment">## &#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x5199;&#x6CD5;&#x63A2;&#x7D22;&#x591A;&#x79CD;&#x53D8;&#x91CF;&#x7684;&#x7A7A;&#x95F4;&#x5206;&#x5E03;&#x7279;&#x5F81;&#xFF1A;</span>
+<span class="hljs-comment">## &#x5355;&#x7EF4;&#xFF1A;</span>
+H &lt;- hyperframe(points=list(asp.km,asp.km,asp.km),
+                Image=list(pzbio10.km,pzbio11.km,pzbio12.km)
+                )
+
+rhos &lt;- with(H, rhohat(points, Image))
+
+
+
+
+<span class="hljs-comment">## &#x8BC4;&#x4F30;&#x5357;&#x7F8E;&#x6D32;&#x7684;&#x5206;&#x5E03;&#x7279;&#x5F81;&#xFF1A;#####</span>
+sav &lt;- raster::extract(envg,sa) %&gt;% cbind(sa) %&gt;% na.omit()
+sa &lt;- sav[,<span class="hljs-number">4</span>:<span class="hljs-number">5</span>] %&gt;% data.frame()
+
+
+
+sap &lt;- ppp_spatstat(sa)
+sap.km &lt;- rescale(sap, <span class="hljs-number">1000</span>, <span class="hljs-string">&quot;km&quot;</span>)
+
+<span class="hljs-comment"># &#x8BC4;&#x4F30;&#x6570;&#x636E;&#x7684;L&#x6A21;&#x578B;&#x548C;G&#x6A21;&#x578B;&#xFF1A;</span>
+L &lt;- Lest(sap.km)
+plot(L, las=<span class="hljs-number">1</span>, legendargs=list(cex=<span class="hljs-number">0.8</span>, xpd=<span class="hljs-literal">TRUE</span>, inset=c(<span class="hljs-number">1.01</span>, <span class="hljs-number">0</span>) ))
+<span class="hljs-comment">## &#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x66F4;&#x6E05;&#x6670;&#x7684;&#x89E3;&#x8BFB;&#x6570;&#x636E;&#x7684;&#x5206;&#x5E03;&#x89C4;&#x5F8B;&#xFF1A;</span>
+plot(L, . -r ~ r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>, legendargs=list(cex=<span class="hljs-number">0.6</span>, xpd=<span class="hljs-literal">TRUE</span>, inset=c(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>) ))
+plot(L, . -r ~ r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+
+<span class="hljs-comment">## &#x4F7F;&#x7528;&#x77EB;&#x6B63;&#x7684;L-hat&#x6765;&#x5E73;&#x8861;&#x975E;&#x7A33;&#x6001;&#xFF1A;</span>
+<span class="hljs-keyword">library</span>(spatstat)
+plot(envelope(sap.km, Linhom, correction = <span class="hljs-string">&quot;Ripley&quot;</span>, verbose = <span class="hljs-literal">T</span>), 
+     . - r ~ r, main = <span class="hljs-string">&quot;Sigma 0.75&quot;</span>)
+lhat &lt;- Linhom(sap.km, correction=<span class="hljs-string">&quot;Ripley&quot;</span>)
+plot(lhat, . -r ~ r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>,xlim = c(<span class="hljs-number">0</span>, <span class="hljs-number">300</span>))
+plot(sap.km)
+<span class="hljs-comment">## G&#x8BC4;&#x4F30;&#x540C;&#x6837;&#x4E0D;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x4E0E;&#x8DDD;&#x79BB;&#xFF1A;&#x7528;&#x8FD9;&#x4E2A;&#x53EF;&#x80FD;&#x66F4;&#x79D1;&#x5B66;&#x4E00;&#x4E9B;&#xFF1B;</span>
+g  &lt;- pcf(sap.km)
+plot(g, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>, legendargs=list(cex=<span class="hljs-number">0.8</span>, xpd=<span class="hljs-literal">TRUE</span>, inset=c(<span class="hljs-number">0.3</span>, <span class="hljs-number">0.1</span>) ))
+plot(g, . -r ~ r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>,xlim = c(<span class="hljs-number">0</span>, <span class="hljs-number">50</span>), 
+     legendargs=list(cex=<span class="hljs-number">0.8</span>, xpd=<span class="hljs-literal">TRUE</span>, inset=c(<span class="hljs-number">0.3</span>, <span class="hljs-number">0.1</span>) ))
+plot(sap.km)
+<span class="hljs-comment">## &#x8861;&#x91CF;&#x53D8;&#x91CF;&#x5728;&#x4E09;&#x7EF4;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x805A;&#x96C6;&#x7A0B;&#x5EA6;&#xFF1A;</span>
+<span class="hljs-comment">## &#x8FD9;&#x6837;&#x505A;&#x6709;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#x5417;&#xFF1F;</span>
+<span class="hljs-comment"># &#x5C06;&#x6570;&#x636E;0-1&#x5316;&#x4E4B;&#x540E;&#x7528;&#x4E8E;&#x8BC4;&#x4F30;&#xFF1B;</span>
+<span class="hljs-comment"># &#x8FD9;&#x4E2A;&#x7ED3;&#x679C;&#x6709;&#x70B9;&#x96BE;&#x4EE5;&#x89E3;&#x91CA;&#xFF1B;&#x5728;&#x8F83;&#x5C0F;&#x7684;&#x5C3A;&#x5EA6;&#x4E0A;&#x8868;&#x73B0;&#x51FA;&#x968F;&#x673A;&#x5206;&#x5E03;&#x7684;&#x8D8B;&#x52BF;&#xFF0C;</span>
+<span class="hljs-comment"># &#x800C;&#x5728;&#x8F83;&#x5927;&#x5C3A;&#x5EA6;&#x4E0A;&#x5C55;&#x793A;&#x51FA;&#x805A;&#x96C6;&#x7684;&#x8D8B;&#x52BF;&#xFF1B;</span>
+az &lt;- c(<span class="hljs-string">&quot;BIO10&quot;</span>,<span class="hljs-string">&quot;BIO11&quot;</span>,<span class="hljs-string">&quot;BIO12&quot;</span>)
+azs &lt;- paste0(<span class="hljs-string">&quot;./f2_envs/&quot;</span> ,az,<span class="hljs-string">&quot;.tif&quot;</span>)
+envg&lt;- stack(azs) 
+ass &lt;- raster::extract(envg,sa) %&gt;% na.omit()
+ass &lt;- zero_1(ass)[,<span class="hljs-number">4</span>:<span class="hljs-number">6</span>]
+names(ass) &lt;- c(<span class="hljs-string">&quot;BIO10&quot;</span>,<span class="hljs-string">&quot;BIO11&quot;</span>,<span class="hljs-string">&quot;BIO12&quot;</span>)
+threeDPpp &lt;- pp3(ass$BIO10, ass$BIO11, ass$BIO12, box3(c(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>)))
+plot3d(ass)
+threeDPppKest &lt;- K3est(threeDPpp)
+plot(threeDPppKest, . -r ~ r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+
+<span class="hljs-comment">## &#x4F7F;&#x7528;&#x5BC6;&#x5EA6;&#x4F30;&#x8BA1;&#x6765;&#x8BC4;&#x4F30;&#x5EFA;&#x6A21;&#x53D8;&#x91CF;&#x7684;&#x5F3A;&#x5EA6;&#xFF1A;</span>
+<span class="hljs-comment"># &#x65B9;&#x6CD5;1&#xFF1A;</span>
+Q &lt;- quadratcount(sap.km, nx= <span class="hljs-number">10</span>, ny=<span class="hljs-number">10</span>)
+plot(sap.km, pch=<span class="hljs-number">20</span>, cols=<span class="hljs-string">&quot;grey70&quot;</span>, main=<span class="hljs-literal">NULL</span>)  <span class="hljs-comment"># Plot points</span>
+plot(Q, add=<span class="hljs-literal">TRUE</span>)  <span class="hljs-comment"># Add quadrat grid</span>
+<span class="hljs-comment"># &#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x5206;&#x5E03;&#x5757;&#x7684;&#x5BC6;&#x5EA6;&#xFF1A;</span>
+Q.d &lt;- intensity(Q)
+<span class="hljs-comment"># Plot the density</span>
+plot(intensity(Q, image=<span class="hljs-literal">TRUE</span>), main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)  <span class="hljs-comment"># Plot density raster</span>
+plot(sap.km, pch=<span class="hljs-number">20</span>, cex=<span class="hljs-number">0.6</span>, col=rgb(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">.5</span>), add=<span class="hljs-literal">TRUE</span>)  <span class="hljs-comment"># Add points</span>
+
+<span class="hljs-comment">## &#x65B9;&#x6CD5;2&#xFF1A;</span>
+
+X&lt;-sap.km
+plot(X)
+plot(density(X, <span class="hljs-number">10</span>)) <span class="hljs-comment">## &#x6784;&#x5EFA;&#x7684;&#x6570;&#x5B57;&#x5F71;&#x54CD;&#x5F3A;&#x5EA6;&#xFF1A;</span>
+contour(density(X,<span class="hljs-number">10</span>), axes=<span class="hljs-literal">FALSE</span>)
+<span class="hljs-comment">## &#x7ED3;&#x5408;&#x5730;&#x7406;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#x6765;&#x8003;&#x8651;&#x534F;&#x53D8;&#x91CF;&#x5BF9;&#x5206;&#x5E03;&#x7684;&#x5F71;&#x54CD;&#x548C;&#x9650;&#x5236;</span>
+<span class="hljs-comment"># &#x8FD9;&#x79CD;&#x5206;&#x6790;&#x4E5F;&#x662F;&#x5EFA;&#x7ACB;&#x5728;&#x70B9;&#x7684;&#x5BC6;&#x5EA6;&#x6982;&#x7387;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#xFF1B;</span>
+
+<span class="hljs-comment">## &#x5BF9;&#x5761;&#x5EA6;&#x8FDB;&#x884C;&#x5206;&#x7EC4;&#xFF0C;&#x5206;&#x7EC4;&#x540E;&#x7528;&#x4E8E;quadratcount&#x7684;&#x6620;&#x5C04;&#xFF1B;</span>
+
+pzbio10 &lt;- raster_utm(sa,envg$BIO10)
+pzbio10 &lt;- as.im(pzbio10)
+hist(pzbio10 , main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+pzbio10.km &lt;- rescale(pzbio10, <span class="hljs-number">1000</span>, <span class="hljs-string">&quot;km&quot;</span>)
+
+pzbio11 &lt;- raster_utm(sa,envg$BIO11)
+pzbio11 &lt;- as.im(pzbio11) 
+hist(pzbio11 , main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+pzbio11.km &lt;- rescale(pzbio11, <span class="hljs-number">1000</span>, <span class="hljs-string">&quot;km&quot;</span>) 
+
+plot(envg$BIO12)
+pzbio12 &lt;- raster_utm(sa,envg$BIO12)
+pzbio12 &lt;- as.im(pzbio12) 
+hist(pzbio12 , main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+pzbio12.km &lt;- rescale(pzbio12, <span class="hljs-number">1000</span>, <span class="hljs-string">&quot;km&quot;</span>)  
+
+b &lt;- quantile(pzbio10.km, probs = (<span class="hljs-number">0</span>:<span class="hljs-number">4</span>)/<span class="hljs-number">4</span>) %&gt;% round(<span class="hljs-number">3</span>)
+Zcut &lt;- cut(pzbio10.km, breaks = b)
+V &lt;- tess(image = Zcut) 
+plot(V)
+plot(sap.km, add = <span class="hljs-literal">TRUE</span>, pch = <span class="hljs-string">&quot;+&quot;</span>)
+<span class="hljs-comment">## &#x57FA;&#x4E8E;&#x5206;&#x7EC4;</span>
+qb &lt;- quadratcount(sap.km, tess = V)
+plot(qb)
+<span class="hljs-comment">## &#x53EF;&#x89C6;&#x5316;&#x70B9;&#x5BC6;&#x5EA6;&#x548C;&#x534F;&#x53D8;&#x91CF;&#x4E4B;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF1A;</span>
+plot(rhohat(sap.km, pzbio10.km,method=<span class="hljs-string">&quot;ratio&quot;</span>))
+bio10th0 &lt;- rhohat(sap.km, pzbio12.km)
+<span class="hljs-comment">## &#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x5199;&#x6CD5;&#x63A2;&#x7D22;&#x591A;&#x79CD;&#x53D8;&#x91CF;&#x7684;&#x7A7A;&#x95F4;&#x5206;&#x5E03;&#x7279;&#x5F81;&#xFF1A;</span>
+<span class="hljs-comment">## &#x5355;&#x7EF4;&#xFF1A;</span>
+H &lt;- hyperframe(points=list(sap.km,sap.km,sap.km),
+                Image=list(pzbio10.km,pzbio11.km,pzbio12.km)
+                )
+
+rhos &lt;- with(H, rhohat(points, Image))
+plot(rhos)
+
+<span class="hljs-comment">### &#x8BC4;&#x4F30;&#x5927;&#x6D0B;&#x6D32;&#x7684;&#x5206;&#x5E03;&#x89C4;&#x5F8B; ####</span>
+ocv &lt;- raster::extract(envg,oc) %&gt;% cbind(oc) %&gt;% na.omit()
+oc &lt;- ocv[,<span class="hljs-number">4</span>:<span class="hljs-number">5</span>] %&gt;% data.frame()
+
+ocp &lt;- ppp_spatstat(oc)
+ocp.km &lt;- rescale(ocp, <span class="hljs-number">1000</span>, <span class="hljs-string">&quot;km&quot;</span>)
+plot(ocp.km)
+<span class="hljs-comment"># &#x8BC4;&#x4F30;&#x6570;&#x636E;&#x7684;L&#x6A21;&#x578B;&#x548C;G&#x6A21;&#x578B;&#xFF1A;</span>
+L &lt;- Lest(ocp.km)
+plot(L, las=<span class="hljs-number">1</span>, legendargs=list(cex=<span class="hljs-number">0.8</span>, xpd=<span class="hljs-literal">TRUE</span>, inset=c(<span class="hljs-number">1.01</span>, <span class="hljs-number">0</span>) ))
+<span class="hljs-comment">## &#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x66F4;&#x6E05;&#x6670;&#x7684;&#x89E3;&#x8BFB;&#x6570;&#x636E;&#x7684;&#x5206;&#x5E03;&#x89C4;&#x5F8B;&#xFF1A;</span>
+plot(L, . -r ~ r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>, legendargs=list(cex=<span class="hljs-number">0.6</span>, xpd=<span class="hljs-literal">TRUE</span>, inset=c(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>) ))
+plot(L, . -r ~ r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+
+<span class="hljs-comment">## &#x4F7F;&#x7528;&#x77EB;&#x6B63;&#x7684;L-hat&#x6765;&#x5E73;&#x8861;&#x975E;&#x7A33;&#x6001;&#xFF1A;</span>
+<span class="hljs-keyword">library</span>(spatstat)
+plot(envelope(ocp.km, Linhom, correction = <span class="hljs-string">&quot;Ripley&quot;</span>, verbose = <span class="hljs-literal">T</span>), 
+     . - r ~ r, main = <span class="hljs-string">&quot;Sigma 0.75&quot;</span>)
+lhat &lt;- Linhom(ocp.km, correction=<span class="hljs-string">&quot;Ripley&quot;</span>)
+plot(lhat, . -r ~ r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>,xlim = c(<span class="hljs-number">0</span>, <span class="hljs-number">300</span>))
+
+<span class="hljs-comment">## G&#x8BC4;&#x4F30;&#x540C;&#x6837;&#x4E0D;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x4E0E;&#x8DDD;&#x79BB;&#xFF1A;&#x7528;&#x8FD9;&#x4E2A;&#x53EF;&#x80FD;&#x66F4;&#x79D1;&#x5B66;&#x4E00;&#x4E9B;&#xFF1B;</span>
+g  &lt;- pcf(ocp.km)
+plot(g, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>, legendargs=list(cex=<span class="hljs-number">0.8</span>, xpd=<span class="hljs-literal">TRUE</span>, inset=c(<span class="hljs-number">0.3</span>, <span class="hljs-number">0.1</span>) ))
+plot(g, . -r ~ r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>,xlim = c(<span class="hljs-number">0</span>, <span class="hljs-number">50</span>), 
+     legendargs=list(cex=<span class="hljs-number">0.8</span>, xpd=<span class="hljs-literal">TRUE</span>, inset=c(<span class="hljs-number">0.3</span>, <span class="hljs-number">0.1</span>) ))
+
+<span class="hljs-comment">## &#x8861;&#x91CF;&#x53D8;&#x91CF;&#x5728;&#x4E09;&#x7EF4;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x805A;&#x96C6;&#x7A0B;&#x5EA6;&#xFF1A;</span>
+<span class="hljs-comment">## &#x8FD9;&#x6837;&#x505A;&#x6709;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#x5417;&#xFF1F;</span>
+<span class="hljs-comment"># &#x5C06;&#x6570;&#x636E;0-1&#x5316;&#x4E4B;&#x540E;&#x7528;&#x4E8E;&#x8BC4;&#x4F30;&#xFF1B;</span>
+<span class="hljs-comment"># &#x8FD9;&#x4E2A;&#x7ED3;&#x679C;&#x6709;&#x70B9;&#x96BE;&#x4EE5;&#x89E3;&#x91CA;&#xFF1B;&#x5728;&#x8F83;&#x5C0F;&#x7684;&#x5C3A;&#x5EA6;&#x4E0A;&#x8868;&#x73B0;&#x51FA;&#x968F;&#x673A;&#x5206;&#x5E03;&#x7684;&#x8D8B;&#x52BF;&#xFF0C;</span>
+<span class="hljs-comment"># &#x800C;&#x5728;&#x8F83;&#x5927;&#x5C3A;&#x5EA6;&#x4E0A;&#x5C55;&#x793A;&#x51FA;&#x805A;&#x96C6;&#x7684;&#x8D8B;&#x52BF;&#xFF1B;</span>
+az &lt;- c(<span class="hljs-string">&quot;BIO10&quot;</span>,<span class="hljs-string">&quot;BIO11&quot;</span>,<span class="hljs-string">&quot;BIO12&quot;</span>)
+azs &lt;- paste0(<span class="hljs-string">&quot;./f2_envs/&quot;</span> ,az,<span class="hljs-string">&quot;.tif&quot;</span>)
+envg&lt;- stack(azs) 
+ass &lt;- raster::extract(envg,oc) %&gt;% na.omit()
+ass &lt;- zero_1(ass)[,<span class="hljs-number">4</span>:<span class="hljs-number">6</span>]
+names(ass) &lt;- c(<span class="hljs-string">&quot;BIO10&quot;</span>,<span class="hljs-string">&quot;BIO11&quot;</span>,<span class="hljs-string">&quot;BIO12&quot;</span>)
+threeDPpp &lt;- pp3(ass$BIO10, ass$BIO11, ass$BIO12, box3(c(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>)))
+plot(threeDPpp)
+threeDPppKest &lt;- K3est(threeDPpp)
+plot(threeDPppKest, . -r ~ r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+plot(threeDPppKest,  main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+<span class="hljs-comment">## &#x4F7F;&#x7528;&#x5BC6;&#x5EA6;&#x4F30;&#x8BA1;&#x6765;&#x8BC4;&#x4F30;&#x5EFA;&#x6A21;&#x53D8;&#x91CF;&#x7684;&#x5F3A;&#x5EA6;&#xFF1A;</span>
+<span class="hljs-comment"># &#x65B9;&#x6CD5;1&#xFF1A;</span>
+Q &lt;- quadratcount(ocp.km, nx= <span class="hljs-number">10</span>, ny=<span class="hljs-number">10</span>)
+plot(ocp.km, pch=<span class="hljs-number">20</span>, cols=<span class="hljs-string">&quot;grey70&quot;</span>, main=<span class="hljs-literal">NULL</span>)  <span class="hljs-comment"># Plot points</span>
+plot(Q, add=<span class="hljs-literal">TRUE</span>)  <span class="hljs-comment"># Add quadrat grid</span>
+<span class="hljs-comment"># &#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x5206;&#x5E03;&#x5757;&#x7684;&#x5BC6;&#x5EA6;&#xFF1A;</span>
+Q.d &lt;- intensity(Q)
+<span class="hljs-comment"># Plot the density</span>
+plot(intensity(Q, image=<span class="hljs-literal">TRUE</span>), main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)  <span class="hljs-comment"># Plot density raster</span>
+plot(ocp.km, pch=<span class="hljs-number">20</span>, cex=<span class="hljs-number">0.6</span>, col=rgb(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">.5</span>), add=<span class="hljs-literal">TRUE</span>)  <span class="hljs-comment"># Add points</span>
+
+<span class="hljs-comment">## &#x65B9;&#x6CD5;2&#xFF1A;</span>
+
+X&lt;-ocp.km
+plot(X)
+plot(density(X, <span class="hljs-number">10</span>)) <span class="hljs-comment">## &#x6784;&#x5EFA;&#x7684;&#x6570;&#x5B57;&#x5F71;&#x54CD;&#x5F3A;&#x5EA6;&#xFF1A;</span>
+contour(density(X,<span class="hljs-number">10</span>), axes=<span class="hljs-literal">FALSE</span>)
+<span class="hljs-comment">## &#x7ED3;&#x5408;&#x5730;&#x7406;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#x6765;&#x8003;&#x8651;&#x534F;&#x53D8;&#x91CF;&#x5BF9;&#x5206;&#x5E03;&#x7684;&#x5F71;&#x54CD;&#x548C;&#x9650;&#x5236;</span>
+<span class="hljs-comment"># &#x8FD9;&#x79CD;&#x5206;&#x6790;&#x4E5F;&#x662F;&#x5EFA;&#x7ACB;&#x5728;&#x70B9;&#x7684;&#x5BC6;&#x5EA6;&#x6982;&#x7387;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#xFF1B;</span>
+
+<span class="hljs-comment">## &#x5BF9;&#x5761;&#x5EA6;&#x8FDB;&#x884C;&#x5206;&#x7EC4;&#xFF0C;&#x5206;&#x7EC4;&#x540E;&#x7528;&#x4E8E;quadratcount&#x7684;&#x6620;&#x5C04;&#xFF1B;</span>
+
+
+pzbio10 &lt;- raster_utm(oc,envg$BIO10)
+pzbio10 &lt;- as.im(pzbio10) 
+hist(pzbio10 , main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+pzbio10.km &lt;- rescale(pzbio10, <span class="hljs-number">1000</span>, <span class="hljs-string">&quot;km&quot;</span>)
+
+pzbio11 &lt;- raster_utm(oc,envg$BIO11)
+pzbio11 &lt;- as.im(pzbio11) 
+hist(pzbio11 , main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+pzbio11.km &lt;- rescale(pzbio11, <span class="hljs-number">1000</span>, <span class="hljs-string">&quot;km&quot;</span>) 
+
+pzbio12 &lt;- raster_utm(oc,envg$BIO12)
+pzbio12 &lt;- as.im(pzbio12) %&gt;% log()
+hist(pzbio12 , main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+pzbio12.km &lt;- rescale(pzbio12, <span class="hljs-number">1000</span>, <span class="hljs-string">&quot;km&quot;</span>) 
+
+b &lt;- quantile(pzbio10.km, probs = (<span class="hljs-number">0</span>:<span class="hljs-number">4</span>)/<span class="hljs-number">4</span>) %&gt;% round(<span class="hljs-number">3</span>)
+Zcut &lt;- cut(pzbio10.km, breaks = b)
+V &lt;- tess(image = Zcut) 
+plot(V)
+plot(ocp.km, add = <span class="hljs-literal">TRUE</span>, pch = <span class="hljs-string">&quot;+&quot;</span>)
+<span class="hljs-comment">## &#x57FA;&#x4E8E;&#x5206;&#x7EC4;</span>
+qb &lt;- quadratcount(ocp.km, tess = V)
+plot(qb)
+<span class="hljs-comment">## &#x53EF;&#x89C6;&#x5316;&#x70B9;&#x5BC6;&#x5EA6;&#x548C;&#x534F;&#x53D8;&#x91CF;&#x4E4B;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF1A;</span>
+plot(rhohat(ocp.km, pzbio10.km,method=<span class="hljs-string">&quot;ratio&quot;</span>))
+bio10th0 &lt;- rhohat(ocp.km, pzbio12.km)
+<span class="hljs-comment">## &#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x5199;&#x6CD5;&#x63A2;&#x7D22;&#x591A;&#x79CD;&#x53D8;&#x91CF;&#x7684;&#x7A7A;&#x95F4;&#x5206;&#x5E03;&#x7279;&#x5F81;&#xFF1A;</span>
+<span class="hljs-comment">## &#x5355;&#x7EF4;&#xFF1A;</span>
+plot(ocp.km)
+H &lt;- hyperframe(points=list(ocp.km,ocp.km,ocp.km),
+                Image=list(pzbio10.km,pzbio11.km,pzbio12.km)
+                )
+
+rhos &lt;- with(H, rhohat(points, Image))
+plot(rhos)
+plot(oc)
+map(add =<span class="hljs-literal">T</span>)
+
+<span class="hljs-comment">### &#x5317;&#x7F8E;&#x6D32; ####</span>
+nav &lt;- raster::extract(envg,na) %&gt;% cbind(na) %&gt;% na.omit()
+na &lt;- nav[,<span class="hljs-number">4</span>:<span class="hljs-number">5</span>] %&gt;% data.frame()
+
+
+nap &lt;- ppp_spatstat(na)
+nap.km &lt;- rescale(nap, <span class="hljs-number">1000</span>, <span class="hljs-string">&quot;km&quot;</span>)
+
+<span class="hljs-comment"># &#x8BC4;&#x4F30;&#x6570;&#x636E;&#x7684;L&#x6A21;&#x578B;&#x548C;G&#x6A21;&#x578B;&#xFF1A;</span>
+L &lt;- Lest(nap.km)
+plot(L, las=<span class="hljs-number">1</span>, legendargs=list(cex=<span class="hljs-number">0.8</span>, xpd=<span class="hljs-literal">TRUE</span>, inset=c(<span class="hljs-number">1.01</span>, <span class="hljs-number">0</span>) ))
+<span class="hljs-comment">## &#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x66F4;&#x6E05;&#x6670;&#x7684;&#x89E3;&#x8BFB;&#x6570;&#x636E;&#x7684;&#x5206;&#x5E03;&#x89C4;&#x5F8B;&#xFF1A;</span>
+plot(L, . -r ~ r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>, legendargs=list(cex=<span class="hljs-number">0.6</span>, xpd=<span class="hljs-literal">TRUE</span>, inset=c(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>) ))
+plot(L, . -r ~ r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+
+<span class="hljs-comment">## &#x4F7F;&#x7528;&#x77EB;&#x6B63;&#x7684;L-hat&#x6765;&#x5E73;&#x8861;&#x975E;&#x7A33;&#x6001;&#xFF1A;</span>
+<span class="hljs-keyword">library</span>(spatstat)
+plot(envelope(nap.km, Linhom, correction = <span class="hljs-string">&quot;Ripley&quot;</span>, verbose = <span class="hljs-literal">T</span>), 
+     . - r ~ r, main = <span class="hljs-string">&quot;Sigma 0.75&quot;</span>)
+lhat &lt;- Linhom(nap.km, correction=<span class="hljs-string">&quot;Ripley&quot;</span>)
+plot(lhat, . -r ~ r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>,xlim = c(<span class="hljs-number">0</span>, <span class="hljs-number">300</span>))
+
+<span class="hljs-comment">## G&#x8BC4;&#x4F30;&#x540C;&#x6837;&#x4E0D;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x4E0E;&#x8DDD;&#x79BB;&#xFF1A;&#x7528;&#x8FD9;&#x4E2A;&#x53EF;&#x80FD;&#x66F4;&#x79D1;&#x5B66;&#x4E00;&#x4E9B;&#xFF1B;</span>
+g  &lt;- pcf(nap.km)
+plot(g, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>, legendargs=list(cex=<span class="hljs-number">0.8</span>, xpd=<span class="hljs-literal">TRUE</span>, inset=c(<span class="hljs-number">0.3</span>, <span class="hljs-number">0.1</span>) ))
+plot(g, . -r ~ r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>,xlim = c(<span class="hljs-number">0</span>, <span class="hljs-number">50</span>), 
+     legendargs=list(cex=<span class="hljs-number">0.8</span>, xpd=<span class="hljs-literal">TRUE</span>, inset=c(<span class="hljs-number">0.3</span>, <span class="hljs-number">0.1</span>) ))
+
+<span class="hljs-comment">## &#x8861;&#x91CF;&#x53D8;&#x91CF;&#x5728;&#x4E09;&#x7EF4;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x805A;&#x96C6;&#x7A0B;&#x5EA6;&#xFF1A;</span>
+<span class="hljs-comment">## &#x8FD9;&#x6837;&#x505A;&#x6709;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#x5417;&#xFF1F;</span>
+<span class="hljs-comment"># &#x5C06;&#x6570;&#x636E;0-1&#x5316;&#x4E4B;&#x540E;&#x7528;&#x4E8E;&#x8BC4;&#x4F30;&#xFF1B;</span>
+<span class="hljs-comment"># &#x8FD9;&#x4E2A;&#x7ED3;&#x679C;&#x6709;&#x70B9;&#x96BE;&#x4EE5;&#x89E3;&#x91CA;&#xFF1B;&#x5728;&#x8F83;&#x5C0F;&#x7684;&#x5C3A;&#x5EA6;&#x4E0A;&#x8868;&#x73B0;&#x51FA;&#x968F;&#x673A;&#x5206;&#x5E03;&#x7684;&#x8D8B;&#x52BF;&#xFF0C;</span>
+<span class="hljs-comment"># &#x800C;&#x5728;&#x8F83;&#x5927;&#x5C3A;&#x5EA6;&#x4E0A;&#x5C55;&#x793A;&#x51FA;&#x805A;&#x96C6;&#x7684;&#x8D8B;&#x52BF;&#xFF1B;</span>
+az &lt;- c(<span class="hljs-string">&quot;BIO10&quot;</span>,<span class="hljs-string">&quot;BIO11&quot;</span>,<span class="hljs-string">&quot;BIO12&quot;</span>)
+azs &lt;- paste0(<span class="hljs-string">&quot;./f2_envs/&quot;</span> ,az,<span class="hljs-string">&quot;.tif&quot;</span>)
+envg&lt;- stack(azs) 
+ass &lt;- raster::extract(envg,na) %&gt;% na.omit()
+ass &lt;- zero_1(ass)[,<span class="hljs-number">4</span>:<span class="hljs-number">6</span>]
+names(ass) &lt;- c(<span class="hljs-string">&quot;BIO10&quot;</span>,<span class="hljs-string">&quot;BIO11&quot;</span>,<span class="hljs-string">&quot;BIO12&quot;</span>)
+threeDPpp &lt;- pp3(ass$BIO10, ass$BIO11, ass$BIO12, box3(c(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>)))
+plot3d(ass)
+threeDPppKest &lt;- K3est(threeDPpp)
+plot(threeDPppKest, . -r ~ r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+
+<span class="hljs-comment">## &#x4F7F;&#x7528;&#x5BC6;&#x5EA6;&#x4F30;&#x8BA1;&#x6765;&#x8BC4;&#x4F30;&#x5EFA;&#x6A21;&#x53D8;&#x91CF;&#x7684;&#x5F3A;&#x5EA6;&#xFF1A;</span>
+<span class="hljs-comment"># &#x65B9;&#x6CD5;1&#xFF1A;</span>
+Q &lt;- quadratcount(nap.km, nx= <span class="hljs-number">10</span>, ny=<span class="hljs-number">10</span>)
+plot(nap.km, pch=<span class="hljs-number">20</span>, cols=<span class="hljs-string">&quot;grey70&quot;</span>, main=<span class="hljs-literal">NULL</span>)  <span class="hljs-comment"># Plot points</span>
+plot(Q, add=<span class="hljs-literal">TRUE</span>)  <span class="hljs-comment"># Add quadrat grid</span>
+<span class="hljs-comment"># &#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x5206;&#x5E03;&#x5757;&#x7684;&#x5BC6;&#x5EA6;&#xFF1A;</span>
+Q.d &lt;- intensity(Q)
+<span class="hljs-comment"># Plot the density</span>
+plot(intensity(Q, image=<span class="hljs-literal">TRUE</span>), main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)  <span class="hljs-comment"># Plot density raster</span>
+plot(nap.km, pch=<span class="hljs-number">20</span>, cex=<span class="hljs-number">0.6</span>, col=rgb(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">.5</span>), add=<span class="hljs-literal">TRUE</span>)  <span class="hljs-comment"># Add points</span>
+
+<span class="hljs-comment">## &#x65B9;&#x6CD5;2&#xFF1A;</span>
+
+X&lt;-nap.km
+plot(X)
+plot(density(X, <span class="hljs-number">10</span>)) <span class="hljs-comment">## &#x6784;&#x5EFA;&#x7684;&#x6570;&#x5B57;&#x5F71;&#x54CD;&#x5F3A;&#x5EA6;&#xFF1A;</span>
+contour(density(X,<span class="hljs-number">10</span>), axes=<span class="hljs-literal">FALSE</span>)
+<span class="hljs-comment">## &#x7ED3;&#x5408;&#x5730;&#x7406;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#x6765;&#x8003;&#x8651;&#x534F;&#x53D8;&#x91CF;&#x5BF9;&#x5206;&#x5E03;&#x7684;&#x5F71;&#x54CD;&#x548C;&#x9650;&#x5236;</span>
+<span class="hljs-comment"># &#x8FD9;&#x79CD;&#x5206;&#x6790;&#x4E5F;&#x662F;&#x5EFA;&#x7ACB;&#x5728;&#x70B9;&#x7684;&#x5BC6;&#x5EA6;&#x6982;&#x7387;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#xFF1B;</span>
+
+<span class="hljs-comment">## &#x5BF9;&#x5761;&#x5EA6;&#x8FDB;&#x884C;&#x5206;&#x7EC4;&#xFF0C;&#x5206;&#x7EC4;&#x540E;&#x7528;&#x4E8E;quadratcount&#x7684;&#x6620;&#x5C04;&#xFF1B;</span>
+
+
+pzbio10 &lt;- raster_utm(na,envg$BIO10)
+pzbio10 &lt;- as.im(pzbio10)
+hist(pzbio10 , main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+pzbio10.km &lt;- rescale(pzbio10, <span class="hljs-number">1000</span>, <span class="hljs-string">&quot;km&quot;</span>)
+
+pzbio11 &lt;- raster_utm(na,envg$BIO11)
+pzbio11 &lt;- as.im(pzbio11) 
+hist(pzbio11 , main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+pzbio11.km &lt;- rescale(pzbio11, <span class="hljs-number">1000</span>, <span class="hljs-string">&quot;km&quot;</span>) 
+
+pzbio12 &lt;- raster_utm(na,envg$BIO12)
+pzbio12 &lt;- as.im(pzbio12) 
+plot(pzbio12)
+hist(pzbio12 , main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+pzbio12.km &lt;- rescale(pzbio12, <span class="hljs-number">1000</span>, <span class="hljs-string">&quot;km&quot;</span>) 
+
+b &lt;- quantile(pzbio10.km, probs = (<span class="hljs-number">0</span>:<span class="hljs-number">4</span>)/<span class="hljs-number">4</span>) %&gt;% round(<span class="hljs-number">3</span>)
+Zcut &lt;- cut(pzbio10.km, breaks = b)
+V &lt;- tess(image = Zcut) 
+plot(V)
+plot(nap.km, add = <span class="hljs-literal">TRUE</span>, pch = <span class="hljs-string">&quot;+&quot;</span>)
+<span class="hljs-comment">## &#x57FA;&#x4E8E;&#x5206;&#x7EC4;</span>
+qb &lt;- quadratcount(nap.km, tess = V)
+plot(qb)
+<span class="hljs-comment">## &#x53EF;&#x89C6;&#x5316;&#x70B9;&#x5BC6;&#x5EA6;&#x548C;&#x534F;&#x53D8;&#x91CF;&#x4E4B;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF1A;</span>
+plot(rhohat(nap.km, pzbio10.km,method=<span class="hljs-string">&quot;ratio&quot;</span>))
+bio10th0 &lt;- rhohat(nap.km, pzbio10.km)
+<span class="hljs-comment">## &#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x5199;&#x6CD5;&#x63A2;&#x7D22;&#x591A;&#x79CD;&#x53D8;&#x91CF;&#x7684;&#x7A7A;&#x95F4;&#x5206;&#x5E03;&#x7279;&#x5F81;&#xFF1A;</span>
+<span class="hljs-comment">## &#x5355;&#x7EF4;&#xFF1A;</span>
+H &lt;- hyperframe(points=list(nap.km,nap.km,nap.km),
+                Image=list(pzbio10.km,pzbio11.km,pzbio12.km)
+                )
+
+rhos &lt;- with(H, rhohat(points, Image))
+plot(rhos)
+
+
+
+asv &lt;- raster::extract(envg,as) %&gt;% cbind(as) %&gt;% na.omit()
+
+sav &lt;- raster::extract(envg,sa) %&gt;% cbind(sa) %&gt;% na.omit()
+
+ocv &lt;- raster::extract(envg,oc) %&gt;% cbind(oc) %&gt;% na.omit()
+
+nav &lt;- raster::extract(envg,na) %&gt;% cbind(na) %&gt;% na.omit()
+write.csv(sav,<span class="hljs-string">&quot;C:/Users/admin/Desktop/sav.csv&quot;</span>)
+</code></pre>
+<h3 id="&#x70B9;&#x7EDF;&#x8BA1;&#x7684;&#x4E00;&#x822C;&#x5206;&#x6790;&#x6E90;&#x7801;">&#x70B9;&#x7EDF;&#x8BA1;&#x7684;&#x4E00;&#x822C;&#x5206;&#x6790;&#x6E90;&#x7801;</h3>
+<pre><code class="lang-R"><span class="hljs-comment"># &#x70B9;&#x6A21;&#x5F0F;&#x5206;&#x6790;&#x7684;&#x6700;&#x7EC8;&#x7248;&#xFF1A;</span>
+<span class="hljs-comment"># &#x6982;&#x5FF5;&#x4ECB;&#x7ECD;&#xFF1A;</span>
+<span class="hljs-comment"># &#x7A7A;&#x95F4;&#x5206;&#x6790;&#x5206;&#x4E3A;&#x4E00;&#x9636;&#x548C;&#x4E8C;&#x9636;&#xFF1A;</span>
+<span class="hljs-comment"># &#x4E00;&#x9636;&#x5206;&#x6790;&#x53EF;&#x80FD;&#x4F1A;&#x63A9;&#x76D6;&#x5C40;&#x57DF;&#x7A7A;&#x95F4;&#x81EA;&#x76F8;&#x5173;&#xFF1B;</span>
+<span class="hljs-comment"># &#x4F7F;&#x7528;&#x4E00;&#x9636;&#x5206;&#x6790;&#x662F;&#x5224;&#x65AD;CSR&#x7684;&#x6700;&#x8FD1;&#x90BB;&#x662F;&#x5426;&#x4E0E;&#x5B9E;&#x9645;&#x5730;&#x7406;&#x5206;&#x5E03;&#x5177;&#x6709;&#x4E00;&#x81F4;&#x6027;&#xFF1A;</span>
+<span class="hljs-comment"># &#x4E8C;&#x9636;&#x5206;&#x6790;&#xFF0C;&#x57FA;&#x4E8E;&#x6700;&#x8FD1;&#x90BB;buffer&#xFF0C;&#x8BC4;&#x4F30;&#x5728;&#x4E0D;&#x540C;&#x8DDD;&#x79BB;&#x5C3A;&#x5EA6;&#x4E0A;&#x7684;&#x7A7A;&#x95F4;&#x76F8;&#x5173;&#x6027;&#x6216;&#x8005;&#x8BF4;&#x805A;&#x96C6;&#x7A0B;&#x5EA6;&#xFF1B;</span>
+<span class="hljs-keyword">library</span>(spatstat)
+load(url(<span class="hljs-string">&quot;http://github.com/mgimond/Spatial/raw/master/Data/ppa.RData&quot;</span>))
+marks(starbucks)  &lt;- <span class="hljs-literal">NULL</span>
+Window(starbucks) &lt;- ma
+plot(starbucks, main=<span class="hljs-literal">NULL</span>, cols=rgb(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">.2</span>), pch=<span class="hljs-number">20</span>)
+
+
+<span class="hljs-comment"># &#x70B9;&#x5BC6;&#x5EA6;&#x7684;&#x5206;&#x6790;&#x7684;&#x4E00;&#x9636;&#x6A21;&#x5F0F;&#xFF0C;&#x4E0D;&#x4EC5;&#x662F;&#x5224;&#x65AD;&#x70B9;&#x7684;&#x5206;&#x5E03;&#x683C;&#x5C40;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x57FA;&#x4E8E;&#x5BC6;&#x5EA6;&#x521B;&#x5EFA;&#x5BC6;&#x5EA6;&#x5F3A;&#x5EA6;&#x6805;&#x683C;&#xFF1B;</span>
+<span class="hljs-comment"># &#x4F7F;&#x7528;quadratcount&#x6784;&#x5EFA;&#x5BC6;&#x5EA6;&#x5206;&#x7C7B;&#x6805;&#x683C;&#xFF1A;</span>
+Q &lt;- quadratcount(starbucks, nx= <span class="hljs-number">6</span>, ny=<span class="hljs-number">3</span>)
+plot(starbucks, pch=<span class="hljs-number">20</span>, cols=<span class="hljs-string">&quot;grey70&quot;</span>, main=<span class="hljs-literal">NULL</span>)  <span class="hljs-comment"># Plot points</span>
+plot(Q, add=<span class="hljs-literal">TRUE</span>)  <span class="hljs-comment"># Add quadrat grid</span>
+<span class="hljs-comment"># &#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x5206;&#x5E03;&#x5757;&#x7684;&#x5BC6;&#x5EA6;&#xFF1A;</span>
+Q.d &lt;- intensity(Q)
+<span class="hljs-comment"># Plot the density</span>
+plot(intensity(Q, image=<span class="hljs-literal">TRUE</span>), main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)  <span class="hljs-comment"># Plot density raster</span>
+plot(starbucks, pch=<span class="hljs-number">20</span>, cex=<span class="hljs-number">0.6</span>, col=rgb(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">.5</span>), add=<span class="hljs-literal">TRUE</span>)  <span class="hljs-comment"># Add points</span>
+
+<span class="hljs-comment"># &#x4F7F;&#x7528;raster&#x6784;&#x5EFA;&#x6805;&#x683C;&#x5757;&#xFF1A;</span>
+<span class="hljs-keyword">library</span>(rspatial)
+city &lt;- sp_data(<span class="hljs-string">&apos;city&apos;</span>)
+crime &lt;- sp_data(<span class="hljs-string">&apos;crime&apos;</span>)
+<span class="hljs-comment">## &#x70B9;&#x8F6C;&#x5BC6;&#x5EA6;&#x6805;&#x683C;&#xFF1A;</span>
+r &lt;- raster(city)
+res(r) &lt;- <span class="hljs-number">1000</span>
+plot(r)
+quads &lt;- as(r, <span class="hljs-string">&apos;SpatialPolygons&apos;</span>)
+plot(quads, add=<span class="hljs-literal">TRUE</span>)
+points(crime, col=<span class="hljs-string">&apos;red&apos;</span>, cex=<span class="hljs-number">.5</span>)
+nc &lt;- rasterize(coordinates(crime), r, fun=<span class="hljs-string">&apos;count&apos;</span>, background=<span class="hljs-number">0</span>)
+plot(nc)
+plot(city, add=<span class="hljs-literal">TRUE</span>)
+<span class="hljs-comment">## &#x7EDF;&#x8BA1;&#x9891;&#x7387;&#xFF1A;</span>
+f &lt;- freq(ncrimes, useNA=<span class="hljs-string">&apos;no&apos;</span>)
+plot(f, pch=<span class="hljs-number">20</span>)
+
+
+<span class="hljs-comment">## &#x5C06;&#x70B9;&#x5206;&#x5E03;&#x8FDB;&#x884C;&#x5BC6;&#x5EA6;&#x53EF;&#x89C6;&#x5316;&#xFF1A;</span>
+<span class="hljs-comment">## &#x53C2;&#x8003;&#x81EA;&#xFF1A;</span>
+<span class="hljs-comment"># https://www.r-bloggers.com/2015/09/spatstat-an-introduction-and-measurements-with-bio7/</span>
+
+data(swedishpines)
+X&lt;-swedishpines
+plot(X)
+plot(density(swedishpines, <span class="hljs-number">10</span>)) <span class="hljs-comment">## &#x6784;&#x5EFA;&#x7684;&#x6570;&#x5B57;&#x5F71;&#x54CD;&#x5F3A;&#x5EA6;&#xFF1A;</span>
+contour(density(X,<span class="hljs-number">10</span>), axes=<span class="hljs-literal">FALSE</span>)
+<span class="hljs-comment">## &#x7ED3;&#x5408;&#x5730;&#x7406;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#x6765;&#x8003;&#x8651;&#x534F;&#x53D8;&#x91CF;&#x5BF9;&#x5206;&#x5E03;&#x7684;&#x5F71;&#x54CD;&#x548C;&#x9650;&#x5236;</span>
+<span class="hljs-comment"># &#x8FD9;&#x79CD;&#x5206;&#x6790;&#x4E5F;&#x662F;&#x5EFA;&#x7ACB;&#x5728;&#x70B9;&#x7684;&#x5BC6;&#x5EA6;&#x6982;&#x7387;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#xFF1B;</span>
+data(bei)
+slope &lt;- bei.extra$grad
+par(mfrow = c(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>))
+plot(bei)
+plot(bei)
+<span class="hljs-comment">## &#x5BF9;&#x5761;&#x5EA6;&#x8FDB;&#x884C;&#x5206;&#x7EC4;&#xFF0C;&#x5206;&#x7EC4;&#x540E;&#x7528;&#x4E8E;quadratcount&#x7684;&#x6620;&#x5C04;&#xFF1B;</span>
+data(bei)
+Z &lt;- bei.extra$grad
+b &lt;- quantile(Z, probs = (<span class="hljs-number">0</span>:<span class="hljs-number">4</span>)/<span class="hljs-number">4</span>)
+Zcut &lt;- cut(Z, breaks = b, labels = <span class="hljs-number">1</span>:<span class="hljs-number">4</span>)
+V &lt;- tess(image = Zcut) 
+plot(V)
+plot(bei, add = <span class="hljs-literal">TRUE</span>, pch = <span class="hljs-string">&quot;+&quot;</span>)
+<span class="hljs-comment">## &#x57FA;&#x4E8E;&#x5206;&#x7EC4;&#x7684;</span>
+qb &lt;- quadratcount(bei, tess = V)
+plot(qb)
+<span class="hljs-comment">## &#x53EF;&#x89C6;&#x5316;&#x70B9;&#x5BC6;&#x5EA6;&#x548C;&#x534F;&#x53D8;&#x91CF;&#x4E4B;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF1A;</span>
+plot(rhohat(bei, slope))
+
+
+<span class="hljs-comment">## &#x6570;&#x636E;&#x7F29;&#x653E;&#xFF0C;&#x5728;&#x5927;&#x5C3A;&#x5EA6;&#x4E0A;&#xFF0C;&#x4E00;&#x822C;&#x9700;&#x8981;&#x4EE5;km&#x4F5C;&#x4E3A;&#x5355;&#x4F4D;&#xFF1A;</span>
+starbucks.km &lt;- rescale(starbucks, <span class="hljs-number">1000</span>, <span class="hljs-string">&quot;km&quot;</span>)
+ma.km &lt;- rescale(ma, <span class="hljs-number">1000</span>, <span class="hljs-string">&quot;km&quot;</span>)
+pop.km    &lt;- rescale(pop, <span class="hljs-number">1000</span>, <span class="hljs-string">&quot;km&quot;</span>)
+pop.lg.km &lt;- rescale(pop.lg, <span class="hljs-number">1000</span>, <span class="hljs-string">&quot;km&quot;</span>)
+
+<span class="hljs-comment">## &#x53EF;&#x4EE5;&#x8003;&#x8651;&#x6839;&#x636E;&#x534F;&#x53D8;&#x91CF;&#x6765;&#x5206;&#x7EC4;&#x70B9;&#x6A21;&#x5F0F;&#x7684;&#x5BC6;&#x5EA6;&#xFF1A;</span>
+brk  &lt;- c( -<span class="hljs-literal">Inf</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span> , <span class="hljs-literal">Inf</span>)  <span class="hljs-comment"># Define the breaks</span>
+Zcut &lt;- cut(pop.lg.km, breaks=brk, labels=<span class="hljs-number">1</span>:<span class="hljs-number">4</span>)  <span class="hljs-comment"># Classify the raster</span>
+E    &lt;- tess(image=Zcut)  <span class="hljs-comment"># Create a tesselated surface</span>
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x534F;&#x53D8;&#x91CF;&#x7684;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#xFF1A;</span>
+plot(E, main=<span class="hljs-string">&quot;&quot;</span>, las=<span class="hljs-number">1</span>)
+<span class="hljs-comment">## &#x6839;&#x636E;&#x534F;&#x53D8;&#x91CF;&#x91CD;&#x65B0;&#x6620;&#x5C04;&#x5206;&#x7EC4;&#x53D8;&#x91CF;&#xFF1A;</span>
+Q   &lt;- quadratcount(starbucks.km, tess = E)  <span class="hljs-comment"># Tally counts</span>
+<span class="hljs-comment">## &#x6839;&#x636E;&#x534F;&#x53D8;&#x91CF;&#x7684;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#xFF0C;&#x91CD;&#x65B0;&#x7ED8;&#x5236;&#xFF1A;</span>
+plot(intensity(Q, image=<span class="hljs-literal">TRUE</span>), las=<span class="hljs-number">1</span>, main=<span class="hljs-literal">NULL</span>)
+plot(starbucks.km, pch=<span class="hljs-number">20</span>, cex=<span class="hljs-number">0.6</span>, col=rgb(<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">.5</span>), add=<span class="hljs-literal">TRUE</span>)
+<span class="hljs-comment">## &#x4FEE;&#x6539;&#x914D;&#x8272;&#x65B9;&#x6848;&#xFF1A;</span>
+cl &lt;-  interp.colours(c(<span class="hljs-string">&quot;lightyellow&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span> ,<span class="hljs-string">&quot;red&quot;</span>), E$n)
+plot( intensity(Q, image=<span class="hljs-literal">TRUE</span>), las=<span class="hljs-number">1</span>, col=cl, main=<span class="hljs-literal">NULL</span>)
+plot(starbucks.km, pch=<span class="hljs-number">20</span>, cex=<span class="hljs-number">0.6</span>, col=rgb(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">.5</span>), add=<span class="hljs-literal">TRUE</span>)
+
+<span class="hljs-comment">## &#x57FA;&#x4E8E;&#x5BC6;&#x5EA6;&#x51FD;&#x6570;&#x6765;&#x523B;&#x753B;&#x6570;&#x636E;&#x5206;&#x5E03;&#x5173;&#x7CFB;&#xFF1B;</span>
+<span class="hljs-comment"># &#x4F7F;&#x7528;50 km&#x5E26;&#x5BBD;&#xFF08;sigma = 50&#xFF09;&#xFF0C; &#x8FD9;&#x91CC;&#x662F;50km&#xFF1B;</span>
+K2 &lt;- density(starbucks.km, sigma=<span class="hljs-number">50</span>) <span class="hljs-comment"># Using a 50km bandwidth</span>
+plot(K2, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+contour(K2, add=<span class="hljs-literal">TRUE</span>)
+
+
+<span class="hljs-comment">## &#x6839;&#x636E;&#x534F;&#x53D8;&#x91CF;&#x7684;&#x5206;&#x5E03;&#x6765;&#x8BC4;&#x4F30;&#x5BC6;&#x5EA6;&#x5F3A;&#x5EA6;&#x548C;&#x534F;&#x53D8;&#x91CF;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#xFF1A;</span>
+<span class="hljs-comment"># &#x8FD9;&#x4E2A;&#x5F88;&#x6709;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x8BC4;&#x4F30;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E0E;&#x5206;&#x5E03;&#x6570;&#x636E;&#x5F3A;&#x5EA6;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF1A;</span>
+<span class="hljs-comment"># Compute rho using the ratio method</span>
+rho &lt;- rhohat(starbucks.km, pop.lg.km,  method=<span class="hljs-string">&quot;ratio&quot;</span>)
+<span class="hljs-comment"># Generate rho vs covariate plot</span>
+plot(rho, las=<span class="hljs-number">1</span>, main=<span class="hljs-literal">NULL</span>, legendargs=list(cex=<span class="hljs-number">0.8</span>, xpd=<span class="hljs-literal">TRUE</span>, inset=c(<span class="hljs-number">1.01</span>, <span class="hljs-number">0</span>)))
+<span class="hljs-comment">## &#x5982;&#x679C;&#x534F;&#x53D8;&#x91CF;&#x662F;&#x552F;&#x4E00;&#x4E3B;&#x5BFC;&#x56E0;&#x7D20;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x57FA;&#x4E8E;&#x534F;&#x53D8;&#x91CF;&#x5EFA;&#x6A21;&#x9884;&#x6D4B;&#x54CD;&#x5E94;&#x5BC6;&#x5EA6;&#xFF1A;</span>
+pred &lt;- predict(rho)
+cl   &lt;- interp.colours(c(<span class="hljs-string">&quot;lightyellow&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span> ,<span class="hljs-string">&quot;red&quot;</span>), <span class="hljs-number">100</span>) <span class="hljs-comment"># Create color scheme</span>
+plot(pred, col=cl, las=<span class="hljs-number">1</span>, main=<span class="hljs-literal">NULL</span>, gamma = <span class="hljs-number">0.25</span>)
+
+<span class="hljs-comment">## &#x8FD8;&#x53EF;&#x4EE5;&#x8865;&#x505A;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x8BC4;&#x4F30;&#x9884;&#x6D4B;&#x54CD;&#x5E94;&#x53D8;&#x91CF;&#x4E0E;&#x5B9E;&#x9645;&#x89C2;&#x6D4B;&#x5F3A;&#x5EA6;&#x5BC6;&#x5EA6;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#xFF1A;</span>
+pred &lt;- predict(rho)
+cl   &lt;- interp.colours(c(<span class="hljs-string">&quot;lightyellow&quot;</span>, <span class="hljs-string">&quot;orange&quot;</span> ,<span class="hljs-string">&quot;red&quot;</span>), <span class="hljs-number">100</span>) <span class="hljs-comment"># Create color scheme</span>
+plot(pred, col=cl, las=<span class="hljs-number">1</span>, main=<span class="hljs-literal">NULL</span>, gamma = <span class="hljs-number">0.25</span>)
+
+<span class="hljs-comment">## &#x8FD8;&#x53EF;&#x4EE5;&#x57FA;&#x4E8E;&#x6CCA;&#x677E;&#x5206;&#x5E03;&#xFF0C;&#x6784;&#x5EFA;&#x534F;&#x53D8;&#x91CF;&#x5BF9;&#x5E94;&#x5173;&#x7CFB;&#xFF1A;</span>
+<span class="hljs-comment"># Create the Poisson point process model</span>
+PPM1 &lt;- ppm(starbucks.km ~ pop.lg.km)
+<span class="hljs-comment"># Plot the relationship</span>
+plot(effectfun(PPM1, <span class="hljs-string">&quot;pop.lg.km&quot;</span>, se.fit=<span class="hljs-literal">TRUE</span>), main=<span class="hljs-literal">NULL</span>, 
+     las=<span class="hljs-number">1</span>, legendargs=list(cex=<span class="hljs-number">0.8</span>, xpd=<span class="hljs-literal">TRUE</span>, inset=c(<span class="hljs-number">1.01</span>, <span class="hljs-number">0</span>) ))
+PPM1
+<span class="hljs-comment">## &#x7A7A;&#x95F4;&#x534F;&#x53D8;&#x91CF;&#x4F7F;&#x7528;&#x7684;&#x5199;&#x6CD5;&#xFF1B;</span>
+lng.ppm02 &lt;- ppm(rcas.ppp, ~ offset(log(rpop)) + rinc + rroad, covariates = list(rpop = rpop.den, rroad = rcrroad.im, rinc = rcrinc.im))
+
+
+
+<span class="hljs-comment">## &#x57FA;&#x4E8E;&#x8DDD;&#x79BB;&#x8BC4;&#x4F30;&#x70B9;&#x7684;&#x7A7A;&#x95F4;&#x683C;&#x5C40;&#xFF1A;</span>
+<span class="hljs-comment"># &#x4E00;&#x9636;&#x6A21;&#x5F0F;&#xFF1A;&#x6784;&#x5EFA;&#x89C2;&#x6D4B;&#x70B9;&#x95F4;&#x8DDD;&#x79BB;&#xFF0C;&#x7136;&#x540E;&#x6784;&#x5EFA;CSR&#xFF1A;</span>
+ann.p &lt;- mean(nndist(starbucks.km, k=<span class="hljs-number">1</span>))
+
+<span class="hljs-comment"># &#x7EDF;&#x8BA1;&#x6700;&#x8FD1;&#x90BB;&#x7684;&#x5206;&#x5E03;&#x683C;&#x5C40;&#xFF1A;&#x8FD9;&#x4E2A;&#x6709;&#x5927;&#x7528;&#xFF01;&#xFF01;</span>
+ANN &lt;- apply(nndist(starbucks.km, k=<span class="hljs-number">1</span>:<span class="hljs-number">100</span>),<span class="hljs-number">2</span>,FUN=mean)
+plot(ANN ~ eval(<span class="hljs-number">1</span>:<span class="hljs-number">100</span>), type=<span class="hljs-string">&quot;b&quot;</span>, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>)
+<span class="hljs-comment"># &#x6784;&#x5EFA;&#x968F;&#x673A;&#x6A21;&#x62DF;&#xFF1A;</span>
+
+n     &lt;- <span class="hljs-number">99</span>               <span class="hljs-comment"># Number of simulations</span>
+ann.r &lt;- vector(length = n) <span class="hljs-comment"># Create an empty object to be used to store simulated ANN values</span>
+<span class="hljs-keyword">for</span> (i <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:n){
+  rand.p   &lt;- rpoint(n=starbucks.km$n, win=ma.km)  <span class="hljs-comment"># Generate random point locations</span>
+  ann.r[i] &lt;- mean(nndist(rand.p, k=<span class="hljs-number">1</span>))  <span class="hljs-comment"># Tally the ANN values</span>
+}
+plot(rand.p, pch=<span class="hljs-number">16</span>, main=<span class="hljs-literal">NULL</span>, cols=rgb(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0.5</span>))
+<span class="hljs-comment">## &#x53EF;&#x89C6;&#x5316;&#x6BD4;&#x8F83;&#x4E24;&#x8005;&#x7684;&#x968F;&#x673A;&#x5206;&#x5E03;&#x72B6;&#x6001;&#xFF1A;</span>
+<span class="hljs-comment"># &#x8FD9;&#x91CC;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x524D;&#x63D0;&#x73AF;&#x5883;&#x662F;&#x5747;&#x503C;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x4E0A;&#x73AF;&#x5883;&#x662F;&#x975E;&#x5747;&#x503C;&#x72B6;&#x6001;&#xFF1B;</span>
+<span class="hljs-comment"># &#x6240;&#x4EE5;&#x8FD9;&#x79CD;&#x8BC4;&#x4F30;&#x65B9;&#x6CD5;&#x662F;&#x5B58;&#x5728;&#x95EE;&#x9898;&#x7684;&#xFF1B;</span>
+hist(ann.r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>, breaks=<span class="hljs-number">40</span>, col=<span class="hljs-string">&quot;bisque&quot;</span>, xlim=range(ann.p, ann.r))
+abline(v=ann.p, col=<span class="hljs-string">&quot;blue&quot;</span>)
+
+<span class="hljs-comment"># &#x6539;&#x8FDB;&#x5747;&#x503C;&#x6D4B;&#x8BD5;&#xFF0C;&#x5C06;&#x534F;&#x53D8;&#x91CF;&#x7EB3;&#x5165;&#x5230;&#x5EFA;&#x6A21;&#x4F53;&#x7CFB;&#x4E2D;&#xFF1A;</span>
+<span class="hljs-comment"># &#x6CE8;&#x610F;&#x4E0B;&#x9762;&#x7684;&#x8FD9;&#x4E2A; f=pop.km</span>
+n     &lt;- <span class="hljs-number">599L</span>
+ann.r &lt;- vector(length=n)
+<span class="hljs-keyword">for</span> (i <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:n){
+  rand.p   &lt;- rpoint(n=starbucks.km$n, f=pop.km) 
+  ann.r[i] &lt;- mean(nndist(rand.p, k=<span class="hljs-number">1</span>))
+}
+hist(ann.r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>, breaks=<span class="hljs-number">40</span>, col=<span class="hljs-string">&quot;bisque&quot;</span>, xlim=range(ann.p, ann.r))
+abline(v=ann.p, col=<span class="hljs-string">&quot;blue&quot;</span>)
+<span class="hljs-comment">## &#x7EDF;&#x8BA1;&#x663E;&#x8457;&#x6027;&#xFF1A;&#x5355;&#x5C3E;&#x68C0;&#x9A8C;&#xFF1A;</span>
+N.greater &lt;- sum(ann.r &gt; ann.p)
+p &lt;- min(N.greater + <span class="hljs-number">1</span>, n + <span class="hljs-number">1</span> - N.greater) / (n +<span class="hljs-number">1</span>)
+p
+
+
+<span class="hljs-comment">## &#x4E8C;&#x9636;&#x8BC4;&#x4F30;&#x65B9;&#x6CD5;(&#x57FA;&#x4E8E;&#x73AF;&#x5883;&#x540C;&#x8D28;&#x6027;)</span>
+<span class="hljs-comment"># &#x6CE8;&#x610F;&#x662F;&#x65E0;&#x8BBA;&#x662F;K&#x8FD8;&#x662F;L&#x51FD;&#x6570;&#xFF0C;&#x9AD8;&#x4E8E;CSR&#x90FD;&#x8868;&#x793A;&#x805A;&#x96C6;&#x8D8B;&#x52BF;&#xFF1B;</span>
+<span class="hljs-comment"># L&#x51FD;&#x6570;&#x7684;&#x4F18;&#x52BF;&#x5728;&#x4E8E;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x5230;&#x5728;&#x8F83;&#x4F4E;&#x5C3A;&#x5EA6;&#x7684;&#x7A7A;&#x95F4;&#x5206;&#x5E03;&#x7279;&#x5F81;&#xFF1B;</span>
+K &lt;- Kest(starbucks.km)
+plot(K, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>, legendargs=list(cex=<span class="hljs-number">0.8</span>, xpd=<span class="hljs-literal">TRUE</span>, inset=c(<span class="hljs-number">1.01</span>, <span class="hljs-number">0</span>) ))
+
+L &lt;- Lest(starbucks.km, main=<span class="hljs-literal">NULL</span>)
+plot(L, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>, legendargs=list(cex=<span class="hljs-number">0.8</span>, xpd=<span class="hljs-literal">TRUE</span>, inset=c(<span class="hljs-number">1.01</span>, <span class="hljs-number">0</span>) ))
+<span class="hljs-comment">## &#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x66F4;&#x6E05;&#x6670;&#x7684;&#x89E3;&#x8BFB;&#x6570;&#x636E;&#x7684;&#x5206;&#x5E03;&#x89C4;&#x5F8B;&#xFF1A;</span>
+plot(L, . -r ~ r, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>, legendargs=list(cex=<span class="hljs-number">0.8</span>, xpd=<span class="hljs-literal">TRUE</span>, inset=c(<span class="hljs-number">1.01</span>, <span class="hljs-number">0</span>) ))
+
+<span class="hljs-comment">## &#x57FA;&#x4E8E;&#x5BF9;&#x6570;&#x51FD;&#x6570;&#x7684;&#x53EF;&#x89C6;&#x5316;&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x662F;&#x540E;&#x6765;&#x6539;&#x8FDB;&#x7684;&#xFF1B;&#x4E0D;&#x4F9D;&#x8D56;&#x4E8E;&#x8DDD;&#x79BB;&#xFF1B;</span>
+<span class="hljs-comment"># &#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x4E0A;&#x514B;&#x670D;&#x540C;&#x8D28;&#x6027;&#x9020;&#x6210;&#x7684;&#x8BEF;&#x5DEE;</span>
+<span class="hljs-comment"># &#x5B83;&#x662F;&#x8BC4;&#x4F30;&#x4E86;&#x70B9;&#x5206;&#x5E03;&#x5468;&#x56F4;&#x7684;&#x751C;&#x751C;&#x5708;&#x7684;&#x70B9;&#x5BC6;&#x5EA6;&#x5F3A;&#x5EA6;&#xFF0C;&#x800C;&#x975E;&#x8DDD;&#x79BB;&#xFF1B;</span>
+g  &lt;- pcf(starbucks.km)
+plot(g, main=<span class="hljs-literal">NULL</span>, las=<span class="hljs-number">1</span>, legendargs=list(cex=<span class="hljs-number">0.8</span>, xpd=<span class="hljs-literal">TRUE</span>, inset=c(<span class="hljs-number">1.01</span>, <span class="hljs-number">0</span>) ))
+
+<span class="hljs-comment">##&#x4E09;&#x7EF4;&#x7A7A;&#x95F4;Kest&#xFF1A;</span>
+<span class="hljs-comment"># &#x8FD9;&#x4E2A;&#x6216;&#x8BB8;&#x53EF;&#x4EE5;&#x8BA9;&#x6211;&#x76F4;&#x63A5;&#x8131;&#x79BB;&#x6570;&#x636E;&#x5206;&#x5E03;&#x70B9;&#x672C;&#x8EAB;&#x6765;&#x8003;&#x8651;&#x6570;&#x636E;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB; &#xFF1A;</span>
+threeDPpp &lt;- pp3(runif(<span class="hljs-number">10</span>), runif(<span class="hljs-number">10</span>), runif(<span class="hljs-number">10</span>), box3(c(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>)))
+plot(threeDPpp)
+threeDPppKest &lt;- K3est(threeDPpp)
+plot(threeDPppKest)
+
+<span class="hljs-comment">## &#x4E8C;&#x9636;&#x8BC4;&#x4F30;(&#x57FA;&#x4E8E;&#x73AF;&#x5883;&#x5F02;&#x8D28;&#x6027;)</span>
+<span class="hljs-comment"># &#x5747;&#x5300;&#x7684;&#x6CCA;&#x677E;&#x70B9;&#x8FC7;&#x7A0B;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x6211;&#x4EEC;&#x5047;&#x8BBE;&#x7AD9;&#x70B9;&#x4E0A;&#x5404;&#x4E2A;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#x662F;&#x72EC;&#x7ACB;&#x7684;&#xFF08;&#x6CCA;&#x677E;&#x8FC7;&#x7A0B;&#xFF09;&#xFF0C;</span>
+<span class="hljs-comment"># &#x5E76;&#x4E14;&#x5B83;&#x4EEC;&#x7684;&#x5F3A;&#x5EA6;&#x5728;&#x4E0D;&#x540C;&#x5730;&#x70B9;&#x4E4B;&#x95F4;&#x6CA1;&#x6709;&#x5DEE;&#x5F02;&#xFF08;&#x540C;&#x8D28;&#xFF09;&#x3002;</span>
+<span class="hljs-comment"># &#x4E0D;&#x5747;&#x5300;&#x7684;&#x6CCA;&#x677E;&#x70B9;&#x8FC7;&#x7A0B;&#x662F;&#x6307;&#x7531;&#x8FC7;&#x7A0B;&#x751F;&#x6210;&#x7684;&#x5206;&#x5E03;&#xFF0C;</span>
+<span class="hljs-comment"># &#x5728;&#x8BE5;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x7AD9;&#x70B9;&#x4E0A;&#x7684;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#x662F;&#x72EC;&#x7ACB;&#x7684;&#xFF0C;&#x4F46;&#x5B83;&#x4EEC;&#x7684;&#x5F3A;&#x5EA6;&#x786E;&#x5B9E;&#x6709;&#x6240;&#x4E0D;&#x540C;&#x3002;</span>
+<span class="hljs-comment"># &#x4F7F;&#x7528;&#x70B9;&#x5BC6;&#x5EA6;&#x5206;&#x5E03;&#x56FE;&#x53EF;&#x4EE5;&#x5728;&#x4E0D;&#x540C;&#x7B49;&#x7EA7;sigma&#x4E2D;&#x67E5;&#x770B;&#x70B9;&#x5BC6;&#x5EA6;&#x7684;&#x4E0D;&#x5747;&#x6027;&#xFF1B;</span>
+<span class="hljs-comment"># &#x4E5F;&#x5C31;&#x662F;&#x7ED9;&#x4E0E;&#x4E0D;&#x540C;&#x7684;&#x68AF;&#x5EA6;&#x5173;&#x7CFB;&#x6765;&#x67E5;&#x770B;&#x5BC6;&#x5EA6;&#x68AF;&#x5EA6;&#x5173;&#x7CFB;&#xFF1B;</span>
+par(mfrow = c(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>))  <span class="hljs-comment"># set up to plot 3 plots on one row</span>
+<span class="hljs-comment"># plot density at various levels of sigma</span>
+plot(density(Liencres.pp, sigma = <span class="hljs-number">0.5</span>), main = <span class="hljs-string">&quot;Sigma 0.5&quot;</span>)
+plot(density(Liencres.pp, sigma = <span class="hljs-number">0.75</span>), main = <span class="hljs-string">&quot;Sigma 0.75&quot;</span>)
+plot(density(Liencres.pp, sigma = <span class="hljs-number">1</span>), main = <span class="hljs-string">&quot;Sigma 1.0&quot;</span>)
+
+<span class="hljs-comment"># &#x4F7F;&#x7528;&#xFF1A;quadrat.test&#x6765;&#x8BC4;&#x4F30;&#x70B9;&#x5206;&#x5E03;&#x7684;&#x5F02;&#x8D28;&#x6027;&#xFF1A;</span>
+set.seed(<span class="hljs-number">324324</span>)  <span class="hljs-comment"># set random seed for repeatability</span>
+<span class="hljs-comment"># &#x8FD9;&#x4E2A;&#x7ED3;&#x679C;&#x4F1A;&#x53D7;&#x5230;&#x7A7A;&#x95F4;&#x8303;&#x56F4;&#x548C;&#x6805;&#x683C;&#x5927;&#x5C0F;&#x7684;&#x9650;&#x5236;&#xFF1A;</span>
+(M &lt;- quadrat.test(Liencres.pp, nx = <span class="hljs-number">4</span>, ny = <span class="hljs-number">10</span>, method = <span class="hljs-string">&quot;MonteCarlo&quot;</span>))
+plot(density(Liencres.pp), main = <span class="hljs-string">&quot;Grid Counts&quot;</span>)
+plot(M, cex = <span class="hljs-number">0.5</span>, col = <span class="hljs-string">&quot;white&quot;</span>, add = <span class="hljs-literal">T</span>)
+
+
+<span class="hljs-comment"># calculate and plot inhomogeneous L-hat &#xFF0C;&#x4F7F;&#x7528;&#x77EB;&#x6B63;&#x7684;L-hat&#x6765;&#x7EA0;&#x6B63;&#x6570;&#x636E;&#xFF1A;</span>
+plot(envelope(Liencres.pp, Linhom, sigma = <span class="hljs-number">0.75</span>, correction = <span class="hljs-string">&quot;Ripley&quot;</span>, verbose = <span class="hljs-literal">F</span>), 
+     . - r ~ r, main = <span class="hljs-string">&quot;Sigma 0.75&quot;</span>)
+
+<span class="hljs-comment">## &#x7A7A;&#x95F4;&#x81EA;&#x76F8;&#x5173;&#x6A21;&#x5F0F;&#xFF1A;</span>
+<span class="hljs-comment"># &#x8FD9;&#x91CC;&#x7684;&#x7A7A;&#x95F4;&#x7EDF;&#x8BA1;&#x6A21;&#x5F0F;&#x53EA;&#x4F7F;&#x7528;R&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x5B9E;&#x73B0;&#xFF0C;&#x5177;&#x4F53;&#x4EE3;&#x7801;&#x5206;&#x6790;&#x5E02;&#x8FD8;&#x662F;&#x4F7F;&#x7528;geoda&#xFF1B;</span>
+as &lt;- read.csv(<span class="hljs-string">&quot;D:/xh2/f1_points/xh/xh_as.csv&quot;</span>)[,<span class="hljs-number">2</span>:<span class="hljs-number">3</span>]
+bio1 &lt;- raster(<span class="hljs-string">&quot;D:/xh2/f2_envs/BIO1.tif&quot;</span>)
+asv &lt;- raster::extract(bio1,as)
+ass &lt;- cbind(asv,as)%&gt;% na.omit() 
+as &lt;- ass[,<span class="hljs-number">2</span>:<span class="hljs-number">3</span>]
+
+<span class="hljs-keyword">source</span>(<span class="hljs-string">&quot;D:/HIDATA/&#x9879;&#x76EE;&#x4EE3;&#x7801;xmind&#x7BA1;&#x7406;/share_code/sdmenm.R&quot;</span>)
+
+asutm &lt;- point_wgs_utm(as)
+range &lt;- poly_wgs_utm(as)
+plot(range)
+points(asutm)
+
+<span class="hljs-comment">## &#x57FA;&#x4E8E;&#x70B9;&#x8DDD;&#x79BB;&#x8FDB;&#x884C;&#x83AB;&#x5170;&#x6307;&#x6570;&#x8BA1;&#x7B97;&#xFF1A;</span>
+ptdist=pointDistance(asutm)
+
+min.dist&lt;-min(ptdist); <span class="hljs-comment"># Minimum</span>
+mean.dist&lt;-mean(ptdist); <span class="hljs-comment"># Mean</span>
+
+nb&lt;-dnearneigh(coordinates(asutm),min.dist,mean.dist)
+
+w2=knn2nb(knearneigh(asutm,k=<span class="hljs-number">6</span>))
+nb_lw&lt;-nb2listw(w2,style=<span class="hljs-string">&quot;B&quot;</span>) <span class="hljs-comment">## &#x8FD9;&#x4E2A;&#x53EF;&#x80FD;&#x8981;&#x4FEE;&#x6539;&#x53C2;&#x6570;&#xFF1A;</span>
+<span class="hljs-comment">## &#x89C2;&#x6D4B;&#x70B9;&#x5BC6;&#x5EA6;&#x5206;&#x5E03;&#x7684;&#x89C4;&#x5F8B;&#x548C;&#x94FE;&#x63A5;&#xFF1A;</span>
+plot(nb_lw,coordinates(asutm),col=<span class="hljs-string">&quot;red&quot;</span>)
+
+<span class="hljs-comment">## &#x8BA1;&#x7B97;&#x5168;&#x5C40;&#x83AB;&#x5170;&#x6307;&#x6570;&#xFF1A;</span>
+aa &lt;- globalG.test(ass$asv,nb_lw,alternative=<span class="hljs-string">&quot;two.sided&quot;</span>)
+plot(aa)
+
+<span class="hljs-comment">## &#x8BA1;&#x7B97;&#x5C40;&#x90E8;&#x83AB;&#x5170;&#x6307;&#x6570;&#xFF1A;</span>
+local_g&lt;-localG(ass$asv,nb_lw)
+local_g &lt;- as.matrix(local_g)
+<span class="hljs-comment">## &#x8BA1;&#x7B97;&#x53CC;&#x5C3E;&#x663E;&#x8457;&#x6027;&#xFF1A;</span>
+pval&lt;- <span class="hljs-number">2</span>*pnorm(-abs(loac$.))
+as$localg &lt;- local_g 
+as$pvalue &lt;- pval
+<span class="hljs-keyword">attach</span>(as)
+head(as)
+as$np[pval&gt;<span class="hljs-number">0.05</span>]=<span class="hljs-number">2</span>
+as$np[pval&lt;<span class="hljs-number">0.05</span>]=<span class="hljs-number">1</span>
+<span class="hljs-keyword">detach</span>(as)
+
+
+<span class="hljs-keyword">attach</span>(as)
+ggplot(as,aes(x = longitude,y = latitude,colour = localg))+
+  scale_colour_gradient(low = <span class="hljs-string">&quot;blue&quot;</span>,high = <span class="hljs-string">&quot;red&quot;</span>)+
+  geom_point(size = pvalue)+
+  scale_size_continuous(breaks = <span class="hljs-number">0.05</span>,guide = guide_legend()) 
+
+ggplot(as,aes(x=longitude,y=latitude,colour=localg,shpae=np))+
+  geom_point(alpha=<span class="hljs-number">.5</span>)+
+  scale_colour_gradient(low = <span class="hljs-string">&quot;blue&quot;</span>,high = <span class="hljs-string">&quot;red&quot;</span>)+
+  scale_size(breaks = c(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>))
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="13.2 空间自相关概念释义.html" class="navigation navigation-prev " aria-label="Previous page: 13.2 空间自相关概念释义">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="13.4 案例.html" class="navigation navigation-next " aria-label="Next page: 13.4 案例">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"13.3 地统计","level":"1.14.3","depth":2,"next":{"title":"13.4 案例","level":"1.14.4","depth":2,"path":"13. 空间生态位/13.4 案例.md","ref":"13. 空间生态位/13.4 案例.md","articles":[]},"previous":{"title":"13.2 空间自相关概念释义","level":"1.14.2","depth":2,"path":"13. 空间生态位/13.2 空间自相关概念释义.md","ref":"13. 空间生态位/13.2 空间自相关概念释义.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github-buttons@2.1.0","edit-link","toggle-chapters","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"repo":"nicheerfeng/Nichefbook","types":["star"],"size":"small"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/nicheerfeng/Nichefbook/edit/main"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","author":"nicheerfeng","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NICHE MODEL 中文指南-RCODING","language":"zh-hans","gitbook":"*","description":"Niche"},"file":{"path":"13. 空间生态位/13.3 地统计.md","mtime":"2021-09-22T13:41:29.235Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-22T14:10:03.582Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
